@@ -1,0 +1,24 @@
+
+.newSalesOne{
+    .centerdContainer{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .checkout{
+        min-height: 9%;
+    }
+    #invoice_search_input_container{
+        svg{
+            circle,path{
+                fill: #ffffff;
+            }
+            #Ellipse_485{
+                fill: #A3AAB2;
+            }
+        }
+    }
+}

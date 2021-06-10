@@ -1,0 +1,40 @@
+.new-btns-container {
+    padding-top: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .btn-apply {
+      width: 156px;
+      height: 48px;
+      padding: 10px 60px 9px;
+      border-radius: 26px;
+      border: solid 1px #1877f2;
+      background-color: #ffffff;
+      font-size: 1.4em;
+      font-weight: 500;
+      text-align: right;
+      color: #1877f2;
+      &:hover{
+        color: #ffffff;
+        background-color: #1877F2;
+      }
+    }
+    .btn-cancel {
+      width: 111px;
+      height: 48px;
+      margin: 0px 12px 0 17px;
+      padding: 10px 43px 9px;
+      padding: 0;
+      text-align: center;
+      border-radius: 26px;
+      border: none;
+      background-color: transparent;
+      font-size: 1.4em;
+      font-weight: 500;
+        border: 2px solid transparent;
+        color: #65676b;
+      &:hover{
+        border: 2px solid #FF545D;
+      }
+    }
+  }

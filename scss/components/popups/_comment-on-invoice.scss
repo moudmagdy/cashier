@@ -1,0 +1,15 @@
+.comment-on-invoice{
+    .sale-number{
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        label{
+            font-size: 1.6em;
+            margin-right: 1em;
+        }
+    }
+    .checkout-operations--group{
+        label{
+            font-size: 1.5em;
+        }
+    }   
+}

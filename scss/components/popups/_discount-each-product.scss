@@ -1,0 +1,139 @@
+.popup--discount-each-product{
+    position: absolute;
+    width: 37.9em;
+    height: 33.8em;
+    background-color: $white;
+    z-index: 999999;
+    margin: 0 auto;
+    border-radius: 12px;
+    font-size: 1rem;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+    display: none;
+    padding: 0 2.5rem;
+    &--header{
+        @include flexCenter;
+        height: 5em;
+        border-bottom: 0.5px solid $gray5;
+        h4{
+            font-family: 'reg';
+        }
+    }
+    &--body{
+        height: 85%;
+        @include flexCenter;
+        justify-content: space-around;
+        flex-direction: column;
+        &-value{
+            @include flexCenter;
+            flex-direction: column;
+            &-title{
+                font-size: 1.6em;
+            }
+            &--inputs{
+                @include flexCenter;
+                &-container{
+                    width: 80%;
+                    // border-bottom: 1px solid $gray6;
+                    input{
+                        border: none;
+                        // border-bottom: 1px solid #ced4da;
+                        text-align: right;
+                        font-weight: 500;
+                        text-align: center;
+                        color: #212121;
+                        border-radius: initial;
+                        height: 29px;
+                        width: 85%;
+                        border-bottom: 1px solid gray;
+                        font-size: 1.4em;
+                        &:focus{
+                            box-shadow: none;
+                            outline: none;
+                        }
+                    }
+                 
+                }
+            }
+            .transfer-icon{
+                width: 2rem;
+                svg{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        &-comment{
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            label{
+                margin-bottom: 1rem;
+                font-size: 1.4em;
+            }
+            input{
+                width: 100%;
+                margin: 0 auto;
+                text-align: right;
+                font-weight: 500;
+                text-align: right;
+                color: #212121;
+                        font-size: 1.4em;
+                border-radius: 8px;
+                border: 1px solid $gray6;
+                
+               padding: 1.5em; 
+                &:focus{
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+        }
+        &-footer{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+           
+        }
+    }
+}
+
+.overlay{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.36);
+    display: none;
+}
+
+
+.submit-btn{
+    border: 2px solid $blue;
+    box-shadow: none;
+    width: 19.5rem;
+    border-radius: 10rem;
+    font-size: 1.4em;
+    color: $blue;
+    padding: 1.1em;
+    &:hover{
+    color: $white;
+    background-color: $blue;
+    }
+}
+.cancel-submit-btn{
+    font-size: 1.4em;
+        color: $black;
+        padding: 0.8em 2em;
+        border-radius: 3rem;
+    &:hover{
+        border: 2px solid $red;
+
+    }
+}

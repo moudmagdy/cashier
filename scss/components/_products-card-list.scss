@@ -1,0 +1,33 @@
+.products-card-list{
+    position: relative;
+    font-size: 0.9rem;
+    width: 100%;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    transition: all 0.4s ease-in;
+    
+    @include mediaMixin(xxxlScreen){
+        font-size:  0.91rem;
+    }
+    @include mediaMixin(xxlScreen){
+        font-size: 0.91rem;
+    }
+    @include mediaMixin(lgDesktop){
+        font-size:0.69rem;
+    }
+    @include mediaMixin(desktop){
+        font-size:0.69rem;
+    }
+    @include mediaMixin(tabltes){
+        font-size:0.76rem;
+    }
+    @include mediaMixin(smTabltes){
+        font-size: 7px;
+    }
+    @include mediaMixin(mobile){
+        font-size: 5px;
+    }
+}

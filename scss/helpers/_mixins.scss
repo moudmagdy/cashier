@@ -1,0 +1,71 @@
+
+
+@mixin mediaMixin($breakpoint) {
+
+    // $breakpoint is simply a variable that can have several values
+    @if $breakpoint==xxxlScreen {
+        @media only screen and (min-width: 1930px)   {
+            @content;
+        }
+    }
+    @if $breakpoint==xxlScreen {
+        @media only screen and (min-width: 1601px)  and (max-width:1920px) {
+            @content;
+        }
+    }
+    @if $breakpoint==xlgDesktop {
+        @media only screen and (min-width: 1441px)  and (max-width:1600px) {
+            @content;
+        }
+    }
+    @else if $breakpoint==lgDesktop {
+        @media only screen and (min-width: 1201px)  and (max-width: 1440px) {
+            @content;
+        }
+    }
+    @else if $breakpoint==desktop {
+        @media only screen and (min-width: 1024px) and (max-width: 1200px)  {
+            @content;
+        }
+    }
+    @else if $breakpoint==tabltes {
+        @media only screen and (min-width: 769px) and (max-width: 1023px)  {
+            @content;
+        }
+    }
+    @else if $breakpoint==smTabltes {
+        @media only screen and (min-width: 571px) and (max-width: 768px)  {
+            @content;
+        }
+    }
+    @else if $breakpoint==mobile {
+        @media only screen and (max-width: 570px) {
+        @content;
+        }
+    }
+}
+
+
+@mixin flexCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+@mixin scroll-bar {
+    scrollbar-color: $gray6 $gray5;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $gray5;
+    } 
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $gray6;
+        border-radius: 20px;
+    } 
+}

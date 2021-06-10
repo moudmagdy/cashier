@@ -1,0 +1,19 @@
+.bill-cash-page {
+    .navbar {
+        border-bottom: 1px solid $gray6;
+    }
+    .layout-right--container .right-content-data{
+        max-height: 100vh;
+    }
+
+    .invoice .searchInput {
+        // top: 1rem;
+    }
+    .pad-20 {
+        padding: 0 24px;
+    }
+    .pdLeft-15 {
+        padding-left: 15px;
+        font-size: 14px;
+    }
+}

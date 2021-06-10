@@ -1,0 +1,133 @@
+.appbar {
+    background-color: $blue;
+    height: 6.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 10px;
+
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+    span {
+        font-family: 'med';
+        font-size: 2rem;
+        color: $white;
+    }
+
+    &.invoice {
+        justify-content: space-between;
+        flex-direction: row;
+        .appbar {
+            font-size: 10px;
+            &-number {
+                @include flexCenter;
+                font-size: 1.4em;
+                width: 15%;
+                justify-content: space-evenly;
+                left: 33px;
+                position: relative;
+                &--box {
+                    width: 3.214em;
+                    height: 3.571em;
+                    border: 2px solid $white;
+                    border-radius: 6px;
+                    @include flexCenter;
+                    @media screen and (min-width: 1500px) and (max-width: 1600px){
+                        width: 5rem;
+                        height: 5.643rem;
+                        left: 30px;
+                    }
+                }
+            }
+
+            &-menu-btn {
+                width: 4.2em;
+                height: 4.2em;
+                border-radius: 50%;
+                @include flexCenter;
+                cursor: pointer;
+
+                svg {
+                    circle {
+                        fill: $white;
+                    }
+
+                    transform: rotate(90deg);
+                    width: 50%;
+                    height: 50%;
+                }
+
+                &:hover {
+                    background-color: $darkBlue;
+                }
+            }
+        }
+    }
+
+    &-menu {
+        display: none;
+        width: 32em;
+        // height: 45.2em;
+        height: auto;
+        z-index: 2222;
+        top: 102%;
+        left: 0px;
+        border-radius: 0.8em;
+        background-color: $white;
+        position: absolute;
+        box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.16);
+        overflow: hidden;
+        padding: 10px 0;
+        ul {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                width: 100%;
+                cursor: pointer;
+                height: 7.2em;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 0 2em 0 0;
+
+                &:hover {
+                    background-color: $veryLightBlue;
+
+                }
+
+                a {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    flex-direction: row-reverse;
+                    cursor: pointer;
+                    text-decoration: none;
+
+                    span {
+                        color: $black;
+                        font-family: 'reg';
+                        padding: 0 0.5em 0 0;
+                        font-size: 1.6em;
+                        &.delete {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,2211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cashier</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+  <link rel="stylesheet" href="css/v1/main.css" />
+  <link rel="stylesheet" href="css/v1/bills/bill.css" />
+  <link rel="stylesheet" href="css/v1/searchbox/search.css" />
+  <link rel="stylesheet" href="css/v1/totalBill/totalbill.css" />
+  <link rel="stylesheet" href="css/v1/sidebar/sidebar.css" />
+  <link rel="stylesheet" href="css/v1/products/products.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-md-7 col-sm-12 col-xs-12 d-flex productsContainer">
+
+      <div class="fixed-top">
+        <!-- start of side menu -->
+        <nav class="navbar navbar-light navbar-static bg-faded menuContainer" role="navigation">
+        
+          <div class="overlay"></div>
+          <ul class="nav navbar-nav">
+            <div class="d-flex align-items-center justify-content-center">
+              <div id="container">
+                <div class="image-container">
+                  <img src="imgs/menu.svg" class="navbar-toggler pull-xs-right" id="navbarSideButton" alt="A image" />
+                </div>
+              </div>
+              <span class="nav-link chossenTitle">المبيعات</span>
+            </div>
+          </ul>
+          <div class="lang" id="lang">
+            <span>En</span>
+          </div>
+          <ul class="navbar-side" id="navbarSide">
+            <li class="navbar-side-item">
+              <a href="#" class="side-link"></a>
+            </li>
+            <li class="navbar-side-item">
+              <span class="glyphicon glyphicon-credit-card"></span>
+              <span class="menu"></span>
+            </li>
+
+            <li class="navbar-side-item">
+              <span class="glyphicon glyphicon-credit-card"></span>
+              <span class="menu"></span>
+            </li>
+            <li class="navbar-side-item">
+              <span class="glyphicon glyphicon-credit-card"></span>
+              <span class="menu"></span>
+            </li>
+            <li class="navbar-side-item">
+              <span class="glyphicon glyphicon-credit-card"></span>
+              <span class="menu"></span>
+            </li>
+            <li class="navbar-side-item">
+              <span class="glyphicon glyphicon-credit-card"></span>
+              <span class="menu"></span>
+            </li>
+            <li class="navbar-side-item">
+              <span class="glyphicon glyphicon-credit-card"></span>
+              <span class="menu"></span>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+
+      <!-- end of side menu -->
+      <!-- starting of right menu with product contents -->
+      <div class="d-flex  layout-container">
+        <div class="sidebar_container">
+          <div class="sidebar">
+            <ul>
+              <li>
+                <a href="">
+                  <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false" role="presentation"><path class="icons-default-fill icons-filled" d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z"></path><path class="icons-default-fill icons-unfilled" d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z"></path></svg>
+                  <span>الرئيسيه</span>
+                </a>
+              </li>
+              <li>
+                <a href="cash-management.html">
+                  <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false" role="presentation"><path class="icons-default-fill icons-filled" d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z"></path><path class="icons-default-fill icons-unfilled" d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z"></path></svg>
+                  <span>حركة نقديه</span>
+                </a>
+              </li>
+           
+              <li>
+                <a href="newSales.html">
+                  <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false" role="presentation"><path class="icons-default-fill icons-filled" d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z"></path><path class="icons-default-fill icons-unfilled" d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z"></path></svg>
+                  <span>التجاره</span>
+                </a>
+              </li>
+           
+              <li>
+                <a href="">
+                  <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false" role="presentation"><path class="icons-default-fill icons-filled" d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z"></path><path class="icons-default-fill icons-unfilled" d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z"></path></svg>
+                  <span>المبيعات</span>
+                </a>
+              </li>
+           
+              <li>
+                <a href="">
+                  <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false" role="presentation"><path class="icons-default-fill icons-filled" d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z"></path><path class="icons-default-fill icons-unfilled" d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z"></path></svg>
+                  <span>خصومات</span>
+                </a>
+              </li>
+           
+              <li>
+                <a href="">
+                  <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false" role="presentation"><path class="icons-default-fill icons-filled" d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z"></path><path class="icons-default-fill icons-unfilled" d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z"></path></svg>
+                  <span>قسم</span>
+                </a>
+              </li>
+           
+              <li>
+                <a href="">
+                  <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false" role="presentation"><path class="icons-default-fill icons-filled" d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z"></path><path class="icons-default-fill icons-unfilled" d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z"></path></svg>
+                  <span>item1</span>
+                </a>
+              </li>
+           
+              <li>
+                <a href="">
+                  <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false" role="presentation"><path class="icons-default-fill icons-filled" d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z"></path><path class="icons-default-fill icons-unfilled" d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z"></path></svg>
+                  <span>item1</span>
+                </a>
+              </li>
+           
+
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="fixed-top searchbar">
+
+            <div class="col-sm-12 col-md-12 searchIconContainer">
+              <div class="container-fluid d-flex align-items-center">
+                <form class="card card-sm inputContainer ">
+                  <div class="card-body row no-gutters d-flex align-items-center">
+                    <div id="container">
+                      <div class="image-container">
+                        <img src="imgs/scannerIcon.svg" alt="A image" />
+                      </div>
+                    </div>
+                    <div id="iconSearch">
+                      <div class="search-image-container">
+                        <img src="imgs/searchIcon.svg" />
+                      </div>
+                    </div>
+                    <div class="inputSearcontainer">
+                      <input class="form-control form-control-lg form-control-borderless searchInputOver" type="search"
+                        placeholder="ابحث عن منتج او باركود" />
+                    </div>
+                  </div>
+                </form>
+                <div class="image-container d-flex col-lg-2 col-md-2 col-sm-12">
+                  <div id="iconcontainer2">
+                    <div class="image-container">
+                      <img src="imgs/Group 4885.svg" alt="A image" />
+                    </div>
+                  </div>
+                  <div id="iconcontainer2">
+                    <div class="image-container">
+                      <img src="imgs/heart.svg" onclick="swap();" id="favauriteIcon1" alt="A image" />
+                      <img src="imgs/blueFavourite.svg" onclick="Toggleswap();" style="display: none;"
+                        id="favauriteIcon2" alt="A image" />
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of search container -->
+          <!-- end of fixed header -->
+          <!-- start show products -->
+          <div id="salesContainer " class="salesContainer salesContainerAdjust col-md-12 d-flex justify-content-start">
+            <div class="card  ">
+              <!-- Changes maed in thish file 
+                1 -  remove product_container class from card 
+                2 - adjustb sales container with new class named with salesContainerAdjust
+              -->
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <!-- start of  selected card -->
+            <div class="card selected ">
+              <div class="addingProductCount">
+                <span> 12 </span>
+              </div>
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <!-- end of  selected card -->
+
+            <div class="card  ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card  ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card  ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card  ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+               <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+               <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+               <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+               <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+               <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+               <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+               <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+               <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+               <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+               <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+               <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+               <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+               <div class="card ">
+              <img class="card-img-top" src="imgs/صور-للجوافة-2.jpg" alt="Card image" src="img_snow_wide.jpg" alt="Snow"
+                style="width: 100%" />
+
+              <div class="top-right dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="imgs/points.svg" />
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><img src="imgs/emptyHeart.svg" /><span>اضف الى مفضلة</span></a>
+                <div class="divider"></div>
+                <a class="dropdown-item" data-toggle="modal" data-target="#ModalDetails"><img
+                    src="imgs/emptyHeart.svg" /><span>المخزون</span></a>
+              </div>
+              <div class="card-body">
+                <div class="describer_container">
+                  <p class="card-text">جونسون، صابون للاستحمام 15ملم</p>
+                </div>
+                <p class="price">4.00</p>
+              </div>
+            </div>
+            
+          </div>
+          <!-- end show products -->
+        </div>
+
+      </div>
+      <!-- end of right menu with product contents -->
+    </div>
+
+    <!--  start bill container -->
+    <div class="col-md-5 col-sm-12 col-xs-12 bg-bills" id="bg-bills">
+        <div class="billsHeaderContainer">
+          <div class="right col-md-4">
+            <div class="title">
+              <span> الفاتورة </span>
+            </div>
+            <div class="title2">
+              <span> #1005 </span>
+            </div>
+          </div>
+          <div class="text-center col-md-4 d-flex justify-content-center">
+            <div class="count">
+              <span> 6 </span>
+            </div>
+            <div class="billTitle">
+              <span> 44 </span>
+            </div>
+          </div>
+
+          <div class="left col-md-4 " type="button" id="dropdownMenuBill" data-toggle="dropdown">
+            <img id="menuIcon" src="imgs/coloredMenu.svg" />
+
+          </div>
+          <!-- start dropdown for bill menu -->
+          <div class="dropdown-menu billdropdown" aria-labelledby="dropdownMenuBill">
+            <div class="item-content" class="d-flex justify-content-center">
+              <img src="imgs/discount.svg"><span> خصم على الفاتورة</span>
+            </div>
+
+            <div class="item-content" class="d-flex justify-content-center" data-toggle="modal"
+              data-target="#order_delivring">
+              <img src="imgs/deliver.svg"><span> توصيل</span>
+            </div>
+            <div class="item-content" class="d-flex justify-content-center">
+              <img src="imgs/discount.svg"><span> حفظ الفاتورة</span>
+            </div>
+            <div class="item-content" class="d-flex justify-content-center">
+              <img src="imgs/message.svg"> <span>اضافة تعليق</span>
+            </div>
+            <div class="item-content" class="d-flex justify-content-center">
+              <img src="imgs/message.svg"><span> طباعة كعرض سعر</span>
+            </div>
+            <div class="item-content" class="d-flex justify-content-center">
+              <img src="imgs/delete.svg"><span class="deletebill"> مسح الفاتورة</span>
+            </div>
+          </div>
+          <!-- end dropdown for bill menu -->
+          <div class="image-container" id="removeClientName">
+            <svg id="Group_4925" data-name="Group 4925" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <rect id="Rectangle_1731" data-name="Rectangle 1731" width="24" height="24" rx="12" fill="#fff" opacity="0"/>
+              <g id="Group_4007" data-name="Group 4007" transform="translate(12.206 4) rotate(45)">
+                <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+                <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+              </g>
+            </svg>
+            
+          </div>
+          <div class="clientContainer" id="dropdownClient" type="button">
+
+            <img src="imgs/addclient_icon.svg" />
+            <span class="clientTitle_container">
+              <span class="client_title" id="client_title"> اضف عميل </span>
+            </span>
+          
+          </div>
+
+          <!-- start content  for adding client -->
+          <div class="dropdown-menu addClienMenu" id="clientList" style="display: none;">
+            <div class="headerAddClient">
+              <div class="col-sm-12 col-md-12 searchIconContainer">
+                <div class=" d-flex">
+                  <form class="card card-sm inputContainer">
+                    <div class="card-body row no-gutters d-flex align-items-center">
+                      <div id="container">
+                        <div class="image-container" id="closeClientsList">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24.896" height="18.206" viewBox="0 0 24.896 18.206">
+                            <g id="Group_4651" data-name="Group 4651" transform="translate(0 0.354)">
+                              <g id="Group_3933" data-name="Group 3933" transform="translate(24.189) rotate(90)">
+                                <g id="Group_5315" data-name="Group 5315">
+                                  <line id="Line_337" data-name="Line 337" y1="24.189" transform="translate(8.664)" fill="none" stroke="#212121" stroke-miterlimit="10" stroke-width="1"/>
+                                  <path id="Path_1911" data-name="Path 1911" d="M0,8.749,8.749,0,17.5,8.749" transform="translate(0 0.001)" fill="none" stroke="#212121" stroke-miterlimit="10" stroke-width="1"/>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                      <div id="iconSearch">
+                        <div class="search-image-container">
+                          <img src="imgs/clientSearch.svg" />
+                        </div>
+                      </div>
+                      <div class="inputSearcontainer">
+                        <input class="form-control form-control-lg form-control-borderless clientSearchInput"
+                          type="search" placeholder="ابحث باسم العميل" />
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+            <div id="Dropdown">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active " id="nav-home-tab" data-toggle="tab" href="#home" role="tab"
+                    aria-controls="home" aria-selected="true">أفراد</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#profile" role="tab"
+                    aria-controls="profile" aria-selected="false">محلات</a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <div data-toggle="modal" style="cursor: pointer;" data-target="#addNew_client"
+                    class="addNewClient d-flex justify-content-center align-items-center">
+                    <p>
+                      + اضافة عميل جديد
+                    </p>
+                  </div>
+                  <div class="list-of-Users">
+                    <ul class="list-group" id="list-of-Users">
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">يوسف العوضي</span>
+                              <br>
+                              <span id="userPhone">05912345700</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">محمود محمد</span>
+                              <br>
+                              <span id="userPhone">05487793158</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">حسن المهدي</span>
+                              <br>
+                              <span id="userPhone">0111155528</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">ابو بكر</span>
+                              <br>
+                              <span id="userPhone">0123456789</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">11.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">احمد محمد</span>
+                              <br>
+                              <span id="userPhone">0987654321</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">عاصم الجزيرى</span>
+                              <br>
+                              <span id="userPhone">01013875831</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">عاصم الجزيرى</span>
+                              <br>
+                              <span id="userPhone">01013875831</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">عاصم الجزيرى</span>
+                              <br>
+                              <span id="userPhone">01013875831</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">عاصم الجزيرى</span>
+                              <br>
+                              <span id="userPhone">01013875831</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">عاصم الجزيرى</span>
+                              <br>
+                              <span id="userPhone">01013875831</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">عاصم الجزيرى</span>
+                              <br>
+                              <span id="userPhone">01013875831</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">عاصم الجزيرى</span>
+                              <br>
+                              <span id="userPhone">01013875831</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">عاصم الجزيرى</span>
+                              <br>
+                              <span id="userPhone">01013875831</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">عاصم الجزيرى</span>
+                              <br>
+                              <span id="userPhone">01013875831</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex">
+                          <img src="imgs/clientPhoto.svg" style="float: left;">
+                          <p>
+                            <span class="clientName">
+                              <span id="name">عاصم الجزيرى</span>
+                              <br>
+                              <span id="userPhone">01013875831</span>
+                            </span>
+                          </p>
+                        </div>
+                        <span class="client-price">00.00</span>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-pane fade show p-2" id="profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                </div>
+
+
+              </div>
+            </div>
+
+
+
+          </div>
+          <!-- start content  for adding client -->
+
+          <!-- </div> -->
+        </div>
+        <div class="first-top" id="productsList">
+          <!-- <div class="divider"></div> -->
+          <!-- bill with hover action -->
+          <div class="billDetails">
+            <div class="col-md-12 d-flex justify-content-between details">
+              <div class="col-md-4">
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText"> جونسون، صابون للاستحمام 15ملم مع هديه علبه زياده 17ملم</p>
+                  <span><input type="number" placeholder="29.00"> </span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div type="button" class="col-md-1 discountIcon d-flex justify-content-end" data-toggle="modal"
+                data-target="#order_discount" style="padding-right: 10px">
+                <img class="img-3" src="imgs/discount.svg" />
+              </div>
+              <div class="col-md-2 cash d-flex justify-content-end">348.00</div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with hover action -->
+
+          <div class="billdivider"></div>
+          <!-- start bill with active discount icon  -->
+          <div class="billDetails">
+            <div class="col-md-12 d-flex justify-content-between details">
+
+              <div class="col-md-4">
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText">11جونسون، صابون للاستحمام</p> <span><input type="number" placeholder="29.00"> </span>
+                  &nbsp;
+                  <span class="oldPrice">29.00</span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+                <img class="img-6" src="imgs/discount_active.svg" />
+              </div>
+
+              <div class="col-md-2 cash d-flex justify-content-end">
+                <span>
+                  348.00<br />
+                  <span class="oldPrice"> 348.00</span>
+                </span>
+              </div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with active discount icon -->
+          <div class="billdivider"></div>
+          <!-- start bill with precentage discount -->
+          <div class="billDetails">
+
+            <div class="col-md-12 d-flex justify-content-between details">
+
+              <div class="col-md-4">
+
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText">جونسون، صابون للاستح22مام</p><span><input type="number" placeholder="29.00"> </span>
+                  &nbsp;
+                  <span class="oldPrice">29.00</span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+                <div class="discountPrecentage">
+                  <span>
+                    10%
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-2 cash d-flex justify-content-end">
+                <span>
+                  348.00<br />
+                  <span class="oldPrice"> 348.00</span>
+                </span>
+              </div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with precentage discount -->
+           <!-- start bill with precentage discount -->
+           <div class="billDetails">
+
+            <div class="col-md-12 d-flex justify-content-between details">
+
+              <div class="col-md-4">
+
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText">جونسون، صابون للا33ستحمام</p><span><input type="number" placeholder="29.00"> </span>
+                  &nbsp;
+                  <span class="oldPrice">29.00</span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+                <div class="discountPrecentage">
+                  <span>
+                    10%
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-2 cash d-flex justify-content-end">
+                <span>
+                  348.00<br />
+                  <span class="oldPrice"> 348.00</span>
+                </span>
+              </div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with precentage discount -->
+           <!-- start bill with precentage discount -->
+           <div class="billDetails">
+
+            <div class="col-md-12 d-flex justify-content-between details">
+
+              <div class="col-md-4">
+
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText">جونسون، صابون للاستحمام</p><span><input type="number" placeholder="29.00"> </span>
+                  &nbsp;
+                  <span class="oldPrice">29.00</span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+                <div class="discountPrecentage">
+                  <span>
+                    10%
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-2 cash d-flex justify-content-end">
+                <span>
+                  348.00<br />
+                  <span class="oldPrice"> 348.00</span>
+                </span>
+              </div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with precentage discount -->
+           <!-- start bill with precentage discount -->
+           <div class="billDetails">
+
+            <div class="col-md-12 d-flex justify-content-between details">
+
+              <div class="col-md-4">
+
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText">جونسون، صابون للاستحمام</p><span><input type="number" placeholder="29.00"> </span>
+                  &nbsp;
+                  <span class="oldPrice">29.00</span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+                <div class="discountPrecentage">
+                  <span>
+                    10%
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-2 cash d-flex justify-content-end">
+                <span>
+                  348.00<br />
+                  <span class="oldPrice"> 348.00</span>
+                </span>
+              </div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with precentage discount -->
+           <!-- start bill with precentage discount -->
+           <div class="billDetails">
+
+            <div class="col-md-12 d-flex justify-content-between details">
+
+              <div class="col-md-4">
+
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText">جونسون، صابون للاستحمام</p><span><input type="number" placeholder="29.00"> </span>
+                  &nbsp;
+                  <span class="oldPrice">29.00</span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+                <div class="discountPrecentage">
+                  <span>
+                    10%
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-2 cash d-flex justify-content-end">
+                <span>
+                  348.00<br />
+                  <span class="oldPrice"> 348.00</span>
+                </span>
+              </div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with precentage discount -->
+           <!-- start bill with precentage discount -->
+           <div class="billDetails">
+
+            <div class="col-md-12 d-flex justify-content-between details">
+
+              <div class="col-md-4">
+
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText">جونسون، صابون للاستحمام</p><span><input type="number" placeholder="29.00"> </span>
+                  &nbsp;
+                  <span class="oldPrice">29.00</span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+                <div class="discountPrecentage">
+                  <span>
+                    10%
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-2 cash d-flex justify-content-end">
+                <span>
+                  348.00<br />
+                  <span class="oldPrice"> 348.00</span>
+                </span>
+              </div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with precentage discount -->
+           <!-- start bill with precentage discount -->
+           <div class="billDetails">
+
+            <div class="col-md-12 d-flex justify-content-between details">
+
+              <div class="col-md-4">
+
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText">جونسون، صابون للاستحمام</p><span><input type="number" placeholder="29.00"> </span>
+                  &nbsp;
+                  <span class="oldPrice">29.00</span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+                <div class="discountPrecentage">
+                  <span>
+                    10%
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-2 cash d-flex justify-content-end">
+                <span>
+                  348.00<br />
+                  <span class="oldPrice"> 348.00</span>
+                </span>
+              </div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with precentage discount -->
+           <!-- start bill with precentage discount -->
+           <div class="billDetails">
+
+            <div class="col-md-12 d-flex justify-content-between details">
+
+              <div class="col-md-4">
+
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText">جونسون، صابون للاستحمام</p><span><input type="number" placeholder="29.00"> </span>
+                  &nbsp;
+                  <span class="oldPrice">29.00</span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+                <div class="discountPrecentage">
+                  <span>
+                    10%
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-2 cash d-flex justify-content-end">
+                <span>
+                  348.00<br />
+                  <span class="oldPrice"> 348.00</span>
+                </span>
+              </div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with precentage discount -->
+           <!-- start bill with precentage discount -->
+           <div class="billDetails">
+
+            <div class="col-md-12 d-flex justify-content-between details">
+
+              <div class="col-md-4">
+
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText">جونسون، صابون للاستحمام</p><span><input type="number" placeholder="29.00"> </span>
+                  &nbsp;
+                  <span class="oldPrice">29.00</span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+                <div class="discountPrecentage">
+                  <span>
+                    10%
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-2 cash d-flex justify-content-end">
+                <span>
+                  348.00<br />
+                  <span class="oldPrice"> 348.00</span>
+                </span>
+              </div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with precentage discount -->
+           <!-- start bill with precentage discount -->
+           <div class="billDetails">
+
+            <div class="col-md-12 d-flex justify-content-between details">
+
+              <div class="col-md-4">
+
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText">جونسون، صابون للاستحمام</p><span><input type="number" placeholder="29.00"> </span>
+                  &nbsp;
+                  <span class="oldPrice">29.00</span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+                <div class="discountPrecentage">
+                  <span>
+                    10%
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-2 cash d-flex justify-content-end">
+                <span>
+                  348.00<br />
+                  <span class="oldPrice"> 348.00</span>
+                </span>
+              </div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with precentage discount -->
+           <!-- start bill with precentage discount -->
+           <div class="billDetails">
+
+            <div class="col-md-12 d-flex justify-content-between details">
+
+              <div class="col-md-4">
+
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText">جونسون، صابون للاستحمام</p><span><input type="number" placeholder="29.00"> </span>
+                  &nbsp;
+                  <span class="oldPrice">29.00</span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+                <div class="discountPrecentage">
+                  <span>
+                    10%
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-2 cash d-flex justify-content-end">
+                <span>
+                  348.00<br />
+                  <span class="oldPrice"> 348.00</span>
+                </span>
+              </div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with precentage discount -->
+           <!-- start bill with precentage discount -->
+           <div class="billDetails">
+
+            <div class="col-md-12 d-flex justify-content-between details">
+
+              <div class="col-md-4">
+
+                <div class="product_description long-and-truncated">
+                  <p class="productNameText">جونسون، صابون للاستحمام</p><span><input type="number" placeholder="29.00"> </span>
+                  &nbsp;
+                  <span class="oldPrice">29.00</span>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                  <img class="img-1" src="imgs/plus.svg" />
+                  <div class="product_count">
+                    <p>12</p>
+                  </div>
+                  <img class="img-2" src="imgs/minus.svg" />
+                </div>
+              </div>
+              <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+                <div class="discountPrecentage">
+                  <span>
+                    10%
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-2 cash d-flex justify-content-end">
+                <span>
+                  348.00<br />
+                  <span class="oldPrice"> 348.00</span>
+                </span>
+              </div>
+              <div class="col-md-1 d-flex justify-content-end">
+                <img class="img-4" src="imgs/multiple.svg" />
+              </div>
+            </div>
+          </div>
+          <!-- end bill with precentage discount -->
+        </div>
+
+      <!-- start footer of bill -->
+      <div class="bill fixed">
+        <div class="divider">
+
+        </div>
+        <div class="totalBill first">
+
+          <div class="col-md-12 d-flex justify-content-between details">
+
+            <div class="col-md-4">
+
+              <div class="product_description long-and-truncated">
+                <p>الاجمالى</p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+
+            </div>
+            <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+
+            </div>
+
+            <div class="col-md-2 cash d-flex justify-content-end">
+              <span class="totalcash">
+                348.00
+              </span>
+            </div>
+            <div class="col-md-1 d-flex justify-content-end">
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- discount on bill -->
+
+        <div class="totalBill">
+
+          <div class="col-md-12 d-flex justify-content-between details">
+
+            <div class="col-md-4">
+
+              <div class="product_description long-and-truncated">
+                <p>الخصم على الفاتورة</p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+
+            </div>
+            <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+              <div class="discountPrecentage footerPrecentage">
+                <span>
+                  10%
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-2 cash d-flex justify-content-end align-items-center">
+              <span>
+                25.00
+              </span>
+            </div>
+            <div class="col-md-1 d-flex justify-content-end">
+              <img class="img-4" src="imgs/multiple.svg" />
+            </div>
+          </div>
+
+        </div>
+
+        <!-- end of discount on bill -->
+        <!-- start delivery -->
+
+        <div class="totalBill">
+
+          <div class="col-md-12 d-flex justify-content-between details deliver">
+
+            <div class="col-md-4">
+
+              <div class="product_description long-and-truncated">
+                <p>التوصيل</p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+
+            </div>
+            <div class="col-md-1 discountIcon d-flex justify-content-end" style="padding-right: 10px">
+
+            </div>
+
+            <div class="col-md-2 cash d-flex justify-content-end align-items-center">
+              <span>
+                25.00
+              </span>
+            </div>
+            <div class="col-md-1 d-flex justify-content-end">
+              <img class="img-4" src="imgs/multiple.svg" />
+            </div>
+          </div>
+        </div>
+        <!-- end delivery -->
+        <!-- start bill buttons -->
+        <div class="billpays">
+          <!-- <a href="bill-cash.html" style="visibility: hidden; height: 0;">
+            Click Me 
+          </a> -->
+
+          <div class="totalBill last d-flex  align-items-center">
+            <a href="bill-cash.html" class="paymentIcon">
+              <img src="imgs/payments.svg">
+
+            </a>
+            <!-- <div  class="paymentIcon">
+              <p>
+          
+              </p>
+             
+            </div> -->
+            <div class="d-flex justify-content-between align-items-center cash-button">
+              <p>
+                استلام كاش
+              </p>
+              <p>
+                385.00
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- end bill buttons -->
+      </div>
+
+
+      <!-- end footer of bill -->
+
+
+    </div>
+
+    <!--  end bill container -->
+  </div>
+  <!-- start modal details of product -->
+  <!-- The Modal -->
+  <div class="modal modal_details fade" id="ModalDetails">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header d-flex justify-content-start align-items-center">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body"></div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <div class="d-flex justify-content-between">
+            <div class="title">
+              <p>المنتج</p>
+              <p class="subTitle">
+                جونسون، صابون للاستحمام<br />
+                15ملم
+              </p>
+            </div>
+            <div class="title">
+              <p>سعر البيع</p>
+              <p class="subTitle price">4.00</p>
+            </div>
+            <div class="title">
+              <p class="avaliable">الكمية المتاحة</p>
+              <div class="quantaty">
+                <span class="quantatyNum"> 12 </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end Modal of product details -->
+  <!-- start modal of deliver el order -->
+  <div class="modal fade" id="order_delivring" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title" id="myModalLabel"><img src="imgs/deliver.svg">&nbsp;التوصيل</p>
+        </div>
+        <div class="modal-body deliver-container">
+          <div class="input-group">
+            <input type="text" class="form-control client-info" placeholder="عاصم السيد - 01013875.81">
+            <span class="input-group-btn pic"> <img src="imgs/clientPhoto.svg"> </span>
+
+          </div>
+
+          <p>
+            العنوان
+          </p>
+          <div class="input-group">
+            <input type="text" class="form-control address"
+              placeholder="شقة 4, دور 3, 7 ش حسن المأمون,مصر الجديدة, القاهرة">
+            <span class="input-group-btn update">
+              تعديل </span>
+          </div>
+          <input disabled type="text" class="form-control address-content"
+            placeholder="شقة 4, دور 3, 7 ش حسن المأمون,مصر الجديدة, القاهرة">
+          <p>
+            اختر طيار
+          </p>
+          <div class="select form-conterol">
+            <select name="slct" class="form-control" id="slct">
+              <option selected disabled> اختر طيار</option>
+              <option value="1"></option>
+
+            </select>
+          </div>
+          <p>
+            قيمة الديلفرى
+          </p>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="0.00">
+            <span class="input-group-btn">
+              جـ.م
+            </span>
+          </div>
+
+          <p>
+            اضف تعليق
+          </p>
+          <input type="text" class="form-control" placeholder="اكتب تعليق">
+
+          <div class="btns-container">
+            <button type="button" class="btn-apply" data-dismiss="modal">تطبيق</button>
+            <button type="button" class="btn-cancel" data-dismiss="modal">الغاء</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--end Modal of modal of deliver el order  -->
+  <!-- start modal for adding new client -->
+  <div class="modal fade" id="addNew_client" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title" id="myModalLabel"><img src="imgs/client_icon.svg">&nbsp; &nbsp;اضافة عميل</p>
+        </div>
+        <div class="modal-body deliver-container">
+
+          <div class="d-flex">
+            <div class="col-md-6" style="padding-left: 8px;">
+              <p>
+                اسم العميل </p>
+              <input type="text" id="client-name" class="form-control" placeholder="اكتب تعليق" tabindex="1">
+            </div>
+            <div class="col-md-6" style="padding-right: 8px;">
+              <p>
+                رقم الموبيل </p>
+              <input type="text" class="form-control" placeholder="اكتب تعليق">
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="col-md-6" style="padding-left: 6px;">
+              <p>
+                كود العميل </p>
+              <input type="text" class="form-control" placeholder="اكتب تعليق">
+            </div>
+            <div class="col-md-2 mt-4">
+              <input disabled type="text" class="form-control address-content text-center" placeholder="تغيير">
+            </div>
+          </div>
+          <div class="divider mt-3"></div>
+
+
+
+          <p>
+            <span>
+              (اختيارى)
+            </span>
+            العنوان1
+          </p>
+          <div class="d-flex">
+            <div class="col-md-4">
+              <p>
+                المحافظة
+              </p>
+              <div class="select" style="padding-left: 11px;">
+                <select name="slct" class="form-control" id="slct">
+                  <option selected disabled> القاهرة</option>
+                  <option value="1"></option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <p>
+                المدينة </p>
+              <div class="select" style="padding-left: 11px;">
+                <select name="slct" class="form-control" id="slct">
+                  <option selected disabled>مدينة نصر </option>
+                  <option value="1"></option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <p>
+                المنطقة </p>
+              <div class="select">
+                <select name="slct" class="form-control" id="slct">
+                  <option selected disabled> الحى السابع</option>
+                  <option value="1"></option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="col-md-6">
+              <p>
+                الشارع
+              </p>
+              <input type="text" class="form-control" placeholder="صلاح سالم">
+            </div>
+            <div class="col-md-2" style="padding-right: 8px;">
+              <p>
+                العمارة </p>
+              <input type="number" class="form-control" placeholder="1">
+            </div>
+            <div class="col-md-2" style="padding-right: 8px;">
+              <p>
+                الدور </p>
+              <input type="number" class="form-control" placeholder="2">
+            </div>
+            <div class="col-md-2" style="padding-right: 8px;">
+              <p>
+                الشقة </p>
+              <input type="number" class="form-control" placeholder="1">
+            </div>
+          </div>
+
+
+          <div class="divider mt-3"></div>
+
+          <p class="addnew_address">
+            + اضافة عنوان
+          </p>
+          <div class="btns-container">
+            <button type="button" class="btn-apply" data-dismiss="modal">حفظ</button>
+            <button type="button" class="btn-cancel" data-dismiss="modal">الغاء</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--end Modal of modal of add new client  -->
+  <!--start Modal of modal for order discount  -->
+  <div class="modal fade" id="order_discount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title" id="myModalLabel">جونسون، صابون للاستحمام</p>
+        </div>
+        <div class="modal-body discountTabsContainer">
+          <div class="tab-regular">
+            <div class="d-flex justify-content-center align-items-center">
+              <!-- <li class="nav-item">
+                  <a class="nav-link d-flex justify-content-center align-items-center nav-left" id="nav-price-tab"
+                    data-toggle="tab" href="#chang-price" role="tab" aria-controls="profile" aria-selected="false">تغيير
+                    سعر الوحدة</a>
+                </li> -->
+              <div class="nav-item text-center">
+                <a class="nav-link active d-flex justify-content-center align-items-center nav-rigth"
+                  id="nav-discount-tab" data-toggle="tab" href="#discount" role="tab" aria-controls="home"
+                  aria-selected="true">الخصم<img src="imgs/discountWithoutBg.svg"></a>
+              </div>
+            </div>
+            <!-- Tab panes -->
+            <div class="tab-pane fade show" id="discount" role="tabpanel" aria-labelledby="nav-discount-tab">
+              <div class="inputs-container d-flex justify-content-center align-items-center">
+                <label for="discount-LE-input">جم</label>
+                <input type="number" class="form-control" id='discount-LE-input'>
+                <img src="imgs/convert.svg">
+                <input type="number" class="form-control" id='discount-number-input'>
+                <label for="discount-number-input">%</label>
+
+
+              </div>
+              <div class="comment">
+                <p>
+                  تعليق
+                </p>
+                <input type="text" class="form-control" placeholder="اكتب تعليق">
+
+              </div>
+              <div class="btns-container">
+                <button type="button" class="btn-cancel" data-dismiss="modal">الغاء</button>
+
+                <button type="button" class="btn-apply" data-dismiss="modal">تطبيق</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--end Modal of modal for order discount  -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="./js/animation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

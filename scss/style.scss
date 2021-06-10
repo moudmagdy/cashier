@@ -1,0 +1,78 @@
+// here import global styles
+
+@import './helpers/variables';
+@import './common/common';
+@import './helpers/mixins';
+
+
+// here import componetns
+
+// Side
+@import './components/side-receiveDevice';
+
+// buttons
+@import './components/btns/btn-receive-cash';
+@import './components/btns/btn-receive-payment';
+@import './components/btns/default-btn';
+@import './components/sidemenu-btn';
+@import './components/btns/default-blue';
+
+@import './components/small/features-btns';
+@import './components/small/increaseicon';
+@import './components/small/decreaseicon';
+@import './components/layout-tabs';
+@import './components/total-payment';
+@import './components/searchInput';
+@import './components/filter';
+@import './components/accordion';
+@import './components/pay-receive-list';
+@import './components/customer-card';
+@import './components/customer-card-placeholder';
+@import './components/btns/payments-buttons';
+@import './components/invoice';
+@import './components/product-card';
+@import './components/products-card-list';
+@import './components/products-list';
+@import './components/checkout';
+@import './components/checkout-operations';
+@import './components/bill';
+@import './components/small/checkout-list';
+@import './components/small/appbar';
+@import './components/clients-list';
+@import './components/calculator';
+@import './components/menus/selectorMenu';
+@import './components/receiveFromOut';
+
+// import menus
+@import './components/menus/change-view-menu';
+
+// import sidemenu
+@import './components/sidemenu';
+
+//import main layout for system
+@import './components/layout';
+
+// POPUPS
+@import './components/popups/discount-each-product';
+@import './components/popups/status_popup';
+@import './components/popups/inventory-popup';
+@import './components/popups/delivery-popup';
+@import './components/popups/add-new-client';
+@import './components/popups/discount-invoice';
+@import './components/popups/add-new-customer';
+@import './components/popups/invoice-discount-popup';
+@import './components/popups/comment-on-invoice';
+
+// SCREENs
+@import './pages/newSalesOne';
+@import './pages/customer';
+@import './pages/customer-two';
+@import './pages/CustomerPage-SideContanet';
+
+@import './pages/cash-management';
+@import './pages/sales';
+@import './pages/bill-cash';
+@import './pages/invoices';
+@import './pages/maintenance';
+@import './pages/invoices-recovery';
+@import './pages/recovery-bill-cash-page';

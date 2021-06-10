@@ -1,0 +1,17 @@
+.btn--receive-cash{
+    position: relative;
+    width: 78%;
+    height: 7em;
+    background-color: $blue;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 0 0 10px;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    span{
+        font-size: 1.8em;
+        color: $white;
+    }
+}

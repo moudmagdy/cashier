@@ -1,0 +1,208 @@
+.invoices-recovery-page{
+    .appbar{
+        background-color: $lightRed2;
+        span{
+            color: $white !important;
+        }
+    }
+    .appbar-number--box{
+        border-color: $white !important;
+    }
+    .appbar-menu-btn{
+        svg{
+            g{
+                line{
+                    fill:$white !important;
+                }
+            }
+        }
+    }
+    .searchInput{
+        &.grayscale{
+            cursor: default;
+            background-color: $white;
+            border-top: 2px solid #f2f2f2;
+            border-bottom: 2px solid #f2f2f2;
+            border-left: 0;
+            border-right: 0;
+            border-radius: 0;
+            margin: 10px 0;
+            width: 100%;
+        }
+        input{
+        cursor: default;
+        color: #757575;
+            &::placeholder{
+                color: #757575;
+            }
+        }
+        svg{
+            fill:#757575
+        }
+    }
+    .flex-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+    }
+    .appbar{
+        span{
+            color: $black;
+        }
+        &.invoice .appbar-number--box{
+            border-color: $black;
+        }
+     .appbar-menu-btn{
+         svg{
+             g{
+                 circle{
+                     fill: $black;
+                 }
+             }
+         }
+         &:hover{
+             background-color: $red;
+         }
+     }   
+    }
+    .products-list-container{
+        height: 69%;
+    }
+    .checkout{
+        overflow: hidden;
+        min-height:20%;
+        height: 22rem;
+        .btn--receive-cash{
+            background-color: $red;
+        }
+    }
+   .right-content-data{
+        height:75vh;
+        max-height: 100%;
+        margin-top: 2rem;
+    }
+    .product-card.selected{
+        border: 3px solid $red ;
+    }
+    .product-card--selected-card{
+        background-color: $red !important;
+    }
+    .checkout-list--item {
+        &-left{
+            &--price{
+                font-family: 'bold',Arial, Helvetica, sans-serif;
+            }
+        }
+        &.total-final{
+        opacity: 1;
+        display: flex;
+        &::before{
+            display: none;
+        }
+            span{
+                font-size: 2rem;
+                color: $black;
+            }
+        }
+        &:nth-last-child(1){
+            &::before{
+                display: none;
+            }
+        }
+    }
+    .center-screen{
+        text-align: center;
+        .numberr{
+            font-size: 14px;
+        }
+    }
+    .product-item-in-list--counter-screen{
+        input{
+            color: $lightRed2;
+        }
+    }
+ 
+    .product-item-in-list--counter--plus,
+    .product-item-in-list--counter--minus{
+        top: -1rem;
+        position: relative;
+    }
+
+
+    .product-card--details .priceData{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .x{
+            font-size: 1.6em;
+            direction: ltr;
+        }
+    }
+    .product-item-in-list--price{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        color: $lightRed2;
+        .second-price{
+            color: $black;
+            font-size: 1.2em;
+        }
+    }
+    .selectAllBtn{
+        width: 97%;
+        height: 5rem;
+        border: 1px solid $red;
+        margin: 0 auto;
+        margin: 2rem auto;
+        border-radius: 8px;
+        /* padding: 0 10px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        span{
+            color: $red;
+            font-size: 1.6em;
+        }
+        &.clicked{
+            background-color: #cc464d;
+            span{
+                color: $white;
+            }
+        }
+        &:hover{
+            background-color: $red;
+            span{
+                color: $white;
+            }
+        }
+    }
+
+
+    .checkout-list--item-left{
+        width: auto;
+    }
+    .product-item-in-list--data-name h3{
+        font-size: 1.6em;
+    }
+    .products-list{
+        font-size: 1.2rem;
+    }
+    .searchInput{
+        height: 7rem;
+        border-top: none !important;
+    }
+  
+}

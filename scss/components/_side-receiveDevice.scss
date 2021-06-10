@@ -1,0 +1,49 @@
+.side-receiveDevice {
+    position: fixed;
+    left: -100%;
+    bottom: 0;
+    width: 0;
+    height: 100vh;
+    z-index: 22229898;
+    width: 33vw;
+    .aside-tab-content{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+    .invoice {
+        font-size: 0.9rem;
+    }
+
+    .invoice .searchInput {
+        width: 100%;
+    }
+
+    .accordion-container {
+        padding: 0 5px;
+        height: 78% !important;
+        margin-bottom: 2em;
+        overflow-y: scroll;
+        @include scroll-bar;
+    }
+
+    .layout-left--container {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .accordion .accordion-item:first-of-type .accordion-button {
+        background-color: transparent;
+    }
+
+    .btn-default-blue {
+        margin: 0 auto;
+        height: 60px;
+        width: 90%;
+        position: absolute;
+        bottom: 5%;
+        span{
+            font-size: 1.8em;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.selectorMenu{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    margin-top: 2em;
+    position: relative;
+    margin-bottom: 0.3em;
+    &--label{
+        font-size: 1.6em;
+    }
+    &-icon{
+        position: absolute;
+        left: 2em;
+        top: 60%;
+    }
+    input{
+        width: 100%;
+        padding: 1.5em;
+        border-radius: 1em;
+        margin-top: 0.6em;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: 1px solid #BDBEC3;
+        font-size: 1.6em;
+    }
+}

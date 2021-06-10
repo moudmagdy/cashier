@@ -1,0 +1,149 @@
+.clients-list{
+    height: 94vh;
+    .layout-tabs{
+        display: flex;
+        padding: 0;
+        height: 13em;
+        flex-direction: column;
+        margin: 0;
+        &--buttons{
+            margin: 0;
+            border-bottom: 1px solid $gray9;
+        }
+        .add-client{
+            position: relative;
+            width: 100%;
+            height: 10em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 6px;
+            span{
+                font-size: 1.8em;
+                color: $blue;
+                font-family: 'med';
+            }
+            &:hover{
+                background-color: $gray9;
+                border-radius: 12px;
+            }
+        }
+    }
+    .search-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row-reverse;
+    .searchInput{
+        margin-top: 10px;
+        width: 85%;
+        margin: 14px 10px 0px 0;
+        background-color: $veryLightBlue;
+        input{
+            &::placeholder{
+                color: $black;
+            }
+        }
+    }
+    .back-btn{
+        width: 4em;
+        height: 4em;
+        padding: 8px;
+        margin-top: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        right: -1rem;
+        position: relative;
+        &:hover{
+        background-color: $gray9;
+
+        }
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    }
+    &--individuals{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+    &--shope{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+    &--suppliers{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+    &--container{
+        height: 77%; 
+        overflow-y: scroll;
+        @include scroll-bar;
+    }
+    &-users{
+        padding: 0;
+        margin: 0;
+        
+        &-item{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 7em;
+            margin-bottom: 6px;
+            cursor: pointer;
+            padding: 0 11px;
+            border-radius: 8px;
+            // &:last-child{
+            //     // margin-bottom: 4%;
+            //     position: relative;
+            // }
+            &:hover{
+                background-color: rgb(238, 238, 238);
+            }
+            &-data{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &--name{
+                    @include flexCenter;
+                    flex-direction: column;
+                    span{
+                        font-size: 1.6em;
+                    }
+                }
+                &--photo{
+                    width: 5em;
+                    height: 5em;
+                    background-color: $waterBlue;
+                    border-radius: 50%;
+                    margin-left: 1em;
+                    @include flexCenter;
+                    svg{
+                        height: 50%;
+                        width: 100%;
+                    }
+
+                }
+            }
+            &-price{
+                span{
+                    font-size: 1.6em;
+                    font-family: 'bold';
+                }
+            }
+        }
+    }
+
+}

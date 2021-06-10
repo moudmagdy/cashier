@@ -1,0 +1,11 @@
+.recovery-bill-cash-page{
+    .appbar{
+        background-color: $lightRed2;
+    }
+    #btn--receive-cash{
+        background-color: $red;
+    }
+    .layout-right--container .right-content-data{
+        max-height: 90vh !important;
+    }
+}

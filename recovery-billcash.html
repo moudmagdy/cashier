@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bill Cash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css"
+        integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<!-- 
+    you can found stylefile in scss/pages/sales.scss
+    sales-page
+    this classs used to override the components used in the page
+-->
+
+<body class="recovery-bill-cash-page">
+    <div class="overlay">
+        <!-- appbar style in _order-discount.scss -->
+    </div>
+    <div class="sidemenu">
+        <ul>
+            <li>
+                <a href="">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>الرئيسيه</span>
+                </a>
+            </li>
+            <li>
+                <a href="cash-management.html">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>حركة نقديه</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>التجاره</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="invoices.html">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>الفواتير</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>خصومات</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>قسم</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>item1</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>item1</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </div>
+    <div class="sidemenu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="26" viewBox="0 0 32 26">
+            <g id="Group_3882" data-name="Group 3882" transform="translate(0 1)">
+                <g id="Group_3881" data-name="Group 3881">
+                    <line id="Line_317" data-name="Line 317" x2="32" fill="none" stroke="#212121" stroke-width="2" />
+                    <line id="Line_318" data-name="Line 318" x2="29.128" transform="translate(2.872 12.195)" fill="none"
+                        stroke="#212121" stroke-width="2" />
+                    <line id="Line_319" data-name="Line 319" x2="32" transform="translate(0 24)" fill="none"
+                        stroke="#212121" stroke-width="2" />
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div class="layout-tabs">
+        <!-- to control mainb layout tabs from JS [layout-tabs--main] -->
+        <ul class="layout-tabs--buttons">
+            <li class="layout-tabs--buttons-btn main-layout-tab-btn active" data-target-id='cash_tab'>
+                <span>سجل النقديه</span>
+            </li>
+            <li class="layout-tabs--buttons-btn main-layout-tab-btn" data-target-id="invoice_tab">
+                <span>عملية نقديه</span>
+            </li>
+        </ul>
+    </div>
+    <div class="layout">
+        <div class="row">
+            <div class="col-md-7 col-lg-7 col-xl-7 col-xxl-8 layout-right">
+                <!-- layout-container class used for looop in js in to render it depend oon click in layoutTabs js component -->
+                <div class="layout-container layout-right--container active" id="cash_tab">
+                    <!-- Start Navbar -->
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <svg id="Component_40_83" data-name="Component 40 – 83" xmlns="http://www.w3.org/2000/svg"
+                                width="48" height="48" viewBox="0 0 48 48">
+                                <g id="Group_4651" data-name="Group 4651" transform="translate(11.811 15)">
+                                    <g id="Group_3933" data-name="Group 3933" transform="translate(24.189) rotate(90)">
+                                        <g id="Group_5315" data-name="Group 5315">
+                                            <line id="Line_337" data-name="Line 337" y1="24.189"
+                                                transform="translate(8.664)" fill="none" stroke="#212121"
+                                                stroke-miterlimit="10" stroke-width="1" />
+                                            <path id="Path_1911" data-name="Path 1911" d="M0,8.749,8.749,0,17.5,8.749"
+                                                transform="translate(0 0.001)" fill="none" stroke="#212121"
+                                                stroke-miterlimit="10" stroke-width="1" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </nav>
+                    <!-- End Navbar -->
+                    <div class="pushLandR25">
+                        <!-- STARt dynamic content -->
+                        <div class="right-content-data">
+                            <div class="calculator">
+                                <!-- appbar style in _calculator.scss -->
+                                <div class="calculator--select-paymentMethod">
+                                    <label for="choose_paymentMethod">طريقة الدفع</label>
+                                    <input placeholder="VISA" list="choose_paymentMethod_list"
+                                        name="choose_paymentMethod" id="choose_paymentMethod">
+                                        <span class="calculator--select-paymentMethod--caret">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6">
+                                                <path id="Path_1983" data-name="Path 1983" d="M15.4,45.7l6,6,6-6Z" transform="translate(-15.4 -45.7)" fill="#cbd0d6"/>
+                                              </svg>
+                                              
+                                        </span>
+                                    <datalist id="choose_paymentMethod_list">
+                                        <option value="VISA">
+                                        <option value="Wallet">
+                                        <option value="Fawry">
+                                        <option value="Master Card">
+                                    </datalist>
+                                </div>
+                                <label for="received_amount">المبلغ المستلم</label>
+                                <div class="calculator--received-amount">
+                                    <input type="number" name="received_amount" id="received_amount"
+                                        placeholder="00.00">
+                                    <div class="calculator--received-amount-currency">
+                                        <label>جم</label>
+                                        <div class="calculator--received-amount-currency-number">
+                                            23.55
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calculator--buttons-container">
+                                    <div class="cal-row">
+                                        <div class="btn-calc"><input type="text" placeholder="7" value="7" disabled></div>
+                                        <div class="btn-calc"><input type="text" placeholder="8" value="8" disabled></div>
+                                        <div class="btn-calc"><input type="text" placeholder="9" value="9" disabled></div>
+                                    </div>
+                                    <div class="cal-row">
+                                        <div class="btn-calc"><input type="text" placeholder="4" value="4" disabled></div>
+                                        <div class="btn-calc"><input type="text" placeholder="5" value="5" disabled></div>
+                                        <div class="btn-calc"><input type="text" placeholder="6" value="6" disabled></div>
+                                    </div>
+                                    <div class="cal-row">
+                                        <div class="btn-calc"><input type="text" placeholder="1" value="1" disabled></div>
+                                        <div class="btn-calc"><input type="text" placeholder="2" value="2" disabled></div>
+                                        <div class="btn-calc"><input type="text" placeholder="3" value="3" disabled></div>
+                                    </div>
+                                    <div class="cal-row">
+                                        <div class="btn-calc"><input type="text" placeholder="0.20" value="0.20" disabled> </div>
+                                        <div class="btn-calc"><input type="text" placeholder="0" value="0" disabled></div>
+                                        <div class="btn-calc"><input type="text" placeholder="00" value="00" disabled></div>
+                                    </div>
+                                    <div class="bill-btn-container">
+                                        <a href="#" class="btn--receive-cash" id='btn--receive-cash'>
+                                            <!-- stylefile style in components/btns/ _btn-receive-cash.scss -->
+                                            <span>استلام كاش</span>
+                                            <span class="btn--receive-cash--price">385.00</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END dynamic content -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-5 col-xl-5 col-xxl-4  layout-left">
+                <div class="layout-container layout-left--container" id="invoice_tab">
+                    <!-- appbar style in _layout.scss -->
+                    <div class="appbar invoice">
+                        <!-- have have class invoice this to allow show invoice title and number and menu btn  -->
+                        <!-- appbar style in components/small/_appbar.scss -->
+                        <div class="appbar-title">
+                            <span>الفاتوره 1005#</span>
+                        </div>
+                        <div class="appbar-number">
+                            <span>6</span>
+                            <div class="appbar-number--box">
+                                <span>44</span>
+                            </div>
+                        </div>
+                        <div class="appbar-menu-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18">
+                                <g id="Group_4318" data-name="Group 4318" transform="translate(0.194 -0.03)">
+                                    <circle id="Ellipse_409" data-name="Ellipse 409" cx="2" cy="2" r="2"
+                                        transform="translate(-0.194 0.03)" fill="#212121" />
+                                    <circle id="Ellipse_418" data-name="Ellipse 418" cx="2" cy="2" r="2"
+                                        transform="translate(-0.194 7.03)" fill="#212121" />
+                                    <circle id="Ellipse_419" data-name="Ellipse 419" cx="2" cy="2" r="2"
+                                        transform="translate(-0.194 14.03)" fill="#212121" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="appbar-menu">
+                            <ul>
+                                <li>
+                                    <a href="#" data-target-modal="popup--invoice">
+                                        <span>خصم علي الفاتوره</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21.939" height="21.939"
+                                            viewBox="0 0 21.939 21.939">
+                                            <g id="Group_4739" data-name="Group 4739"
+                                                transform="translate(21.232 14.254) rotate(135)">
+                                                <path id="Path_1791" data-name="Path 1791"
+                                                    d="M1.289,0H8.581A1.289,1.289,0,0,1,9.869,1.288V14.455a1.288,1.288,0,0,1-.419.951L5.8,18.738a1.288,1.288,0,0,1-1.738,0L.419,15.406A1.289,1.289,0,0,1,0,14.455V1.289A1.289,1.289,0,0,1,1.289,0Z"
+                                                    transform="translate(0 0)" fill="rgba(0,0,0,0)" stroke="#212121"
+                                                    stroke-width="1" />
+                                                <circle id="Ellipse_394" data-name="Ellipse 394" cx="1.343" cy="1.343"
+                                                    r="1.343" transform="translate(3.591 11.514)" fill="rgba(0,0,0,0)"
+                                                    stroke="#212121" stroke-width="1" />
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#order_delivring">
+                                        <span>نوصيل</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18.528" height="12"
+                                            viewBox="0 0 18.528 12">
+                                            <g id="Group_4745" data-name="Group 4745" transform="translate(0.5 0.5)">
+                                                <path id="Rectangle_2161" data-name="Rectangle 2161"
+                                                    d="M1,0h9a1,1,0,0,1,1,1V9a0,0,0,0,1,0,0H0A0,0,0,0,1,0,9V1A1,1,0,0,1,1,0Z"
+                                                    fill="rgba(0,0,0,0)" stroke="#212121" stroke-width="1" />
+                                                <path id="Path_1840" data-name="Path 1840"
+                                                    d="M35.082,8.792h3.946l2.554,3.113v4.249h-6.5Z"
+                                                    transform="translate(-24.054 -7.292)" fill="rgba(0,0,0,0)"
+                                                    stroke="#212121" stroke-width="1" />
+                                                <circle id="Ellipse_415" data-name="Ellipse 415" cx="2" cy="2" r="2"
+                                                    transform="translate(3 7)" fill="#fff" stroke="#212121"
+                                                    stroke-width="1" />
+                                                <circle id="Ellipse_416" data-name="Ellipse 416" cx="2" cy="2" r="2"
+                                                    transform="translate(12 7)" fill="#fff" stroke="#212121"
+                                                    stroke-width="1" />
+                                            </g>
+                                        </svg>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" id="save_invoice">
+                                        <span>حفظ الفاتورة</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21.939" height="21.939"
+                                            viewBox="0 0 21.939 21.939">
+                                            <g id="Group_4739" data-name="Group 4739"
+                                                transform="translate(21.232 14.254) rotate(135)">
+                                                <path id="Path_1791" data-name="Path 1791"
+                                                    d="M1.289,0H8.581A1.289,1.289,0,0,1,9.869,1.288V14.455a1.288,1.288,0,0,1-.419.951L5.8,18.738a1.288,1.288,0,0,1-1.738,0L.419,15.406A1.289,1.289,0,0,1,0,14.455V1.289A1.289,1.289,0,0,1,1.289,0Z"
+                                                    transform="translate(0 0)" fill="rgba(0,0,0,0)" stroke="#212121"
+                                                    stroke-width="1" />
+                                                <circle id="Ellipse_394" data-name="Ellipse 394" cx="1.343" cy="1.343"
+                                                    r="1.343" transform="translate(3.591 11.514)" fill="rgba(0,0,0,0)"
+                                                    stroke="#212121" stroke-width="1" />
+                                            </g>
+                                        </svg>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span>اضافة تعليق</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17.952" height="14.479"
+                                            viewBox="0 0 17.952 14.479">
+                                            <g id="Group_4748" data-name="Group 4748" transform="translate(0.5 0.5)">
+                                                <g id="Group_4747" data-name="Group 4747"
+                                                    transform="translate(4.733 5.462)">
+                                                    <line id="Line_434" data-name="Line 434" x1="6.769" fill="none"
+                                                        stroke="#000" stroke-miterlimit="10" stroke-width="1.101" />
+                                                </g>
+                                                <path id="Path_1872" data-name="Path 1872"
+                                                    d="M173.441,124.4l-3.505-2.279H158.128a1.639,1.639,0,0,1-1.639-1.639v-7.5a1.64,1.64,0,0,1,1.639-1.639H171.8a1.639,1.639,0,0,1,1.639,1.639Z"
+                                                    transform="translate(-156.489 -111.34)" fill="none" stroke="#000"
+                                                    stroke-miterlimit="10" stroke-width="1" />
+                                            </g>
+                                        </svg>
+
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" id='print_price'>
+                                        <span>طباعة عرض سعر</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17.952" height="14.479"
+                                            viewBox="0 0 17.952 14.479">
+                                            <g id="Group_4748" data-name="Group 4748" transform="translate(0.5 0.5)">
+                                                <g id="Group_4747" data-name="Group 4747"
+                                                    transform="translate(4.733 5.462)">
+                                                    <line id="Line_434" data-name="Line 434" x1="6.769" fill="none"
+                                                        stroke="#000" stroke-miterlimit="10" stroke-width="1.101" />
+                                                </g>
+                                                <path id="Path_1872" data-name="Path 1872"
+                                                    d="M173.441,124.4l-3.505-2.279H158.128a1.639,1.639,0,0,1-1.639-1.639v-7.5a1.64,1.64,0,0,1,1.639-1.639H171.8a1.639,1.639,0,0,1,1.639,1.639Z"
+                                                    transform="translate(-156.489 -111.34)" fill="none" stroke="#000"
+                                                    stroke-miterlimit="10" stroke-width="1" />
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" id='delete_invoice'>
+                                        <span class="delete">مسح الفاتورة</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17.005" height="18.898"
+                                            viewBox="0 0 17.005 18.898">
+                                            <g id="Group_4746" data-name="Group 4746" transform="translate(0 0.5)">
+                                                <path id="Path_1871" data-name="Path 1871"
+                                                    d="M163.571,55.384h5.092a2.525,2.525,0,0,0,2.508-2.239L172.545,41.1a.42.42,0,0,0-.418-.468H160.106a.42.42,0,0,0-.418.468l1.374,12.048A2.525,2.525,0,0,0,163.571,55.384Z"
+                                                    transform="translate(-157.614 -37.486)" fill="rgba(0,0,0,0)"
+                                                    stroke="#ff545d" stroke-width="1" />
+                                                <path id="Rectangle_2308" data-name="Rectangle 2308"
+                                                    d="M.974,0H4.4a.974.974,0,0,1,.974.974V3.143a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V.974A.974.974,0,0,1,.974,0Z"
+                                                    transform="translate(5.817)" fill="rgba(0,0,0,0)" stroke="#ff545d"
+                                                    stroke-width="1" />
+                                                <line id="Line_432" data-name="Line 432" x1="17.005"
+                                                    transform="translate(0 3.143)" fill="none" stroke="#ff545d"
+                                                    stroke-width="1" />
+                                                <line id="Line_433" data-name="Line 433" x2="5.443"
+                                                    transform="translate(5.781 10.52)" fill="none" stroke="#ff545d"
+                                                    stroke-width="1" />
+                                            </g>
+                                        </svg>
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="left-content-data ">
+                        <div class="invoice" id="salesInvoice">
+                            <!-- stylefile name => _invoice.scss -->
+                            <div class="searchInput" id="invoice_search_input_container">
+                                <!-- stylefile name => _searchInput.scss -->
+                                <div class="image-container" id="removeClientNameFromInvoice">
+                                    <svg id="Group_4925" data-name="Group 4925" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <rect id="Rectangle_1731" data-name="Rectangle 1731" width="24" height="24"
+                                            rx="12" fill="#fff" opacity="0" />
+                                        <g id="Group_4007" data-name="Group 4007"
+                                            transform="translate(12.206 4) rotate(45)">
+                                            <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)"
+                                                fill="none" stroke="#878a90" stroke-linecap="round"
+                                                stroke-miterlimit="10" stroke-width="1" />
+                                            <line id="Line_344" data-name="Line 344" y2="12"
+                                                transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90"
+                                                stroke-linecap="round" stroke-miterlimit="10" stroke-width="1" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                        <g id="Group_5006" transform="translate(-78.263 -102.166)">
+                                            <circle id="Ellipse_485" cx="16" cy="16" r="16" fill="#fff"
+                                                transform="translate(78.263 102.166)" />
+                                            <path id="Path_1893"
+                                                d="M103.424 125.677a9.992 9.992 0 0 1-16.561 0 9.992 9.992 0 0 1 16.561 0z"
+                                                class="cls-2" transform="translate(-.877 -1.923)" />
+                                            <circle id="Ellipse_486" cx="3.767" cy="3.767" r="3.767" class="cls-2"
+                                                transform="translate(90.497 109.787)" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <input id="invoiceInput" value='' type="search" name="search" placeholder="اضف عميل">
+                                <div class="remove_search_input" id='remove_search_input'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12.022" height="12.023"
+                                        viewBox="0 0 12.022 12.023">
+                                        <g id="Group_3933" data-name="Group 3933"
+                                            transform="translate(6.01 -5.303) rotate(45)">
+                                            <line id="Line_337" data-name="Line 337" y2="16"
+                                                transform="translate(8.002 0)" fill="none" stroke="#212121"
+                                                stroke-miterlimit="10" stroke-width="1" />
+                                            <line id="Line_338" data-name="Line 338" x2="16" transform="translate(0 8)"
+                                                fill="none" stroke="#212121" stroke-miterlimit="10" stroke-width="1" />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="bill">
+                                <ul class="bill-list">
+                                    <!-- stylefile style in _bill.scss -->
+                                    <li class="bill-list--item push-left-10">
+                                        <span class="bill-name">الاجمالي</span>
+                                        <span class="bill-price medFont bill-price--priceNumber">320.00</span>
+                                    </li>
+                                    <li class="bill-list--item red-font">
+                                        <span class="bill-name">الخصم الكلي</span>
+                                        <div class="custom-container">
+                                            <div class="bill-price medFont">
+                                                <span class="bill-price--priceNumber">320.00</span>
+                                                <div class="bill-list--item-invoice-discount-number ">
+                                                    <span>10%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bill-list--item--delete-row">
+                                                <svg id="Group_4925" data-name="Group 4925"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24">
+                                                    <rect id="Rectangle_1731" data-name="Rectangle 1731" width="24"
+                                                        height="24" rx="12" fill="#fff" opacity="0" />
+                                                    <g id="Group_4007" data-name="Group 4007"
+                                                        transform="translate(12.206 4) rotate(45)">
+                                                        <line id="Line_343" data-name="Line 343" y2="12"
+                                                            transform="translate(6)" fill="none" stroke="#878a90"
+                                                            stroke-linecap="round" stroke-miterlimit="10"
+                                                            stroke-width="1" />
+                                                        <line id="Line_344" data-name="Line 344" y2="12"
+                                                            transform="translate(12 6) rotate(90)" fill="none"
+                                                            stroke="#878a90" stroke-linecap="round"
+                                                            stroke-miterlimit="10" stroke-width="1" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li class="bill-list--item">
+                                        <span class="bill-name">التوصيل</span>
+                                        <div class="custom-container">
+                                            <span class="final-price">360.00</span>
+                                            <div class="bill-list--item--delete-row">
+                                                <svg id="Group_4925" data-name="Group 4925"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24">
+                                                    <rect id="Rectangle_1731" data-name="Rectangle 1731" width="24"
+                                                        height="24" rx="12" fill="#fff" opacity="0" />
+                                                    <g id="Group_4007" data-name="Group 4007"
+                                                        transform="translate(12.206 4) rotate(45)">
+                                                        <line id="Line_343" data-name="Line 343" y2="12"
+                                                            transform="translate(6)" fill="none" stroke="#878a90"
+                                                            stroke-linecap="round" stroke-miterlimit="10"
+                                                            stroke-width="1" />
+                                                        <line id="Line_344" data-name="Line 344" y2="12"
+                                                            transform="translate(12 6) rotate(90)" fill="none"
+                                                            stroke="#878a90" stroke-linecap="round"
+                                                            stroke-miterlimit="10" stroke-width="1" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="bill-list--item push-left-10 total-final-row">
+                                        <span class="bill-name ">الاجمالي الكلي</span>
+                                        <span
+                                            class="bill-price medFont bill-price--priceNumber total-final">394.00</span>
+                                    </li>
+                                    <li class="bill-list--item push-left-10">
+                                        <span class="bill-name ">الباقي</span>
+                                        <span
+                                            class="bill-price medFont bill-price--priceNumber remaining-amount">124.00</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+        integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"
+        integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA=="
+        crossorigin="anonymous"></script>
+<script src="./js/pages/bill-cash.module.js" type="module"></script>
+
+
+</body>
+
+</html>

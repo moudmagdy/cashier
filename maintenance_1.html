@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maintenance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css"
+        integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="maintenance-page">
+    <div class="overlay">
+        <!-- appbar style in _order-discount.scss -->
+    </div>
+    <div class="sidemenu">
+        <ul>
+            <li>
+                <a href="">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>الرئيسيه</span>
+                </a>
+            </li>
+            <li>
+                <a href="cash-management.html">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>حركة نقديه</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="bill-cashNew.html">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>التجاره</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="invoices.html">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>الفواتير</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>خصومات</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>قسم</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>item1</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <svg viewBox="-6 -6 32 32" class="app-svg icons-bell app-bar-icons-fill-colors" focusable="false"
+                        role="presentation">
+                        <path class="icons-default-fill icons-filled"
+                            d="M12.4497 16.0016C12.2174 17.1419 11.2089 18 10 18C8.79108 18 7.78257 17.1419 7.55033 16.0016H12.4497ZM9.99765 2C13.1466 2 15.7415 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.408L16.9528 13.9951L16.9784 14.0796L16.9939 14.1664L16.9991 14.2546C16.9991 14.5697 16.8034 14.845 16.4771 14.9618L16.3636 14.9947L16.2491 15.0046H3.75136C3.66286 15.0046 3.57507 14.9889 3.49203 14.9583C3.20513 14.8526 3.01636 14.5865 3.00958 14.2422L3.01418 14.1247L3.04762 13.9952L3.99901 11.411L4.00009 7.79281L4.00439 7.56824C4.12701 4.45115 6.77103 2 9.99765 2Z">
+                        </path>
+                        <path class="icons-default-fill icons-unfilled"
+                            d="M9.99766 2C13.1466 2 15.7416 4.33488 15.9821 7.3554L15.9955 7.57762L16 7.80214L15.999 11.398L16.9244 13.6202C16.947 13.6743 16.9647 13.7302 16.9774 13.7871L16.9926 13.8733L17.0013 14.0046C17.0013 14.4526 16.7048 14.8387 16.2521 14.9677L16.1358 14.9945L16.0013 15.0046L12.4996 15.004L12.4946 15.1653C12.4095 16.469 11.3252 17.5 10 17.5C8.67453 17.5 7.58998 16.4685 7.50533 15.1644L7.49962 15.004L3.99891 15.0046C3.91096 15.0046 3.82358 14.993 3.73902 14.9702L3.61456 14.9277C3.20378 14.7567 2.96181 14.3392 3.01221 13.8757L3.0333 13.7483L3.07572 13.6202L3.99902 11.401L4.0001 7.79281L4.0044 7.56824C4.12702 4.45115 6.77104 2 9.99766 2ZM11.4996 15.004H8.49962L8.50697 15.1454C8.57552 15.8581 9.14275 16.425 9.85556 16.4931L10 16.5C10.7797 16.5 11.4205 15.9051 11.4931 15.1445L11.4996 15.004ZM9.99766 3C7.37511 3 5.22717 4.92372 5.01715 7.38498L5.00393 7.59723L5.00002 7.80214V11.5L4.96161 11.6922L3.9989 14.0046L15.9566 14.0066L16.0019 14.0045L15.0384 11.6922L15 11.5L15.0001 7.81241L14.996 7.60831C14.8909 5.0349 12.6947 3 9.99766 3Z">
+                        </path>
+                    </svg>
+                    <span>item1</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </div>
+    <div class="sidemenu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="26" viewBox="0 0 32 26">
+            <g id="Group_3882" data-name="Group 3882" transform="translate(0 1)">
+                <g id="Group_3881" data-name="Group 3881">
+                    <line id="Line_317" data-name="Line 317" x2="32" fill="none" stroke="#212121" stroke-width="2" />
+                    <line id="Line_318" data-name="Line 318" x2="29.128" transform="translate(2.872 12.195)" fill="none"
+                        stroke="#212121" stroke-width="2" />
+                    <line id="Line_319" data-name="Line 319" x2="32" transform="translate(0 24)" fill="none"
+                        stroke="#212121" stroke-width="2" />
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div class="layout-tabs">
+        <!-- to control mainb layout tabs from JS [layout-tabs--main] -->
+        <ul class="layout-tabs--buttons">
+            <li class="layout-tabs--buttons-btn main-layout-tab-btn active" data-target-id='cash_tab'>
+                <span>سجل النقديه</span>
+            </li>
+            <li class="layout-tabs--buttons-btn main-layout-tab-btn" data-target-id="invoice_tab">
+                <span>عملية نقديه</span>
+            </li>
+        </ul>
+    </div>
+    <div class="layout">
+        <div class="row">
+            <div class="col-md-7 col-lg-7 col-xl-7 col-xxl-8 layout-right">
+                <!-- layout-container class used for looop in js in to render it depend oon click in layoutTabs js component -->
+                <div class="layout-container layout-right--container active" id="cash_tab">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">حركه النقديه</a>
+                        </div>
+                    </nav>
+                    
+                    <div class="pushLandR25">
+                        <div class="deliveredRequests-leftSide-MultiTabs">
+                            <div class="layout-tabs ">
+                                <ul class="layout-tabs--buttons">
+                                    <li class="layout-tabs--buttons-btn clients-tabs-btn active" data-target-id="device_layoutTabs">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16.065" height="16.065" viewBox="0 0 16.065 16.065">
+                                                <g id="Group_6160" data-name="Group 6160" transform="translate(-1966.415 -1255.085)">
+                                                  <circle id="Ellipse_614" data-name="Ellipse 614" cx="0.952" cy="0.952" r="0.952" transform="translate(1973.495 1255.085)" fill="#1987ef"/>
+                                                  <circle id="Ellipse_615" data-name="Ellipse 615" cx="0.952" cy="0.952" r="0.952" transform="translate(1973.495 1269.245)" fill="#1987ef"/>
+                                                  <g id="Group_6154" data-name="Group 6154" transform="translate(1973.495 1255.085)">
+                                                    <circle id="Ellipse_616" data-name="Ellipse 616" cx="0.952" cy="0.952" r="0.952" transform="translate(0)" fill="#1987ef"/>
+                                                    <circle id="Ellipse_617" data-name="Ellipse 617" cx="0.952" cy="0.952" r="0.952" transform="translate(0 14.16)" fill="#1987ef"/>
+                                                  </g>
+                                                  <g id="Group_6155" data-name="Group 6155" transform="translate(1969.955 1256.034)">
+                                                    <circle id="Ellipse_618" data-name="Ellipse 618" cx="0.952" cy="0.952" r="0.952" transform="translate(0 0)" fill="#1987ef"/>
+                                                    <circle id="Ellipse_619" data-name="Ellipse 619" cx="0.952" cy="0.952" r="0.952" transform="translate(7.08 12.263)" fill="#1987ef"/>
+                                                  </g>
+                                                  <g id="Group_6156" data-name="Group 6156" transform="translate(1967.364 1258.625)">
+                                                    <circle id="Ellipse_620" data-name="Ellipse 620" cx="0.952" cy="0.952" r="0.952" transform="translate(0 0)" fill="#1987ef"/>
+                                                    <circle id="Ellipse_621" data-name="Ellipse 621" cx="0.952" cy="0.952" r="0.952" transform="translate(12.263 7.08)" fill="#1987ef"/>
+                                                  </g>
+                                                  <g id="Group_6157" data-name="Group 6157" transform="translate(1966.415 1262.165)">
+                                                    <circle id="Ellipse_622" data-name="Ellipse 622" cx="0.952" cy="0.952" r="0.952" transform="translate(0 0)" fill="#1987ef"/>
+                                                    <circle id="Ellipse_623" data-name="Ellipse 623" cx="0.952" cy="0.952" r="0.952" transform="translate(14.16 0)" fill="#1987ef"/>
+                                                  </g>
+                                                  <g id="Group_6158" data-name="Group 6158" transform="translate(1967.364 1258.625)">
+                                                    <circle id="Ellipse_624" data-name="Ellipse 624" cx="0.952" cy="0.952" r="0.952" transform="translate(0 7.08)" fill="#1987ef"/>
+                                                    <circle id="Ellipse_625" data-name="Ellipse 625" cx="0.952" cy="0.952" r="0.952" transform="translate(12.263 0)" fill="#1987ef"/>
+                                                  </g>
+                                                  <g id="Group_6159" data-name="Group 6159" transform="translate(1969.955 1256.034)">
+                                                    <circle id="Ellipse_626" data-name="Ellipse 626" cx="0.952" cy="0.952" r="0.952" transform="translate(0 12.263)" fill="#1987ef"/>
+                                                    <circle id="Ellipse_627" data-name="Ellipse 627" cx="0.952" cy="0.952" r="0.952" transform="translate(7.08 0)" fill="#1987ef"/>
+                                                  </g>
+                                                </g>
+                                              </svg>
+                                            اجهزه نشطة
+                                           
+                                          </span>
+                                    </li>
+                                
+                                    <li class="layout-tabs--buttons-btn clients-tabs-btn" data-target-id="client_invoice">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.067" height="17.067" viewBox="0 0 17.067 17.067">
+                                                <g id="Group_6152" data-name="Group 6152" transform="translate(-1964.294 -1203.922)">
+                                                  <path id="Path_2046" data-name="Path 2046" d="M1977.637,1206.032a8.024,8.024,0,1,0,3.132,5.27" transform="translate(0)" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="1"/>
+                                                  <path id="Path_2047" data-name="Path 2047" d="M1972.057,1216.083l3.586,3.586,7.643-7.643" transform="translate(-3.656 -3.829)" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="1"/>
+                                                </g>
+                                              </svg>
+                                            فاتورة العميل</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Start search box in right content -->
+                        <div class="flex-container">
+                            <div class="btn-default-blue" id="receiveDevice">
+                                <!-- Stylefile name => _features-btns.scss -->
+                                <div class="content">
+                                    <span class="plus">+</span>
+                                    <span class="text"> استلام الجهاز</span>
+                                </div>
+                            </div>
+                            <div class="searchInput">
+                                <!-- Stylefile name => _searchInput.scss -->
+                                <div class="icon"><img src="imgs/searchIcon.svg"></div>
+                                <input type="search" name="search" placeholder="ابحث باسم العميل او المورد">
+                            </div>
+                        </div>
+                        <!-- END search box in right content -->
+                        <!-- Start filter in right content -->
+                        <div class="filter">
+                            <!-- stylefile name => _filter.scss -->
+                            <ul>
+                                <li class="active activeRequests">
+                                    <div class="btn "><span>طلبات نشطة</span></div>
+                                </li>
+                                <li class="deliveredRequests">
+                                    <div class="btn"><span>طلبات مسلمه</span></div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- END filter in right content -->
+                        <!-- Start Accordion container  -->
+                        <div class="right-content-data">
+                            <div class="accordion-container">
+                                <!-- this is a standalone component -->
+                                <!-- stylefile name => _accordion.scss -->
+                                <div class="accordion">
+                                    <!-- stylefile name => _accordion.scss -->
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    الثلاثاء,22 ديسمبر2020
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <div class="pay-receive">
+                                                        <!-- this is a component -->
+                                                        <!-- stylefile name => _pay-receive-list.scss -->
+                                                        <ul class="pay-receive-list">
+                                                            <li class="pay-receive-list-item">
+                                                                <div class="pay-receive-list-item--details">
+                                                                    <span>#1005</span>
+                                                                    <span>عاصم السيد - 01126620548</span>
+                                                                </div>
+                                                                <div class="pay-receive-list-item--time">
+                                                                    <span> 05:00 م</span>
+                                                                </div>
+                                                                <!-- change between two classes to change state of device
+                                                                    maintenance-process = جاري الصيانه
+                                                                    delivered-done =  تم التسليم
+                                                                -->
+                                                                <div
+                                                                    class="pay-receive-list-item--budget maintenance-process">
+                                                                    <span class="maintenance-process-data">جاري
+                                                                        الصيانه</span>
+                                                                    <span class="delivered-done-data">تم التسليم</span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="pay-receive-list-item">
+                                                                <div class="pay-receive-list-item--details">
+                                                                    <span>#1005</span>
+                                                                    <span>عاصم السيد - 01126620548</span>
+                                                                </div>
+                                                                <div class="pay-receive-list-item--time">
+                                                                    <span> 05:00 م</span>
+                                                                </div>
+                                                                <!-- change between two classes to change state of device
+                                                                    maintenance-process = جاري الصيانه
+                                                                    delivered-done =  تم التسليم
+                                                                -->
+                                                                <div
+                                                                    class="pay-receive-list-item--budget maintenance-process">
+                                                                    <span class="maintenance-process-data">جاري
+                                                                        الصيانه</span>
+                                                                    <span class="delivered-done-data">تم التسليم</span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="pay-receive-list-item">
+                                                                <div class="pay-receive-list-item--details">
+                                                                    <span>#1005</span>
+                                                                    <span>عاصم السيد - 01126620548</span>
+                                                                </div>
+                                                                <div class="pay-receive-list-item--time">
+                                                                    <span> 05:00 م</span>
+                                                                </div>
+                                                                <!-- change between two classes to change state of device
+                                                                    maintenance-process = جاري الصيانه
+                                                                    delivered-done =  تم التسليم
+                                                                -->
+                                                                <div
+                                                                    class="pay-receive-list-item--budget maintenance-process">
+                                                                    <span class="maintenance-process-data">جاري
+                                                                        الصيانه</span>
+                                                                    <span class="delivered-done-data">تم التسليم</span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="pay-receive-list-item">
+                                                                <div class="pay-receive-list-item--details">
+                                                                    <span>#1005</span>
+                                                                    <span>عاصم السيد - 01126620548</span>
+                                                                </div>
+                                                                <div class="pay-receive-list-item--time">
+                                                                    <span> 05:00 م</span>
+                                                                </div>
+                                                                <!-- change between two classes to change state of device
+                                                                    maintenance-process = جاري الصيانه
+                                                                    delivered-done =  تم التسليم
+                                                                -->
+                                                                <div
+                                                                    class="pay-receive-list-item--budget maintenance-process">
+                                                                    <span class="maintenance-process-data">جاري
+                                                                        الصيانه</span>
+                                                                    <span class="delivered-done-data">تم التسليم</span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="pay-receive-list-item">
+                                                                <div class="pay-receive-list-item--details">
+                                                                    <span>#1005</span>
+                                                                    <span>عاصم السيد - 01126620548</span>
+                                                                </div>
+                                                                <div class="pay-receive-list-item--time">
+                                                                    <span> 05:00 م</span>
+                                                                </div>
+                                                                <!-- change between two classes to change state of device
+                                                                    maintenance-process = جاري الصيانه
+                                                                    delivered-done =  تم التسليم
+                                                                -->
+                                                                <div
+                                                                    class="pay-receive-list-item--budget maintenance-process">
+                                                                    <span class="maintenance-process-data">جاري
+                                                                        الصيانه</span>
+                                                                    <span class="delivered-done-data">تم التسليم</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- new according -->
+                                <div class="accordion">
+                                    <!-- this is a standalone component -->
+                                    <!-- stylefile name => _accordion.scss -->
+                                    <div class="accordion" id="accordingTwo>
+                                        <div class=" accordion-item"="">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseTwo" aria-expanded="true"
+                                                aria-controls="collapseTwo">
+                                                الثلاثاء,22 ديسمبر2020
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse show"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordingTwo">
+                                            <div class="accordion-body">
+                                                <div class="pay-receive">
+                                                    <!-- this is standalone  component -->
+                                                    <!-- stylefile name => _pay-receive-list.scss -->
+                                                    <ul class="pay-receive-list">
+                                                        <li class="pay-receive-list-item">
+                                                            <div class="pay-receive-list-item--details">
+                                                                <span>#1005</span>
+                                                                <span>عاصم السيد - 01126620548</span>
+                                                            </div>
+                                                            <div class="pay-receive-list-item--time">
+                                                                <span> 05:00 م</span>
+                                                            </div>
+                                                            <!-- change between two classes to change state of device
+                                                                maintenance-process = جاري الصيانه
+                                                                delivered-done =  تم التسليم
+                                                            -->
+                                                            <div class="pay-receive-list-item--budget delivered-done">
+                                                                <span class="maintenance-process-data">جاري
+                                                                    الصيانه</span>
+                                                                <span class="delivered-done-data">تم التسليم</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="pay-receive-list-item">
+                                                            <div class="pay-receive-list-item--details">
+                                                                <span>#1005</span>
+                                                                <span>عاصم السيد - 01126620548</span>
+                                                            </div>
+                                                            <div class="pay-receive-list-item--time">
+                                                                <span> 05:00 م</span>
+                                                            </div>
+                                                            <!-- change between two classes to change state of device
+                                                                maintenance-process = جاري الصيانه
+                                                                delivered-done =  تم التسليم
+                                                            -->
+                                                            <div
+                                                                class="pay-receive-list-item--budget maintenance-process">
+                                                                <span class="maintenance-process-data">جاري
+                                                                    الصيانه</span>
+                                                                <span class="delivered-done-data">تم التسليم</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="pay-receive-list-item">
+                                                            <div class="pay-receive-list-item--details">
+                                                                <span>#1005</span>
+                                                                <span>عاصم السيد - 01126620548</span>
+                                                            </div>
+                                                            <div class="pay-receive-list-item--time">
+                                                                <span> 05:00 م</span>
+                                                            </div>
+                                                            <!-- change between two classes to change state of device
+                                                                maintenance-process = جاري الصيانه
+                                                                delivered-done =  تم التسليم
+                                                            -->
+                                                            <div
+                                                                class="pay-receive-list-item--budget maintenance-process">
+                                                                <span class="maintenance-process-data">جاري
+                                                                    الصيانه</span>
+                                                                <span class="delivered-done-data">تم التسليم</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="pay-receive-list-item">
+                                                            <div class="pay-receive-list-item--details">
+                                                                <span>#1005</span>
+                                                                <span>عاصم السيد - 01126620548</span>
+                                                            </div>
+                                                            <div class="pay-receive-list-item--time">
+                                                                <span> 05:00 م</span>
+                                                            </div>
+                                                            <!-- change between two classes to change state of device
+                                                                maintenance-process = جاري الصيانه
+                                                                delivered-done =  تم التسليم
+                                                            -->
+                                                            <div
+                                                                class="pay-receive-list-item--budget maintenance-process">
+                                                                <span class="maintenance-process-data">جاري
+                                                                    الصيانه</span>
+                                                                <span class="delivered-done-data">تم التسليم</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END Accordion container  -->
+
+                        <!-- Start Total Amounts in right content -->
+                        <div class="total-payments">
+                            <div class="total-payments--received">
+                                <div class="number">
+                                    <span class="title">طلبات نشطه</span>
+                                    <span class="price">15</span>
+                                </div>
+                            </div>
+                            <div class="total-payments--received total-deliveredRequests">
+                                <div class="number">
+                                    <span class="title">جاري الصيانه</span>
+                                    <span class="price">10</span>
+                                </div>
+                            </div>
+                            <div class="total-payments--received">
+                                <div class="number">
+                                    <span class="title">تمت الصيانه</span>
+                                    <span class="price">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END Total Amounts in right content -->
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-5 col-xl-5 col-xxl-4  layout-left">
+                <div class="layout-container layout-left--container" id="invoice_tab" style="position: relative;">
+                        <div class="appbar invoice blueBG">
+                            <!-- have have class invoice this to allow show invoice title and number and menu btn  -->
+                            <!-- appbar style in components/small/_appbar.scss -->
+                            <div class="appbar-title">
+                                <span>الفاتوره 1005#</span>
+                            </div>
+                            <!-- <div class="appbar-number">
+                                <span>6</span>
+                                <div class="appbar-number--box">
+                                    <span>44</span>
+                                </div>
+                            </div> -->
+                            <div class="appbar-menu-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18">
+                                    <g id="Group_4318" data-name="Group 4318" transform="translate(0.194 -0.03)">
+                                        <circle id="Ellipse_409" data-name="Ellipse 409" cx="2" cy="2" r="2" transform="translate(-0.194 0.03)" fill="#212121"></circle>
+                                        <circle id="Ellipse_418" data-name="Ellipse 418" cx="2" cy="2" r="2" transform="translate(-0.194 7.03)" fill="#212121"></circle>
+                                        <circle id="Ellipse_419" data-name="Ellipse 419" cx="2" cy="2" r="2" transform="translate(-0.194 14.03)" fill="#212121"></circle>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="appbar-menu">
+                                <ul>
+                                    <li>
+                                        <a href="invoices-recovery.html">
+                                            <span>استرجاع الفاتوره</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21.939" height="21.939" viewBox="0 0 21.939 21.939">
+                                                <g id="Group_4739" data-name="Group 4739" transform="translate(21.232 14.254) rotate(135)">
+                                                    <path id="Path_1791" data-name="Path 1791" d="M1.289,0H8.581A1.289,1.289,0,0,1,9.869,1.288V14.455a1.288,1.288,0,0,1-.419.951L5.8,18.738a1.288,1.288,0,0,1-1.738,0L.419,15.406A1.289,1.289,0,0,1,0,14.455V1.289A1.289,1.289,0,0,1,1.289,0Z" transform="translate(0 0)" fill="rgba(0,0,0,0)" stroke="#212121" stroke-width="1"></path>
+                                                    <circle id="Ellipse_394" data-name="Ellipse 394" cx="1.343" cy="1.343" r="1.343" transform="translate(3.591 11.514)" fill="rgba(0,0,0,0)" stroke="#212121" stroke-width="1"></circle>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span>طباعه الفاتوره</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.952" height="14.479" viewBox="0 0 17.952 14.479">
+                                                <g id="Group_4748" data-name="Group 4748" transform="translate(0.5 0.5)">
+                                                    <g id="Group_4747" data-name="Group 4747" transform="translate(4.733 5.462)">
+                                                        <line id="Line_434" data-name="Line 434" x1="6.769" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.101"></line>
+                                                    </g>
+                                                    <path id="Path_1872" data-name="Path 1872" d="M173.441,124.4l-3.505-2.279H158.128a1.639,1.639,0,0,1-1.639-1.639v-7.5a1.64,1.64,0,0,1,1.639-1.639H171.8a1.639,1.639,0,0,1,1.639,1.639Z" transform="translate(-156.489 -111.34)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"></path>
+                                                </g>
+                                            </svg>
+    
+    
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span>تكرار الفاتورة</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.952" height="14.479" viewBox="0 0 17.952 14.479">
+                                                <g id="Group_4748" data-name="Group 4748" transform="translate(0.5 0.5)">
+                                                    <g id="Group_4747" data-name="Group 4747" transform="translate(4.733 5.462)">
+                                                        <line id="Line_434" data-name="Line 434" x1="6.769" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.101"></line>
+                                                    </g>
+                                                    <path id="Path_1872" data-name="Path 1872" d="M173.441,124.4l-3.505-2.279H158.128a1.639,1.639,0,0,1-1.639-1.639v-7.5a1.64,1.64,0,0,1,1.639-1.639H171.8a1.639,1.639,0,0,1,1.639,1.639Z" transform="translate(-156.489 -111.34)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"></path>
+                                                </g>
+                                            </svg>
+    
+    
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="deliveredRequests-leftSide-MultiTabs leftnewContent">
+                            <div class="layout-tabs blueBG">
+                                <ul class="layout-tabs--buttons">
+                                    <li class="layout-tabs--buttons-btn clients-tabs-btn active" data-target-id="device_layoutTabs">
+                                        <span class="withNumber">
+                                            <div class="numberCircle">
+                                                <span>1</span>
+                                            </div>
+                                            معلومات الجهاز
+                                          </span>
+                                    </li>
+                                    <li class="layout-tabs--buttons-btn clients-tabs-btn" data-target-id="client_invoice">
+                                        <span class="withNumber">
+                                            <div class="numberCircle">
+                                                <span>2</span>
+                                            </div>
+                                           قطع الغيار</span>
+                                    </li>
+                                    <li class="layout-tabs--buttons-btn clients-tabs-btn" data-target-id="client_invoice">
+                                        <span class="withNumber">
+                                            <div class="numberCircle">
+                                                <span>2</span>
+                                            </div>
+                                            فاتورة العميل</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    <!-- START content in invoic with padding -->
+                        <div class="pushLandR25">
+                            <div class="searchInput grayscale" id="invoice_search_input_container">
+                                <!-- stylefile name => _searchInput.scss -->
+                                <div class="image-container" id="removeClientNameFromInvoice">
+                                    <svg id="Group_4925" data-name="Group 4925" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <rect id="Rectangle_1731" data-name="Rectangle 1731" width="24" height="24" rx="12" fill="#fff" opacity="0"></rect>
+                                        <g id="Group_4007" data-name="Group 4007" transform="translate(12.206 4) rotate(45)">
+                                            <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
+                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                        <g id="Group_5006" transform="translate(-78.263 -102.166)">
+                                            <circle id="Ellipse_485" cx="16" cy="16" r="16" fill="#fff" transform="translate(78.263 102.166)"></circle>
+                                            <path id="Path_1893" d="M103.424 125.677a9.992 9.992 0 0 1-16.561 0 9.992 9.992 0 0 1 16.561 0z" class="cls-2" transform="translate(-.877 -1.923)"></path>
+                                            <circle id="Ellipse_486" cx="3.767" cy="3.767" r="3.767" class="cls-2" transform="translate(90.497 109.787)"></circle>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <input id="invoiceInput" value="" type="search" name="search" placeholder="لا يوجد عميل" disabled="">
+                                <div class="remove_search_input" id="remove_search_input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12.022" height="12.023" viewBox="0 0 12.022 12.023">
+                                        <g id="Group_3933" data-name="Group 3933" transform="translate(6.01 -5.303) rotate(45)">
+                                            <line id="Line_337" data-name="Line 337" y2="16" transform="translate(8.002 0)" fill="none" stroke="#212121" stroke-miterlimit="10" stroke-width="1"></line>
+                                            <line id="Line_338" data-name="Line 338" x2="16" transform="translate(0 8)" fill="none" stroke="#212121" stroke-miterlimit="10" stroke-width="1"></line>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="clients-list--individuals deviceInfo-tab-content active" id="device_layoutTabs">
+                                <div class="accordion-container">
+                                    <!-- this is a standalone component -->
+                                    <!-- stylefile name => _accordion.scss -->
+                                    <div class="accordion">
+                                        <!-- stylefile name => _accordion.scss -->
+                                        <div class="accordion" id="accordion_deviceInfoInTabs">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="accordion_deviceInfo_headerInTabs">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion_deviceInfoBodyInTabs" aria-expanded="true" aria-controls="accordion_deviceInfoBodyInTabs">
+                                                        معلومات الجهاز
+                                                    </button>
+                                                </h2>
+                                                <div id="accordion_deviceInfoBodyInTabs" class="accordion-collapse collapse show" aria-labelledby="accordion_deviceInfo_headerInTabs" data-bs-parent="#accordion_deviceInfoInTabs">
+                                                    <div class="accordion-body">
+                                                        <div class="accordion-information-list">
+                                                            <ul>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title">براند الجهاز</span>
+                                                                    <span class="name">اسود-f1 بوكو فون -
+                                                                        3723872039</span>
+                                                                </li>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title">الرقم المتسلسل</span>
+                                                                    <span class="name">284849-284849-284849</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- new according -->
+                                    <div class="accordion">
+                                        <!-- this is a standalone component -->
+                                        <!-- stylefile name => _accordion.scss -->
+                                        <div class="accordion" id="accordion_maintenanceInfoInTabs">
+                                            <div class=" accordion-item">
+                                                <h2 class="accordion-header" id="accordion_maintenanceInfoHeaderInTabs">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion_maintenanceInfoBodyInTabs" aria-expanded="true" aria-controls="accordion_maintenanceInfoBodyInTabs">
+                                                        معلومات الصيانه
+                                                    </button>
+                                                </h2>
+                                                <div id="accordion_maintenanceInfoBodyInTabs" class="accordion-collapse collapse show" aria-labelledby="accordion_maintenanceInfoHeaderInTabs" data-bs-parent="#accordion_maintenanceInfoInTabs">
+                                                    <div class="accordion-body">
+                                                        <div class="accordion-information-list accordion-maintenance">
+                                                            <ul class="accordion-deliverdRequests--maintenanceInfo" style="display: block;">
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title">مشكلات الجهاز</span>
+                                                                    <div class="name device-issues">
+                                                                        <div class="device-issues--issue">
+                                                                            <span>كسر الشاشه</span>
+                                                                        </div>
+                                                                        <div class="device-issues--issue">
+                                                                            <span>تغير باغه</span>
+                                                                        </div>
+                                                                        <div class="device-issues--issue">
+                                                                            <span>تغير ضهر</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title ">فرع الاستلام</span>
+                                                                    <span class="name branch">مدينة نصر</span>
+                                                                </li>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title">تاريخ الاستلام</span>
+                                                                    <span class="name">
+                                                                        05:20 PM - 14/7/72020
+                                                                    </span>
+                                                                </li>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title">تاريخ التسليم</span>
+                                                                    <span class="name">
+                                                                        05:20 PM - 14/7/72020
+                                                                    </span>
+                                                                </li>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title">تحت الحساب</span>
+                                                                    <span class="name">150ج</span>
+                                                                </li>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title"> فني الصيانه</span>
+                                                                    <span class="name">محمود علاء -
+                                                                        01052564856</span>
+                                                                </li>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title">التعليق</span>
+                                                                    <span class="name">لا يوجد</span>
+                                                                </li>
+                                                              
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title">تعليق الصيانه</span>
+                                                                    <span class="name">لا يوجد</span>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="accordion-activeRequests--maintenanceInfo" style="display: none;">
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title">222مشكلات الجهاز</span>
+                                                                    <div class="name device-issues">
+                                                                        <div class="device-issues--issue">
+                                                                            <span>كسر الشاشه</span>
+                                                                        </div>
+                                                                        <div class="device-issues--issue">
+                                                                            <span>تغير باغه</span>
+                                                                        </div>
+                                                                        <div class="device-issues--issue">
+                                                                            <span>تغير ضهر</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title ">2فرع الاستلام</span>
+                                                                    <span class="name branch">مدينة نصر</span>
+                                                                </li>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title">تاريخ الاستلام</span>
+                                                                    <span class="name">
+                                                                        05:20 PM - 14/7/72020
+                                                                    </span>
+                                                                </li>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title">2تاريخ التسليم</span>
+                                                                    <span class="name">
+                                                                        05:20 PM - 14/7/72020
+                                                                    </span>
+                                                                </li>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title">تحت الحساب</span>
+                                                                    <span class="name">150ج</span>
+                                                                </li>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title"> فني الصيانه</span>
+                                                                    <span class="name">محمود علاء -
+                                                                        01052564856</span>
+                                                                </li>
+                                                                <li class="accordion-information-list--item">
+                                                                    <span class="title">التعليق</span>
+                                                                    <span class="name">لا يوجد</span>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- END of input -->
+                       <div class="checkout active-request ">
+                                <!-- stylefile name => _checkout.scss -->
+                                <div class="checkout-chart-btn"></div>
+                                <div class="payments-buttons">
+                                    <!-- stylefile name => btns/_payment-buttons.scss -->
+                                    <div class="payments-buttons-pay rejectDevice">
+                                        <div>
+                                            <svg id="Group_4765" data-name="Group 4765" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <g id="Ellipse_408" data-name="Ellipse 408" fill="none" stroke="#ff545d" stroke-width="1.6">
+                                                    <circle cx="12" cy="12" r="12" stroke="none"></circle>
+                                                    <circle cx="12" cy="12" r="11.2" fill="none"></circle>
+                                                </g>
+                                                <g id="Group_5551" data-name="Group 5551" transform="translate(8 8)">
+                                                    <g id="Group_4233" data-name="Group 4233" transform="translate(0 8.232) rotate(-45)">
+                                                        <g id="Group_4232" data-name="Group 4232">
+                                                            <g id="Group_3881" data-name="Group 3881">
+                                                                <line id="Line_318" data-name="Line 318" x2="11.642" transform="translate(0 0)" fill="none" stroke="#ff545d" stroke-width="1.6"></line>
+                                                                <line id="Line_467" data-name="Line 467" x2="11.642" fill="none" stroke="#ff545d" stroke-width="1.6"></line>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                    <g id="Group_5550" data-name="Group 5550" transform="translate(8.232 8.232) rotate(-135)">
+                                                        <g id="Group_4232-2" data-name="Group 4232" transform="translate(0)">
+                                                            <g id="Group_3881-2" data-name="Group 3881">
+                                                                <line id="Line_318-2" data-name="Line 318" x2="11.642" transform="translate(0)" fill="none" stroke="#ff545d" stroke-width="1.6"></line>
+                                                                <line id="Line_467-2" data-name="Line 467" x2="11.642" transform="translate(0 0)" fill="none" stroke="#ff545d" stroke-width="1.6"></line>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span>رفض الجهاز</span>
+                                    </div>
+                                    <div class="payments-buttons-receive finishMaintenanceInChekout">
+                                        <span>انهاء الصيانه</span>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25.6" height="25.6" viewBox="0 0 25.6 25.6">
+                                                <g id="Group_4765" data-name="Group 4765" transform="translate(0.623 0.8)">
+                                                    <circle id="Ellipse_408" data-name="Ellipse 408" cx="12" cy="12" r="12" transform="translate(0.177)" fill="none" stroke="#1877f2" stroke-width="1.6"></circle>
+                                                    <g id="Group_4233" data-name="Group 4233" transform="translate(17.951 8.018) rotate(135)">
+                                                        <path id="Path_1960" data-name="Path 1960" d="M10.793,4.976V0H0" fill="none" stroke="#1877f2" stroke-width="1.6"></path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="checkout-list">
+                                    <!-- stylefile name => component/small/_checkout-list.scss -->
+
+                                    <!-- ---- Start ITEM ---- -->
+                                    <li class="checkout-list--item">
+                                        <div class="checkout-list--item-right">
+                                            <span class="checkout-list--item-right--title">
+                                                الاجمالي
+                                            </span>
+                                        </div>
+                                        <div class="checkout-list--item-left price-only">
+                                            <!-- if we have price only here without any disocunt icon or close icon just add price-obly class -->
+                                            <span class="checkout-list--item-left--price">302.25</span>
+                                        </div>
+                                    </li>
+                                    <!-- ---- End ITEM ---- -->
+
+                                    <!-- ---- Start ITEM ---- -->
+                                    <li class="checkout-list--item">
+                                        <div class="checkout-list--item-right red-text">
+                                            <span class="checkout-list--item-right--title">
+                                                الخصم الكلي
+                                            </span>
+                                        </div>
+                                        <div class="checkout-list--item-left red-text">
+
+                                            <span class="checkout-list--item-left--price">302.25</span>
+                                            <div class="discount-number ">
+                                                <!-- stylefile name => common  - is a public class -->
+                                                <span>10%</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- ---- End ITEM ---- -->
+                                    <!-- ---- Start ITEM ---- -->
+                                    <li class="checkout-list--item">
+                                        <div class="checkout-list--item-right">
+                                            <span class="checkout-list--item-right--title">
+                                                التوصيل
+                                            </span>
+                                        </div>
+                                        <div class="checkout-list--item-left price-only">
+                                            <span class="checkout-list--item-left--price">302.25</span>
+                                        </div>
+                                    </li>
+                                    <!-- ---- End ITEM ---- -->
+                                    <!-- ---- Start ITEM ---- -->
+                                    <li class="checkout-list--item total-final">
+                                        <div class="checkout-list--item-right">
+                                            <span class="checkout-list--item-right--title">
+                                                الاجمالي الكلي
+                                            </span>
+                                        </div>
+                                        <div class="checkout-list--item-left price-only">
+                                            <!-- <div class="checkout-list--item-left--delete">
+                                                <svg id="Group_4925" data-name="Group 4925" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24">
+                                                <rect id="Rectangle_1731" data-name="Rectangle 1731" width="24" height="24"
+                                                    rx="12" fill="#fff" opacity="0" />
+                                                <g id="Group_4007" data-name="Group 4007"
+                                                    transform="translate(12.206 4) rotate(45)">
+                                                    <line id="Line_343" data-name="Line 343" y2="12"
+                                                        transform="translate(6)" fill="none" stroke="#878a90"
+                                                        stroke-linecap="round" stroke-miterlimit="10" stroke-width="1" />
+                                                    <line id="Line_344" data-name="Line 344" y2="12"
+                                                        transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90"
+                                                        stroke-linecap="round" stroke-miterlimit="10" stroke-width="1" />
+                                                </g>
+                                            </svg>
+                                            </div>  -->
+                                            <span class="checkout-list--item-left--price">302.25</span>
+                                        </div>
+                                    </li>
+                                    <!-- ---- End ITEM ---- -->
+                                    <!-- ---- Start ITEM ---- -->
+                                    <li class="checkout-list--item">
+                                        <div class="checkout-list--item-right">
+                                            <span class="checkout-list--item-right--title">
+                                                المدفوع
+                                            </span>
+                                        </div>
+                                        <div class="checkout-list--item-left price-only">
+                                            <span class="checkout-list--item-left--price">302.25</span>
+                                        </div>
+                                    </li>
+                                    <!-- ---- End ITEM ---- -->
+                                    <!-- ---- End ITEM ---- -->
+                                    <!-- ---- Start ITEM ---- -->
+                                    <li class="checkout-list--item">
+                                        <div class="checkout-list--item-right">
+                                            <span class="checkout-list--item-right--title">
+                                                الباقي
+                                            </span>
+                                        </div>
+                                        <div class="checkout-list--item-left price-only">
+                                            <span class="checkout-list--item-left--price">302.25</span>
+                                        </div>
+                                    </li>
+                                    <!-- ---- End ITEM ---- -->
+                                </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- END discount-on-each-product -->
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+        integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"
+        integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA=="
+        crossorigin="anonymous"></script>
+    <script src="./js/pages/maintenance.module.js" type="module"></script>
+
+
+
+</body>
+
+</html>

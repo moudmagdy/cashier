@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.25" height="15.568" viewBox="0 0 16.25 15.568">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#212121;stroke-width:1.4px}
+        </style>
+    </defs>
+    <g id="Group_3882" transform="translate(0 .7)">
+        <g id="Group_3881">
+            <path id="Line_317" d="M0 0L16.25 0" class="cls-1"/>
+            <path id="Line_318" d="M0 0L14.5 0" class="cls-1" transform="translate(1.75 7.199)"/>
+            <path id="Line_319" d="M0 0L16.25 0" class="cls-1" transform="translate(0 14.168)"/>
+        </g>
+    </g>
+</svg>

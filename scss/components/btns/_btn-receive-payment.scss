@@ -1,0 +1,14 @@
+.btn--receive-payment{
+    position: relative;
+    width: 7em;
+    height: 7em;
+    background-color: $lightGray2;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    svg{
+        height: 100%;
+    }
+}

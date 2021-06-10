@@ -1,0 +1,294 @@
+// This products list used in main left layout to display all products in invoice that user choose it
+
+.products-list-container {
+    width: 100%;
+    height: 59.9%;
+    padding: 0 24px;
+    margin-bottom: 4px;
+    @include mediaMixin(xlgDesktop) {
+        height: 68%;
+    }
+}
+
+.products-list {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    overflow-y: scroll;
+    @include scroll-bar;
+}
+
+.product-item-in-list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    // height: auto;
+    // min-height: 7.2em;
+    padding: 0.8em;
+    border-bottom: 1px solid $gray5;
+    // border-radius: 0.8em;
+    // transition: all 0.2s ease-in-out;
+
+    &::before {
+        width: 0%;
+        height: 100%;
+        background-color: $gray8;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+        content: '';
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+    &::after {
+        height: 0;
+        width: 0.3em;
+        background-color: $blue;
+        position: absolute;
+        right: 0;
+        transition: all 0.2s ease-in-out;
+        bottom: 0;
+        content: '';
+        z-index: 6;
+    }
+    &--data {
+        // display: flex;
+        // justify-content: center;
+        // align-items: flex-start;
+        // flex-direction: column;
+        width: 35%;
+        z-index: 4;
+
+        &-name {
+            h3 {
+                font-size: 1.8em;
+                font-family: 'reg';
+                display: block;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                position: relative;
+                line-height: 1.5;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                height: calc(1em * 1.5 * 2);
+                padding: 0 !important;
+            }
+        }
+        &-discountInput {
+            font-size: 1.2em;
+            span {
+                text-decoration: line-through;
+                color: $darkGray;
+            }
+            
+            input {
+                width: 5em;
+                border: none;
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+    
+                &[type=number] {
+                    -moz-appearance: textfield;
+                }
+    
+                &:focus {
+                    outline: none;
+                }
+                &::placeholder {
+                    color: $black;
+                }
+    
+            }
+        }
+    }
+
+    &--counter {
+        width: 105px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 4;
+        &-screen {
+            width: 3.6em;
+            height: 4em;
+            background-color: $gray7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.6em;
+
+            input {
+                width: 100%;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                height: 100%;
+                text-align: center;
+                font-size: 1.6em;
+                padding: 0;
+                margin: 0;
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+                &[type=number] {
+                    -moz-appearance: textfield;
+                  }
+            }
+        }
+
+        &--minus,
+        &--plus {
+            cursor: pointer;
+            display: none;
+            z-index: 4;
+            width: 3em;
+            height: 3em;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            svg {
+                width: 2em
+            }
+            &:hover {
+                background-color: $lightGray2;
+            }
+        }
+    }
+
+    &--discount {
+        width: 2.5em;
+        height: 2.5em;
+        background-color: $lightRed;
+        border-radius: 50%;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        z-index: 4;
+        visibility: hidden;
+        svg {
+            path,
+            circle {
+                stroke: $lightRed2;
+            }
+        }
+        &.add-discount {
+        background-color: $white;
+        span {
+            display: none;
+        }
+        svg {
+
+            path,
+            circle {
+                stroke: $darkGray;
+            }
+        }
+        }
+        &.number {
+            width: 3.5em;
+            border-radius: 52px;
+            background-color: $lightRed;
+
+            span {
+                font-size: 1.2em;
+                color: $lightRed2;
+            }
+            svg {
+                display: none;
+            }
+        }
+
+        &.final {
+            background-color: $lightRed2;
+            border-radius: 52px;
+            width: 3.5em;
+
+            span {
+                font-size: 1.2em;
+                color: $white;
+
+            }
+        }
+
+
+    }
+
+    &--price {
+        z-index: 4;
+
+        span {
+            font-size: 1.8em;
+        }
+    }
+
+    &--delete {
+        width: 2.5em;
+        height: 2.5em;
+        // background-color: rgb(241, 228, 253);
+        border-radius: 50%;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 4;
+        width: 3em;
+        height: 3em;
+        svg {
+            height: 100%;
+            width: 40%;
+        }
+        &:hover {
+            background-color: $lightGray2;
+        }
+    }
+
+    &:hover {
+        .product-item-in-list--counter--minus {
+            display: flex;
+        }
+
+        .product-item-in-list--counter--plus {
+            display: flex;
+        }
+
+        .product-item-in-list--discount {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .product-item-in-list--delete {
+            visibility: visible;
+            opacity: 1;
+        }
+        &::before {
+            width: 100%;
+        }
+        &::after {
+            height: 100%;
+        }
+    }
+
+}

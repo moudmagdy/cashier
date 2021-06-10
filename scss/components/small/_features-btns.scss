@@ -1,0 +1,41 @@
+.features-btns{
+    display: flex;
+    justify-content: space-evenly;
+    width: 18%;
+    flex-direction: row-reverse;
+    &--favorite-btn{
+        width: 5.4em;
+        height: 5.4em;
+        display: flex;
+        justify-content: center;
+        border-radius: 12px;
+        align-items: center;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(238, 238, 238);
+        }
+        &.active{
+            svg{
+                g{
+                    path{
+                        fill: $red;
+                        stroke: $lightGray2;
+                    }
+                }
+            }
+        }
+    }
+    &--layout-view-btn{
+        width: 5.4em;
+        height: 5.4em;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        align-items: center;
+        border-radius: 12px;
+        &:hover{
+        background-color: rgb(238, 238, 238);
+            
+        }
+    }
+}

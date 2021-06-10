@@ -1,0 +1,321 @@
+//modal of delevery
+#order_delivring {
+    input{
+        padding: 1.375rem 0.75rem;
+        font-size: 1.4em;
+    }
+    select{
+        font-size: 1.4em;
+        padding: 1.375rem 0.75rem;
+    }
+    .modal-dialog {
+      width: 434px !important;
+      height: auto !important;
+      padding: 0;
+    box-shadow: 0px 1px 20px rgba(0,0,0,0.15);
+    border-radius: 12px;
+      background-color: #ffffff;
+      z-index: 1120;
+    }
+    .modal-title {
+      font-size: 1.6em;
+      font-weight: bold;
+      text-align: center;
+      color: #212121;
+      font-family: "NotoSansArabic-Bold";
+    }
+ 
+    
+  .modal-header{
+    background-color: #F5F5F5;
+  }
+ .addnew_address {
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: right;
+    color: #1877f2 !important;
+    direction: ltr;
+    background: #F0F2F5  !important;
+    width: 10rem;
+    height: 4rem !important;
+    border-radius: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: 'reg' !important;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+datalist{
+  opacity: 0;
+  display: none !important;
+  span{
+    display: block;
+  }
+}
+  .d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+   
+    .select.form-conterol{
+      width: 95%;
+    }
+    input,select{
+      width: 100%;
+      border: 1px solid #ced4da;
+      border-radius: 10px !important;
+    }
+   
+  }
+  .deliver-container {
+    padding: 14.5px 28px 18px 28px;
+    direction: rtl;
+    text-align: right;
+    p {
+      font-family: "NotoSansArabic-SemiBold";
+      font-size: 1.4em;
+      font-weight: 600;
+      text-align: right;
+      color: #212121;
+      height: 17px;
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+    .input-group-btn.pic {
+      top: 8px;
+      right: 21px;
+      z-index: 100;
+    }
+    .input-group-btn {
+      position: absolute;
+      left: 16px;
+      top: 15px;
+      width: 19px;
+      height: 25px;
+      font-family: "NotoSansArabic-Medium";
+      font-size: 1.2em;
+      text-align: right;
+      color: #212121;
+      z-index: 100;
+  
+    }
+    .input-group-btn.update {
+      width: 24px;
+      height: 21px;
+      font-family: "NotoSansArabic-Medium";
+      font-size: 1.2em;
+      text-align: right;
+      color: #1877f2;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  
+    .form-control.address {
+      -webkit-backdrop-filter: blur(30px);
+      backdrop-filter: blur(30px);
+      border: solid 2px #4080ff;
+      font-size: 1.4em;
+      background-color: #f5f5f5;
+    }
+    .form-control.address-content {
+      border: none;
+      background-color: #f5f5f5;
+      margin-top: 8px;
+    }
+    .form-control.client-info {
+      height: 51.5px;
+      padding-right: 64px !important;
+      padding-left: 0;
+      padding-top: 8px;
+      border-radius: 8px !important;
+      background-color: #e3f3ff;
+      border: none;
+      font-size: 1.6em;
+      font-weight: 500;
+      text-align: right;
+      color: #212121;
+      
+    }
+
+  }
+  .discountTabsContainer {
+    padding: 16px 41px 24px 41px;
+    #chang-price {
+      p {
+        opacity: 0.6;
+        text-decoration: line-through;
+        font-family: "NotoSansArabic-Medium";
+        font-size: 11px;
+        font-weight: 500;
+        text-align: center;
+        color: #212121;
+      }
+      .btns-container {
+        padding-top: 24px !important;
+      }
+    }
+    .inputs-container {
+      padding-top: 20px;
+      padding-bottom: 10px;
+      .form-control {
+        border: none;
+        border-bottom: 1px solid #ced4da;
+        text-align: right;
+        font-family: "NotoSansArabic-Medium";
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        color: #212121;
+        border-radius: initial;
+        height: 29px;
+    
+        
+      }
+  
+      .input-group > .custom-select:not(:last-child),
+      .input-group > .form-control:not(:last-child) {
+        border-radius: 0px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .input-group-btn {
+        position: absolute;
+        left: 5px;
+        top: 10px;
+        font-family: "NotoSansArabic-Medium";
+        font-size: 1.2em;
+        text-align: right;
+        color: #212121;
+      }
+    }
+    .btns-container {
+      padding-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .btn-apply {
+        width: 185px;
+        height: 48px;
+        padding: 10px 74px 9px 75px;
+        border-radius: 26px;
+        border: solid 1px #1877f2;
+        background-color: #ffffff;
+        font-family: "NotoSansArabic-Medium";
+        font-size: 1.4em;
+        font-weight: 500;
+        text-align: right;
+        color: #1877f2;
+      }
+      .btn-cancel {
+        width: 79px;
+        height: 48px;
+        padding: 10px 27px 9px;
+        border-radius: 26px;
+        border: none;
+        background-color: transparent;
+        font-family: "NotoSansArabic-Medium";
+        font-size: 1.4em;
+        font-weight: 500;
+        text-align: right;
+        color: #65676b;
+      }
+    }
+  }
+  .nav-item {
+    a {
+      font-size: 1.2em;
+      line-height: 2.08;
+      text-align: right;
+      color: #212121;
+      font-family: "NotoSansArabic-Regular";
+    }
+  }
+  #order_discount {
+    .modal-dialog {
+      width: 329px;
+      height: auto !important;
+      border-radius: 12px;
+      background-color: #ffffff;
+      margin: 0;
+    }
+    .modal-content {
+      border: none;
+    }
+    p {
+      font-size: 1.2em;
+      font-weight: 600;
+      line-height: 2.1;
+      text-align: right;
+      color: #212121;
+      font-family: "NotoSansArabic-SemiBold";
+    }
+  }
+  #order_discount.modal {
+    position: fixed;
+    top: 20%;
+    z-index: 1050;
+    display: none;
+    left: 3%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+    direction: ltr;
+  }
+  /* Reset Select */
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    background-image: none;
+    
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select */
+  .select {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+  }
+  select {
+    flex: 1;
+    padding: 0 0.5em;
+    color: #fff;
+    cursor: pointer;
+  }
+  /* Arrow */
+  .select::after {
+    content: "\f078";
+    font: normal normal normal 17px/1 FontAwesome;
+    font-size: 1.2em;
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    padding: 0 1em;
+    background: transparent;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: 0.25s all ease;
+    transition: 0.25s all ease;
+  }
+  .new-btns-container{
+    border-top: 0px;
+  }
+
+  }
+  .modal.fade .modal-dialog{
+    transform: translate(0);
+  }
+  

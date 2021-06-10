@@ -1,0 +1,14 @@
+.btn-default-blue {
+    margin: 0 20px;
+    background-color: $blue;
+    width: 146px;
+    height: 44px;
+    @include flexCenter;
+    border-radius: 28px;
+    cursor: pointer;
+
+    span {
+        color: #ffffff;
+        font-size: 1.5em;
+    }
+}

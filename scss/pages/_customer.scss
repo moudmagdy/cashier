@@ -1,0 +1,240 @@
+.maintenance-page{
+    &.customer-page{
+    
+        .appbar-menu-btn{
+            svg{
+                transform: rotate(90deg);
+            }
+        }
+        .customer-data{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            font-size: 10px;
+            .user-picture{
+                position: relative;
+                height: 7em;
+                width: 7em;
+                background-color: #FF6B73;
+                margin: 5rem 0 3rem 0px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding:1.5rem;
+                svg{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &--user-information{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .username{
+                    font-size: 16px;
+                    color: black;
+                }
+                .cost{
+                    margin-top: 2rem;
+                    span{
+                        font-size: 16px;
+                    }
+                    .number{
+                        color: #F02849;
+                        font-weight: bolder;
+                    }
+                }
+            }
+            .user-settings{
+                list-style: none;
+                position: relative;
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: row;
+                margin-top: 5rem;
+                padding: 0px;
+                font-size: 8px;
+                @media screen and (max-width:992px) {
+                    font-size: 7px;
+                }
+                @media screen and (max-width:1024px) {
+                     font-size: 7px !important;
+                 }
+                li{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    cursor: pointer;
+                    span{
+                        margin: 1em 0;
+                        font-size: 1.6em;
+                    }
+                    &:hover{
+                        svg{
+                            fill:black;
+                            circle,path{
+                                fill:black;
+                            }
+                        }
+                    }
+                }
+                &--item-circle{
+                    width: 10em;
+                    height: 10em;
+                    background-color: #F5F5F5;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    svg{
+                        height: 50%;
+                        width: 50%;
+                    }
+                }
+            }
+            .user-data{
+                position: relative;
+                width: 100%;
+                list-style: none;
+                height: auto;
+                margin-top: 5rem;
+                font-size: 1rem;
+                @media screen and (max-width:1024px) {
+                margin-top: 0rem;
+                font-size: 7px !important;
+                }
+                &--item{
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex-direction: row;    margin: 3rem 0;
+                    @media screen and (max-width:1024px) {
+                        margin:2rem 0;
+                    }
+                    .circle{
+                        position: relative;
+                        width: 4em;
+                        height: 4em;
+                        background-color: #A3AAB2;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        svg{
+                            width: 70%;
+                            height: 70%;
+                        }
+                    }
+                }
+                &-info{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin: 0 1em;
+                    span{
+                        font-size: 1.6em;
+                        
+                    }
+                    &--title{
+                        color: #4D4D4D;
+                        font-size: 1.4em;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+            .btn-blueInCustomer{
+                position: absolute;
+                width: 85%;
+                margin: 0 auto;
+                height: 8rem;
+                background-color: #EBF6FF;
+                border-radius: 40px;
+                bottom: 2%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                span{
+                    color: #1877F2;
+                    font-size: 2rem;
+                }
+            }
+        }
+        .client-history{
+            position: relative;
+            height: auto;
+            width: 100%;
+            &--tabs{
+                width: 100%;
+                height: auto;
+                ul{
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    list-style: none;
+                    border-bottom: 1px solid #e2e2e2;
+                    border-top: 1px solid #e2e2e2;
+                    padding: 2rem 0;
+                    li{
+                        font-size: 16px;
+                        color: #A3AAB2;
+                        flex-basis: 20%;
+                        text-align: center;
+                    }
+                }
+            }
+            .pay-receive-list{
+                padding: 0;
+                li{
+                    div{
+                        flex-basis: 20%;
+                        text-align: center;
+                    }
+                    .pay-receive-list-item--details{
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        .total-payments{
+            .total-payments--received{
+              
+                .number{
+                    flex-direction: row;
+                    .price{
+                        font-size: 2rem;
+                        margin:0 1rem ;
+                        color: #F02849 !important;
+                        font-weight: bolder;
+
+                        &.greenC{
+                            color: #30B360 !important;
+                        }
+                    }
+                    .title{
+                        color: black !important;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

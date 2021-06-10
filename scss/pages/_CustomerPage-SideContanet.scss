@@ -1,0 +1,40 @@
+.CustomerPage-SideContanet{
+    .appbar{
+        background-color: #1877F2 !important;
+        span{
+            color: #ffffff !important;
+        }
+    }
+    .customer-data--user-information{
+        width: 100%;
+        margin-bottom: 2rem;
+        
+    }
+    .customer-data{
+        justify-content: space-around !important;
+    }
+    .customer-card{
+        display: flex !important;
+        height: 0rem;
+        background: transparent;
+        font-size: 0.8em;
+    }
+    .customer-card--invoice-details{
+        background: #F5F5F5;
+        padding:0 2rem;
+        border-radius: 14px;
+    }
+    .checkout{
+        position: relative;
+        padding: 2rem 0;
+        bottom: 47px;
+        .payments-buttons{
+            display: flex !important;
+            bottom: 0;
+            position:relative;
+        }
+    }
+    .checkout-operations--group{
+        margin-bottom: 2rem;
+    }
+}

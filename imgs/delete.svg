@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Group_4740" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2,.cls-3{fill:transparent;stroke:#ff545d}.cls-3{fill:none}
+        </style>
+    </defs>
+    <g id="Group_4746" transform="translate(3.884 3.93)">
+        <path id="Path_1871" d="M163.167 53.851h4.563a2.263 2.263 0 0 0 2.248-2.006l1.231-10.8a.377.377 0 0 0-.375-.419h-10.772a.377.377 0 0 0-.375.419l1.231 10.8a2.263 2.263 0 0 0 2.249 2.006z" class="cls-2" transform="translate(-157.829 -37.813)"/>
+        <path id="Rectangle_2308" d="M.974 0h2.865a.974.974 0 0 1 .974.974v1.842H0V.974A.974.974 0 0 1 .974 0z" class="cls-2" transform="translate(5.212)"/>
+        <path id="Line_432" d="M15.238 0L0 0" class="cls-3" transform="translate(0 2.816)"/>
+        <path id="Line_433" d="M0 0L4.877 0" class="cls-3" transform="translate(5.18 9.427)"/>
+    </g>
+</svg>
