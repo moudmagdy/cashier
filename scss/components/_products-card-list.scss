@@ -9,13 +9,13 @@
     flex-flow: row wrap;
     transition: all 0.4s ease-in;
     
-    @include mediaMixin(xxxlScreen){
+    @include mediaMixin(xxxlScreen) {
         font-size:  0.91rem;
     }
-    @include mediaMixin(xxlScreen){
+    @include mediaMixin(xxlScreen) {
         font-size: 0.91rem;
     }
-    @include mediaMixin(lgDesktop){
+    @include mediaMixin(lgDesktop) {
         font-size:0.69rem;
     }
     @include mediaMixin(desktop){

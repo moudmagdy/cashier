@@ -1,6 +1,6 @@
 // This card used to display all products in main right layout 
 
-.product-card{
+.product-card {
     width: 20.16em;
     height: 28.8em;
     background-color: $white;
@@ -16,12 +16,13 @@
     cursor: pointer;
     // overflow: hidden;
     padding: 2px;
-    &--selected-card{
+
+    &--selected-card {
         display: none;
     }
-    &.selected{
+    &.selected {
         border: 3px solid $blue;
-        .product-card--selected-card{
+        .product-card--selected-card {
             position: absolute;
             left: -8px;
             top: -10px;
@@ -32,7 +33,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            span{
+            span {
                 color: $white;
                 font-family: 'med';
                 font-size: 1.5em;
@@ -40,27 +41,27 @@
         }
     }
    
-    &-dropdown-menu{
-        .dropdown-menu{
+    &-dropdown-menu {
+        .dropdown-menu {
 
             font-size: 1em;
             width: 25.7em;
             text-align: right;
-            li{
+            li {
                 height:4.5em ;
                 @include flexCenter;
                 
-                a{
+                a {
                     height: 100%;
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
                     font-size: 1.6em;
-                    span{
+                    span {
                         margin-right: 1rem;
                         position: relative;
                     }
-                    &:hover{
+                    &:hover {
                         background-color: $veryLightBlue;
                     }
                 }
@@ -69,7 +70,7 @@
         }
     }
   
-    &--btn{
+    &--btn {
         position: absolute;
         right: 0;
         top: 0;
@@ -81,28 +82,28 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        &:hover{
+        &:hover {
         background-color: #E3E6E9;
 
         }
-        svg{
+        svg {
             height: 50%;
         }
     }
-    &--image{
+    &--image {
         height: 50%;
         width: 100%;
         overflow: hidden;
         border-top-left-radius: 0.8em;
         border-top-right-radius: 0.8em;
-        img{
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
 
-    &--details{
+    &--details {
         height: 50%;
         width: 100%;
         display: flex;
@@ -110,23 +111,23 @@
         align-items: flex-start;
         flex-direction: column;
         padding: 0 10px;
-        &-title{
+        &-title {
             text-align: right;
             font-size: 1.8em;
             font-family: 'med',Arial, Helvetica, sans-serif;
         }
-        &-price{
+        &-price {
             font-size: 1.6em;
             // font-family: 'bold';
         }
 
     }
-    &.listview{
-        .product-card--details{
+    &.listview {
+        .product-card--details {
             height: 100%;
             justify-content: space-around;
             width: 85.3%;
-            p{
+            p {
                 margin-bottom: 0;
                 opacity: 1;
                 font-size: 1.6em;
@@ -136,7 +137,7 @@
                 overflow: hidden;
             }
         }
-        .product-card--image{
+        .product-card--image {
         //    width: 34%;
            height: 87%;
         }
