@@ -15,7 +15,7 @@
         left: 0 !important;
         right: 0 !important;
         &--header{
-            @include flexCenter;
+            @include flex-center;
             height: 5em;
             border-bottom: 0.5px solid $gray5;
             h4{
@@ -24,17 +24,17 @@
         }
         &--body{
             height: 85%;
-            @include flexCenter;
+            @include flex-center;
             justify-content: space-around;
             flex-direction: column;
             &-value{
-                @include flexCenter;
+                @include flex-center;
                 flex-direction: column;
                 &-title{
                     font-size: 1.6em;
                 }
                 &--inputs{
-                    @include flexCenter;
+                    @include flex-center;
                     &-container{
                         width: 80%;
                         // border-bottom: 1px solid $gray6;

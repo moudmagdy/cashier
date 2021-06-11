@@ -22,7 +22,7 @@
         .appbar {
             font-size: 10px;
             &-number {
-                @include flexCenter;
+                @include flex-center;
                 font-size: 1.4em;
                 width: 15%;
                 justify-content: space-evenly;
@@ -33,7 +33,7 @@
                     height: 3.571em;
                     border: 2px solid $white;
                     border-radius: 6px;
-                    @include flexCenter;
+                    @include flex-center;
                     @media screen and (min-width: 1500px) and (max-width: 1600px){
                         width: 5rem;
                         height: 5.643rem;
@@ -46,7 +46,7 @@
                 width: 4.2em;
                 height: 4.2em;
                 border-radius: 50%;
-                @include flexCenter;
+                @include flex-center;
                 cursor: pointer;
 
                 svg {

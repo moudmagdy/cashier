@@ -279,14 +279,13 @@ input[type=number] {
   scrollbar-width: thin;
 }
 .side-receiveDevice .accordion-container::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
 .side-receiveDevice .accordion-container::-webkit-scrollbar-track {
   background-color: #F0F0F0;
 }
 .side-receiveDevice .accordion-container::-webkit-scrollbar-thumb {
   background-color: #BDBEC3;
-  border-radius: 20px;
 }
 .side-receiveDevice .layout-left--container {
   background-color: white;
@@ -890,14 +889,13 @@ input[type=number] {
   scrollbar-width: thin;
 }
 .pay-receive-list::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
 .pay-receive-list::-webkit-scrollbar-track {
   background-color: #F0F0F0;
 }
 .pay-receive-list::-webkit-scrollbar-thumb {
   background-color: #BDBEC3;
-  border-radius: 20px;
 }
 .pay-receive-list-item {
   height: 7.4em;
@@ -1394,14 +1392,13 @@ input[type=number] {
   outline: none;
 }
 .invoice--pay-receive-details form .inputs-group textarea::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
 .invoice--pay-receive-details form .inputs-group textarea::-webkit-scrollbar-track {
   background-color: #F0F0F0;
 }
 .invoice--pay-receive-details form .inputs-group textarea::-webkit-scrollbar-thumb {
   background-color: #BDBEC3;
-  border-radius: 20px;
 }
 .invoice--pay-receive-details form .inputs-group label {
   margin-bottom: 0.5em;
@@ -1421,13 +1418,11 @@ input[type=number] {
 }
 
 .product-card {
-  width: 20.16em;
-  height: 28.8em;
-  background-color: #ffffff;
-  margin: 13px 5px;
-  border-radius: 0.8em;
   position: relative;
-  max-height: 28.8em !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1437,11 +1432,9 @@ input[type=number] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  background-color: #ffffff;
   border: 3px solid transparent;
+  border-radius: 0.8em;
   cursor: pointer;
   padding: 2px;
 }
@@ -1595,25 +1588,14 @@ input[type=number] {
 
 .products-card-list {
   position: relative;
-  font-size: 0.9rem;
   width: 100%;
   font-size: 0.9rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
   -webkit-transition: all 0.4s ease-in;
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
 }
 @media only screen and (min-width: 1930px) {
   .products-card-list {
@@ -1688,14 +1670,13 @@ input[type=number] {
   scrollbar-width: thin;
 }
 .products-list::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
 .products-list::-webkit-scrollbar-track {
   background-color: #F0F0F0;
 }
 .products-list::-webkit-scrollbar-thumb {
   background-color: #BDBEC3;
-  border-radius: 20px;
 }
 
 .product-item-in-list {
@@ -2798,14 +2779,13 @@ input[type=number] {
   scrollbar-width: thin;
 }
 .clients-list--container::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
 .clients-list--container::-webkit-scrollbar-track {
   background-color: #F0F0F0;
 }
 .clients-list--container::-webkit-scrollbar-thumb {
   background-color: #BDBEC3;
-  border-radius: 20px;
 }
 .clients-list-users {
   padding: 0;
@@ -3308,14 +3288,13 @@ input[type=number] {
   scrollbar-width: thin;
 }
 .layout-right--container .right-content-data::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
 .layout-right--container .right-content-data::-webkit-scrollbar-track {
   background-color: #F0F0F0;
 }
 .layout-right--container .right-content-data::-webkit-scrollbar-thumb {
   background-color: #BDBEC3;
-  border-radius: 20px;
 }
 @media screen and (max-width: 767px) {
   .layout-right--container .right-content-data {
@@ -5175,7 +5154,7 @@ input[type=number] {
   padding-left: 15px;
 }
 .sales-page .right-content-data {
-  margin-top: 1rem;
+  padding-top: 20px;
   height: 82vh;
   max-height: 100%;
 }
@@ -5866,14 +5845,13 @@ input[type=number] {
   scrollbar-width: thin;
 }
 .maintenance-page .activeRequest-leftSide-oneTab::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
 .maintenance-page .activeRequest-leftSide-oneTab::-webkit-scrollbar-track {
   background-color: #F0F0F0;
 }
 .maintenance-page .activeRequest-leftSide-oneTab::-webkit-scrollbar-thumb {
   background-color: #BDBEC3;
-  border-radius: 20px;
 }
 @media screen and (max-height: 700px) {
   .maintenance-page .clients-list--individuals.active {
@@ -5884,14 +5862,13 @@ input[type=number] {
     scrollbar-width: thin;
   }
   .maintenance-page .clients-list--individuals.active::-webkit-scrollbar {
-    width: 5px;
+    width: 8px;
   }
   .maintenance-page .clients-list--individuals.active::-webkit-scrollbar-track {
     background-color: #F0F0F0;
   }
   .maintenance-page .clients-list--individuals.active::-webkit-scrollbar-thumb {
     background-color: #BDBEC3;
-    border-radius: 20px;
   }
   .maintenance-page .invoice {
     height: 92%;

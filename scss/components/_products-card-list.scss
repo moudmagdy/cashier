@@ -1,13 +1,15 @@
 .products-card-list{
     position: relative;
-    font-size: 0.9rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-wrap: wrap;
     width: 100%;
     font-size: 0.9rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
     transition: all 0.4s ease-in;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
     
     @include mediaMixin(xxxlScreen) {
         font-size:  0.91rem;

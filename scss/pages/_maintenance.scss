@@ -64,7 +64,7 @@
         position: relative;
     }
     .device-issues{
-        @include flexCenter;
+        @include flex-center;
         justify-content: space-around;
         flex-wrap: wrap;
         &--issue{
@@ -73,7 +73,7 @@
             border:1px solid #4d4d4d;
             border-radius: 2em;
             // margin: 1em 0;
-            @include flexCenter;
+            @include flex-center;
             span{
                 color:$black ;
             }
@@ -324,7 +324,7 @@
                 }
 
                 .device-maintenance {
-                    @include flexCenter;
+                    @include flex-center;
                     justify-content: flex-start;
                     flex-wrap: wrap;
 
@@ -334,7 +334,7 @@
                         background-color: #F2F2F2;
                         border-radius: 2em;
                         margin: 1em 0.5em;
-                        @include flexCenter;
+                        @include flex-center;
 
                         span {
                             color:$black ;

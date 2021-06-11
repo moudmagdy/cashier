@@ -83,13 +83,13 @@
     }
 
     &--buttons-container{
-        @include flexCenter;
+        @include flex-center;
         // flex-wrap: wrap;
         flex-direction: column;
         margin-top: 10px;
         direction: ltr;
         .cal-row{
-            @include flexCenter;
+            @include flex-center;
             flex-direction: row;
             width: 100%;
             justify-content: space-between;

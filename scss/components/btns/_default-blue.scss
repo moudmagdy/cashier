@@ -3,7 +3,7 @@
     background-color: $blue;
     width: 146px;
     height: 44px;
-    @include flexCenter;
+    @include flex-center;
     border-radius: 28px;
     cursor: pointer;
 

@@ -1,5 +1,5 @@
 // this bill used in Bill-cash page 
-.bill{
+.bill {
     width: 100%;
     height: 22%;
     position: relative;
@@ -8,9 +8,9 @@
     border-top: 1px solid $gray6;
     background: white;
     border-radius: 18px;
-    // padding:0 36px;
     padding: 0 17px;
-    &-list{
+
+    &-list {
         width: 100%;
         height: 80%;
         list-style: none;
@@ -20,7 +20,8 @@
         flex-direction: column;
         padding: 0;
         margin: 0;
-        &--item{
+
+        &--item {
             // padding: 0 0 0 3em;
             width: 100%;
             height: 7em;
@@ -32,78 +33,87 @@
             border-width: 3px;
             padding-right: 15px !important ;
             border-bottom: 1px dashed rgba(203, 208, 214,0.3);
-           &.total-final-row{
-               background-color: $gray7;
-               font-weight: bold;
-               height: 12em;
-               font-family: 'bold',Arial, Helvetica, sans-serif !important;
-           }
-            &.push-left-10{
-               padding:0 0 0 6.5em;
-           }
-            .custom-container{
+
+            &.total-final-row {
+                background-color: $gray7;
+                font-weight: bold;
+                height: 12em;
+                font-family: 'bold', Arial, Helvetica, sans-serif !important;
+            }
+
+            &.push-left-10 {
+                padding:0 0 0 6.5em;
+            }
+
+            .custom-container {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-           &:last-child{
+
+            &:last-child {
                 border: none;
             }
-            &--delete-row{
+
+            &--delete-row {
                 width: 2em;
                 height: 2em;
                 margin: 0 2em;
                 border: 1px solid $gray6;
                 border-radius: 50%;
                 cursor: pointer;
-                @include flexCenter;
-                &:hover{
-                border: 1px solid $blue;
-                svg{
-                    g{
-                        line{
+                @include flex-center;
+
+                &:hover {
+                    border: 1px solid $blue;
+                svg {
+                    g {
+                        line {
                             stroke: $blue;
                         }
                     }
-                 
                 }
                 }
             }
-            .bill-name{
+            .bill-name {
                 font-size: 1.3em;
                 font-family: 'med';
                 font-size: 2em;
             }
-            .bill-price{
+            .bill-price {
                 width: 18em;
                 // font-size: 1.8em;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 flex-direction: row-reverse;
-                &--priceNumber{
+
+                &--priceNumber {
                     font-size: 2.4em;
                 }
             }
-            .final-price{
+            .final-price {
                 font-size: 2.4em;
                 font-family: 'bold';
             }
-            &-invoice{
+            &-invoice {
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
                 flex-direction: column;
                 // height: 14em;
-                div{
+
+                div {
                     margin: 0.5em 0;
                 }
-                &-discount{
+
+                &-discount {
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;  
-                    &-number{
+                    align-items: center;
+
+                    &-number {
                         width: 5.8em;
                         border-radius: 52px;
                         background-color: $lightRed;
@@ -117,25 +127,29 @@
                         left: -15%;
                         position: relative;
                         height: 3.5em;
+
                         span {
                             font-size: 1.8em;
                             color: $lightRed2;
                         }
                     }
                 }
-                &-delivery{
+
+                &-delivery {
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;  
                 }
             }
-            &.red-font{
+
+            &.red-font {
                 color: $lightRed2;
             }
         }
     }
-    &-btn-container{
+
+    &-btn-container {
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -145,8 +159,9 @@
         padding: 0 16px;
         padding-top: 8px;
         font-family: 'reg';
-        .btn--receive-cash{
-            &--price{
+
+        .btn--receive-cash {
+            &--price {
                 font-size: 3.556rem;
                 font-family: 'med';
                 left: -1%;
@@ -156,32 +171,36 @@
     }
 }
 
+.bill {
+    border-top: none;
+    height: 35%;
+    span {
+        font-family: 'reg',Arial, Helvetica, sans-serif !important;
+    }
+    
+    .custom-container {
+        .bill-price--priceNumber {
+            width: auto;
+        }
+    }
+    
+    .bill-price--priceNumber {
+        width: 5em;
+    }
 
- .bill{
-        border-top: none;
-        height: 35%;
-        span{
-            font-family: 'reg',Arial, Helvetica, sans-serif !important;
-        }
-        .custom-container{
-            .bill-price--priceNumber{
-                width: auto;
-            }
-        }
-        .bill-price--priceNumber{
-          width: 5em;
-        }
-        // .total-final-row{
-        //     background-color: $gray5;
-        // }
-        .total-final{
-            font-family: 'med';
-        }
-        .remaining-amount{
-            font-family: 'bold' !important;
-            color: $blue;
-        }
+    // .total-final-row {
+    //     background-color: $gray5;
+    // }
+
+    .total-final {
+        font-family: 'med';
     }
-    .bill-btn-container{
-        padding: 0 !important;
+    
+    .remaining-amount {
+        font-family: 'bold' !important;
+        color: $blue;
     }
+}
+.bill-btn-container {
+    padding: 0 !important;
+}

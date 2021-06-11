@@ -8,7 +8,7 @@
         border-bottom: none;
         top: 1rem;
         position: relative;
-        @include flexCenter;
+        @include flex-center;
         justify-content: flex-end;
         padding: 0 1.5rem;
         button{
@@ -29,7 +29,7 @@
     .modal-body{
         padding: 2rem;
         .content{
-            @include flexCenter;
+            @include flex-center;
             flex-direction: column;
         }
         &-img{
@@ -47,7 +47,7 @@
             align-items: flex-start;
             &--product{
                 width: 33.33%;
-                @include flexCenter;
+                @include flex-center;
                 flex-direction: column;
                 align-items: flex-start;
                 h5{
@@ -56,7 +56,7 @@
                 }
             }
             &--price{
-                @include flexCenter;
+                @include flex-center;
                 width: 33.33%;
                 flex-direction: column;
                 h5{
@@ -67,7 +67,7 @@
                 }
             }
             &--quantity{
-                @include flexCenter;
+                @include flex-center;
                 width: 33.33%;
                 flex-direction: column;
                 .blue-box{
@@ -77,7 +77,7 @@
                     height: 3em;
                     padding: 4px 9px;
                     border-radius: 5px;
-                    @include flexCenter;
+                    @include flex-center;
                     span{
                         color: $white;
                         font-size: 16px;
