@@ -1,15 +1,15 @@
 .sales-page{
-    .final-price{
+    .final-price {
         font-family: 'reg',Arial, Helvetica, sans-serif;
     }
 
-.searchInput{
-    margin-bottom: 10px;
-}
-.pdLeft-15{
-    padding-left: 15px;
-}
-    .right-content-data{
+    .searchInput {
+        // margin-bottom: 10px;
+    }
+    .pdLeft-15{
+        padding-left: 15px;
+    }
+    .right-content-data {
         padding-top: 20px;
         height: 82vh;
         max-height: 100%;
@@ -24,14 +24,14 @@
     //         max-height: 93vh !important;
     //     }
     // }
-.layout-right--container {
-    .searchInput{
-        width: 90%;
-    }
+// .layout-right--container {
+//     .searchInput{
+//         width: 90%;
+//     }
 
-}
+// }
     
-    .flex-container{
+    .flex-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -44,7 +44,6 @@
     #salesInvoice{
         @media screen and (max-height:850px) {
             font-size: 7px;
-            height: 99%;
         }
     }
 }

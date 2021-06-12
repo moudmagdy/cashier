@@ -12,16 +12,16 @@
         padding: 1rem 1rem !important;
 
     }
-    .leftnewContent .layout-tabs--buttons-btn.active span{
+    .leftnewContent .page__layout__nav a.active span{
         color: $white;
     }
-    .leftnewContent .layout-tabs--buttons-btn{
+    .leftnewContent .page__layout__nav a{
     .numberCircle{
         border: 1px solid #c3c3c3;
         background: transparent;
     }
     }
-    .leftnewContent .layout-tabs--buttons-btn.active{
+    .leftnewContent .page__layout__nav a.active {
         .numberCircle{
             border: none;
             background: #F2F2F2;
@@ -30,15 +30,11 @@
             }
         }
         }
+        // .layout-right{
+        //     background-color: red;
+        // }
 
-
-
-
-        .layout-right{
-            background-color: red;
-        }
-
-    .leftnewContent .layout-tabs--buttons-btn span{
+    .leftnewContent .page__layout__nav a span{
         color: #c3c3c3;
     }
     .greenBG{
@@ -51,7 +47,7 @@
         background-color: #2BAB5A !important;
     }
     .deliveredRequests-leftSide-MultiTabs{
-        .layout-tabs{
+        .page__layout__tabs {
             display: block;
             padding: 0;
         }

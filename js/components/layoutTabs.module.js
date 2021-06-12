@@ -1,4 +1,4 @@
-let tabBtnMain = document.querySelectorAll('.main-layout-tab-btn');
+let tabBtnMain = document.querySelectorAll('.page__layout__nav a');
 let subTabBtn = document.querySelectorAll('.clients-tabs-btn');
 let asideClientTabs = document.querySelectorAll('.asideClientTabs');
 let asideClientTabs2 = document.querySelectorAll('.clients-tabs-btn2');
@@ -19,10 +19,8 @@ const layoutTabs = (e, layoutContainer, tabsBtn) => {
   let clickItem = e.currentTarget.getAttribute('data-target-id');
   let clickItemHash = '#' + clickItem;
   let getLayout = document.querySelector(clickItemHash);
-  getLayout.classList.add('active')
-  e.currentTarget.classList.add('active')
-
-
+  getLayout.classList.add('active');
+  e.currentTarget.classList.add('active');
 }
 
 asideClientTabs.forEach(node => {
@@ -33,7 +31,7 @@ asideClientTabs.forEach(node => {
 
 tabBtnMain.forEach(node => {
   node.addEventListener('click', function (e) {
-    layoutTabs(e, '.layout-container', '.main-layout-tab-btn')
+    layoutTabs(e, '.page__layout__col', '.page__layout__nav a')
   })
 });
 
@@ -45,10 +43,9 @@ subTabBtn.forEach(node => {
 
 subTabBtn.forEach(node => {
   node.addEventListener('click', function (e) {
-    layoutTabs(e, '.deviceInfo-tab-content', '.layout-tabs--buttons')
+    layoutTabs(e, '.deviceInfo-tab-content', '.page__layout__nav')
   })
 });
-
 
 asideClientTabs2.forEach(node => {
   node.addEventListener('click', function (e) {

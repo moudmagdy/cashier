@@ -1,40 +1,60 @@
-.sidemenu{
+.main__menu__container {
     position: fixed;
-    z-index: 222;
     right: 0;
     top: 0;
-    width: 8.5rem;
-    font-size: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    width: var(--main-menu-width);
     height: 100%;
-    margin-top: 6.5rem;
+    z-index: 999;
+
+    .sidemenu-btn {
+        width: var(--main-menu-width);
+        // height: 25px;
+        display: block;
+        text-align: center;
+        padding: 12px 8px;
+        // justify-content: center;
+        cursor: pointer;
+
+        svg {
+            width: 20px;
+        }
+    }
+}
+.sidemenu {
+    // width: 8.5rem;
+    font-size: 1rem;
+    // margin-top: 6.5rem;
     background-color: $white;
     padding: 5px 6px 2px 3px;
     transition: all 0.3s ease-in-out;
-    @media screen and(max-width:1024px){
+
+    @media screen and(max-width:1024px) {
         display: none;
     }
-    &.sideMenuOpened{
+    &.sideMenuOpened {
         width: 22rem;  
         border-top-left-radius: 24px;
         box-shadow: 0px 0px 15px 2px #d0d0d0;
         ul li {
             margin: 2.5px auto;
         }
-        ul li a{
+        ul li a {
             justify-content: space-around;
             align-items: center;
             flex-direction: row;
             margin: 0 4rem;  
         }
-         ul li span{
+        ul li span {
             margin-top: 0px;
         }
-        ul li svg{
+        ul li svg {
             margin: 0;
         }
         
     }
-    ul{
+    ul {
         display: flex;
         align-content: center;
         flex-direction: column;
@@ -44,7 +64,7 @@
         height: auto;
         padding: 0;
         position: relative;
-        li{
+        li {
             display: block;
             font-size: 1.2em;
             height: 6em;
@@ -55,10 +75,10 @@
             text-decoration: none;
             margin-bottom: 5px;
             border-radius: 8px;
-            &:hover{
+            &:hover {
                 background-color: #f1f1f1;
             }
-            span{
+            span {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
@@ -68,14 +88,14 @@
                 position: relative;
                 top: 0;
             }
-            svg{
-                height: 3em;
-                width: 3em;
+            svg {
+                height: 28px;
+                width: 28px;
                 fill: #a6cdff;
                 margin-bottom: 16px;
                 margin-top: 5px;
             }
-            a{
+            a {
                 color: #8d8d8d;
                 justify-content: center;
                 align-items: center;

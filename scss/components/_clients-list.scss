@@ -1,6 +1,6 @@
 .clients-list{
     height: 94vh;
-    .layout-tabs{
+    .page__layout__tabs {
         display: flex;
         padding: 0;
         height: 13em;
@@ -36,9 +36,9 @@
         align-items: center;
         flex-direction: row-reverse;
     .searchInput{
-        margin-top: 10px;
-        width: 85%;
-        margin: 14px 10px 0px 0;
+        // margin-top: 10px;
+        // width: 85%;
+        // margin: 14px 10px 0px 0;
         background-color: $veryLightBlue;
         input{
             &::placeholder{

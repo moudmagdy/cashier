@@ -1,6 +1,6 @@
-.invoice{
+.invoice {
     font-size: 1rem;
-    height: 100%;
+    // height: 100%;
     position: relative;
     display: block;
     // justify-content: space-between;
@@ -13,10 +13,10 @@
     //     font-size: 7px;
     //   }
     .searchInput{
-        margin-top: 10px;
+        // margin-top: 10px;
         background-color: $lightGray2;
-        margin: 10px auto;
-        width: 92%;
+        // margin: 10px auto;
+        // width: 92%;
         input{
             &::placeholder{
                 color: $black;
@@ -91,7 +91,7 @@
             }
         }
     }
-    &--customer-list{
+    &--customer-list {
         
     }
 
@@ -99,4 +99,15 @@
         position: absolute;
         bottom: 5%;
     }
+}
+.invoice__content {
+    height: 100vh;
+    background-color: #fff;
+}
+.invoice__details {
+    display: flex;
+    flex-direction: column;
+}
+.add-client__container {
+    padding: 5px 15px;
 }

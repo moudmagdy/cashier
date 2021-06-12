@@ -12,21 +12,21 @@ tl.fromTo(appbar_menu, 0.1, {
 }, {
     display: 'block',
     opacity: 1,
-  
-})
-.fromTo(appbar_menuItems, 0.3, {
 
-    opacity: 0,
-    top:'4rem',
-    position:'relative'
-}, {
-    position:'relative',
-    opacity: 1,
-    top:"0rem",
-    stagger:0.1,
-    ease:Back.easeOut.config(1.7)
-  
-},'-=0.1')
+})
+    .fromTo(appbar_menuItems, 0.3, {
+
+        opacity: 0,
+        top: '4rem',
+        position: 'relative'
+    }, {
+        position: 'relative',
+        opacity: 1,
+        top: "0rem",
+        stagger: 0.1,
+        ease: Back.easeOut.config(1.7)
+
+    }, '-=0.1')
 tl.reverse()
 appbar_menu_btn.addEventListener('click', () => {
     tl.reversed(!tl.reversed())
@@ -36,12 +36,12 @@ appbar_menu_btn.addEventListener('click', () => {
 let itemsClick = document.querySelectorAll('.appbar-menu ul li');
 
 itemsClick.forEach(element => {
-    element.addEventListener('click',()=>{
-    tl.reverse(0.9)
-        
+    element.addEventListener('click', () => {
+        tl.reverse(0.9)
+
     })
 });
-// let layoutContainerRight = document.querySelector('.layout-right--container'); 
+// let layoutContainerRight = document.querySelector('.layout-right--container');
 // let invoice = document.querySelector('#salesInvoice'); 
 // layoutContainerRight.addEventListener('click',()=>{
 //     tl.reverse(0.5)

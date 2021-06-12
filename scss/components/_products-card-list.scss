@@ -1,15 +1,18 @@
-.products-card-list{
+.products-card-list {
     position: relative;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 8px;
     width: 100%;
     font-size: 0.9rem;
     transition: all 0.4s ease-in;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 8px;
+    padding: 10px 22px 20px 15px;
+
+    &.listview__grid {
+        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+        gap: 12px;
+    }
     
     @include mediaMixin(xxxlScreen) {
         font-size:  0.91rem;

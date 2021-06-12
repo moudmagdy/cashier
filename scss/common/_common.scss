@@ -3,6 +3,8 @@
   --darkreader-neutral-text: #d8d4cf;
   --darkreader-selection-background: #004daa;
   --darkreader-selection-text: #e8e6e3;
+
+  --main-menu-width: 85px;
 }
 html {
   font-size: 10px;
@@ -98,7 +100,7 @@ input {
   left: 0;
 }
 
-.ltr .layout {
+.ltr .page__layout {
   padding: 0 0 0 104px;
 
 }
@@ -116,17 +118,17 @@ input {
   pointer-events: none !important;
 }
 
-@media (min-width: 992px) {
-  .col-xl-5 {
-    flex: 0 0 auto;
-    width: 41.6666666667%;
-  }
+// @media (min-width: 992px) {
+//   .col-xl-5 {
+//     flex: 0 0 auto;
+//     width: 41.6666666667%;
+//   }
 
-  .col-xl-7 {
-    flex: 0 0 auto;
-    width: 58.3333333333%;
-  }
-}
+//   .col-xl-7 {
+//     flex: 0 0 auto;
+//     width: 58.3333333333%;
+//   }
+// }
 
 .thinFont {
   font-family: 'reg', Arial, Helvetica, sans-serif !important;
@@ -177,19 +179,19 @@ input {
 }
 
 
-@media (min-width: 1500px) {
-  .col-xxl-8 {
-    flex: 0 0 auto;
-    width: 66.6666666667%;
-  }
+// @media (min-width: 1500px) {
+//   .col-xxl-8 {
+//     flex: 0 0 auto;
+//     width: 66.6666666667%;
+//   }
 
-  .col-xxl-4 {
-    flex: 0 0 auto;
-    width: 33.3333333333%;
-  }
+//   .col-xxl-4 {
+//     flex: 0 0 auto;
+//     width: 33.3333333333%;
+//   }
 
 
-}
+// }
 
 input{
 &::-webkit-outer-spin-button,

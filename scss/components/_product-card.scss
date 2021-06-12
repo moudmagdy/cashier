@@ -10,18 +10,26 @@
     // height: 28.8em;
     // max-height: 28.8em !important;
     background-color: $white;
-    border: 3px solid transparent;
+    // border: 3px solid transparent;
     border-radius: 0.8em;
     cursor: pointer;
     // overflow: hidden;
-    padding: 2px;
+    padding: 3px;
     // margin: 13px 5px;
 
     &--selected-card {
         display: none;
     }
     &.selected {
-        border: 3px solid $blue;
+        // border: 3px solid $blue;
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border: 3px solid $blue;
+            border-radius: 0.8em;
+            pointer-events: none;
+        }
         .product-card--selected-card {
             position: absolute;
             left: -8px;
@@ -42,6 +50,9 @@
     }
 
     &-dropdown-menu {
+        .dropdown-toggle::after {
+            display: none;
+        }
         .dropdown-menu {
             font-size: 1em;
             width: 25.7em;
@@ -121,6 +132,7 @@
 
         &-price {
             font-size: 1.6em;
+            margin-bottom: 0;
             // font-family: 'bold';
         }
 
@@ -135,7 +147,7 @@
             p {
                 margin-bottom: 0;
                 opacity: 1;
-                font-size: 1.6em;
+                // font-size: 1.6em;
                 display: block;
                 width: 95%;
                 white-space: nowrap;
