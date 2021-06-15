@@ -79,7 +79,7 @@
 
             &.sales__page {
                 &::before {
-                    background-image: url(../../images/menu/sales.svg);
+                    background-image: url(./../images/menu/sales.svg);
                 }
                 &:hover {
                     background-color: #1877f21a;
@@ -88,13 +88,13 @@
                     color: #1877f2;
                     background-color: #1877f21a;
                     &::before {
-                        background-image: url(../../images/menu/sales-filled.svg);
+                        background-image: url(./../images/menu/sales-filled.svg);
                     }
                 }
             }
             &.cash-flow__page {
                 &::before {
-                    background-image: url(../../images/menu/cash-flow.svg);
+                    background-image: url(./../images/menu/cash-flow.svg);
                 }
                 &:hover {
                     background-color: #4cc7841a;
@@ -103,13 +103,13 @@
                     color: #4cc784;
                     background-color: #4cc7841a;
                     &::before {
-                        background-image: url(../../images/menu/cash-flow-filled.svg);
+                        background-image: url(./../images/menu/cash-flow-filled.svg);
                     }
                 }
             }
             &.bills__page {
                 &::before {
-                    background-image: url(../../images/menu/bills.svg);
+                    background-image: url(./../images/menu/bills.svg);
                 }
                 &:hover {
                     background-color: #EBF6FF;
@@ -117,13 +117,13 @@
                 &.active {
                     background-color: #EBF6FF;
                     &::before {
-                        background-image: url(../../images/menu/bills-filled.svg);
+                        background-image: url(./../images/menu/bills-filled.svg);
                     }
                 }
             }
             &.expenses__page {
                 &::before {
-                    background-image: url(../../images/menu/expenses.svg);
+                    background-image: url(./../images/menu/expenses.svg);
                 }
                 &:hover {
                     background-color: #EBF6FF;
@@ -131,13 +131,13 @@
                 &.active {
                     background-color: #EBF6FF;
                     &::before {
-                        background-image: url(../../images/menu/expenses.svg);
+                        background-image: url(./../images/menu/expenses.svg);
                     }
                 }
             }
             &.maintenance__page {
                 &::before {
-                    background-image: url(../../images/menu/maintenance.svg);
+                    background-image: url(./../images/menu/maintenance.svg);
                 }
                 &:hover {
                     background-color: #EBF6FF;
@@ -145,13 +145,13 @@
                 &.active {
                     background-color: #EBF6FF;
                     &::before {
-                        background-image: url(../../images/menu/maintenance-filled.svg);
+                        background-image: url(./../images/menu/maintenance-filled.svg);
                     }
                 }
             }
             &.clients__page {
                 &::before {
-                    background-image: url(../../images/menu/clients.svg);
+                    background-image: url(./../images/menu/clients.svg);
                 }
                 &:hover {
                     background-color: #EBF6FF;
@@ -159,13 +159,13 @@
                 &.active {
                     background-color: #EBF6FF;
                     &::before {
-                        background-image: url(../../images/menu/clients.svg);
+                        background-image: url(./../images/menu/clients.svg);
                     }
                 }
             }
             &.suppliers__page {
                 &::before {
-                    background-image: url(../../images/menu/clients.svg);
+                    background-image: url(./../images/menu/clients.svg);
                 }
                 &:hover {
                     background-color: #EBF6FF;
@@ -173,13 +173,13 @@
                 &.active {
                     background-color: #EBF6FF;
                     &::before {
-                        background-image: url(../../images/menu/clients.svg);
+                        background-image: url(./../images/menu/clients.svg);
                     }
                 }
             }
             &.work-shift__page {
                 &::before {
-                    background-image: url(../../images/menu/work-shift.svg);
+                    background-image: url(./../images/menu/work-shift.svg);
                 }
                 &:hover {
                     background-color: #EBF6FF;
@@ -187,13 +187,13 @@
                 &.active {
                     background-color: #EBF6FF;
                     &::before {
-                        background-image: url(../../images/menu/work-shift.svg);
+                        background-image: url(./../images/menu/work-shift.svg);
                     }
                 }
             }
             &.settings__page {
                 &::before {
-                    background-image: url(../../images/menu/settings.svg);
+                    background-image: url(./../images/menu/settings.svg);
                 }
                 &:hover {
                     background-color: #EBF6FF;
@@ -201,13 +201,13 @@
                 &.active {
                     background-color: #EBF6FF;
                     &::before {
-                        background-image: url(../../images/menu/settings.svg);
+                        background-image: url(./../images/menu/settings.svg);
                     }
                 }
             }
             &.update-data__page {
                 &::before {
-                    background-image: url(../../images/menu/update.svg);
+                    background-image: url(./../images/menu/update.svg);
                 }
                 &:hover {
                     background-color: #EBF6FF;
@@ -215,13 +215,13 @@
                 &.active {
                     background-color: #EBF6FF;
                     &::before {
-                        background-image: url(../../images/menu/update.svg);
+                        background-image: url(./../images/menu/update.svg);
                     }
                 }
             }
             &.management__page {
                 &::before {
-                    background-image: url(../../images/menu/management.svg);
+                    background-image: url(./../images/menu/management.svg);
                 }
                 &:hover {
                     background-color: #EBF6FF;
@@ -229,7 +229,7 @@
                 &.active {
                     background-color: #EBF6FF;
                     &::before {
-                        background-image: url(../../images/menu/management-filled.svg);
+                        background-image: url(./../images/menu/management-filled.svg);
                     }
                 }
             }

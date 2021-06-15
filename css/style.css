@@ -2957,7 +2957,7 @@ input[type=number] {
   background-repeat: no-repeat;
 }
 .main-menu nav a.sales__page::before {
-  background-image: url(../../images/menu/sales.svg);
+  background-image: url(./../images/menu/sales.svg);
 }
 .main-menu nav a.sales__page:hover {
   background-color: #1877f21a;
@@ -2967,10 +2967,10 @@ input[type=number] {
   background-color: #1877f21a;
 }
 .main-menu nav a.sales__page.active::before {
-  background-image: url(../../images/menu/sales-filled.svg);
+  background-image: url(./../images/menu/sales-filled.svg);
 }
 .main-menu nav a.cash-flow__page::before {
-  background-image: url(../../images/menu/cash-flow.svg);
+  background-image: url(./../images/menu/cash-flow.svg);
 }
 .main-menu nav a.cash-flow__page:hover {
   background-color: #4cc7841a;
@@ -2980,10 +2980,10 @@ input[type=number] {
   background-color: #4cc7841a;
 }
 .main-menu nav a.cash-flow__page.active::before {
-  background-image: url(../../images/menu/cash-flow-filled.svg);
+  background-image: url(./../images/menu/cash-flow-filled.svg);
 }
 .main-menu nav a.bills__page::before {
-  background-image: url(../../images/menu/bills.svg);
+  background-image: url(./../images/menu/bills.svg);
 }
 .main-menu nav a.bills__page:hover {
   background-color: #EBF6FF;
@@ -2992,10 +2992,10 @@ input[type=number] {
   background-color: #EBF6FF;
 }
 .main-menu nav a.bills__page.active::before {
-  background-image: url(../../images/menu/bills-filled.svg);
+  background-image: url(./../images/menu/bills-filled.svg);
 }
 .main-menu nav a.expenses__page::before {
-  background-image: url(../../images/menu/expenses.svg);
+  background-image: url(./../images/menu/expenses.svg);
 }
 .main-menu nav a.expenses__page:hover {
   background-color: #EBF6FF;
@@ -3004,10 +3004,10 @@ input[type=number] {
   background-color: #EBF6FF;
 }
 .main-menu nav a.expenses__page.active::before {
-  background-image: url(../../images/menu/expenses.svg);
+  background-image: url(./../images/menu/expenses.svg);
 }
 .main-menu nav a.maintenance__page::before {
-  background-image: url(../../images/menu/maintenance.svg);
+  background-image: url(./../images/menu/maintenance.svg);
 }
 .main-menu nav a.maintenance__page:hover {
   background-color: #EBF6FF;
@@ -3016,10 +3016,10 @@ input[type=number] {
   background-color: #EBF6FF;
 }
 .main-menu nav a.maintenance__page.active::before {
-  background-image: url(../../images/menu/maintenance-filled.svg);
+  background-image: url(./../images/menu/maintenance-filled.svg);
 }
 .main-menu nav a.clients__page::before {
-  background-image: url(../../images/menu/clients.svg);
+  background-image: url(./../images/menu/clients.svg);
 }
 .main-menu nav a.clients__page:hover {
   background-color: #EBF6FF;
@@ -3028,10 +3028,10 @@ input[type=number] {
   background-color: #EBF6FF;
 }
 .main-menu nav a.clients__page.active::before {
-  background-image: url(../../images/menu/clients.svg);
+  background-image: url(./../images/menu/clients.svg);
 }
 .main-menu nav a.suppliers__page::before {
-  background-image: url(../../images/menu/clients.svg);
+  background-image: url(./../images/menu/clients.svg);
 }
 .main-menu nav a.suppliers__page:hover {
   background-color: #EBF6FF;
@@ -3040,10 +3040,10 @@ input[type=number] {
   background-color: #EBF6FF;
 }
 .main-menu nav a.suppliers__page.active::before {
-  background-image: url(../../images/menu/clients.svg);
+  background-image: url(./../images/menu/clients.svg);
 }
 .main-menu nav a.work-shift__page::before {
-  background-image: url(../../images/menu/work-shift.svg);
+  background-image: url(./../images/menu/work-shift.svg);
 }
 .main-menu nav a.work-shift__page:hover {
   background-color: #EBF6FF;
@@ -3052,10 +3052,10 @@ input[type=number] {
   background-color: #EBF6FF;
 }
 .main-menu nav a.work-shift__page.active::before {
-  background-image: url(../../images/menu/work-shift.svg);
+  background-image: url(./../images/menu/work-shift.svg);
 }
 .main-menu nav a.settings__page::before {
-  background-image: url(../../images/menu/settings.svg);
+  background-image: url(./../images/menu/settings.svg);
 }
 .main-menu nav a.settings__page:hover {
   background-color: #EBF6FF;
@@ -3064,10 +3064,10 @@ input[type=number] {
   background-color: #EBF6FF;
 }
 .main-menu nav a.settings__page.active::before {
-  background-image: url(../../images/menu/settings.svg);
+  background-image: url(./../images/menu/settings.svg);
 }
 .main-menu nav a.update-data__page::before {
-  background-image: url(../../images/menu/update.svg);
+  background-image: url(./../images/menu/update.svg);
 }
 .main-menu nav a.update-data__page:hover {
   background-color: #EBF6FF;
@@ -3076,10 +3076,10 @@ input[type=number] {
   background-color: #EBF6FF;
 }
 .main-menu nav a.update-data__page.active::before {
-  background-image: url(../../images/menu/update.svg);
+  background-image: url(./../images/menu/update.svg);
 }
 .main-menu nav a.management__page::before {
-  background-image: url(../../images/menu/management.svg);
+  background-image: url(./../images/menu/management.svg);
 }
 .main-menu nav a.management__page:hover {
   background-color: #EBF6FF;
@@ -3088,7 +3088,7 @@ input[type=number] {
   background-color: #EBF6FF;
 }
 .main-menu nav a.management__page.active::before {
-  background-image: url(../../images/menu/management-filled.svg);
+  background-image: url(./../images/menu/management-filled.svg);
 }
 .main-menu--opened {
   width: 168px;
