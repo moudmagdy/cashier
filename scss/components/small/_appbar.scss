@@ -1,19 +1,19 @@
 .appbar {
     background-color: $blue;
-    height: 50px;
+    height: 52px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 0 16px;
     font-size: 10px;
+    color: $white;
 
     @media screen and (max-width:767px) {
         display: none;
     }
-    span {
-        // font-family: 'med';
-        font-size: 2rem;
-        color: $white;
+    .appbar-title {
+        font-family: 'NotoSansArabic_Medium';
+        font-size: 15px;
     }
 
     &.invoice {
@@ -28,17 +28,23 @@
                 justify-content: space-evenly;
                 left: 33px;
                 position: relative;
+                span {
+                    font-size: 15px;
+                    font-family: 'NotoSansArabic_SemiBold';
+                }
                 &--box {
-                    width: 3.214em;
-                    height: 3.571em;
+                    @include flex-center;
+                    width: 36px;
+                    height: 40px;
+                    font-family: 'NotoSansArabic_Medium';
+                    font-size: 1rem;
                     border: 2px solid $white;
                     border-radius: 6px;
-                    @include flex-center;
-                    @media screen and (min-width: 1500px) and (max-width: 1600px){
-                        width: 5rem;
-                        height: 5.643rem;
-                        left: 30px;
-                    }
+                    // @media screen and (min-width: 1500px) and (max-width: 1600px){
+                    //     width: 5rem;
+                    //     height: 5.643rem;
+                    //     left: 30px;
+                    // }
                 }
             }
 
