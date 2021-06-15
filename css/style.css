@@ -685,10 +685,22 @@ input[type=number] {
 }
 .search__bar .features__dropdown .features__dropdown__menu {
   text-align: right;
+  border: none;
+  border-radius: 8px;
+  -webkit-box-shadow: 1px 0px 12px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 1px 0px 12px 0px rgba(0, 0, 0, 0.16);
+}
+.search__bar .features__dropdown .features__dropdown__menu .dropdown-item {
+  font-family: "NotoSansArabic_Medium";
+  font-size: 12px;
+  padding: 14px 16px;
 }
 .search__bar .features__dropdown .features__dropdown__menu .dropdown-item svg {
   fill: #060505;
   margin-left: 5px;
+}
+.search__bar .features__dropdown .features__dropdown__menu .dropdown-item:hover {
+  background-color: #EBF6FF;
 }
 .search__bar .features__dropdown .features__dropdown__menu .dropdown-item:active svg {
   fill: #fff;
@@ -1363,7 +1375,7 @@ input[type=number] {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #fff;
-  border: 0.2px solid #C6CFD9;
+  border: 1px solid #E2E9F0;
   border-radius: 8px;
   cursor: pointer;
   padding: 3px;
@@ -2528,6 +2540,12 @@ input[type=number] {
   font-size: 12px;
   border: none;
   padding: 4px 12px;
+}
+.clients-list .search-container .clients-list__search__input input[type=search]:focus {
+  outline: none;
+}
+.clients-list .search-container .clients-list__search__input input[type=search]::-webkit-search-cancel-button, .clients-list .search-container .clients-list__search__input input[type=search]::-webkit-search-cancel-button {
+  display: none !important;
 }
 .clients-list .search-container .clients-list__search__input input[type=search]::-webkit-input-placeholder {
   color: #212121;

@@ -43,6 +43,14 @@
                 border: none;
                 padding: 4px 12px;
 
+                &:focus {
+                    outline: none;
+                }
+                &::-webkit-search-cancel-button,
+                &::-webkit-search-cancel-button{
+                    display: none !important;
+                }
+
                 &::placeholder {
                     color: $black;
                 }

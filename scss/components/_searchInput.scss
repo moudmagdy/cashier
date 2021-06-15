@@ -131,11 +131,22 @@
     .features__dropdown {
         .features__dropdown__menu {
             text-align: right;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 1px 0px 12px 0px rgba(0, 0, 0, 0.16);
 
             .dropdown-item {
+                font-family: 'NotoSansArabic_Medium';
+                font-size: 12px;
+                padding: 14px 16px;
+
                 svg {
                     fill: #060505;
                     margin-left: 5px;
+                }
+
+                &:hover {
+                    background-color: #EBF6FF;
                 }
 
                 &:active {
