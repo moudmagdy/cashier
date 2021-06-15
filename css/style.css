@@ -1340,7 +1340,7 @@ input[type=number] {
 .products__list {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 16px;
   -webkit-transition: all 0.4s ease-in;
   -o-transition: all 0.4s ease-in;
@@ -1416,7 +1416,8 @@ input[type=number] {
 }
 .product__image {
   width: 100%;
-  height: 120px;
+  height: 50%;
+  max-height: 90px;
   overflow: hidden;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
