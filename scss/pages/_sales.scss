@@ -1,50 +1,18 @@
-.sales-page{
+.sales-page {
     .final-price {
-        font-family: 'reg',Arial, Helvetica, sans-serif;
-    }
-
-    .searchInput {
-        // margin-bottom: 10px;
+        // font-family: 'reg',Arial, Helvetica, sans-serif;
     }
     .pdLeft-15{
         padding-left: 15px;
     }
-    .right-content-data {
-        padding-top: 20px;
-        height: 82vh;
-        max-height: 100%;
-        
-    }
-    // .left-content-data {
-    //     overflow: hidden;
-    // }
-    // .layout-left--container{
-    //     @include mediaMixin(mobile){
-    //         min-height: 93vh !important;
-    //         max-height: 93vh !important;
-    //     }
-    // }
-// .layout-right--container {
-//     .searchInput{
-//         width: 90%;
-//     }
 
-// }
-    
-    .flex-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row-reverse;
-        position: relative;
-    }
     .clients-list{
         display: none;
     }
-    #salesInvoice{
-        @media screen and (max-height:850px) {
-            font-size: 7px;
-        }
-    }
+    // #salesInvoice{
+    //     @media screen and (max-height:850px) {
+    //         font-size: 7px;
+    //     }
+    // }
 }
 

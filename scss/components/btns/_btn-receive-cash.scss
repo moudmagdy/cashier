@@ -1,17 +1,32 @@
 .btn--receive-cash{
     position: relative;
-    width: 78%;
-    height: 7em;
-    background-color: $blue;
-    border-radius: 50px;
     display: flex;
-    justify-content: space-around;
-    padding: 0 0 0 10px;
+    justify-content: space-between;
     align-items: center;
+    background-color: $blue;
+    border-radius: 28px;
+    // padding: 0 0 0 10px;
     cursor: pointer;
     text-decoration: none;
-    span{
-        font-size: 1.8em;
+    color: $white;
+    grid-column: 2;
+    grid-row: 1;
+    padding: 14px 28px;
+    line-height: 1.3;
+
+    &:hover {
         color: $white;
+        background-color: lighten($blue, 5%);
+    }
+    
+    span {
+        &:first-child {
+            font-family: 'NotoSansArabic_Medium';
+            font-size: 16px;
+        }
+        &:last-child {
+            font-size: 22px;
+            font-family: 'NotoSansArabic_SemiBold';
+        }
     }
 }

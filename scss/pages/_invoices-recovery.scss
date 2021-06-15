@@ -91,16 +91,16 @@
         max-height: 100%;
         margin-top: 2rem;
     }
-    .product-card.selected{
+    .product.selected{
         border: 3px solid $red ;
     }
-    .product-card--selected-card{
+    .product--selected-card{
         background-color: $red !important;
     }
     .checkout-list--item {
         &-left{
             &--price{
-                font-family: 'bold',Arial, Helvetica, sans-serif;
+                // font-family: 'bold',Arial, Helvetica, sans-serif;
             }
         }
         &.total-final{
@@ -139,13 +139,13 @@
     }
 
 
-    .product-card--details .priceData{
+    .product--details .priceData{
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         .x{
-            font-size: 1.6em;
+            font-size: 1.6rem;
             direction: ltr;
         }
     }
@@ -157,7 +157,7 @@
         color: $lightRed2;
         .second-price{
             color: $black;
-            font-size: 1.2em;
+            font-size: 1.2rem;
         }
     }
     .selectAllBtn{
@@ -174,7 +174,7 @@
         cursor: pointer;
         span{
             color: $red;
-            font-size: 1.6em;
+            font-size: 1.6rem;
         }
         &.clicked{
             background-color: #cc464d;
@@ -195,7 +195,7 @@
         width: auto;
     }
     .product-item-in-list--data-name h3{
-        font-size: 1.6em;
+        font-size: 1.6rem;
     }
     .products-list{
         font-size: 1.2rem;

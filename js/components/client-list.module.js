@@ -1,4 +1,4 @@
- const clientListRenderer = (invoiceName,listID,inputID) => {
+const clientListRenderer = (invoiceName, listID, inputID) => {
     // loop in clients-list-users-item - used in homepage and Add client tab 
 
     let clientsListUsersItem = document.querySelectorAll('.clients-list-users-item')
@@ -21,13 +21,13 @@
 
 
 
-     let tl = new TimelineMax({
+    let tl = new TimelineMax({
         paused: true
     });
     tl.to(salesInvoice, 0.4, {
-            opacity: 0,
-            display: 'none'
-        })
+        opacity: 0,
+        display: 'none'
+    })
         .to(clientsList, 0.4, {
             opacity: 1,
             display: 'block'

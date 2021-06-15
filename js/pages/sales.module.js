@@ -7,7 +7,7 @@ import '../components/appBar-menu.module.js';
 import clientListRenderer from './../components/client-list.module.js';
 
 import './../components/ChangeView.module.js';
-import './../components/sidemenu.module.js';
+import './../components/main-menu.module.js';
 
 clientListRenderer('salesInvoice', 'clientsList', 'salesInvoice')
 
@@ -63,18 +63,9 @@ document.getElementById('btn--receive-cash').addEventListener('click', (e) => {
 })
 
 
-
-
-
-
-
-
-
-
-
 // Start animation for All Cards in Homepage
 
-let cards = document.querySelectorAll('.product-card');
+let cards = document.querySelectorAll('.product');
 
 
 let productItemInList = document.querySelectorAll('.product-item-in-list');
@@ -89,9 +80,10 @@ tl1.play()
 
 cards.forEach(card => {
     card.addEventListener('click', () => {
-        card.classList.toggle('selected')
+        card.classList.toggle('product--selected')
     })
 })
 
 
-productsListContainer.style.maxHeight = "calc(100vh - 50px - 60px - 210px)";
+productsListContainer.style.maxHeight = "calc(100vh - 50px - 60px - 350px)";
+// productsListContainer.style.maxHeight = "calc(100vh - 50px - 60px - 500px)";

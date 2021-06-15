@@ -18,7 +18,7 @@
         // margin: 10px auto;
         // width: 92%;
         input{
-            &::placeholder{
+            &::placeholder {
                 color: $black;
             }
         }
@@ -36,7 +36,7 @@
         }
         &-details{
             width: 100%;
-            margin-top: 10em;
+            margin-top: 10rem;
             form{
                 display: flex;
                 justify-content: center;
@@ -49,10 +49,10 @@
                     width: 100%;
                     input{
                         width: 100%;
-                        padding: 1.2em;
+                        padding: 1.2rem;
                         position: relative;
                         border-radius: 8px;
-                        font-size: 1.4em;
+                        font-size: 1.4rem;
                         box-shadow: none;
                         border: 1px solid $gray6;
                         color: $darkGray;
@@ -62,10 +62,10 @@
                     }
                     textarea{
                         width: 100%;
-                        padding: 1.2em;
+                        padding: 1.2rem;
                         position: relative;
                         border-radius: 8px;
-                        font-size: 1.4em;
+                        font-size: 1.4rem;
                         box-shadow: none;
                         border: 1px solid $gray6;
                         color: $darkGray;
@@ -76,24 +76,23 @@
                         @include scroll-bar;
                     }
                     label {
-                        margin-bottom: 0.5em;
-                        font-size: 1.4em;
-                        font-family: 'thin';
+                        margin-bottom: 0.5rem;
+                        font-size: 1.4rem;
+                        // font-family: 'thin';
                     }
                     span {
                         position: absolute;
-                        left: 1em;
+                        left: 1rem;
                         top: 52%;
                         color: $darkGray;
-                        font-size: 1.4em;
+                        font-size: 1.4rem;
                     }
                 }
             }
         }
     }
-    &--customer-list {
-        
-    }
+    // &--customer-list {
+    // }
 
     .payments-buttons{
         position: absolute;
@@ -109,5 +108,5 @@
     flex-direction: column;
 }
 .add-client__container {
-    padding: 5px 15px;
+    padding: 4px 24px;
 }

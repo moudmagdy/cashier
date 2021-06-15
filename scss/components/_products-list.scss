@@ -2,13 +2,6 @@
 
 .products-list-container {
     max-height: calc(100vh - 50px - 60px - 210px);
-    // width: 100%;
-    // height: 59.9%;
-    // padding: 0 24px;
-    // margin-bottom: 4px;
-    @include mediaMixin(xlgDesktop) {
-        // height: 68%;
-    }
 }
 
 .products-list {
@@ -22,22 +15,17 @@
     padding: 0;
     margin: 0;
     font-size: 1rem;
-    // overflow-y: scroll;
-    // @include scroll-bar;
 }
 
 .product-item-in-list {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
     width: 100%;
-    // height: auto;
-    // min-height: 7.2em;
     padding: 10px 20px;
     border-bottom: 1px solid $gray5;
-    // border-radius: 0.8em;
-    // transition: all 0.2s ease-in-out;
+    z-index: 1;
 
     &:last-child {
         border-bottom: none;
@@ -52,52 +40,39 @@
         content: '';
         right: 0;
         top: 0;
-        z-index: 1;
+        z-index: -1;
     }
     &::after {
+        width: 0.3rem;
         height: 0;
-        width: 0.3em;
         background-color: $blue;
         position: absolute;
         right: 0;
         transition: all 0.2s ease-in-out;
         bottom: 0;
         content: '';
-        z-index: 6;
+        z-index: 1;
     }
     &--data {
-        // display: flex;
-        // justify-content: center;
-        // align-items: flex-start;
-        // flex-direction: column;
         width: 35%;
-        z-index: 4;
+        margin-left: 10px;
 
         &-name {
             h3 {
-                font-size: 1.8em;
-                font-family: 'reg';
-                display: block;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                position: relative;
-                line-height: 1.5;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                -webkit-line-clamp: 2;
-                height: calc(1em * 1.5 * 2);
-                padding: 0 !important;
+                font-family: 'NotoSansArabic_Medium';
+                font-size: 13px;
+                @include line-clamp(1.5, 2);
             }
         }
         &-discountInput {
-            font-size: 1.2em;
+            font-size: 11px;
             span {
                 text-decoration: line-through;
                 color: $darkGray;
             }
             
             input {
-                width: 5em;
+                width: 5rem;
                 border: none;
                 &::-webkit-outer-spin-button,
                 &::-webkit-inner-spin-button {
@@ -106,6 +81,7 @@
                 }
     
                 &[type=number] {
+                    background-color: transparent;
                     -moz-appearance: textfield;
                 }
     
@@ -121,19 +97,18 @@
     }
 
     &--counter {
-        width: 105px;
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
-        z-index: 4;
+        gap: 5px;
+
         &-screen {
-            width: 3.6em;
-            height: 4em;
+            width: 36px;
+            height: 40px;
             background-color: $gray7;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 0.6em;
+            border-radius: 4px;
 
             input {
                 width: 100%;
@@ -142,7 +117,9 @@
                 box-shadow: none;
                 height: 100%;
                 text-align: center;
-                font-size: 1.6em;
+                font-family: 'NotoSansArabic_Medium';
+                font-size: 15px;
+                color: #060505;
                 padding: 0;
                 margin: 0;
                 &::-webkit-outer-spin-button,
@@ -158,16 +135,17 @@
 
         &--minus,
         &--plus {
+            @include flex-center;
             cursor: pointer;
-            display: none;
-            z-index: 4;
-            width: 3em;
-            height: 3em;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
-            justify-content: center;
-            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+
             svg {
-                width: 2em
+                width: 12px;
+                height: 12px;
             }
             &:hover {
                 background-color: $lightGray2;
@@ -176,8 +154,8 @@
     }
 
     &--discount {
-        width: 2.5em;
-        height: 2.5em;
+        width: 24px;
+        height: 24px;
         background-color: $lightRed;
         border-radius: 50%;
         padding: 0;
@@ -187,36 +165,27 @@
         justify-content: center;
         align-items: center;
         opacity: 0;
-        z-index: 4;
         visibility: hidden;
-        svg {
-            path,
-            circle {
-                stroke: $lightRed2;
-            }
-        }
-        &.add-discount {
-        background-color: $white;
-        span {
-            display: none;
-        }
-        svg {
+        margin: 0 auto 0 10px;
 
-            path,
-            circle {
-                stroke: $darkGray;
-            }
-        }
-        }
-        &.number {
-            width: 3.5em;
-            border-radius: 52px;
-            background-color: $lightRed;
+        &.add-discount {
+            background-color: rgba(198, 207, 217, 0.3);
 
             span {
-                font-size: 1.2em;
-                color: $lightRed2;
+                display: none;
             }
+            svg {
+                width: 13px;
+            }
+        }
+        &.number {
+            width: max-content;
+            border-radius: 25px;
+            background-color: $lightRed;
+            color: $lightRed2;
+            font-size: 12px;
+            padding: 0 5px;
+
             svg {
                 display: none;
             }
@@ -225,10 +194,10 @@
         &.final {
             background-color: $lightRed2;
             border-radius: 52px;
-            width: 3.5em;
+            width: 3.5rem;
 
             span {
-                font-size: 1.2em;
+                font-size: 1.2rem;
                 color: $white;
 
             }
@@ -238,17 +207,14 @@
     }
 
     &--price {
-        z-index: 4;
-
-        span {
-            font-size: 1.8em;
-        }
+        font-family: 'NotoSansArabic_Medium';
+        font-size: 15px;
+        margin: 0 auto 0 10px;
     }
 
     &--delete {
-        width: 2.5em;
-        height: 2.5em;
-        // background-color: rgb(241, 228, 253);
+        width: 24px;
+        height: 24px;
         border-radius: 50%;
         padding: 0;
         margin: 0;
@@ -258,12 +224,11 @@
         align-items: center;
         opacity: 0;
         visibility: hidden;
-        z-index: 4;
-        width: 3em;
-        height: 3em;
+        margin-right: auto;
+
         svg {
-            height: 100%;
-            width: 40%;
+            width: 12px;
+            height: 12px;
         }
         &:hover {
             background-color: $lightGray2;
@@ -271,12 +236,10 @@
     }
 
     &:hover {
-        .product-item-in-list--counter--minus {
-            display: flex;
-        }
-
+        .product-item-in-list--counter--minus,
         .product-item-in-list--counter--plus {
-            display: flex;
+            opacity: 1;
+            pointer-events: auto;
         }
 
         .product-item-in-list--discount {

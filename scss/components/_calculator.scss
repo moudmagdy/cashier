@@ -5,8 +5,8 @@
     direction: rtl;
     font-size: 1rem;
     label {
-        font-size: 1.4em;
-        font-family: 'reg', Arial, Helvetica, sans-serif;
+        font-size: 1.4rem;
+        // font-family: 'reg', Arial, Helvetica, sans-serif;
     }
 
     &--select-paymentMethod {
@@ -19,13 +19,13 @@
             -webkit-box-shadow: none;
             box-shadow: none;
             border: 1px solid $gray6;
-            font-size: 1.6em;
-            margin-bottom: 3em;
+            font-size: 1.6rem;
+            margin-bottom: 3rem;
         }
         &--caret{
             position: absolute;
-            left: 2em;
-            top: 4.8em;
+            left: 2rem;
+            top: 4.8rem;
 
         }
     }
@@ -33,7 +33,7 @@
     &--received-amount {
         position: relative;
         width: 100%;
-        height: 7em;
+        height: 7rem;
         border: 1px solid $gray6;
         border-radius: 8px;
         display: flex;
@@ -41,7 +41,7 @@
         background-color: $white;
         align-items: center;
         margin-top: 6px;
-        padding: 0 1em;
+        padding: 0 1rem;
         &:focus,
         &:hover{
             border: 1px solid $blue;
@@ -50,7 +50,7 @@
             height: 100%;
             border: none;
             background: transparent;
-            font-size: 1.6em;
+            font-size: 1.6rem;
             width: 40%;
             color: $darkGray;
         }
@@ -62,8 +62,8 @@
             align-items: center;
 
             &-number {
-                width: 5em;
-                height: 3em;
+                width: 5rem;
+                height: 3rem;
                 border-radius: 8px;
                 background-color: #E2E2E4;
                 overflow: hidden;
@@ -73,10 +73,10 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 1.6em;
+                font-size: 1.6rem;
             }
             label {
-                margin-left: 1em;
+                margin-left: 1rem;
                 color: $blue;
             }
         }
@@ -95,8 +95,8 @@
             justify-content: space-between;
         }
         .btn-calc{
-            width: 10.8em;
-            height: 6.4em;
+            width: 10.8rem;
+            height: 6.4rem;
             border-radius: 8px;
             background-color: #E2E2E4;
             overflow: hidden;
@@ -108,7 +108,7 @@
             height: 100%;
                 background: transparent;
                 border: none;
-                font-size: 1.6em;
+                font-size: 1.6rem;
                 text-align: center;
                 color: $black;
             }

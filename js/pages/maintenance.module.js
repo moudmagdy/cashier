@@ -5,7 +5,7 @@
 // import '../components/appBar-menu.module.js';
 // // to enable function to get clicked client to get value and show in input in prdouct list 
 // import clientListRenderer from './../components/client-list.module.js';
-// // import './../components/sidemenu.module.js';
+// // import './../components/main-menu.module.js';
 
 // clientListRenderer('salesInvoiceInAside','clientsListInAside','receiveDevice_input')
 
@@ -19,7 +19,7 @@
 // // })
 
 // // // Start animation for All Cards in Homepage
-// // let cards = document.querySelectorAll('.product-card');
+// // let cards = document.querySelectorAll('.product');
 // // let productItemInList = document.querySelectorAll('.product-item-in-list');
 // // let tl1 = new TimelineMax({
 // //     paused: true
@@ -130,7 +130,7 @@
 
 
 // // Two tabs animation Timeline
-// let featuresBtns = document.querySelector('.features-btns');
+// let featuresBtns = document.querySelector('.search__bar__options');
 // let activeRequests = document.querySelector('.activeRequests')
 // let deliveredRequests = document.querySelector('.deliveredRequests');
 

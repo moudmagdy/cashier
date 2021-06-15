@@ -1,5 +1,13 @@
 // here import global styles
 
+@import './base/fonts';
+@import './base/typography';
+
+@import './abstracts/functions';
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+
 @import './helpers/variables';
 @import './common/common';
 @import './helpers/mixins';
@@ -17,7 +25,7 @@
 // @import './components/sidemenu-btn';
 @import './components/btns/default-blue';
 
-@import './components/small/features-btns';
+// @import './components/small/features-btns';
 @import './components/small/increaseicon';
 @import './components/small/decreaseicon';
 @import './components/layout-tabs';
@@ -30,7 +38,6 @@
 @import './components/customer-card-placeholder';
 @import './components/btns/payments-buttons';
 @import './components/invoice';
-@import './components/product-card';
 @import './components/products-card-list';
 @import './components/products-list';
 @import './components/checkout';
@@ -46,8 +53,8 @@
 // import menus
 @import './components/menus/change-view-menu';
 
-// import sidemenu
-@import './components/sidemenu';
+// Main menu
+@import './components/main-menu';
 
 //import main layout for system
 @import './components/layout';

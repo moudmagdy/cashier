@@ -11,7 +11,7 @@
         display: none;
     }
     span {
-        font-family: 'med';
+        // font-family: 'med';
         font-size: 2rem;
         color: $white;
     }
@@ -117,7 +117,7 @@
 
                     span {
                         color: $black;
-                        font-family: 'reg';
+                        // font-family: 'reg';
                         padding: 0 0.5em 0 0;
                         font-size: 1.6em;
                         &.delete {

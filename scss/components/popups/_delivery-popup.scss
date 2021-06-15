@@ -22,7 +22,7 @@
       font-weight: bold;
       text-align: center;
       color: #212121;
-      font-family: "NotoSansArabic-Bold";
+      // font-family: "NotoSansArabic-Bold";
     }
  
     
@@ -45,7 +45,7 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    font-family: 'reg' !important;
+    // font-family: 'reg' !important;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -78,7 +78,7 @@ datalist{
     direction: rtl;
     text-align: right;
     p {
-      font-family: "NotoSansArabic-SemiBold";
+      // font-family: "NotoSansArabic-SemiBold";
       font-size: 1.4em;
       font-weight: 600;
       text-align: right;
@@ -98,7 +98,7 @@ datalist{
       top: 15px;
       width: 19px;
       height: 25px;
-      font-family: "NotoSansArabic-Medium";
+      // font-family: "NotoSansArabic-Medium";
       font-size: 1.2em;
       text-align: right;
       color: #212121;
@@ -108,7 +108,7 @@ datalist{
     .input-group-btn.update {
       width: 24px;
       height: 21px;
-      font-family: "NotoSansArabic-Medium";
+      // font-family: "NotoSansArabic-Medium";
       font-size: 1.2em;
       text-align: right;
       color: #1877f2;
@@ -150,7 +150,7 @@ datalist{
       p {
         opacity: 0.6;
         text-decoration: line-through;
-        font-family: "NotoSansArabic-Medium";
+        // font-family: "NotoSansArabic-Medium";
         font-size: 11px;
         font-weight: 500;
         text-align: center;
@@ -167,7 +167,7 @@ datalist{
         border: none;
         border-bottom: 1px solid #ced4da;
         text-align: right;
-        font-family: "NotoSansArabic-Medium";
+        // font-family: "NotoSansArabic-Medium";
         font-size: 14px;
         font-weight: 500;
         text-align: center;
@@ -188,7 +188,7 @@ datalist{
         position: absolute;
         left: 5px;
         top: 10px;
-        font-family: "NotoSansArabic-Medium";
+        // font-family: "NotoSansArabic-Medium";
         font-size: 1.2em;
         text-align: right;
         color: #212121;
@@ -206,7 +206,7 @@ datalist{
         border-radius: 26px;
         border: solid 1px #1877f2;
         background-color: #ffffff;
-        font-family: "NotoSansArabic-Medium";
+        // font-family: "NotoSansArabic-Medium";
         font-size: 1.4em;
         font-weight: 500;
         text-align: right;
@@ -219,7 +219,7 @@ datalist{
         border-radius: 26px;
         border: none;
         background-color: transparent;
-        font-family: "NotoSansArabic-Medium";
+        // font-family: "NotoSansArabic-Medium";
         font-size: 1.4em;
         font-weight: 500;
         text-align: right;
@@ -233,7 +233,7 @@ datalist{
       line-height: 2.08;
       text-align: right;
       color: #212121;
-      font-family: "NotoSansArabic-Regular";
+      // font-family: "NotoSansArabic-Regular";
     }
   }
   #order_discount {
@@ -253,7 +253,7 @@ datalist{
       line-height: 2.1;
       text-align: right;
       color: #212121;
-      font-family: "NotoSansArabic-SemiBold";
+      // font-family: "NotoSansArabic-SemiBold";
     }
   }
   #order_discount.modal {

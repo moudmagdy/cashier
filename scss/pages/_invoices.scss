@@ -103,7 +103,7 @@
         }
         &-left{
             &--price{
-                font-family: 'bold',Arial, Helvetica, sans-serif;
+                // font-family: 'bold',Arial, Helvetica, sans-serif;
             }
         }
         &.total-final{
@@ -125,21 +125,21 @@
     }
     .total-payments--paid .number span,
     .total-payments--received .number span{
-        font-family: 'reg',Arial, Helvetica, sans-serif;
+        // font-family: 'reg',Arial, Helvetica, sans-serif;
 
     }
     .total-payments--paid .number span:nth-child(2),
     .total-payments--received .number span:nth-child(2){
-        font-family: 'reg',Arial, Helvetica, sans-serif;
+        // font-family: 'reg',Arial, Helvetica, sans-serif;
     }
 
     .total-payments--received .number .title{
         color: #757575 !important;
-        font-family: 'reg';
+        // font-family: 'reg';
     }
     .total-payments--received .number .price{
         color: $black !important;
-        font-family: 'reg';
+        // font-family: 'reg';
         font-size: 2rem;
     }
 }

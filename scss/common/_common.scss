@@ -4,41 +4,45 @@
   --darkreader-selection-background: #004daa;
   --darkreader-selection-text: #e8e6e3;
 
-  --main-menu-width: 85px;
+  --main-menu-width: 96px;
+  --color-brand: #4080FF;
+  --color-text-primary: #060505;
+  --color-text-secondary: #A3AAB2;
+
+  --default-font-size: 1rem;
 }
-html {
-  font-size: 10px;
-  overflow: hidden;
+// html {
+  // overflow: hidden;
 
-  @media screen and (min-width:769px) and (max-width:1024px) {
-    font-size: 9px;
-  }
+  // @media screen and (min-width:769px) and (max-width:1024px) {
+  //   font-size: 9px;
+  // }
 
-  @media screen and (min-width:375px) and (max-width:768px) {
-    font-size: 9.5px;
-  }
+  // @media screen and (min-width:375px) and (max-width:768px) {
+  //   font-size: 9.5px;
+  // }
 
-  @media screen and (max-width:375px) {
-    font-size: 6.5px;
-  }
+  // @media screen and (max-width:375px) {
+  //   font-size: 6.5px;
+  // }
 
-  @media screen and (max-height:900px) {
-    font-size: 9px;
-  }
+  // @media screen and (max-height:900px) {
+  //   font-size: 9px;
+  // }
 
-  @media screen and (max-height:767px) {
-    font-size: 8px;
-  }
+  // @media screen and (max-height:767px) {
+  //   font-size: 8px;
+  // }
 
-  @media screen and (max-height:570px) {
-    font-size: 7px;
-  }
-}
+  // @media screen and (max-height:570px) {
+  //   font-size: 7px;
+  // }
+// }
 
 * {
   box-sizing: border-box;
   outline: none !important;
-  font-family: 'reg', Arial, Helvetica, sans-serif;
+  // font-family: 'reg', Arial, Helvetica, sans-serif;
 
   *:focus {
     outline: none !important;
@@ -61,33 +65,8 @@ body {
   direction: rtl;
 }
 
-input {
-  font-family: 'reg', Arial, Helvetica, sans-serif !important;
-}
-
-@font-face {
-  font-family: "med";
-  src: url(../fonts/NotoSansArabic-hinted/NotoSansArabic-Medium.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "reg";
-  src: url(../fonts/NotoSansArabic-hinted/NotoSansArabic-Regular.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "light";
-  src: url(../fonts/NotoSansArabic-hinted/NotoSansArabic-Light.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "bold";
-  src: url(../fonts/NotoSansArabic-hinted/NotoSansArabic-Bold.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "semiBold";
-  src: url(../fonts/NotoSansArabic-hinted/NotoSansArabic-SemiBold.ttf) format("truetype");
+main {
+  overflow: hidden;
 }
 
 
@@ -130,52 +109,50 @@ input {
 //   }
 // }
 
-.thinFont {
-  font-family: 'reg', Arial, Helvetica, sans-serif !important;
-}
+// .thinFont {
+//   font-family: 'reg', Arial, Helvetica, sans-serif !important;
+// }
 
-.regFont {
-  font-family: 'reg', Arial, Helvetica, sans-serif !important;
-}
+// .regFont {
+//   font-family: 'reg', Arial, Helvetica, sans-serif !important;
+// }
 
-.medFont {
-  font-family: 'med', Arial, Helvetica, sans-serif !important;
-}
+// .medFont {
+//   font-family: 'med', Arial, Helvetica, sans-serif !important;
+// }
 
-.semiBold {
-  font-family: 'semiBold', Arial, Helvetica, sans-serif !important;
-}
+// .semiBold {
+//   font-family: 'semiBold', Arial, Helvetica, sans-serif !important;
+// }
 
-.boldFont {
-  font-family: 'bold', Arial, Helvetica, sans-serif !important;
-}
-
-
+// .boldFont {
+//   font-family: 'bold', Arial, Helvetica, sans-serif !important;
+// }
 
 
 
 
-.discount-number{
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 5.8em;
-      border-radius: 52px;
-      background-color: $lightRed2;
-      padding: 0;
-      margin: 0;
-      cursor: pointer;
-      justify-content: center;
-      align-items: center;
-      z-index: 4;
-      // left: -15%;
-      position: relative;
-      height: 3.5em;
-      span {
-        font-size: 1.8em;
-        color: $white !important;
-      }
+
+
+.discount-number {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  line-height: 1.2;
+  background-color: $lightRed2;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 4;
+  border-radius: 52px;
+  padding: 4px 8px;
+  margin: 0;
+
+  span {
+    font-size: inherit !important;
+    color: $white !important;
+  }
 }
 
 

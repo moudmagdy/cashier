@@ -59,7 +59,7 @@
         }
         &-cost{
             font-size: 2.6em;
-            font-family: 'med';
+            // font-family: 'med';
         }
     }
     &--invoice-details{
@@ -70,7 +70,7 @@
         flex-direction: row-reverse;
         &--last-payment{
             color: $black;
-            font-family: 'med';
+            // font-family: 'med';
             font-size: 1.8em;
         }
         &--date{
@@ -80,7 +80,7 @@
         &--price{
             font-size: 1.8em;
             color: $black;
-            font-family: 'bold';
+            // font-family: 'bold';
             display: flex;
             justify-content: space-between;
             align-items: center;

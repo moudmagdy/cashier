@@ -23,7 +23,7 @@
     .accordion-container {
         padding: 0 5px;
         height: 78% !important;
-        margin-bottom: 2em;
+        margin-bottom: 2rem;
         overflow-y: scroll;
         @include scroll-bar;
     }
@@ -43,7 +43,7 @@
         position: absolute;
         bottom: 5%;
         span{
-            font-size: 1.8em;
+            font-size: 1.8rem;
         }
     }
 }

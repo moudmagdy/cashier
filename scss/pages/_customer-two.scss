@@ -1,6 +1,6 @@
 .customer-page-two{
     .pay-receive-list{
-        max-height: 82em;
+        max-height: 82rem;
     }
     .right-content-data{
         max-height: auto !important;
@@ -22,18 +22,18 @@
             flex-basis: 28% !important;
         }
         a,span{
-            font-size: 1.6em;
+            font-size: 1.6rem;
             @media screen and (max-width:992px) {
-                font-size: 1.4em;
+                font-size: 1.4rem;
             }
         }
         span{
             margin: 0 !important;
         }
     }
-    .sidemenu-btn{
-        display: none;
-    }
+    // .sidemenu-btn{
+    //     display: none;
+    // }
     .left-content-data{
         box-shadow: 3px 1px 2px #f3f3f3;
     }

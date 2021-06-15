@@ -17,9 +17,9 @@ let invoiceInput2 = document.getElementById('invoiceInput2');
 // Animation for items in pay receive list 
 // Css style in _pay-receive-list.scss used in according menu
 let tl = new TimelineMax();
-tl.fromTo(payReceiveItems, 0.5, { opacity: 0,position:'relative',bottom:'-50px'}, {opacity: 1,position:'relative',bottom:0,stagger: 0.1})
+tl.fromTo(payReceiveItems, 0.5, { opacity: 0, position: 'relative', bottom: '-50px' }, { opacity: 1, position: 'relative', bottom: 0, stagger: 0.1 })
 payReceiveItems.forEach(element => {
-    element.addEventListener('click',()=>{
+    element.addEventListener('click', () => {
         customerCardTl.play();
         // pay-receive-list-item--details
         invoiceSearchInput.classList.add('haveUser')
@@ -32,26 +32,26 @@ payReceiveItems.forEach(element => {
 
 
 
-import './../components/sidemenu.module.js';
+import './../components/main-menu.module.js';
 
 
 
 // ---------------//////---------------
 // Animation for CARD in invoice 
 // Css style in _customer-card.scss & _customer-card-placeholder.scss
-let customerCardTl = new TimelineMax({paused:true});
+let customerCardTl = new TimelineMax({ paused: true });
 customerCardTl
-    .to(customerCardPlcaeholder_bigCircle,0.3,{width:'100%',height:'100%',borderRadius:'16px'})
-    .to(customerCardPlcaeholder_smallCircle,0.3,{borderRadius:'16px'},'-=0.3')
-    .to(customerCardPlcaeholder_bigCircle,0.5,{backgroundColor:'#F1F9FF'},'-=0.3')
-    .to(customerCardPlcaeholder_smallCircle,0.5,{backgroundColor:'#F1F9FF'},'-=0.4')
-    .to(customerCardPlcaeholder,0.5,{display:'none',opacity:0},'-=0.1')
-    .fromTo(customerCard,0.5,{display:'none',opacity:0},{display:'flex',opacity:1})
+    .to(customerCardPlcaeholder_bigCircle, 0.3, { width: '100%', height: '100%', borderRadius: '16px' })
+    .to(customerCardPlcaeholder_smallCircle, 0.3, { borderRadius: '16px' }, '-=0.3')
+    .to(customerCardPlcaeholder_bigCircle, 0.5, { backgroundColor: '#F1F9FF' }, '-=0.3')
+    .to(customerCardPlcaeholder_smallCircle, 0.5, { backgroundColor: '#F1F9FF' }, '-=0.4')
+    .to(customerCardPlcaeholder, 0.5, { display: 'none', opacity: 0 }, '-=0.1')
+    .fromTo(customerCard, 0.5, { display: 'none', opacity: 0 }, { display: 'flex', opacity: 1 })
 
 
 let resetInvoiceSearchInput = document.getElementById('removeClientNameFromInvoice');
 
-    resetInvoiceSearchInput.addEventListener('click',()=>{
+resetInvoiceSearchInput.addEventListener('click', () => {
     // reset card animation and iinput bar
     customerCardTl.reverse(0.5);
     invoiceSearchInput.classList.remove('haveUser')
@@ -77,9 +77,9 @@ let resetInvoiceSearchInput = document.getElementById('removeClientNameFromInvoi
 
 const fadeOut = ele => {
     let fadeOut = new TimelineMax();
-    fadeOut.to(ele,0.5,{opacity:'0',display:'none'})
+    fadeOut.to(ele, 0.5, { opacity: '0', display: 'none' })
 }
 const fadeIn = ele => {
     let fadeIn = new TimelineMax();
-    fadeIn.to(ele,0.5,{opacity:'1',display:'block'})
+    fadeIn.to(ele, 0.5, { opacity: '1', display: 'block' })
 }

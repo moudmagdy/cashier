@@ -1,14 +1,14 @@
-let changeViewBtn = document.querySelector('.features-btns--layout-view-btn');
+let changeViewBtn = document.querySelector('.layout__feature');
 let changeViewMenu = document.querySelector('.change-view-menu');
-let changeViewMenuItems = document.querySelectorAll('.change-view-menu ul li');
-let productCard = document.querySelectorAll('.product-card');
-let productCardImage = document.querySelectorAll('.product-card .product-card--image');
-let productCardTitle = document.querySelectorAll('.product-card .product-card--details-title');
-let productCardMenuBtn = document.querySelectorAll('.product-card .product-card--btn');
-let selectedCardBorder = document.querySelectorAll('.product-card--selected-card');
-let productCardDesc = document.querySelectorAll('.product-card--details-price');
-let productCardDetails = document.querySelectorAll('.product-card--details');
-let allElementsInCard = document.querySelectorAll('.product-card *');
+let changeViewMenuItems = document.querySelectorAll('.layout__feature + ul li a');
+let productCard = document.querySelectorAll('.product');
+let productCardImage = document.querySelectorAll('.product .product__image');
+let productCardTitle = document.querySelectorAll('.product .product__title');
+let productCardMenuBtn = document.querySelectorAll('.product .product__dropdown__btn');
+let selectedCardBorder = document.querySelectorAll('.product__quantity');
+let productCardDesc = document.querySelectorAll('.product__price');
+let productCardDetails = document.querySelectorAll('.product__details');
+let allElementsInCard = document.querySelectorAll('.product *');
 
 let running = false;
 
@@ -65,9 +65,9 @@ boxViewTimeline.to(productCard, 0.1, {
         display: 'none'
     })
     .to(productCard, 0, {
-        height: '19.342em',
-        width: '20.16em',
-        flexDirection: 'column',
+        // height: '19.342em',
+        // width: '20.16em',
+        // flexDirection: 'column',
     })
     .to(productCardImage, 0, {
         height: '100%'
@@ -91,6 +91,7 @@ boxViewTimeline.to(productCard, 0.1, {
 
 changeViewMenuItems.forEach(ele => {
     ele.addEventListener('click', (e) => {
+        e.preventDefault();
         let clickedItem = e.currentTarget.getAttribute('data-view');
         menuTl.reverse(0.3);
         switch (clickedItem) {

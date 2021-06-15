@@ -1,13 +1,13 @@
 .customer-card-placeholder{
-    height: 40.3em;
+    height: 40.3rem;
     width: 100%;
     display: flex;
     justify-content: center;
         align-items: center;
-    // max-width: 30em;
+    // max-width: 30rem;
     margin: 0 auto;
     // @media screen and (max-height:800px) {
-    // height: 20.3em;
+    // height: 20.3rem;
 
     // }
     .content{
@@ -17,10 +17,10 @@
         justify-content: center;
         align-items: center;
         .big-circle{
-            width: 25em;
-            height: 25em;
+            width: 25rem;
+            height: 25rem;
             background-color: $lightGray2;
-            padding: 1em;
+            padding: 1rem;
             border-radius: 50%;
             .small{
                 width: 100%;

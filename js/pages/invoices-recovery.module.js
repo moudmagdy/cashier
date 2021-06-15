@@ -3,7 +3,7 @@ import '../components/layoutTabs.module.js';
 import '../components/modal.module.js';
 // to enbale menu in appbar
 import '../components/appBar-menu.module.js';
-import './../components/sidemenu.module.js';
+import './../components/main-menu.module.js';
 
 
 let tl3 = new TimelineMax({ paused: true });
@@ -35,7 +35,7 @@ let selectAllBtn = document.getElementById('selectAllBtn');
 
 // Start animation for All Cards in Homepage
 
-let cards = document.querySelectorAll('.product-card');
+let cards = document.querySelectorAll('.product');
 
 
 let productItemInList = document.querySelectorAll('.product-item-in-list');

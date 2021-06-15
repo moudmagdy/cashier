@@ -64,10 +64,10 @@
         justify-content: space-around;
         flex-wrap: wrap;
         &--issue{
-            width: 8em;
-            height: 2.5em;
+            width: 8rem;
+            height: 2.5rem;
             border:1px solid #4d4d4d;
-            border-radius: 2em;
+            border-radius: 2rem;
             // margin: 1em 0;
             @include flex-center;
             span{
@@ -230,7 +230,7 @@
 
         &-left {
             &--price {
-                font-family: 'bold', Arial, Helvetica, sans-serif;
+                // font-family: 'bold', Arial, Helvetica, sans-serif;
             }
         }
 
@@ -263,23 +263,23 @@
 
     .total-payments--paid .number span,
     .total-payments--received .number span {
-        font-family: 'reg', Arial, Helvetica, sans-serif;
+        // font-family: 'reg', Arial, Helvetica, sans-serif;
 
     }
 
     .total-payments--paid .number span:nth-child(2),
     .total-payments--received .number span:nth-child(2) {
-        font-family: 'reg', Arial, Helvetica, sans-serif;
+        // font-family: 'reg', Arial, Helvetica, sans-serif;
     }
 
     .total-payments--received .number .title {
         color: #757575 !important;
-        font-family: 'reg';
+        // font-family: 'reg';
     }
 
     .total-payments--received .number .price {
         color: $black !important;
-        font-family: 'reg';
+        // font-family: 'reg';
         font-size: 2rem;
     }
 
@@ -325,11 +325,11 @@
                     flex-wrap: wrap;
 
                     &--item {
-                        width: 8em;
-                        height: 2.5em;
+                        width: 8rem;
+                        height: 2.5rem;
                         background-color: #F2F2F2;
-                        border-radius: 2em;
-                        margin: 1em 0.5em;
+                        border-radius: 2rem;
+                        margin: 1rem 0.5rem;
                         @include flex-center;
 
                         span {
@@ -369,7 +369,7 @@
         align-items: center;
 
         h1 {
-            font-size: 1.6em;
+            font-size: 1.6rem;
             color: $blue;
             display: none;
         }
@@ -396,7 +396,7 @@
             .name {
                 font-weight: normal;
                 font-size: 12px;
-                font-size: 1.4em;
+                font-size: 1.4rem;
                 text-align: right;
                 color: #000;
                 flex-basis: 65%;
@@ -404,7 +404,7 @@
 
             .title {
                 font-weight: 500;
-                font-size: 1.4em;
+                font-size: 1.4rem;
                 text-align: right;
                 color: $darkGray;
             }

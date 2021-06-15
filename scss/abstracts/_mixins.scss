@@ -1,0 +1,35 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin scroll-bar {
+    scrollbar-color: $gray6 $gray5;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background-color: $gray5;
+    } 
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: $gray6;
+    } 
+}
+
+@mixin line-clamp($line-height, $lines-count) {
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    position: relative;
+    line-height: $line-height;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines-count;
+    height: calc(1em * #{$line-height} * #{$lines-count});
+    padding: 0 !important;
+}
