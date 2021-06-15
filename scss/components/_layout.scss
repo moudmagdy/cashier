@@ -24,6 +24,7 @@
 
         @media (max-width: 768px) {
             display: none;
+            height: calc(100vh - 48px);
         }
 
         &.active {

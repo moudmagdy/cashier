@@ -1,5 +1,5 @@
-let tabBtnMain = document.querySelectorAll('.page__layout__nav a');
-let subTabBtn = document.querySelectorAll('.clients-tabs-btn');
+let tabBtnMain = document.querySelectorAll('.page__layout > .page__layout__nav a');
+let subTabBtn = document.querySelectorAll('.clients-list .page__layout__nav a');
 let asideClientTabs = document.querySelectorAll('.asideClientTabs');
 let asideClientTabs2 = document.querySelectorAll('.clients-tabs-btn2');
 
@@ -13,7 +13,7 @@ const layoutTabs = (e, layoutContainer, tabsBtn) => {
     ele.classList.remove('active');
   });
   getContent.forEach(element => {
-    element.classList.remove('active')
+    element.classList.remove('active');
   });
 
   let clickItem = e.currentTarget.getAttribute('data-target-id');
@@ -23,11 +23,11 @@ const layoutTabs = (e, layoutContainer, tabsBtn) => {
   e.currentTarget.classList.add('active');
 }
 
-asideClientTabs.forEach(node => {
-  node.addEventListener('click', function (e) {
-    layoutTabs(e, '.aside-tab-content', '.asideClientTabs')
-  })
-});
+// asideClientTabs.forEach(node => {
+//   node.addEventListener('click', function (e) {
+//     layoutTabs(e, '.aside-tab-content', '.asideClientTabs')
+//   })
+// });
 
 tabBtnMain.forEach(node => {
   node.addEventListener('click', function (e) {
@@ -37,21 +37,21 @@ tabBtnMain.forEach(node => {
 
 subTabBtn.forEach(node => {
   node.addEventListener('click', function (e) {
-    layoutTabs(e, '.customers-tab-content', '.clients-tabs-btn')
+    layoutTabs(e, '.customers-tab-content', '.clients-list .page__layout__nav a')
   })
 });
 
-subTabBtn.forEach(node => {
-  node.addEventListener('click', function (e) {
-    layoutTabs(e, '.deviceInfo-tab-content', '.page__layout__nav')
-  })
-});
+// subTabBtn.forEach(node => {
+//   node.addEventListener('click', function (e) {
+//     layoutTabs(e, '.deviceInfo-tab-content', '.page__layout__nav a')
+//   })
+// });
 
-asideClientTabs2.forEach(node => {
-  node.addEventListener('click', function (e) {
-    layoutTabs(e, '.order-tab-content', '.clients-tabs-btn2')
-  })
-});
+// asideClientTabs2.forEach(node => {
+//   node.addEventListener('click', function (e) {
+//     layoutTabs(e, '.order-tab-content', '.clients-tabs-btn2')
+//   })
+// });
 
 
 

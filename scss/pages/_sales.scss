@@ -1,7 +1,12 @@
 .sales-page {
-    .final-price {
-        // font-family: 'reg',Arial, Helvetica, sans-serif;
+    & > .page__layout > .page__layout__nav {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: flex;
+        }
     }
+
     .pdLeft-15{
         padding-left: 15px;
     }

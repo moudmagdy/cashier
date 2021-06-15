@@ -50,7 +50,7 @@ const clientListRenderer = (invoiceName, listID, inputID) => {
             let getNumber = element.children[0].children[1].children[1].textContent;
             invoiceInput.value = getName + ' - ' + getNumber
             tl.reverse(0.5);
-            invoice_search_input_container.classList.add('have_value')
+            invoice_search_input_container.classList.add('have_value');
         })
     });
 
