@@ -639,6 +639,30 @@ input[type=number] {
   fill: #fff;
 }
 
+.remove_search_input {
+  position: relative;
+  left: 1rem;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.remove_search_input:hover {
+  background-color: #e6e6e6;
+}
+.remove_search_input svg {
+  width: 10px !important;
+  height: 10px !important;
+}
+
 .searchInput {
   position: relative;
   width: 100%;
@@ -653,35 +677,13 @@ input[type=number] {
       -ms-flex-align: center;
           align-items: center;
 }
-.searchInput .remove_search_input {
-  display: none;
-}
 .searchInput.have_value {
   background-color: #E3F3FF !important;
 }
 .searchInput.have_value .remove_search_input {
-  position: relative;
-  left: 1rem;
-  width: 5rem;
-  height: 4rem;
-  background-color: transparent;
-  border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-}
-.searchInput.have_value .remove_search_input:hover {
-  background-color: #ffffff;
-}
-.searchInput.have_value .remove_search_input svg {
-  height: 50%;
 }
 .searchInput .image-container {
   z-index: 11111;

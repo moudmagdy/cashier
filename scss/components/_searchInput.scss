@@ -102,6 +102,28 @@
 }
 
 
+
+
+.remove_search_input {
+    position: relative;
+    left: 1rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken(#fff, 10%);
+    }
+    svg {
+        width: 10px !important;
+        height: 10px !important;
+    }
+}
 .searchInput {
     position: relative;
     width: 100%;
@@ -112,28 +134,11 @@
     cursor: pointer;
     align-items: center;
 
-    .remove_search_input{
-        display: none;
-    }
+    
     &.have_value {
         background-color: $veryLightBlue !important;
         .remove_search_input {
-            position: relative;
-            left: 1rem;
-            width:5rem;
-            height: 4rem;
-            background-color: transparent;
-            border-radius: 50%;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            &:hover{
-                background-color: $white;
-            }
-            svg{
-                height: 50%;
-            }
         }
     }
     .image-container {

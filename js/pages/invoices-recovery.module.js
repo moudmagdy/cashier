@@ -19,18 +19,10 @@ document.getElementById('btn--receive-cash').addEventListener('click', (e) => {
         color: 'green',
         transitionIn: 'fadeInUp',
     });
-})
-
-
-
+});
 
 
 let selectAllBtn = document.getElementById('selectAllBtn');
-
-
-
-
-
 
 
 // Start animation for All Cards in Homepage
@@ -49,7 +41,8 @@ tl1.play()
 
 
 cards.forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+        e.stopPropagation();
         card.classList.toggle('selected')
     })
 })

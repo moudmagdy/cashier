@@ -79,7 +79,8 @@ tl1.play()
 
 
 cards.forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+        e.stopPropagation();
         card.classList.toggle('product--selected');
     });
 });
@@ -89,3 +90,10 @@ const addClientHeight = document.querySelector('.add-client__container').offsetH
 const checkoutHeight = document.querySelector('.checkout').offsetHeight;
 
 productsListContainer.style.maxHeight = `calc(100vh - ${appBarHeight}px - ${addClientHeight}px - ${checkoutHeight}px)`;
+
+
+document.querySelectorAll('.product__dropdown').forEach(dropdown => {
+    dropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+});
