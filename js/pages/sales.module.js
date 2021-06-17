@@ -85,12 +85,12 @@ cards.forEach(card => {
     });
 });
 
+
 const appBarHeight = document.querySelector('.appbar').offsetHeight;
 const addClientHeight = document.querySelector('.add-client__container').offsetHeight;
 const checkoutHeight = document.querySelector('.checkout').offsetHeight;
 
 productsListContainer.style.maxHeight = `calc(100vh - ${appBarHeight}px - ${addClientHeight}px - ${checkoutHeight}px)`;
-
 
 document.querySelectorAll('.product__dropdown').forEach(dropdown => {
     dropdown.addEventListener('click', (e) => {

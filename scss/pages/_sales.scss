@@ -1,4 +1,6 @@
 .sales-page {
+    overflow: hidden;
+
     & > .page__layout > .page__layout__nav {
         display: none;
 
@@ -7,11 +9,7 @@
         }
     }
 
-    .pdLeft-15{
-        padding-left: 15px;
-    }
-
-    .clients-list{
+    .clients-list {
         display: none;
     }
     // #salesInvoice{

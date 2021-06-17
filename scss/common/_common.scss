@@ -8,6 +8,7 @@
   --color-brand: #4080FF;
   --color-text-primary: #060505;
   --color-text-secondary: #A3AAB2;
+  --color-bg: #F5F5F5;
 
   --default-font-size: 1rem;
 }
@@ -61,12 +62,7 @@ button {
 
 body {
   background-color: $lightGray1 !important;
-  overflow: hidden;
   direction: rtl;
-}
-
-main {
-  overflow: hidden;
 }
 
 

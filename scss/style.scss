@@ -1,11 +1,13 @@
-// here import global styles
-
-@import './base/fonts';
-@import './base/typography';
-
 @import './abstracts/functions';
 @import './abstracts/mixins';
 @import './abstracts/variables';
+@import './base/fonts';
+@import './base/typography';
+@import './components/buttons';
+@import './layout/forms';
+
+
+
 
 
 @import './helpers/variables';
@@ -51,7 +53,7 @@
 @import './components/receiveFromOut';
 
 // import menus
-@import './components/menus/change-view-menu';
+// @import './components/menus/change-view-menu';
 
 // Main menu
 @import './components/main-menu';
@@ -71,13 +73,14 @@
 @import './components/popups/comment-on-invoice';
 
 // SCREENs
+@import './pages/sales';
+@import './pages/settings';
+
 @import './pages/newSalesOne';
 @import './pages/customer';
 @import './pages/customer-two';
 @import './pages/CustomerPage-SideContanet';
-
 @import './pages/cash-management';
-@import './pages/sales';
 @import './pages/bill-cash';
 @import './pages/invoices';
 @import './pages/maintenance';
