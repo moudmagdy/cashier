@@ -45,6 +45,11 @@ header .page__title {
   color: var(--color-text-primary);
 }
 
+fieldset legend {
+  font-family: "NotoSansArabic_SemiBold";
+  font-size: 14px;
+}
+
 label {
   font-family: "NotoSansArabic_Medium";
   font-size: 14px;
@@ -222,6 +227,10 @@ label > span {
 
 .btn-link {
   color: #1877F2;
+}
+
+fieldset legend {
+  color: #4D4D4D;
 }
 
 .form-label {
