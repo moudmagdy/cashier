@@ -1,6 +1,15 @@
 fieldset
     legend
         color: #4D4D4D
+        margin-bottom: 20px
+
+    &:not(:first-child)
+        legend
+            margin-top: 24px
+
+    &:not(:last-child)
+        padding-bottom: 20px
+        border-bottom: 1px solid #ececec
 
 .form-label
     color: #A3AAB2
@@ -9,7 +18,7 @@ fieldset
 .form-select
     border: 1px solid #CBD0D6
     border-radius: 12px
-    padding: 0.688rem 0.95rem
+    padding: 0.788rem 0.95rem
 
 .form-select
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cpath fill='%23A3AAB2' d='M0,0l6,6l6-6H0z'/%3E%3C/svg%3E")

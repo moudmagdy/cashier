@@ -24,7 +24,7 @@ header
     &__footer
         border-top: 1px solid #ececec
         border-radius: 0 0 12px 12px
-        padding: 8px 24px
+        padding: 12px 24px
 
 .collapse__toggle
     display: flex
@@ -64,4 +64,46 @@ header
 
         .form__card__header
             border-radius: 12px
-            transition: all 350ms ease 175ms
+            transition: border-radius 350ms ease 175ms
+
+        .collapse__container
+            max-height: 0
+
+.delete-all-data__modal
+    .modal-header
+        +flex-center
+        background-color: #FF8591
+        border: none
+        padding: 0.85rem 20px
+
+        .modal-title
+            font-size: 14px
+            color: #fff
+
+    .modal-body
+        +flex-center
+        flex-direction: column
+        padding: 40px 24px
+
+        svg
+            margin-bottom: 15px
+
+        p
+            max-width: 90%
+            font-family: 'NotoSansArabic_SemiBold'
+            text-align: center
+            margin-bottom: 60px
+
+        .form-check
+            margin: 0
+
+        .form-check-label
+            color: #4D4D4D
+
+    .modal-footer
+        border-top: 1px solid #ececec
+        padding: 8px 20px
+        margin: 0
+
+        & > *
+            margin: 0
