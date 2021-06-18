@@ -4993,6 +4993,7 @@ header .header__btns {
   color: #4D4D4D;
 }
 .delete-all-data__modal .modal-footer {
+  gap: 8px;
   border-top: 1px solid #ececec;
   padding: 8px 20px;
   margin: 0;
