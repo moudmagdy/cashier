@@ -1,20 +1,61 @@
-.appbar {
-    background-color: $blue;
-    height: 52px;
+.control-panel {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0 16px;
-    font-size: 10px;
-    color: $white;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fff;
 
-    @media screen and (max-width:767px) {
-        display: none;
+    &__header {
+        display: flex;
+        align-items: center;
+        height: 52px;
+        color: #fff;
+        background-color: #1877F2;
+        padding: 5px 16px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
     }
-    .appbar-title {
+
+    &__title {
         font-family: 'NotoSansArabic_Medium';
         font-size: 15px;
+        margin-bottom: 0;
     }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    &__content {
+        height: 100%;
+
+        &:empty {
+            background-image: url(../images/empty-bar.svg);
+            background-repeat: no-repeat;
+            background-position: center 60px;
+        }
+    }
+
+    &__bottom-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        z-index: 999;
+        box-shadow: 0px -1px 5px rgba(0,0,0,0.12);
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        margin-top: auto
+    }
+}
+
+
+
+.appbar {
+    font-size: 10px;
 
     &.invoice {
         justify-content: space-between;
@@ -38,7 +79,7 @@
                     height: 40px;
                     font-family: 'NotoSansArabic_Medium';
                     font-size: 1rem;
-                    border: 2px solid $white;
+                    border: 2px solid #fff;
                     border-radius: 6px;
                     // @media screen and (min-width: 1500px) and (max-width: 1600px){
                     //     width: 5rem;
@@ -57,7 +98,7 @@
 
                 svg {
                     circle {
-                        fill: $white;
+                        fill: #fff;
                     }
 
                     transform: rotate(90deg);
@@ -81,7 +122,7 @@
         top: 102%;
         left: 0px;
         border-radius: 0.8em;
-        background-color: $white;
+        background-color: #fff;
         position: absolute;
         box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.16);
         overflow: hidden;

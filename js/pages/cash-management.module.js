@@ -1,6 +1,6 @@
 
 // import this module to active tabs functrion in mobile devices
-import '../components/layoutTabs.module.js';
+import '../components/layout-nav.module.js';
 import './../components/client-list.module.js';
 import './../components/modal.module.js'
 

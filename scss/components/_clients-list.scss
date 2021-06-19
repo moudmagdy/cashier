@@ -1,5 +1,6 @@
 .clients-list {
-    height: 94vh;
+    flex-direction: column;
+    height: calc(100vh - 52px);
 
     .add-client {
         position: relative;
@@ -13,6 +14,7 @@
         cursor: pointer;
         text-decoration: none;
         border-bottom: 1px solid #F0F2F5;
+        padding: 15px 20px;
         
         &:hover {
             background-color: $gray9;
@@ -92,11 +94,11 @@
         }
     }
     &--container {
-        height: 77%; 
         overflow-y: scroll;
         @include scroll-bar;
     }
     &-users  {
+        list-style: none;
         padding: 0;
         margin: 0;
         

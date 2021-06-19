@@ -1,4 +1,4 @@
-import '../components/layoutTabs.module.js';
+import '../components/layout-nav.module.js';
 // to enable popup and positioning popup 
 import '../components/modal.module.js';
 // to enbale menu in appbar

@@ -7,7 +7,13 @@
 
     &__row
         display: grid
-        grid-template-columns: auto 33.3333333333%
+        grid-template-columns: 2fr 1fr
+
+        @media (max-width: 1024px)
+            grid-template-columns: 1fr 415px
+
+        @media (max-width: 815px)
+            grid-template-columns: 1fr 1fr
 
         @media (max-width: 768px)
             grid-template-columns: 1fr

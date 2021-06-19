@@ -1,5 +1,3 @@
-import './../components/main-menu.module.js';
-
 const collapseToggles = document.querySelectorAll('.collapse__toggle');
 const collapseContainers = document.querySelectorAll('.collapse__container');
 

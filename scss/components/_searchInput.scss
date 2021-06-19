@@ -1,109 +1,3 @@
-.search__bar {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0 22px 10px;
-
-    &__input {
-        display: flex;
-        align-items: center;
-        flex: 1 1 100%;
-        height: 44px;
-        background-color: #FFFFFF;
-        border: 0.5px solid #c6cfd9;
-        border-radius: 22px;
-        padding: 0 18px;
-    
-        svg {
-            pointer-events: none;
-            fill: #A3AAB2;
-        }
-    
-        input[type="search"] {
-            flex: 1 1 100%;
-            height: 100%;
-            font-size: 12px;
-            border: none;
-            padding: 0 5px;
-    
-            &:focus {
-                outline: none;
-            }
-            &::-webkit-search-cancel-button,
-            &::-webkit-search-cancel-button{
-                display: none !important;
-            }
-        }
-    }
-
-    &__features {
-        display: flex;
-        align-items: center;
-        margin-right: 12px
-    }
-
-    &__feature {
-        @include flex-center;
-        width: 36px;
-        height: 36px;
-        background-color: transparent;
-        border-radius: 8px;
-
-        &::after {
-            display: none;
-        }
-        
-        svg {
-            fill: #A3AAB2;
-        }
-
-        &:hover {
-            background-color: rgba(198, 207, 217, 0.2);
-            svg {
-                fill: $blue;
-            }
-        }
-
-        &.active {
-            svg {
-                fill: $blue;
-            }
-        }
-    }
-    .features__dropdown {
-        .features__dropdown__menu {
-            text-align: right;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 1px 0px 12px 0px rgba(0, 0, 0, 0.16);
-
-            .dropdown-item {
-                font-family: 'NotoSansArabic_Medium';
-                font-size: 12px;
-                padding: 14px 16px;
-
-                svg {
-                    fill: #060505;
-                    margin-left: 5px;
-                }
-
-                &:hover {
-                    background-color: #EBF6FF;
-                }
-
-                &:active {
-                    svg {
-                        fill: #fff;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-
-
 .remove_search_input {
     position: relative;
     left: 1rem;
@@ -128,7 +22,7 @@
     position: relative;
     width: 100%;
     height: 6rem;
-    background-color: $white;
+    background-color: #fff;
     border-radius: 32px;
     display: flex;
     cursor: pointer;
@@ -148,7 +42,7 @@
         top: 17px;
         transform: rotate(180deg);
         cursor: pointer;
-        background: #ffffff;
+        background: #fff;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -190,7 +84,7 @@
         background-color: $lightBlue  !important;
         svg {
             .cls-2{
-                fill:$white
+                fill:#fff
             }
             circle{
                 fill: $waterBlue;

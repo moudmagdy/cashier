@@ -43,10 +43,10 @@
         &:hover{
             background-color: $green;
             span{
-                color: $white;
+                color: #fff;
             }
             .increaseicon{
-                background-color: $white;
+                background-color: #fff;
                .cls-1{
                    stroke: $green;
                }
@@ -73,10 +73,10 @@
         &:hover{
             background-color: $red;
             span{
-                color: $white;
+                color: #fff;
             }
             .decreaseicon{
-                background-color: $white;
+                background-color: #fff;
                .cls-1{
                    stroke: $red;
                }

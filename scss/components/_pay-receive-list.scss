@@ -27,7 +27,7 @@
             cursor: pointer;
 
             &:hover {
-              background-color: $white;
+              background-color: #fff;
               border-radius: 8px;
               .increaseicon  {
                 box-shadow: 0 0 5px #eee;
@@ -44,7 +44,7 @@
               flex-direction: row-reverse;
               span{
                 display: none;
-                color: $white;
+                color: #fff;
               }
               &.maintenance-process{
                 background: #B1E5EF;
@@ -76,7 +76,7 @@
               // &-icon{
               //   width: 4.4em;
               //   height: 4.4em;
-              //   background-color: $white;
+              //   background-color: #fff;
               //   border-radius: 50%;
               //   display: flex;
               //   justify-content: center;

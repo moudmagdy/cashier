@@ -15,12 +15,6 @@ const clientListRenderer = (invoiceName, listID, inputID) => {
     let backBtn = document.querySelectorAll('.back-btn');
 
 
-
-
-
-
-
-
     let tl = new TimelineMax({
         paused: true
     });
@@ -30,9 +24,9 @@ const clientListRenderer = (invoiceName, listID, inputID) => {
     })
         .to(clientsList, 0.4, {
             opacity: 1,
-            display: 'block'
+            display: 'flex'
         })
-    console.log('play animation');
+    // console.log('play animation');
 
     invoiceInput.addEventListener('click', () => {
         tl.play();

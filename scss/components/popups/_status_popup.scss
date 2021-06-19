@@ -1,7 +1,7 @@
 .statusPopup {
     position: absolute;
     width: 100%;
-    background: white;
+    background: #fff;
     min-height: 43%;
     height: auto;
     bottom: 6px;
@@ -58,7 +58,7 @@
         border-color: $blue;
 
         span {
-            color: $white;
+            color: #fff;
         }
 
         &:hover {

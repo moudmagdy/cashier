@@ -1,0 +1,270 @@
+.main-menu
+    position: fixed
+    right: 0
+    top: 0
+    grid-template-rows: auto 1fr
+    width: var(--main-menu-width)
+    min-height: 100vh
+    background-color: #fff
+    z-index: 999
+    padding: 8px
+    transform: translateX(100%)
+    transition: all 0.3s ease-in-out
+
+    @media (min-width: 1024px)
+        transform: translateX(0)
+
+    &__toggle,
+    &__logo
+        display: inline-block
+
+    &__toggle
+        padding: 1px 5px
+        transition: margin-right 0.3s ease-in-out
+
+        svg
+            width: 32px
+            height: 26px
+            fill: #212121
+
+    & > .main-menu__toggle
+        margin-right: 19px
+
+    &__logo
+        width: 0
+        height: 0
+        opacity: 0
+        pointer-events: none
+        transition: all 0.3s ease-in-out
+
+        svg
+            width: 28px
+            height: 28px
+            fill: var(--color-brand)
+
+    nav
+        display: flex
+        flex-direction: column
+        justify-content: center
+        margin-top: 24px
+
+        a
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 5px
+            color: #A3AAB2
+            font-size: 11px
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            text-decoration: none
+            border-radius: 8px
+            padding: 10px 12px
+
+            &::before
+                content: ""
+                width: 44px
+                height: 44px
+                background-size: cover
+                background-repeat: no-repeat
+
+            &.sales__page
+                &::before
+                    background-image: url(./../images/menu/sales.svg)
+
+                &:hover
+                    background-color: #1877f21a
+
+                &.active
+                    color: #1877f2
+                    background-color: #1877f21a
+
+                    &::before
+                        background-image: url(./../images/menu/sales-filled.svg)
+
+            &.cash-flow__page
+                &::before
+                    background-image: url(./../images/menu/cash-flow.svg)
+
+                &:hover
+                    background-color: #4cc7841a
+
+                &.active
+                    color: #4cc784
+                    background-color: #4cc7841a
+
+                    &::before
+                        background-image: url(./../images/menu/cash-flow-filled.svg)
+
+            &.bills__page
+                &::before
+                    background-image: url(./../images/menu/bills.svg)
+
+                &:hover
+                    background-color: #EBF6FF
+
+                &.active
+                    background-color: #EBF6FF
+
+                    &::before
+                        background-image: url(./../images/menu/bills-filled.svg)
+
+            &.expenses__page
+                &::before
+                    background-image: url(./../images/menu/expenses.svg)
+
+                &:hover
+                    background-color: #EBF6FF
+
+                &.active
+                    background-color: #EBF6FF
+
+                    &::before
+                        background-image: url(./../images/menu/expenses.svg)
+
+            &.maintenance__page
+                &::before
+                    background-image: url(./../images/menu/maintenance.svg)
+
+                &:hover
+                    background-color: #EBF6FF
+
+                &.active
+                    background-color: #EBF6FF
+
+                    &::before
+                        background-image: url(./../images/menu/maintenance-filled.svg)
+
+            &.clients__page
+                &::before
+                    background-image: url(./../images/menu/clients.svg)
+
+                &:hover
+                    background-color: #EBF6FF
+
+                &.active
+                    background-color: #EBF6FF
+
+                    &::before
+                        background-image: url(./../images/menu/clients.svg)
+
+            &.suppliers__page
+                &::before
+                    background-image: url(./../images/menu/clients.svg)
+
+                &:hover
+                    background-color: #EBF6FF
+
+                &.active
+                    background-color: #EBF6FF
+
+                    &::before
+                        background-image: url(./../images/menu/clients.svg)
+
+            &.work-shift__page
+                &::before
+                    background-image: url(./../images/menu/work-shift.svg)
+
+                &:hover
+                    background-color: #EBF6FF
+
+                &.active
+                    background-color: #EBF6FF
+
+                    &::before
+                        background-image: url(./../images/menu/work-shift.svg)
+
+            &.settings__page
+                &::before
+                    background-image: url(./../images/menu/settings.svg)
+
+                &:hover
+                    background-color: #EBF6FF
+
+                &.active
+                    background-color: #EBF6FF
+
+                    &::before
+                        background-image: url(./../images/menu/settings.svg)
+
+            &.update-data__page
+                &::before
+                    background-image: url(./../images/menu/update.svg)
+
+                &:hover
+                    background-color: #EBF6FF
+
+                &.active
+                    background-color: #EBF6FF
+
+                    &::before
+                        background-image: url(./../images/menu/update.svg)
+
+            &.management__page
+                &::before
+                    background-image: url(./../images/menu/management.svg)
+
+                &:hover
+                    background-color: #EBF6FF
+
+                &.active
+                    background-color: #EBF6FF
+
+                    &::before
+                        background-image: url(./../images/menu/management-filled.svg)
+
+    &--opened
+        width: 168px
+        border-radius: 12px 0 0 12px
+        box-shadow: 0px 0px 15px 2px #d0d0d0
+        transform: translateX(0)
+
+        .main-menu__toggle
+            margin-right: 0
+
+        .main-menu__logo
+            width: 28px
+            height: 28px
+            opacity: 1
+            pointer-events: auto
+            margin-right: 10px
+
+        nav
+            a
+                flex-direction: row
+                font-size: 14px
+
+                &::before
+                    width: 28px
+                    height: 28px
+
+    @media (max-width: 1024px)
+        width: 168px
+        border-radius: 12px 0 0 12px
+        box-shadow: 0px 0px 15px 2px #d0d0d0
+        opacity: 0
+        pointer-events: none
+
+        &--opened
+            opacity: 1
+            pointer-events: auto
+
+        .main-menu__toggle
+            margin-right: 0
+
+        .main-menu__logo
+            width: 28px
+            height: 28px
+            opacity: 1
+            pointer-events: auto
+            margin-right: 10px
+
+        nav
+            a
+                flex-direction: row
+                font-size: 14px
+
+                &::before
+                    width: 28px
+                    height: 28px

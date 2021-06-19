@@ -12,7 +12,7 @@
         justify-content: flex-end;
         padding: 0 1.5rem;
         button{
-            background-color: $white;
+            background-color: #fff;
             margin: 0 !important;
             padding: 0 !important;
 
@@ -79,7 +79,7 @@
                     border-radius: 5px;
                     @include flex-center;
                     span{
-                        color: $white;
+                        color: #fff;
                         font-size: 16px;
                     }
                 }

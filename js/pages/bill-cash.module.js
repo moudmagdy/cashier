@@ -1,14 +1,14 @@
-import './../components/layoutTabs.module.js';
+import './../components/layout-nav.module.js';
 import '../components/appBar-menu.module.js';
 
 
-document.getElementById('btn--receive-cash').addEventListener('click',(e)=>{
+document.getElementById('btn--receive-cash').addEventListener('click', (e) => {
     e.preventDefault()
     iziToast.show({
         title: 'تم بنجاح',
         message: 'تم استلام المبلغ بنجاح',
-        color:'green',
-        transitionIn:'fadeInUp',
+        color: 'green',
+        transitionIn: 'fadeInUp',
     });
 })
 

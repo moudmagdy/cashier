@@ -2,17 +2,17 @@
     .appbar{
         background-color: $lightRed2;
         span{
-            color: $white !important;
+            color: #fff !important;
         }
     }
     .appbar-number--box{
-        border-color: $white !important;
+        border-color: #fff !important;
     }
     .appbar-menu-btn{
         svg{
             g{
                 line{
-                    fill:$white !important;
+                    fill:#fff !important;
                 }
             }
         }
@@ -20,7 +20,7 @@
     .searchInput{
         &.grayscale{
             cursor: default;
-            background-color: $white;
+            background-color: #fff;
             border-top: 2px solid #f2f2f2;
             border-bottom: 2px solid #f2f2f2;
             border-left: 0;
@@ -179,13 +179,13 @@
         &.clicked{
             background-color: #cc464d;
             span{
-                color: $white;
+                color: #fff;
             }
         }
         &:hover{
             background-color: $red;
             span{
-                color: $white;
+                color: #fff;
             }
         }
     }

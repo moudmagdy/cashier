@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses - Cashier</title>
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="expenses-page">
+        <div class="main-menu">
+            <a href="#" class="main-menu__toggle">
+                <svg width="32" height="26" viewBox="0 0 32 26">
+                    <path d="M27,5.4H5V4.1h22V5.4z M27,12.4H7v1.4h20V12.4z M27,20.6H5v1.4h22V20.6z"></path>
+                </svg>
+            </a>
+            <a href="#" class="main-menu__logo">
+                <svg width="28" height="28" viewBox="0 0 28 28">
+                    <path d="M5.6,3.7c4-2.6,9.1-2.7,13.2-0.3l-3.4,4.4c-0.9-0.4-1.9-0.7-2.9-0.7c-1.1,0-2.2,0.3-3.1,0.8L5.6,3.7z M12.4,26.4C5.5,26.4,0,20.8,0,14c0-2.3,0.6-4.5,1.8-6.4l4.3,3.9c-1.4,3.5,0.2,7.4,3.7,8.8c1.9,0.8,4.1,0.7,5.8-0.3l0,0h0.1 c1.8-1.1,3-2.9,3.3-5v-0.2h-3c-0.1,0-0.1,0-0.1-0.1s0-0.1,0-0.2l0,0l6.2-8h0.1l0,0l0,0l5.6,8l0,0c0,0,0.1,0.1,0,0.2 c0,0.1-0.1,0.1-0.1,0.1h-3.1V15C24.3,21.3,18.9,26.4,12.4,26.4"></path>
+                </svg>
+            </a>
+            <nav>
+                <a href="sales.html" class="sales__page active">المبيعات</a>
+                <a href="" class="cash-flow__page">حركة النقدية</a>
+                <a href="" class="bills__page">الفواتير</a>
+                <a href="expenses.html" class="expenses__page">المصروفات</a>
+                <a href="" class="maintenance__page">الصيانة</a>
+                <a href="" class="clients__page">العملاء</a>
+                <a href="" class="suppliers__page">الموردون</a>
+                <a href="" class="work-shift__page">الوردية</a>
+                <a href="settings.html" class="settings__page">اعدادات</a>
+                <a href="" class="update-data__page">تحديث البيانات</a>
+                <a href="" class="management__page">الادارة</a>
+            </nav>
+        </div>
+        <div class="page__layout">
+            <nav class="page__layout__nav">
+                <a href="#" class="active" data-target-id="cash_tab">سجل النقدية</a>
+                <a href="#" data-target-id="invoice_tab">عملية نقدية</a>
+            </nav>
+            <div class="page__layout__row">
+                <section class="page__layout__col active" id="cash_tab">
+                    <header>
+                        <a href="#" class="main-menu__toggle">
+                            <svg width="32" height="26" viewBox="0 0 32 26">
+                                <path d="M27,5.4H5V4.1h22V5.4z M27,12.4H7v1.4h20V12.4z M27,20.6H5v1.4h22V20.6z"></path>
+                            </svg>
+                        </a>
+                        <h1 class="page__title">
+                            <a href="expenses.html">المصاريف</a>
+                        </h1>
+                    </header>
+                    <div class="search__bar">
+                        <div class="search__bar__input">
+                            <svg width="15" height="13.9" viewBox="0 0 15 13.9">
+                                <path d="M14.8,12.7l-2.4-2.4c1.6-2.6,1.3-6-0.9-8.3C8.8-0.7,4.6-0.7,2,2C0.7,3.2,0,4.9,0,6.7s0.7,3.5,2,4.7 c1.3,1.3,2.9,2,4.7,2s3.5-0.7,4.7-2c0,0,0.1-0.1,0.1-0.1l2.3,2.3c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2 C15.1,13.4,15.1,12.9,14.8,12.7z M6.7,12C5.3,12,4,11.4,3,10.4c-1-1-1.6-2.3-1.6-3.7S2,4,3,2.9c1-1,2.3-1.6,3.7-1.6s2.7,0.6,3.7,1.6 c2.1,2.1,2.1,5.4,0,7.5C9.4,11.4,8.1,12,6.7,12z"></path>
+                            </svg>
+                            <input type="search" name="search" placeholder="ابحث بالمصروف او بند الصرف">
+                        </div>
+                    </div>
+                </section>
+                <section class="page__layout__col" id="invoice_tab">
+                    <div class="control-panel">
+                        <div class="control-panel__header">
+                            <h4 class="control-panel__title">اضافة مصروف</h4>
+                        </div>
+                        <div class="control-panel__body">
+                            <div class="control-panel__content"></div>
+                            <div class="control-panel__bottom-bar">
+                                <form>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="printer-name">المبلغ المصروف</label>
+                                            <input type="text" class="form-control" name="" id="printer-name" placeholder="00.00">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="printer-name">تاريخ الصرف</label>
+                                            <input type="text" class="form-control" name="" id="printer-name" placeholder="اليوم, 12-4-2021">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="printer-name">التعليق</label>
+                                            <textarea type="text" class="form-control" name="" id="printer-name" placeholder="اكتب تعليقك"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button type="submit" class="btn btn-primary btn-lg">حفظ</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="js/popper.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/pages/expenses.module.js" type="module"></script>
+</body>
+
+</html>

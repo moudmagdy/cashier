@@ -10,7 +10,7 @@
     .searchInput{
         &.grayscale{
             cursor: default;
-            background-color: $white;
+            background-color: #fff;
             border-top: 2px solid #f2f2f2;
             border-bottom: 2px solid #f2f2f2;
             border-left: 0;
@@ -46,7 +46,7 @@
         flex-direction: row-reverse;
     }
     .appbar{
-        background-color: $white;
+        background-color: #fff;
         span{
             color: $black;
         }

@@ -4,15 +4,13 @@
 @import './base/fonts';
 @import './base/typography';
 @import './components/buttons';
+@import './components/search-bar';
+@import './components/collapsible';
 @import './layout/forms';
 
-
-
-
-
+@import './helpers/mixins';
 @import './helpers/variables';
 @import './common/common';
-@import './helpers/mixins';
 
 
 // here import componetns
@@ -75,6 +73,7 @@
 // SCREENs
 @import './pages/sales';
 @import './pages/settings';
+@import './pages/expenses';
 
 @import './pages/newSalesOne';
 @import './pages/customer';

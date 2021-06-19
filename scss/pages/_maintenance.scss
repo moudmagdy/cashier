@@ -13,7 +13,7 @@
 
     }
     .leftnewContent .page__layout__nav a.active span{
-        color: $white;
+        color: #fff;
     }
     .leftnewContent .page__layout__nav a{
     .numberCircle{
@@ -79,7 +79,7 @@
         position: absolute;
         width: 2.5rem;
         height: 2.5rem;
-        background-color: #ffffff;
+        background-color: #fff;
         border-radius: 50%;
         right: -30px;
         display: flex;
@@ -102,7 +102,7 @@
     .searchInput {
         &.grayscale {
             cursor: default;
-            background-color: $white;
+            background-color: #fff;
             border-top: 2px solid #f2f2f2;
             border-bottom: 2px solid #f2f2f2;
             border-left: 0;
@@ -146,12 +146,12 @@
     }
 
     .appbar {
-        background-color: $white;
+        background-color: #fff;
         @include mediaMixin(desktop){
             font-size:7px;
         }
         span {
-            color: $white;
+            color: #fff;
         }
 
         &.invoice .appbar-number--box {
@@ -448,7 +448,7 @@
 
                 &:hover {
                     span {
-                        color: $white;
+                        color: #fff;
                     }
 
                     svg {
@@ -456,7 +456,7 @@
 
                             circle,
                             line {
-                                stroke: $white
+                                stroke: #fff
                             }
                         }
                     }
@@ -481,7 +481,7 @@
                     background-color: $blue;
 
                     span {
-                        color: $white;
+                        color: #fff;
                     }
 
                     svg {
@@ -489,7 +489,7 @@
 
                             circle,
                             path {
-                                stroke: $white
+                                stroke: #fff
                             }
                         }
                     }
