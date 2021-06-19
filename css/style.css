@@ -415,8 +415,6 @@ label > span {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  color: #060505;
-  border-radius: 4px;
   text-decoration: none;
   padding: 0.475rem 0.975rem;
 }
@@ -2000,10 +1998,13 @@ input[type=number] {
   z-index: 1;
 }
 .product-item-in-list--data {
-  width: 35%;
   margin-left: 10px;
 }
+.product-item-in-list--data-name {
+  margin-bottom: 10px;
+}
 .product-item-in-list--data-name h3 {
+  width: 145px;
   font-family: "NotoSansArabic_Medium";
   font-size: 13px;
   display: block;
@@ -2017,8 +2018,16 @@ input[type=number] {
   -webkit-line-clamp: 2;
   height: calc(1em * 1.5 * 2);
   padding: 0 !important;
+  margin-bottom: 0;
 }
 .product-item-in-list--data-discountInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   font-size: 11px;
 }
 .product-item-in-list--data-discountInput span {
@@ -2026,7 +2035,7 @@ input[type=number] {
   color: #757575;
 }
 .product-item-in-list--data-discountInput input {
-  width: 5rem;
+  width: 45px;
   border: none;
 }
 .product-item-in-list--data-discountInput input::-webkit-outer-spin-button, .product-item-in-list--data-discountInput input::-webkit-inner-spin-button {
@@ -3664,12 +3673,7 @@ input[type=number] {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
-@media (max-width: 1024px) {
-  .page__layout__row {
-    grid-template-columns: 1fr 415px;
-  }
-}
-@media (max-width: 815px) {
+@media (max-width: 992px) {
   .page__layout__row {
     grid-template-columns: 1fr 1fr;
   }
@@ -5086,6 +5090,99 @@ header .header__btns {
     display: -ms-flexbox;
     display: flex;
   }
+}
+.expenses-page .operations {
+  padding: 0 18px;
+}
+.expenses-page .operations__group__header {
+  font-size: 12px;
+  border-top: 1px solid #dbe1e5;
+  border-bottom: 1px solid #dbe1e5;
+  padding: 4px 10px;
+  margin-bottom: 0;
+}
+.expenses-page .operations__group__header a {
+  color: #060505;
+  border-radius: 4px;
+  padding: 0.694rem 0.975rem;
+}
+.expenses-page .operations__group__header a:hover {
+  color: #060505;
+  background-color: #E6E6E6;
+}
+.expenses-page .operations__group__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0.5rem;
+}
+.expenses-page .operations__group__item > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding: 0 15px;
+}
+.expenses-page .operations__group__item:hover {
+  background-color: #fff;
+}
+.expenses-page .operations__group__item .operations__item__comment {
+  font-family: "NotoSansArabic_Medium";
+  font-size: 12px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+.expenses-page .operations__group__item .operations__item__subject span {
+  display: inline-block;
+  color: #060505;
+  font-size: 12px;
+  border: 1px solid #060505;
+  border-radius: 24px;
+  padding: 0.388rem 0.8rem;
+}
+.expenses-page .operations__group__item .operations__item__time {
+  font-size: 12px;
+}
+.expenses-page .operations__group__item .operations__item__amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+}
+.expenses-page .operations__group__item .operations__item__amount span {
+  display: inline-block;
+  font-family: "NotoSansArabic_SemiBold";
+}
+.expenses-page .operations__group__item .operations__item__amount span.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.expenses-page .operations__group__item .operations__item__amount span.icon svg {
+  width: 11px;
+  height: 11px;
 }
 .expenses-page .total-operations {
   display: -webkit-box;

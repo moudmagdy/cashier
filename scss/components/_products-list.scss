@@ -77,25 +77,32 @@
         z-index: 1;
     }
     &--data {
-        width: 35%;
         margin-left: 10px;
 
         &-name {
+            margin-bottom: 10px;
+
             h3 {
+                width: 145px;
                 font-family: 'NotoSansArabic_Medium';
                 font-size: 13px;
                 @include line-clamp(1.5, 2);
+                margin-bottom: 0;
             }
         }
         &-discountInput {
+            display: flex;
+            gap: 5px;
+            width: max-content;
             font-size: 11px;
+            
             span {
                 text-decoration: line-through;
                 color: $darkGray;
             }
             
             input {
-                width: 5rem;
+                width: 45px;
                 border: none;
                 &::-webkit-outer-spin-button,
                 &::-webkit-inner-spin-button {

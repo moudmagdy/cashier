@@ -7,6 +7,79 @@
         @media (max-width: 768px)
             display: flex
 
+    .operations
+        padding: 0 18px
+        &__group
+            &__header
+                font-size: 12px
+                border-top: 1px solid #dbe1e5
+                border-bottom: 1px solid #dbe1e5
+                padding: 4px 10px
+                margin-bottom: 0
+
+                a
+                    color: #060505
+                    border-radius: 4px
+                    padding: 0.694rem 0.975rem
+
+                    &:hover
+                        color: #060505
+                        background-color: #E6E6E6
+            &__list
+            &__item
+                display: flex
+                align-items: center
+                padding: 1rem 0.5rem
+
+                & > *
+                    flex: 1 1 100%
+                    padding: 0 15px
+
+                &:hover
+                    background-color: #fff
+
+                .operations__item__comment
+                    font-family: 'NotoSansArabic_Medium'
+                    font-size: 12px
+                    display: -webkit-box
+                    -webkit-box-orient: vertical
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    -webkit-line-clamp: 2
+
+                .operations__item__subject
+                    span
+                        display: inline-block
+                        color: #060505
+                        font-size: 12px
+                        border: 1px solid #060505
+                        border-radius: 24px
+                        padding: 0.388rem 0.8rem
+
+                .operations__item__time
+                    font-size: 12px
+
+                .operations__item__amount
+                    display: flex
+                    justify-content: flex-end
+                    align-items: center
+                    gap: 3px
+
+                    span
+                        display: inline-block
+                        font-family: 'NotoSansArabic_SemiBold'
+
+                        &.icon
+                            +flex-center
+                            width: 32px
+                            height: 32px
+                            background-color: #fff
+                            border-radius: 50%
+
+                            svg
+                                width: 11px
+                                height: 11px
+
     .total-operations
         display: flex
         gap: 10px
