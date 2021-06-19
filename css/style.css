@@ -3696,6 +3696,21 @@ input[type=number] {
     height: calc(100vh - 48px);
   }
 }
+.page__layout__col > footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 72px;
+  background-color: #F5F5F5;
+  border-top: 1px solid #dbe1e5;
+  margin-top: auto;
+}
 .page__layout header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5071,6 +5086,42 @@ header .header__btns {
     display: -ms-flexbox;
     display: flex;
   }
+}
+.expenses-page .total-operations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.expenses-page .total-operations__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.expenses-page .total-operations svg {
+  width: 14px;
+  height: 14px;
+}
+.expenses-page .total-operations .total-amount h6 {
+  font-size: 12px;
+  color: #A3AAB2;
+}
+.expenses-page .total-operations .total-amount__number, .expenses-page .total-operations .total-amount__currency {
+  display: inline-block;
+  font-family: "NotoSansArabic_SemiBold";
+  font-size: 20px;
+  line-height: 1;
+  color: #060505;
 }
 .expenses-page .control-panel__bottom-bar form {
   width: 100%;
