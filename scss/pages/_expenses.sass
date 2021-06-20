@@ -9,7 +9,11 @@
 
     .operations
         padding: 0 18px
+
         &__group
+            &:not(:last-child)
+                margin-bottom: 15px
+
             &__header
                 font-size: 12px
                 border-top: 1px solid #dbe1e5
@@ -128,3 +132,17 @@
                 font-size: 1rem
                 border-radius: 28px
                 padding: 0.975rem 3rem
+
+            .currency-symbol
+                position: relative
+
+                .form-control
+                    padding-left: 2.8rem
+
+                &::before
+                    position: absolute
+                    left: 0.95rem
+                    top: 50%
+                    transform: translateY(-50%)
+                    content: attr(data-symbol)
+                    font-size: 12px

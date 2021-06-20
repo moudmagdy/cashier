@@ -24,7 +24,7 @@
         padding: 0 5px;
         height: 78% !important;
         margin-bottom: 2rem;
-        overflow-y: scroll;
+        overflow-y: auto;
         @include scroll-bar;
     }
 

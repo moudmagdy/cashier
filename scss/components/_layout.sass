@@ -62,8 +62,9 @@
         background-color: #fff
 
     &__scrollable-content
-        overflow-y: scroll
+        overflow-y: auto
         @include scroll-bar
+        scroll-behavior: smooth
 
     .form-container
         max-width: 670px

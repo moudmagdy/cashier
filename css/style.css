@@ -390,8 +390,8 @@ label > span {
 }
 .search__bar .features__dropdown .features__dropdown__menu .dropdown-item {
   font-family: "NotoSansArabic_Medium";
-  font-size: 12px;
-  padding: 14px 16px;
+  font-size: 14px;
+  padding: 12px 16px;
 }
 .search__bar .features__dropdown .features__dropdown__menu .dropdown-item svg {
   fill: #060505;
@@ -400,8 +400,67 @@ label > span {
 .search__bar .features__dropdown .features__dropdown__menu .dropdown-item:hover {
   background-color: #EBF6FF;
 }
+.search__bar .features__dropdown .features__dropdown__menu .dropdown-item:active {
+  background-color: #1877F2;
+  color: #fff;
+}
 .search__bar .features__dropdown .features__dropdown__menu .dropdown-item:active svg {
   fill: #fff;
+}
+.search__bar .search__bar__dropdown .dropdown-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #C6CFD9;
+  border-radius: 12px;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.763rem 0.75rem;
+}
+.search__bar .search__bar__dropdown .dropdown-toggle::after {
+  content: "";
+  width: 8.8px;
+  height: 16.2px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.8' height='16.2' viewBox='0 0 8.8 16.2'%3E%3Cpath fill='%23A3AAB2' d='M0,11.8l4.4,4.4l4.4-4.4H0z M0,4.4L4.4,0l4.4,4.4L0,4.4z'/%3E%3C/svg%3E");
+  background-size: 8.8px 16.2px;
+  background-repeat: no-repeat;
+  border: none;
+  margin-right: 28px;
+}
+.search__bar .search__bar__dropdown .dropdown-toggle.show {
+  border-color: #1877F2;
+}
+.search__bar .search__bar__dropdown .dropdown-toggle .dropdown__label {
+  font-size: 12px;
+  color: #A3AAB2;
+  margin-left: 5px;
+}
+.search__bar .search__bar__dropdown .dropdown-toggle .dropdown__selected-value {
+  color: #4D4D4D;
+  font-family: "NotoSansArabic_Medium";
+  font-size: 12px;
+}
+.search__bar .search__bar__dropdown .dropdown-menu {
+  text-align: right;
+  border: none;
+  border-radius: 8px;
+  -webkit-box-shadow: 1px 0px 12px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 1px 0px 12px 0px rgba(0, 0, 0, 0.16);
+}
+.search__bar .search__bar__dropdown .dropdown-menu .dropdown-item {
+  font-family: "NotoSansArabic_Medium";
+  font-size: 14px;
+  padding: 10px 14px;
+}
+.search__bar .search__bar__dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: #EBF6FF;
+}
+.search__bar .search__bar__dropdown .dropdown-menu .dropdown-item:active {
+  background-color: #1877F2;
+  color: #fff;
 }
 
 .collapse__toggle {
@@ -684,7 +743,7 @@ input[type=number] {
   padding: 0 5px;
   height: 78% !important;
   margin-bottom: 2rem;
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-color: #BDBEC3 #F0F0F0;
   scrollbar-width: thin;
 }
@@ -1196,6 +1255,7 @@ input[type=number] {
 .accordion-container .accordion .accordion-collapse {
   border: none;
 }
+
 .pay-receive {
   font-size: 1rem;
 }
@@ -1212,7 +1272,7 @@ input[type=number] {
 .pay-receive-list {
   width: 100%;
   list-style: none;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 65em;
   padding: 0;
   scrollbar-color: #BDBEC3 #F0F0F0;
@@ -3058,7 +3118,7 @@ input[type=number] {
   display: block;
 }
 .clients-list--container {
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-color: #BDBEC3 #F0F0F0;
   scrollbar-width: thin;
 }
@@ -3745,9 +3805,10 @@ input[type=number] {
   background-color: #fff;
 }
 .page__layout__scrollable-content {
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-color: #BDBEC3 #F0F0F0;
   scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 .page__layout__scrollable-content::-webkit-scrollbar {
   width: 8px;
@@ -4801,7 +4862,7 @@ input[type=number] {
 }
 @media screen and (max-width: 768px) {
   .modal.addNew_client-class {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
   .modal.addNew_client-class .d-flex {
     -webkit-box-orient: vertical !important;
@@ -5094,6 +5155,9 @@ header .header__btns {
 .expenses-page .operations {
   padding: 0 18px;
 }
+.expenses-page .operations__group:not(:last-child) {
+  margin-bottom: 15px;
+}
 .expenses-page .operations__group__header {
   font-size: 12px;
   border-top: 1px solid #dbe1e5;
@@ -5239,6 +5303,22 @@ header .header__btns {
   font-size: 1rem;
   border-radius: 28px;
   padding: 0.975rem 3rem;
+}
+.expenses-page .control-panel__bottom-bar form .currency-symbol {
+  position: relative;
+}
+.expenses-page .control-panel__bottom-bar form .currency-symbol .form-control {
+  padding-left: 2.8rem;
+}
+.expenses-page .control-panel__bottom-bar form .currency-symbol::before {
+  position: absolute;
+  left: 0.95rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: attr(data-symbol);
+  font-size: 12px;
 }
 
 .newSalesOne .centerdContainer {
@@ -6448,7 +6528,7 @@ header .header__btns {
 }
 .maintenance-page .activeRequest-leftSide-oneTab {
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-color: #BDBEC3 #F0F0F0;
   scrollbar-width: thin;
 }
@@ -6463,7 +6543,7 @@ header .header__btns {
 }
 @media screen and (max-height: 700px) {
   .maintenance-page .clients-list--individuals.active {
-    overflow-y: scroll;
+    overflow-y: auto;
     height: auto;
     max-height: 62vh;
     scrollbar-color: #BDBEC3 #F0F0F0;

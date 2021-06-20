@@ -3,7 +3,7 @@
     // min-height: 70rem;
     // max-height: 70rem;
     // background: red;
-    // overflow-y: scroll;
+    // overflow-y: auto;
 
     .accordion {
         .accordion-body {
@@ -34,9 +34,6 @@
         }
         .accordion-collapse{
             border: none;
-        }
-        ul{
-            // overflow: hidden;
         }
     }
 }

@@ -6,11 +6,11 @@
   @media screen and (max-width:280px) {
     font-size: 0.7rem;
   }
- 
+
     &-list{
         width: 100%;
         list-style: none;
-        overflow-y: scroll;
+        overflow-y: auto;
         max-height: 65em;
         padding: 0;
         @include scroll-bar;

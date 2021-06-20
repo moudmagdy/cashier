@@ -94,7 +94,7 @@
         }
     }
     &--container {
-        overflow-y: scroll;
+        overflow-y: auto;
         @include scroll-bar;
     }
     &-users  {

@@ -8,7 +8,7 @@
             margin-top: 3rem;
         }
         @media screen  and (max-width:768px){
-            overflow-y: scroll;
+            overflow-y: auto;
             .d-flex{
                 flex-direction: column !important;
                 align-items: flex-start !important;

@@ -61,6 +61,36 @@
                             </svg>
                             <input type="search" name="search" placeholder="ابحث بالمصروف او بند الصرف">
                         </div>
+                        <div class="dropdown search__bar__dropdown">
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="dropdown__label">اختر بند:</span>
+                                <span class="dropdown__selected-value">كل</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <a class="dropdown-item" href="#" data-filter-list="">كل</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" data-filter-list="">كهرباء</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" data-filter-list="">يومية</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" data-filter-list="">ايجار</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" data-filter-list="">انترنت</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dropdown search__bar__dropdown">
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="dropdown__label">اختر تاريخ</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                            </div>
+                        </div>
                     </div>
                     <div class="page__layout__scrollable-content">
                         <div class="operations">
@@ -431,7 +461,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="operations__group collapsible">
+                            <div class="operations__group collapsible collapsed">
                                 <h3 class="operations__group__header">
                                     <a href="#" class="collapse__toggle" role="button" aria-expanded="true">الاثنين، 21 ديسمبر 2020</a>
                                 </h3>
@@ -827,19 +857,21 @@
                                     <div class="row">
                                         <div class="col">
                                             <label class="form-label" for="amount_spent">المبلغ المصروف</label>
-                                            <input type="text" class="form-control" name="amount_spent" id="" placeholder="00.00">
+                                            <div class="currency-symbol" data-symbol="جـ.م">
+                                                <input type="text" class="form-control" name="amount_spent" id="amount_spent" placeholder="00.00">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col">
                                             <label class="form-label" for="spending_date">تاريخ الصرف</label>
-                                            <input type="text" class="form-control" name="spending_date" id="" placeholder="اليوم, 12-4-2021">
+                                            <input type="text" class="form-control" name="spending_date" id="spending_date" placeholder="اليوم، 12/4/2021">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col">
                                             <label class="form-label" for="comment">التعليق</label>
-                                            <textarea type="text" class="form-control" name="" id="comment" placeholder="اكتب تعليقك"></textarea>
+                                            <textarea type="text" class="form-control" name="comment" id="comment" placeholder="اكتب تعليقك"></textarea>
                                         </div>
                                     </div>
                                     <div class="row">

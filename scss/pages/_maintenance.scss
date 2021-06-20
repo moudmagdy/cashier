@@ -516,13 +516,13 @@
     }
     .activeRequest-leftSide-oneTab{
         height: 100%;
-        overflow-y: scroll;
+        overflow-y: auto;
         // display: none; // remove this
         @include scroll-bar;
     }
     @media screen and (max-height:700px) {
         .clients-list--individuals.active{
-            overflow-y: scroll;
+            overflow-y: auto;
             height: auto;
             max-height: 62vh;
             @include scroll-bar;
