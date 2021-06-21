@@ -51,7 +51,7 @@
                             </svg>
                         </a>
                         <h1 class="page__title">
-                            <a href="expenses.html">المصاريف</a>
+                            <a href="expenses.html">المصروفات</a>
                         </h1>
                     </header>
                     <div class="search__bar">
@@ -851,39 +851,141 @@
                             <h4 class="control-panel__title">اضافة مصروف</h4>
                         </div>
                         <div class="control-panel__body">
-                            <div class="control-panel__content"></div>
-                            <div class="control-panel__bottom-bar">
-                                <form>
-                                    <div class="row">
-                                        <div class="col">
-                                            <label class="form-label" for="amount_spent">المبلغ المصروف</label>
-                                            <div class="currency-symbol" data-symbol="جـ.م">
-                                                <input type="text" class="form-control" name="amount_spent" id="amount_spent" placeholder="00.00">
+                            <div class="control-panel__view" data-view="add-expense">
+                                <div class="select-item">
+                                    <a href="#" class="select-item__btn" data-view-target="add-expense-subject">
+                                        <span class="select-item__btn__icon">
+                                            <svg width="25" height="25" viewBox="0 0 25 25">
+                                                <path fill="#A3AAB2" d="M12.5,0C19.4,0,25,5.6,25,12.5S19.4,25,12.5,25S0,19.4,0,12.5S5.6,0,12.5,0z" />
+                                                <path fill="#F5F5F5" d="M18.7,16.1c-2.3,3.4-7,4.4-10.5,2c-0.8-0.5-1.5-1.2-2-2c2.3-3.4,7-4.4,10.5-2C17.5,14.6,18.2,15.3,18.7,16.1z M12.5,5.6c1.6,0,2.8,1.3,2.8,2.8s-1.3,2.8-2.8,2.8S9.7,10,9.7,8.4S10.9,5.6,12.5,5.6z" />
+                                            </svg>
+                                        </span>
+                                        <span class="select-item__btn__label">اختر بند الصرف</span>
+                                    </a>
+                                    <div class="item__selected">
+                                        <div class="item__selected__icon"></div>
+                                        <div class="item__selected__data"></div>
+                                        <a class="remove__selected-item" href="#">
+                                            <svg width="15" height="15" viewBox="0 0 15 15">
+                                                <path fill="#060505" d="M8.4,7.5l6.6,6.6L14.1,15L7.5,8.4L0.9,15h0L0,14.1l6.6-6.6L0,0.9L0.9,0h0l6.6,6.6L14.1,0L15,0.9L8.4,7.5z"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="control-panel__content"></div>
+                                <div class="control-panel__bottom-bar">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label" for="amount_spent">المبلغ المصروف</label>
+                                                <div class="currency-symbol" data-symbol="جـ.م">
+                                                    <input type="text" class="form-control" name="amount_spent" id="amount_spent" placeholder="00.00">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <label class="form-label" for="spending_date">تاريخ الصرف</label>
-                                            <input type="text" class="form-control" name="spending_date" id="spending_date" placeholder="اليوم، 12/4/2021">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label" for="spending_date">تاريخ الصرف</label>
+                                                <input type="text" class="form-control" name="spending_date" id="spending_date" placeholder="اليوم، 12/4/2021">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <label class="form-label" for="comment">التعليق</label>
-                                            <textarea type="text" class="form-control" name="comment" id="comment" placeholder="اكتب تعليقك"></textarea>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label" for="comment">التعليق</label>
+                                                <textarea type="text" class="form-control" name="comment" id="comment" placeholder="اكتب تعليقك"></textarea>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <button type="submit" class="btn btn-primary btn-lg">حفظ</button>
+                                        <div class="row">
+                                            <div class="col">
+                                                <button type="submit" class="btn btn-primary btn-lg">حفظ</button>
+                                            </div>
                                         </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="control-panel__view" data-view="add-expense-subject">
+                                <div class="items-search">
+                                    <div class="items-search__input">
+                                        <svg width="15" height="13.9" viewBox="0 0 15 13.9">
+                                            <path d="M14.8,12.7l-2.4-2.4c1.6-2.6,1.3-6-0.9-8.3C8.8-0.7,4.6-0.7,2,2C0.7,3.2,0,4.9,0,6.7s0.7,3.5,2,4.7 c1.3,1.3,2.9,2,4.7,2s3.5-0.7,4.7-2c0,0,0.1-0.1,0.1-0.1l2.3,2.3c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2 C15.1,13.4,15.1,12.9,14.8,12.7z M6.7,12C5.3,12,4,11.4,3,10.4c-1-1-1.6-2.3-1.6-3.7S2,4,3,2.9c1-1,2.3-1.6,3.7-1.6s2.7,0.6,3.7,1.6 c2.1,2.1,2.1,5.4,0,7.5C9.4,11.4,8.1,12,6.7,12z"></path>
+                                        </svg>
+                                        <input type="search" name="" id="" placeholder="ابحث باسم بند صرف">
                                     </div>
-                                </form>
+                                    <div class="items-search__back-btn">
+                                        <svg width="15" height="15" viewBox="0 0 15 15">
+                                            <path fill="#060505" d="M15,8.1H2.3l4.1,4.1L5.5,13L0,7.5L5.5,2l0.8,0.8L2.3,6.9H15V8.1z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a href="#" class="add-item__btn" data-bs-toggle="modal" data-bs-target="#subjectName">
+                                    <svg width="10.2" height="10.2" viewBox="0 0 10.2 10.2">
+                                        <path fill="#1877F2" d="M10.2,4.8c0,0.4-0.4,0.8-0.8,0.8H5.9v3.8c0,0.4-0.4,0.8-0.8,0.8S4.3,9.8,4.3,9.4V5.6H0.8C0.4,5.6,0,5.2,0,4.8 S0.4,4,0.8,4h3.5V0.8C4.3,0.4,4.7,0,5.1,0s0.8,0.4,0.8,0.8V4h3.5C9.8,4,10.2,4.4,10.2,4.8z"></path>
+                                    </svg>
+                                    <span>اضافة بند</span>
+                                </a>
+                                <ul class="control-panel__list list-unstyled">
+                                    <li>
+                                        <a href="#" class="control-panel__list-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>كهرباء</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>يومية</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>ايجار</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>انترنت</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </section>
+            </div>
+        </div>
+        <div class="modal fade" id="subjectName" tabindex="-1" aria-labelledby="subjectNameLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="subjectNameLabel">اضافة بند مصاريف</h5>
+                    </div>
+                    <div class="modal-body">
+                        <label class="form-label" for="subjectNameInput">اسم البند</label>
+                        <input type="text" class="form-control" name="" id="subjectNameInput" placeholder="اكتب اسم البند">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-lg">اضافة</button>
+                        <button type="button" class="btn btn-link btn-lg" data-bs-dismiss="modal">الغاء</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

@@ -11,15 +11,18 @@
         padding: 0 18px
 
         &__group
-            &:not(:last-child)
-                margin-bottom: 15px
+            // &:not(:last-child)
+            //     margin-bottom: 15px
+            border-top: 1px solid #dbe1e5
 
             &__header
                 font-size: 12px
-                border-top: 1px solid #dbe1e5
-                border-bottom: 1px solid #dbe1e5
                 padding: 4px 10px
                 margin-bottom: 0
+                border-bottom-width: 1px
+                border-bottom-style: solid
+                border-bottom-color: transparent
+                transition: border-bottom-color 0ms ease 350ms
 
                 a
                     color: #060505
@@ -29,20 +32,33 @@
                     &:hover
                         color: #060505
                         background-color: #E6E6E6
-            &__list
+
+            &.collapsed
+                &:last-of-type
+                    border-bottom: 1px solid #dbe1e5
+
+            &:not(.collapsed)
+                .operations__group__header
+                    border-bottom-color: #dbe1e5
+                    transition: border-bottom-color 0ms ease
+
+            // &__list
+
             &__item
                 display: flex
                 align-items: center
-                padding: 1rem 0.5rem
+                padding: 0.875rem 0.5rem
 
                 & > *
-                    flex: 1 1 100%
+                    flex: 1 1
                     padding: 0 15px
 
                 &:hover
                     background-color: #fff
 
                 .operations__item__comment
+                    flex-basis: 30%
+                    min-height: 36px
                     font-family: 'NotoSansArabic_Medium'
                     font-size: 12px
                     display: -webkit-box

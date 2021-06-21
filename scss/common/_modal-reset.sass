@@ -1,0 +1,42 @@
+.modal-dialog
+    box-shadow: 0px 1px 20px rgba(0,0,0,0.15)
+    margin: 4.5rem auto
+    @media (min-width: 576px)
+        max-width: 522px
+
+.modal-sm
+    @media (min-width: 576px)
+        max-width: 356px
+
+.modal-content
+    border: none
+    border-radius: 8px
+
+.modal-header
+    +flex-center
+    border: none
+    padding: 0.85rem 20px
+    border-top-right-radius: 8px
+    border-top-left-radius: 8px
+
+.modal-title
+    font-size: 14px
+
+.modal-body
+    padding: 1.5rem
+
+    .form-label
+        color: inherit
+        font-size: 12px
+
+.modal-footer
+    justify-content: flex-start
+    border-color: #ececec
+    gap: 8px
+    border-bottom-left-radius: 8px
+    border-bottom-right-radius: 8px
+    padding: 8px 20px
+    margin-top: 0
+
+    & > *
+        margin: 0
