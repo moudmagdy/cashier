@@ -5,6 +5,9 @@
     gap: 15px
     padding: 0 22px 10px
 
+    @media (max-width: 576px)
+        flex-wrap: wrap
+
     &__input
         display: flex
         align-items: center
@@ -87,6 +90,9 @@
                         fill: #fff
 
     .search__bar__dropdown
+        @media (max-width: 576px)
+            width: 100%
+
         .dropdown-toggle
             display: flex
             align-items: center
@@ -104,7 +110,7 @@
                 background-size: 8.8px 16.2px
                 background-repeat: no-repeat
                 border: none
-                margin-right: 28px
+                margin-right: auto
 
             &.show
                 border-color: #1877F2
@@ -118,6 +124,10 @@
                 color: #4D4D4D
                 font-family: 'NotoSansArabic_Medium'
                 font-size: 12px
+
+            span
+                &:last-child
+                    margin-left: 28px
 
         .dropdown-menu
             text-align: right
