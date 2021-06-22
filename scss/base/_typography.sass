@@ -5,8 +5,8 @@ body
     font-family: 'NotoSansArabic_Regular'
     font-weight: normal
     font-style: normal
-    color: var(--color-text-primary)
-    font-size: var(--default-font-size)
+    @include var(color, color-text-primary)
+    @include var(font-size, default-font-size)
 
 h1,
 h2,
@@ -25,7 +25,7 @@ header
         font-size: 1rem
         font-weight: 600
         font-style: normal
-        color: var(--color-text-primary)
+        @include var(color, color-text-primary)
 
 fieldset
     legend

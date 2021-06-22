@@ -1,0 +1,29 @@
+@use 'sass:map';
+
+$color-white: #fff;
+$color-brand: #1877F2;
+$color-brand-aman: #3DBEC8;
+$color-bg: #F5F5F5;
+$color-text-primary: #060505;
+
+$variables: (
+    default-font-size: 1rem,
+    main-menu-width: 88px,
+    color-brand: $color-brand,
+    color-brand-aman: $color-brand-aman,
+    color-bg: $color-bg,
+    color-text-primary: $color-text-primary
+
+    // color-text-secondary: #A3AAB2
+);
+
+:root {
+    --default-font-size: #{map-get($variables, default-font-size)};
+    --main-menu-width: #{map-get($variables, main-menu-width)};
+    --color-brand: #{map-get($variables, color-brand)};
+    --color-brand-aman: #{map-get($variables, color-brand-aman)};
+    --color-bg: #{map-get($variables, color-bg)};
+    --color-text-primary: #{map-get($variables, color-text-primary)};
+
+    // --color-text-secondary: #A3AAB2;
+}

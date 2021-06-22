@@ -149,7 +149,7 @@
                 text-align: center;
                 font-family: 'NotoSansArabic_Medium';
                 font-size: 15px;
-                color: #060505;
+                @include var(color, color-text-primary);
                 padding: 0;
                 margin: 0;
                 &::-webkit-outer-spin-button,

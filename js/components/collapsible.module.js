@@ -1,5 +1,6 @@
-const collapseToggles = document.querySelectorAll('.collapse__toggle');
+const collapseToggles = document.querySelectorAll('.collapse__toggle:not(.services .collapse__toggle)');
 const collapseContainers = document.querySelectorAll('.collapse__container');
+const servicesCollapseToggles = document.querySelectorAll('.services .collapse__toggle');
 
 collapseContainers.forEach(container => {
     window.addEventListener('load', () => {
@@ -53,6 +54,23 @@ collapseToggles.forEach(collapseToggle => {
             parentCollapsible.classList.remove('collapsed');
             siblingCollapseContainer.style.maxHeight = siblingCollapseContainer.scrollHeight + 'px';
             collapseToggle.setAttribute('aria-expanded', 'true');
+        }
+    });
+});
+
+servicesCollapseToggles.forEach(servicesCollapseToggle => {
+    servicesCollapseToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parentCollapsible = servicesCollapseToggle.closest('.collapsible');
+        const siblingCollapseContainer = servicesCollapseToggle.parentNode.nextElementSibling;
+        if (!parentCollapsible.classList.contains('collapsed')) {
+            parentCollapsible.classList.add('collapsed');
+            siblingCollapseContainer.style.maxHeight = 0;
+            servicesCollapseToggle.setAttribute('aria-expanded', 'false');
+        } else {
+            parentCollapsible.classList.remove('collapsed');
+            siblingCollapseContainer.style.maxHeight = siblingCollapseContainer.scrollHeight + 'px';
+            servicesCollapseToggle.setAttribute('aria-expanded', 'true');
         }
     });
 });

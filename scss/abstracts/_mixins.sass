@@ -27,3 +27,7 @@
     -webkit-line-clamp: $lines-count
     height: calc(1em * #{$line-height} * #{$lines-count})
     padding: 0 !important
+
+@mixin var($property, $varName)
+    #{$property}: map-get($variables, $varName)
+    #{$property}: var(--#{$varName})

@@ -1,6 +1,13 @@
 @import './abstracts/functions';
-@import './abstracts/mixins';
 @import './abstracts/variables';
+@import './abstracts/mixins';
+
+
+@import './helpers/mixins';
+@import './helpers/variables';
+@import './common/common';
+
+
 @import './base/fonts';
 @import './base/typography';
 @import './components/buttons';
@@ -9,9 +16,7 @@
 @import './layout/forms';
 @import './common/modal-reset';
 
-@import './helpers/mixins';
-@import './helpers/variables';
-@import './common/common';
+
 
 
 // here import componetns
@@ -75,6 +80,7 @@
 @import './pages/sales';
 @import './pages/settings';
 @import './pages/expenses';
+@import './pages/aman';
 
 @import './pages/newSalesOne';
 @import './pages/customer';

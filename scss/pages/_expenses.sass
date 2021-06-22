@@ -23,12 +23,12 @@
                 transition: border-bottom-color 0ms ease 350ms
 
                 a
-                    color: #060505
+                    @include var(color, color-text-primary)
                     border-radius: 4px
                     padding: 0.694rem 0.975rem
 
                     &:hover
-                        color: #060505
+                        @include var(color, color-text-primary)
                         background-color: #E6E6E6
 
             &.collapsed
@@ -66,9 +66,9 @@
                 .operations__item__subject
                     span
                         display: inline-block
-                        color: #060505
+                        @include var(color, color-text-primary)
                         font-size: 12px
-                        border: 1px solid #060505
+                        border: 1px solid $color-text-primary
                         border-radius: 24px
                         padding: 0.388rem 0.8rem
 
@@ -122,7 +122,7 @@
                 font-family: 'NotoSansArabic_SemiBold'
                 font-size: 20px
                 line-height: 1
-                color: #060505
+                @include var(color, color-text-primary)
 
     .control-panel__bottom-bar
         form
@@ -197,12 +197,12 @@
         transition: all 0.3s
 
         &:hover
-            border-color: #1877F2
+            @include var(border-color, color-brand)
 
         &.selected
-            background-color: #1877F2
             color: #fff
-            border-color: #1877F2
+            @include var(background-color, color-brand)
+            @include var(border-color, color-brand)
 
         &:first-of-type
             margin-top: 15px

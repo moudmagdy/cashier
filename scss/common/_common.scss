@@ -3,14 +3,6 @@
   --darkreader-neutral-text: #d8d4cf;
   --darkreader-selection-background: #004daa;
   --darkreader-selection-text: #e8e6e3;
-
-  --main-menu-width: 96px;
-  --color-brand: #4080FF;
-  --color-text-primary: #060505;
-  --color-text-secondary: #A3AAB2;
-  --color-bg: #F5F5F5;
-
-  --default-font-size: 1rem;
 }
 
 
@@ -30,9 +22,6 @@
   }
 
   user-select: none !important;
-}
-.modal-header{
-  background-color: #F5F5F5;
 }
 button {
   &:focus {

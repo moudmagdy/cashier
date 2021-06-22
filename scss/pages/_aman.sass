@@ -1,0 +1,73 @@
+.aman-page
+    .page__layout
+        & > header
+            +var(background-color, color-brand-aman)
+            color: $color-white
+
+            .page__title
+                color: $color-white
+
+            .main-menu__toggle
+                svg
+                    fill: $color-white
+
+        .search__bar
+            justify-content: space-between
+            padding: 0.25rem 1.8rem
+
+            .search__bar__input
+                max-width: 474px
+
+            .credit__balance
+                span
+                    font-size: 19
+
+                    &:last-child
+                        font-family: 'NotoSansArabic_SemiBold'
+
+            .reload__btn
+                +flex-center
+                width: 36px
+                height: 36px
+                border-radius: 8px
+
+                &:hover
+                    background-color: #C6CFD9
+
+.services
+    display: grid
+    grid-template-columns: repeat(4, 1fr) 3fr
+    gap: 24px
+    padding: 0 28px
+
+    &__group
+        &__header
+            font-size: 12px
+            margin-bottom: 8px
+
+            a
+                @include var(color, color-text-primary)
+                width: 100%
+                height: 48px
+                border-radius: 4px
+                padding: 0.688rem 1rem
+
+                &:hover
+                    @include var(color, color-text-primary)
+                    background-color: #E3E3E3
+
+        &__item
+            font-size: 12px
+            text-align: center
+            background-color: $color-white
+            border: 1px solid #E2E9F0
+            border-radius: 8px
+
+            &:not(:last-child)
+                margin-bottom: 8px
+
+            a
+                display: block
+                color: inherit
+                text-decoration: none
+                padding: 1.2rem 0.98rem
