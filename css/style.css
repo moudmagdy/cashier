@@ -764,6 +764,10 @@ fieldset:not(:last-child) {
   border-bottom: 1px solid #ececec;
 }
 
+[type=number] {
+  direction: rtl;
+}
+
 .form-label {
   color: #A3AAB2;
 }
@@ -3965,8 +3969,8 @@ fieldset:not(:last-child) {
 }
 .main-menu nav a::before {
   content: "";
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background-size: cover;
   background-repeat: no-repeat;
 }
