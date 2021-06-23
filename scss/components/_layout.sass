@@ -40,7 +40,7 @@
     header
         display: flex
         align-items: center
-        height: 52px
+        min-height: 52px
         padding: 0 22px
 
         // @media (min-width: 1024px)
@@ -69,6 +69,45 @@
         overflow-y: auto
         @include scroll-bar
         scroll-behavior: smooth
+
+    .control-panel__bottom-bar
+        padding: 12px 24px
+
+        form
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+
+        label
+            font-size: 12px
+            color: #242424
+
+        .form-control
+            margin-bottom: 10px
+
+        textarea
+            resize: none
+
+        .btn-lg
+            width: 100%
+            font-size: 1rem
+            border-radius: 28px
+            padding: 0.975rem 3rem
+
+        .currency-symbol
+            position: relative
+
+            .form-control
+                padding-left: 2.8rem
+
+            &::before
+                position: absolute
+                left: 0.95rem
+                top: 50%
+                transform: translateY(-50%)
+                content: attr(data-symbol)
+                font-size: 12px
 
     .form-container
         max-width: 670px

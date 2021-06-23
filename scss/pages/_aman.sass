@@ -1,5 +1,28 @@
 .aman-page
+    position: relative
+    height: 100vh
+    overflow: hidden
+
+    &::after
+        content: ""
+        position: absolute
+        inset: 0
+        z-index: 999
+        background-color: transparent
+        pointer-events: none
+        transition: background-color 0.3s
+
     .page__layout
+        $color-brand: $color-brand-aman
+        --color-brand: #{map-get($variables, color-brand-aman)}
+        display: grid
+
+        .form-control,
+        .form-select
+            &:focus
+                +var(border-color, color-brand-aman)
+                box-shadow: 0 0 0 0.25rem lighten($color-brand-aman, 30%)
+
         & > header
             +var(background-color, color-brand-aman)
             color: $color-white
@@ -31,16 +54,66 @@
                 height: 36px
                 border-radius: 8px
 
+                svg
+                    width: 25px
+
                 &:hover
                     background-color: #C6CFD9
+
+        section
+            height: calc(100vh - 104px)
+
+        .control-panel
+            position: fixed
+            top: 0
+            right: 100%
+            width: 415px
+            z-index: 9999
+            transition: transform 0.3s cubic-bezier(0.8,-0.21, 0.35, 0.32)
+
+            .control-panel__close-btn
+                +flex-center
+                width: 48px
+                height: 48px
+                background-color: rgba(255, 255, 255, 0.15)
+                border-radius: 50%
+                margin-right: auto
+                transition: background-color 0.3s
+
+                &:hover
+                    background-color: rgba(255, 255, 255, 0.30)
+
+                svg
+                    fill: $color-white
+
+            .control-panel__content:empty
+                background-image: none
+
+.control-panel--shown
+    &::after
+        pointer-events: auto
+        background-color: rgba(6, 5, 5, 0.35)
+
+    .control-panel
+        transform: translateX(100%)
 
 .services
     display: grid
     grid-template-columns: repeat(4, 1fr) 3fr
+    grid-template-rows: 100%
     gap: 24px
+    height: 100%
     padding: 0 28px
 
+    @media (min-width: 1200px)
+        grid-template-columns: repeat(4, 1fr) minmax(430px, 2fr)
+
     &__group
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: auto 1fr
+        align-content: start
+
         &__header
             font-size: 12px
             margin-bottom: 8px
@@ -56,18 +129,116 @@
                     @include var(color, color-text-primary)
                     background-color: #E3E3E3
 
+        &__list
+            overflow: hidden
+            +scroll-bar
+
+        &:not(.collapsed)
+            .services__group__list
+                overflow-y: auto
+
         &__item
             font-size: 12px
             text-align: center
             background-color: $color-white
             border: 1px solid #E2E9F0
             border-radius: 8px
+            margin-bottom: 8px
 
-            &:not(:last-child)
-                margin-bottom: 8px
+            &:last-child
+                margin-bottom: 15px
 
             a
-                display: block
+                display: flex
+                align-items: center
                 color: inherit
                 text-decoration: none
                 padding: 1.2rem 0.98rem
+
+                .services__item__icon
+                    width: 32px
+                    height: 32px
+                    margin-left: 10px
+
+                svg
+                    margin-right: auto
+
+.btn-primary
+    &:hover
+        background-color: darken($color-brand-aman, 10%)
+        border-color: darken($color-brand-aman, 10%)
+
+    &:disabled
+        background-color: lighten($color-brand-aman, 10%)
+        border-color: lighten($color-brand-aman, 10%)
+
+    &:active, &:focus
+        background-color: darken($color-brand-aman, 15%)
+        border-color: darken($color-brand-aman, 15%)
+
+.key__buttons
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    gap: 10px 30px
+    padding: 20px 10px 24px
+
+    .key__btn
+        flex: 1 0 25%
+        background-color: #F0F2F5
+        font-family: 'NotoSansArabic_Medium'
+        font-size: 15px
+        border-radius: 8px
+        border: none
+        padding: 0.613rem 0.85rem
+        transition: background-color 0.3s
+
+        svg
+            fill: #C6CFD9
+            transition: fill 0.3s
+
+        &:hover
+            background-color: darken(#F0F2F5, 10%)
+
+            svg
+                fill: darken(#C6CFD9, 25%)
+
+.receipt
+    padding: 10px 24px
+
+    li
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 48px
+        padding: 10px 24px
+
+        &:hover
+            background-color: #F5F5F5
+
+        &:first-child
+            border-bottom: 1px solid #F0F2F5
+
+        span
+            &:first-child
+                font-family: 'NotoSansArabic_Medium', sans-serif
+                font-size: 12px
+
+            &:last-child
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+.success__message
+    display: none
+    align-content: center
+    justify-content: center
+    flex-direction: column
+    padding: 30px 24px 80px
+
+    span
+        font-family: 'NotoSansArabic_Medium', sans-serif
+        margin-bottom: 30px
+
+.spinner
+    display: none
+    margin: 50px 0

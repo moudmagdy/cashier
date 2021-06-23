@@ -67,10 +67,14 @@ servicesCollapseToggles.forEach(servicesCollapseToggle => {
             parentCollapsible.classList.add('collapsed');
             siblingCollapseContainer.style.maxHeight = 0;
             servicesCollapseToggle.setAttribute('aria-expanded', 'false');
+            // siblingCollapseContainer.style.removeProperty('overflow-y');
         } else {
             parentCollapsible.classList.remove('collapsed');
             siblingCollapseContainer.style.maxHeight = siblingCollapseContainer.scrollHeight + 'px';
             servicesCollapseToggle.setAttribute('aria-expanded', 'true');
+            // setTimeout(function () {
+            //     siblingCollapseContainer.style.overflowY = 'auto';
+            // }, 350);
         }
     });
 });
