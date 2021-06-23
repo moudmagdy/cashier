@@ -4279,16 +4279,6 @@ fieldset:not(:last-child) {
   padding: 12px 24px;
 }
 .page__layout .control-panel__bottom-bar form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
 }
 .page__layout .control-panel__bottom-bar label {
@@ -6154,25 +6144,18 @@ header .header__btns {
 
 .success__message {
   display: none;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  text-align: center;
   padding: 30px 24px 80px;
 }
 .success__message span {
+  display: block;
   font-family: "NotoSansArabic_Medium", sans-serif;
   margin-bottom: 30px;
 }
 
 .spinner {
   display: none;
-  margin: 50px 0;
+  margin: 50px auto;
 }
 
 .newSalesOne .centerdContainer {

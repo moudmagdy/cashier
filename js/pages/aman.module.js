@@ -53,11 +53,11 @@ controlPanels.forEach(panel => {
 
     confirmReceiptBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        spinner.style.display = 'block';
+        spinner.style.display = 'flex';
         confirmReceiptBtn.style.display = 'none';
         setTimeout(function () {
             spinner.style.display = 'none';
-            successMessage.style.display = 'flex'
+            successMessage.style.display = 'block'
             printBtn.style.display = 'block';
         }, 3500);
     });
@@ -65,5 +65,18 @@ controlPanels.forEach(panel => {
     printBtn.addEventListener('click', (e) => {
         e.preventDefault();
         document.querySelector('.control-panel--shown').classList.remove('control-panel--shown');
+        setTimeout(function () {
+            confirmCreditBtn.style.display = 'block';
+            panel.querySelectorAll('.form-label').forEach(label => {
+                label.style.display = 'block';
+            });
+            panel.querySelectorAll('.form-control').forEach(input => {
+                input.style.display = 'block';
+            });
+            panel.querySelector('.key__buttons').style.display = 'flex';
+            panel.querySelector('.receipt').style.display = 'none';
+            successMessage.style.display = 'none'
+            printBtn.style.display = 'none';
+        }, 350);
     });
 });
