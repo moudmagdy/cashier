@@ -5998,7 +5998,7 @@ header .header__btns {
   color: #4D4D4D;
 }
 
-.control-panel__content .closed-shift {
+.closed-shift {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -6016,44 +6016,61 @@ header .header__btns {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  background-color: #fff;
   padding: 15px 24px;
 }
-.control-panel__content .closed-shift .logo {
+.closed-shift .logo {
   margin-bottom: 10px;
 }
-.control-panel__content .closed-shift h3 {
+.closed-shift h3 {
   font-size: 22px;
   color: #4D4D4D;
   margin-bottom: 15px;
 }
-.control-panel__content .closed-shift h6 {
+.closed-shift h6 {
   color: #4D4D4D;
   margin-bottom: 10px;
 }
-.control-panel__content .closed-shift p {
+.closed-shift p {
   color: #4D4D4D;
   margin-bottom: 60px;
 }
-.control-panel__content .closed-shift .daily-total-amount {
+.closed-shift .daily-total-amount {
   font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 40px;
   color: #060505;
   margin-bottom: 24px;
 }
-.control-panel__content .closed-shift .form-label {
+.closed-shift .form-label {
   color: #242424;
 }
-.control-panel__content .closed-shift textarea {
+.closed-shift textarea {
   resize: none;
 }
-.control-panel__content .closed-shift .btn {
+.closed-shift .btn {
   -ms-flex-item-align: center;
       align-self: center;
   border-radius: 28px;
   padding: 0.975rem 5.098rem;
 }
-.control-panel__content .closed-shift .btn-lg {
+.closed-shift .btn-lg {
   width: 100%;
+}
+
+.new-shift-page .closed-shift {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+.new-shift-page .closed-shift form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .newSalesOne .centerdContainer {
