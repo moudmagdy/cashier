@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
     <title>Expenses - Cashier</title>
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -24,14 +26,14 @@
                 </svg>
             </a>
             <nav>
-                <a href="sales.html" class="sales__page active">المبيعات</a>
+                <a href="sales.html" class="sales__page">المبيعات</a>
                 <a href="" class="cash-flow__page">حركة النقدية</a>
                 <a href="" class="bills__page">الفواتير</a>
-                <a href="expenses.html" class="expenses__page">المصروفات</a>
+                <a href="expenses.html" class="expenses__page active">المصروفات</a>
                 <a href="" class="maintenance__page">الصيانة</a>
                 <a href="" class="clients__page">العملاء</a>
                 <a href="" class="suppliers__page">الموردون</a>
-                <a href="" class="work-shift__page">الوردية</a>
+                <a href="shift.html" class="work-shift__page">الوردية</a>
                 <a href="settings.html" class="settings__page">اعدادات</a>
                 <a href="" class="update-data__page">تحديث البيانات</a>
                 <a href="" class="management__page">الادارة</a>
@@ -893,14 +895,26 @@
                                 <div class="control-panel__content"></div>
                                 <div class="control-panel__bottom-bar">
                                     <form>
-                                        <label class="form-label" for="amount_spent">المبلغ المصروف</label>
-                                        <div class="currency-symbol" data-symbol="جـ.م">
-                                            <input type="number" class="form-control" name="amount_spent" id="amount_spent" placeholder="00.00">
+                                        <div class="row">
+                                            <div class="col-12 mb-3">
+                                                <label class="form-label" for="amount_spent">المبلغ المصروف</label>
+                                                <div class="currency-symbol" data-symbol="جـ.م">
+                                                    <input type="number" class="form-control" name="amount_spent" id="amount_spent" placeholder="00.00">
+                                                </div>
+                                            </div>
                                         </div>
-                                        <label class="form-label" for="spending_date">تاريخ الصرف</label>
-                                        <input type="text" class="form-control" name="spending_date" id="spending_date" placeholder="اليوم، 12/4/2021">
-                                        <label class="form-label" for="comment">التعليق</label>
-                                        <textarea class="form-control" name="comment" id="comment" placeholder="اكتب تعليقك"></textarea>
+                                        <div class="row">
+                                            <div class="col-12 mb-3">
+                                                <label class="form-label" for="spending_date">تاريخ الصرف</label>
+                                                <input type="text" class="form-control" name="spending_date" id="spending_date" placeholder="اليوم، 12/4/2021">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 mb-3">
+                                                <label class="form-label" for="comment">التعليق</label>
+                                                <textarea class="form-control" name="comment" id="comment" placeholder="اكتب تعليقك"></textarea>
+                                            </div>
+                                        </div>
                                         <button type="submit" class="btn btn-primary btn-lg">حفظ</button>
                                     </form>
                                 </div>

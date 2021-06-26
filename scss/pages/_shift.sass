@@ -1,0 +1,146 @@
+.shift-page
+    position: relative
+    height: 100vh
+    overflow: hidden
+
+    &::after
+        content: ""
+        position: absolute
+        inset: 0
+        z-index: 999
+        background-color: transparent
+        pointer-events: none
+        transition: background-color 0.3s
+
+    & > .page__layout > .page__layout__nav
+        display: none
+
+    .end__shift__cta
+        +flex-center
+        flex-direction: column
+        min-height: 100vh
+
+        & > *
+            margin-top: auto
+
+        .btn
+            border-radius: 28px
+            padding: 0.975rem 5.098rem
+            margin-bottom: 60px
+
+.shift-summary__container
+    max-width: 700px
+    padding: 15px 28px
+
+.shift-summary
+    background-color: #fff
+    border: 1px solid #E2E9F0
+    border-radius: 8px
+    padding: 40px 84px 60px
+
+    h3
+        font-size: calc(1.1rem + .5vw)
+        margin-bottom: 24px
+
+    h4
+        font-family: 'NotoSansArabic_SemiBold', sans-serif
+        font-size: 16px
+        margin-top: 45px
+        margin-bottom: 20px
+
+    p
+        font-size: 14px
+        margin-bottom: 30px
+
+.shift-summary__list
+    display: flex
+    flex-direction: column
+
+    li
+        display: flex
+        align-items: center
+        height: 54px
+        border-bottom: 1px solid #efefef
+        padding: 0.85rem 1rem
+
+        h5
+            flex: 0 1 65%
+            font-size: 16px
+            color: #4D4D4D
+            margin: 0
+
+        .receipt__count
+            flex: 0 1 15%
+
+        .opening-balance-amount,
+        .daily-total-amount,
+        .operations-amount
+            flex: 0 1 20%
+
+        .opening-balance-amount,
+        .daily-total-amount
+            color: #060505
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+            font-size: 22px
+
+        .operations-amount
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+            font-size: 17px
+
+            &.revenue
+                color: #3ABD76
+
+            &.outgoing
+                color: #FF6B73
+
+        .receipt__count
+            font-family: 'NotoSansArabic_Medium', sans-serif
+            font-size: 12px
+            color: #4D4D4D
+
+.control-panel__content
+    .closed-shift
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: center
+        align-content: center
+        padding: 15px 24px
+
+        .logo
+            margin-bottom: 10px
+
+        h3
+            font-size: 22px
+            color: #4D4D4D
+            margin-bottom: 15px
+
+        h6
+            color: #4D4D4D
+            margin-bottom: 10px
+
+        p
+            color: #4D4D4D
+            margin-bottom: 60px
+
+        .daily-total-amount
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+            font-size: 40px
+            color: #060505
+            margin-bottom: 24px
+
+        .form-label
+            color: #242424
+
+        textarea
+            resize: none
+
+        .btn
+            align-self: center
+            border-radius: 28px
+            padding: 0.975rem 5.098rem
+
+        .btn-lg
+            width: 100%

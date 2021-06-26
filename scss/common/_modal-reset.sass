@@ -21,7 +21,11 @@
     border-top-left-radius: 8px
 
 .modal-title
+    +flex-center
     font-size: 14px
+
+    svg, img
+        margin-left: 12px
 
 .modal-body
     padding: 1.5rem
@@ -41,3 +45,12 @@
 
     & > *
         margin: 0
+
+    .btn
+        border-radius: 24px
+        padding: 0.725rem 4rem
+
+.modal-sm
+    .modal-footer
+        .btn
+            padding: 0.725rem 2.95rem

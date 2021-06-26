@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
     <title>Aman - Cashier</title>
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <main class="aman-page">
+    <main class="aman-page has__slidable__cp">
         <div class="main-menu">
             <a href="#" class="main-menu__toggle">
                 <svg width="32" height="26" viewBox="0 0 32 26">
@@ -31,7 +33,7 @@
                 <a href="" class="maintenance__page">الصيانة</a>
                 <a href="" class="clients__page">العملاء</a>
                 <a href="" class="suppliers__page">الموردون</a>
-                <a href="" class="work-shift__page">الوردية</a>
+                <a href="shift.html" class="work-shift__page">الوردية</a>
                 <a href="settings.html" class="settings__page">اعدادات</a>
                 <a href="" class="update-data__page">تحديث البيانات</a>
                 <a href="" class="management__page">الادارة</a>
@@ -214,13 +216,23 @@
                         </div>
                         <div class="control-panel__bottom-bar">
                             <form>
-                                <label class="form-label" for="phone_number">رقم الموبيل</label>
-                                <input type="text" class="form-control" name="phone_number" id="phone_number" placeholder="012xxxxxxxxxxxxx">
-                                <label class="form-label" for="repeat_phone_number">تأكيد رقم الموبيل</label>
-                                <input type="text" class="form-control" name="repeat_phone_number" id="repeat_phone_number" placeholder="012xxxxxxxxxxxxx">
-                                <div class="d-flex flex-column align-items-center">
-                                    <label class="form-label" for="recharge_value">القيمة</label>
-                                    <input type="text" class="form-control text-center" name="recharge_value" id="recharge_value" placeholder=""></input>
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <label class="form-label" for="phone_number">رقم الموبيل</label>
+                                        <input type="number" class="form-control" name="phone_number" id="phone_number" placeholder="012xxxxxxxxxxxxx">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <label class="form-label" for="repeat_phone_number">تأكيد رقم الموبيل</label>
+                                        <input type="number" class="form-control" name="repeat_phone_number" id="repeat_phone_number" placeholder="012xxxxxxxxxxxxx">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 mb-3 text-center">
+                                        <label class="form-label" for="recharge_value">القيمة</label>
+                                        <input type="number" class="form-control" name="recharge_value" id="recharge_value" placeholder=""></input>
+                                    </div>
                                 </div>
                                 <div class="key__buttons">
                                     <button type="button" class="key__btn backspace--btn">

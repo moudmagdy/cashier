@@ -1,16 +1,16 @@
 .aman-page
-    position: relative
-    height: 100vh
-    overflow: hidden
+    .btn-primary
+        &:hover
+            background-color: darken($color-brand-aman, 10%)
+            border-color: darken($color-brand-aman, 10%)
 
-    &::after
-        content: ""
-        position: absolute
-        inset: 0
-        z-index: 999
-        background-color: transparent
-        pointer-events: none
-        transition: background-color 0.3s
+        &:disabled
+            background-color: lighten($color-brand-aman, 10%)
+            border-color: lighten($color-brand-aman, 10%)
+
+        &:active, &:focus
+            background-color: darken($color-brand-aman, 15%)
+            border-color: darken($color-brand-aman, 15%)
 
     .page__layout
         $color-brand: $color-brand-aman
@@ -64,38 +64,8 @@
             height: calc(100vh - 104px)
 
         .control-panel
-            position: fixed
-            top: 0
-            right: 100%
-            width: 415px
-            z-index: 9999
-            transition: transform 0.3s cubic-bezier(0.8,-0.21, 0.35, 0.32)
-
-            .control-panel__close-btn
-                +flex-center
-                width: 48px
-                height: 48px
-                background-color: rgba(255, 255, 255, 0.15)
-                border-radius: 50%
-                margin-right: auto
-                transition: background-color 0.3s
-
-                &:hover
-                    background-color: rgba(255, 255, 255, 0.30)
-
-                svg
-                    fill: $color-white
-
             .control-panel__content:empty
                 background-image: none
-
-.control-panel--shown
-    &::after
-        pointer-events: auto
-        background-color: rgba(6, 5, 5, 0.35)
-
-    .control-panel
-        transform: translateX(100%)
 
 .services
     display: grid
@@ -163,19 +133,6 @@
                 svg
                     margin-right: auto
 
-.btn-primary
-    &:hover
-        background-color: darken($color-brand-aman, 10%)
-        border-color: darken($color-brand-aman, 10%)
-
-    &:disabled
-        background-color: lighten($color-brand-aman, 10%)
-        border-color: lighten($color-brand-aman, 10%)
-
-    &:active, &:focus
-        background-color: darken($color-brand-aman, 15%)
-        border-color: darken($color-brand-aman, 15%)
-
 .key__buttons
     display: flex
     flex-wrap: wrap
@@ -240,4 +197,4 @@
 
 .spinner
     display: none
-    margin: 50px auto
+    margin: 125px auto 170px

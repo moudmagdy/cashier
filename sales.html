@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
     <title>Sales - Cashier</title>
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,7 +35,7 @@
                 <a href="" class="maintenance__page">الصيانة</a>
                 <a href="" class="clients__page">العملاء</a>
                 <a href="" class="suppliers__page">الموردون</a>
-                <a href="" class="work-shift__page">الوردية</a>
+                <a href="shift.html" class="work-shift__page">الوردية</a>
                 <a href="settings.html" class="settings__page">اعدادات</a>
                 <a href="" class="update-data__page">تحديث البيانات</a>
                 <a href="" class="management__page">الادارة</a>
@@ -59,7 +61,6 @@
                         </h1>
                     </header>
                     <div class="search__bar">
-                        <!-- Stylefile name => _searchInput.scss -->
                         <div class="search__bar__input">
                             <svg width="15" height="13.9" viewBox="0 0 15 13.9">
                                 <path d="M14.8,12.7l-2.4-2.4c1.6-2.6,1.3-6-0.9-8.3C8.8-0.7,4.6-0.7,2,2C0.7,3.2,0,4.9,0,6.7s0.7,3.5,2,4.7 c1.3,1.3,2.9,2,4.7,2s3.5-0.7,4.7-2c0,0,0.1-0.1,0.1-0.1l2.3,2.3c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2 C15.1,13.4,15.1,12.9,14.8,12.7z M6.7,12C5.3,12,4,11.4,3,10.4c-1-1-1.6-2.3-1.6-3.7S2,4,3,2.9c1-1,2.3-1.6,3.7-1.6s2.7,0.6,3.7,1.6 c2.1,2.1,2.1,5.4,0,7.5C9.4,11.4,8.1,12,6.7,12z"></path>
@@ -67,7 +68,6 @@
                             <input type="search" name="search" placeholder="ابحث عن منتج او باركود">
                         </div>
                         <div class="search__bar__features">
-                            <!-- Stylefile name => _features-btns.scss -->
                             <div class="features__dropdown dropdown">
                                 <a href="#" class="search__bar__feature layout__feature dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                     <svg width="18" height="18" viewBox="0 0 18 18">
@@ -102,19 +102,16 @@
                                 </ul>
                             </div>
                             <a href="#" class="search__bar__feature print__feature">
-                                <!-- add classs active to make it red -->
                                 <svg width="18" height="17" viewBox="0 0 18 17">
                                     <path d="M14,1v3H4V1c0-0.6,0.4-1,1-1h8C13.6,0,14,0.4,14,1z M13,14v2c0,0.6-0.4,1-1,1H6c-0.6,0-1-0.4-1-1v-2H13z M0,7v7 c0,0.6,0.4,1,1,1h3v-2h10v2h3c0.6,0,1-0.4,1-1V7c0-1.1-0.9-2-2-2H2C0.9,5,0,5.9,0,7z M5,8H2V7h3V8z"></path>
                                 </svg>
                             </a>
                             <a href="#" class="search__bar__feature bar-code__feature">
-                                <!-- add classs active to make it red -->
                                 <svg width="19.5" height="16" viewBox="0 0 19.5 16">
                                     <path d="M0,0h2v16H0V0z M4,0h1v16H4V0z M6,0h2v16H6V0z M9.5,0h1v16h-1V0z M12,0h2v16h-2V0z M15,0h1v16h-1V0z M17.5,0h2 v16h-2V0z"></path>
                                 </svg>
                             </a>
                             <a href="#" class="search__bar__feature favorite__feature">
-                                <!-- add classs active to make it red -->
                                 <svg width="20" height="18.5" viewBox="0 0 20 18.5">
                                     <path d="M10,1.5c2.5-2.2,6.3-2,8.5,0.5c2,2.3,2,5.7,0,8L10,18.5L1.5,10c-2.2-2.5-2-6.3,0.5-8.5C4.3-0.5,7.7-0.5,10,1.5z"></path>
                                 </svg>
@@ -1074,6 +1071,24 @@
                                     <span>44</span>
                                 </div>
                             </div>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg width="2" height="10" viewBox="0 0 2 10">
+                                        <path d="M1,0c0.6,0,1,0.4,1,1S1.6,2,1,2S0,1.6,0,1S0.4,0,1,0z M1,4c0.6,0,1,0.4,1,1S1.6,6,1,6S0,5.6,0,5S0.4,4,1,4z M1,8c0.6,0,1,0.4,1,1c0,0.6-0.4,1-1,1S0,9.6,0,9C0,8.4,0.4,8,1,8z"></path>
+                                    </svg>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </li>
+                                </ul>
+                            </div>
                             <div class="appbar-menu-btn">
                                 <svg width="4" height="18" viewBox="0 0 4 18">
                                     <g id="Group_4318" data-name="Group 4318" transform="translate(0.194 -0.03)">
@@ -1224,8 +1239,7 @@
                                                     </svg>
                                                 </span>
                                             </div>
-                                            <div class="product-item-in-list--discount add-discount" data-target-modal="popup--discount-each-product">
-                                                <!-- To show model upon click just set the class name of this model you want to show in data-target-model="classname here" -->
+                                            <div class="product-item-in-list--discount add-discount" data-bs-toggle="modal" data-bs-target="#add_discount_modal">
                                                 <span>10%</span>
                                                 <svg width="13" height="13.1" viewBox="0 0 13 13.1">
                                                     <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
@@ -1731,71 +1745,55 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="control-panel__bottom-bar checkout">
-                                    <!-- stylefile name => _checkout.scss -->
-                                    <ul class="checkout-list">
-                                        <!-- stylefile name => component/small/_checkout-list.scss -->
-                                        <li class="checkout-list--item">
-                                            <div class="checkout-list--item-right">
-                                                <span class="checkout-list--item-right--title">الاجمالي</span>
-                                            </div>
-                                            <div class="checkout-list--item-left price-only">
-                                                <!-- if we have price only here without any disocunt icon or close icon just add price-obly class -->
-                                                <span class="checkout-list--item-left--price">302.25</span>
-                                            </div>
-                                        </li>
-                                        <li class="checkout-list--item">
-                                            <div class="checkout-list--item-right red-text">
-                                                <span class="checkout-list--item-right--title">الخصم الكلي</span>
-                                            </div>
-                                            <div class="checkout-list--item-left red-text">
-                                                <div class="discount-number ">
-                                                    <!-- stylefile name => common  - is a public class -->
-                                                    <span>10%</span>
+                                <div class="control-panel__bottom-bar">
+                                    <div class="checkout">
+                                        <ul class="checkout__list list-unstyled">
+                                            <li class="checkout__list__item">
+                                                <h5>الاجمالي</h5>
+                                                <span class="invoice-total-amount">302.25</span>
+                                            </li>
+                                            <li class="checkout__list__item">
+                                                <h5>الخصم الكلي</h5>
+                                                <div class="invoice-discount">
+                                                    <span class="discount-percentage">10%</span>
+                                                    <span class="discount-amount">25.00</span>
                                                 </div>
-                                                <span class="checkout-list--item-left--price">302.25</span>
-                                                <div class="checkout-list--item-left--delete">
+                                                <a href="#" class="checkout-list--item-left--delete">
                                                     <svg width="24" height="24" viewBox="0 0 24 24">
                                                         <path fill="#C6CFD9" d="M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12s12-5.4,12-12S18.6,0,12,0z M12,23C5.9,23,1,18.1,1,12S5.9,1,12,1 s11,4.9,11,11S18.1,23,12,23z M17.7,16.9L12.7,12l4.9-4.9l-0.7-0.7L12,11.3L7.1,6.3L6.3,7.1l4.9,4.9l-4.9,4.9l0.7,0.7l4.9-4.9 l4.9,4.9L17.7,16.9z"></path>
                                                     </svg>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="checkout-list--item">
-                                            <div class="checkout-list--item-right">
-                                                <span class="checkout-list--item-right--title">التوصيل</span>
-                                            </div>
-                                            <div class="checkout-list--item-left">
-                                                <span class="checkout-list--item-left--price">302.25</span>
-                                                <div class="checkout-list--item-left--delete">
+                                                </a>
+                                            </li>
+                                            <li class="checkout__list__item">
+                                                <h5>التوصيل</h5>
+                                                <span>25.00</span>
+                                                <a href="#" class="checkout-list--item-left--delete">
                                                     <svg width="24" height="24" viewBox="0 0 24 24">
                                                         <path fill="#C6CFD9" d="M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12s12-5.4,12-12S18.6,0,12,0z M12,23C5.9,23,1,18.1,1,12S5.9,1,12,1 s11,4.9,11,11S18.1,23,12,23z M17.7,16.9L12.7,12l4.9-4.9l-0.7-0.7L12,11.3L7.1,6.3L6.3,7.1l4.9,4.9l-4.9,4.9l0.7,0.7l4.9-4.9 l4.9,4.9L17.7,16.9z"></path>
                                                     </svg>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="checkout-btn-container">
-                                        <a href="#" class="btn--receive-cash" id="btn--receive-cash">
-                                            <!-- stylefile style in components/btns/ _btn-receive-cash.scss -->
-                                            <span>استلام كاش</span>
-                                            <span class="btn--receive-cash--price">385.00</span>
-                                        </a>
-                                        <a href="bill-cashNew.html" class="btn--receive-payment">
-                                            <!-- stylefile style in components/btns/ _btn-receive-payments.scss -->
-                                            <svg width="30.4" height="22" viewBox="0 0 30.4 22">
-                                                <path fill="#F5F5F5" d="M28.4,0H7.9c-1.1,0-2,0.9-2,2v3.1H2c-1.1,0-2,0.9-2,2V20c0,1.1,0.9,2,2,2h22.2c1.1,0,2-0.9,2-2v-4.8h2.2 c1.1,0,2-0.9,2-2V2C30.4,0.9,29.5,0,28.4,0z"></path>
-                                                <path fill="#1877F2" opacity="0.52" enable-background="new" d="M25.4,8.3h5.1v2.5h-5.1V8.3z M23.5,2.8h5.1v0.7h-5.1V2.8z M21.7,2.8h1.4v0.7h-1.4V2.8z M19.9,2.8h1.4v0.7h-1.4V2.8z"></path>
-                                                <path fill="#1877F2" d="M30.4,2v11.2c0,1.1-0.9,2-2,2h-2.2v-1h2.2c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H7.9c-0.6,0-1,0.4-1,1v3.1h-1V2 c0-1.1,0.9-2,2-2h20.5C29.5,0,30.4,0.9,30.4,2z M24.2,6.1c0.6,0,1,0.4,1,1v7.1h1V7.1c0-1.1-0.9-2-2-2H6.9v1H24.2z M25.2,20 c0,0.6-0.4,1-1,1H2c-0.6,0-1-0.4-1-1V7.1c0-0.6,0.4-1,1-1h3.9v-1H2c-1.1,0-2,0.9-2,2V20c0,1.1,0.9,2,2,2h22.2c1.1,0,2-0.9,2-2v-4.8 h-1V20z M6.9,6.1v-1h-1v1H6.9z M25.2,14.2v1h1v-1H25.2z M22,15.4l0.5,0v-3.7l-0.5,0c-0.9,0-1.7-0.7-1.8-1.6l-1,0 c0.1,1.3,1,2.4,2.3,2.6v1.7c-1.3,0.2-2.2,1.3-2.3,2.6l1,0C20.2,16.1,21,15.4,22,15.4z M7,17c-0.1-1.3-1-2.4-2.3-2.6v-1.7 c1.3-0.2,2.2-1.3,2.3-2.6l-1,0c0,0.9-0.9,1.7-1.8,1.6l-0.5,0v3.7l0.5,0c0.9,0,1.7,0.7,1.8,1.6L7,17z M10.9,13.2c0,1.3,1,2.3,2.3,2.3 s2.3-1,2.3-2.3s-1-2.3-2.3-2.3S10.9,11.9,10.9,13.2z"></path>
-                                            </svg>
-                                        </a>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="checkout-btn-container">
+                                            <a href="#" class="btn--receive-cash" id="btn--receive-cash">
+                                                <span>استلام كاش</span>
+                                                <span class="btn--receive-cash--price">385.00</span>
+                                            </a>
+                                            <a href="" class="btn--receive-payment">
+                                                <svg width="30.4" height="22" viewBox="0 0 30.4 22">
+                                                    <path fill="#F5F5F5" d="M28.4,0H7.9c-1.1,0-2,0.9-2,2v3.1H2c-1.1,0-2,0.9-2,2V20c0,1.1,0.9,2,2,2h22.2c1.1,0,2-0.9,2-2v-4.8h2.2 c1.1,0,2-0.9,2-2V2C30.4,0.9,29.5,0,28.4,0z"></path>
+                                                    <path fill="#1877F2" opacity="0.52" enable-background="new" d="M25.4,8.3h5.1v2.5h-5.1V8.3z M23.5,2.8h5.1v0.7h-5.1V2.8z M21.7,2.8h1.4v0.7h-1.4V2.8z M19.9,2.8h1.4v0.7h-1.4V2.8z"></path>
+                                                    <path fill="#1877F2" d="M30.4,2v11.2c0,1.1-0.9,2-2,2h-2.2v-1h2.2c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H7.9c-0.6,0-1,0.4-1,1v3.1h-1V2 c0-1.1,0.9-2,2-2h20.5C29.5,0,30.4,0.9,30.4,2z M24.2,6.1c0.6,0,1,0.4,1,1v7.1h1V7.1c0-1.1-0.9-2-2-2H6.9v1H24.2z M25.2,20 c0,0.6-0.4,1-1,1H2c-0.6,0-1-0.4-1-1V7.1c0-0.6,0.4-1,1-1h3.9v-1H2c-1.1,0-2,0.9-2,2V20c0,1.1,0.9,2,2,2h22.2c1.1,0,2-0.9,2-2v-4.8 h-1V20z M6.9,6.1v-1h-1v1H6.9z M25.2,14.2v1h1v-1H25.2z M22,15.4l0.5,0v-3.7l-0.5,0c-0.9,0-1.7-0.7-1.8-1.6l-1,0 c0.1,1.3,1,2.4,2.3,2.6v1.7c-1.3,0.2-2.2,1.3-2.3,2.6l1,0C20.2,16.1,21,15.4,22,15.4z M7,17c-0.1-1.3-1-2.4-2.3-2.6v-1.7 c1.3-0.2,2.2-1.3,2.3-2.6l-1,0c0,0.9-0.9,1.7-1.8,1.6l-0.5,0v3.7l0.5,0c0.9,0,1.7,0.7,1.8,1.6L7,17z M10.9,13.2c0,1.3,1,2.3,2.3,2.3 s2.3-1,2.3-2.3s-1-2.3-2.3-2.3S10.9,11.9,10.9,13.2z"></path>
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="clients-list" id="clientsList">
                                 <div class="search-container">
                                     <div class="clients-list__search__input" id="invoice_search_input_container">
-                                        <div class="image-container" id="removeClientNameFromInvoice" style="display: none;">
+                                        <div class="image-container" id="removeClientNameFromInvoice">
                                             <svg id="Group_4925" data-name="Group 4925" width="24" height="24" viewBox="0 0 24 24">
                                                 <rect id="Rectangle_1731" data-name="Rectangle 1731" width="24" height="24" rx="12" fill="#fff" opacity="0"></rect>
                                                 <g id="Group_4007" data-name="Group 4007" transform="translate(12.206 4) rotate(45)">
@@ -1820,7 +1818,7 @@
                                     <a href="#" data-target-id="client_list_shope">محلات</a>
                                     <a href="#" data-target-id="client_list_suppliers">موردين</a>
                                 </nav>
-                                <a href="#" class="add-client" data-target-modal="addNew_client-class">
+                                <a href="#" class="add-client" data-bs-toggle="modal" data-bs-target="#add_client_modal">
                                     <svg width="10.2" height="10.2" viewBox="0 0 10.2 10.2">
                                         <path fill="#1877F2" d="M10.2,4.8c0,0.4-0.4,0.8-0.8,0.8H5.9v3.8c0,0.4-0.4,0.8-0.8,0.8S4.3,9.8,4.3,9.4V5.6H0.8C0.4,5.6,0,5.2,0,4.8 S0.4,4,0.8,4h3.5V0.8C4.3,0.4,4.7,0,5.1,0s0.8,0.4,0.8,0.8V4h3.5C9.8,4,10.2,4.4,10.2,4.8z"></path>
                                     </svg>
@@ -2083,58 +2081,48 @@
                 </section>
             </div>
         </div>
-        <div class="overlay">
-            <!-- appbar style in _order-discount.scss -->
-        </div>
-        <!-- Start POPUP -->
-        <!-- START discount-on-each-product -->
-        <div class="popup--discount-each-product">
-            <!-- appbar style in _discount-each-product.scss -->
-            <div class="popup--discount-each-product--header">
-                <h4>جونسون صابو استحمام 50 مللم</h4>
-            </div>
-            <div class="popup--discount-each-product--body">
-                <div class="popup--discount-each-product--body-value">
-                    <div>
-                        <svg width="17.146" height="17.146" viewBox="0 0 17.146 17.146">
-                            <g id="Group_4464" data-name="Group 4464" transform="translate(16.156 11.003) rotate(135)">
-                                <path id="Path_1791" data-name="Path 1791" d="M.952,0H6.336a.952.952,0,0,1,.951.951v9.722a.951.951,0,0,1-.31.7l-2.692,2.46a.951.951,0,0,1-1.283,0L.309,11.375a.952.952,0,0,1-.309-.7V.952A.951.951,0,0,1,.952,0Z" transform="translate(0 0)" fill="none" stroke="#212121" stroke-linecap="round" stroke-width="1.4"></path>
-                                <circle id="Ellipse_394" data-name="Ellipse 394" cx="0.992" cy="0.992" r="0.992" transform="translate(2.651 8.502)" fill="#212121"></circle>
-                            </g>
-                        </svg>
-                        <span class="popup--discount-each-product--body-value-title">الخصم</span>
-                    </div>
-                    <div class="popup--discount-each-product--body-value--inputs">
-                        <div class="popup--discount-each-product--body-value--inputs-container">
-                            <label for="discount-number-input">%</label>
-                            <input type="text" name="" id="discount-number-input" placeholder="number">
-                        </div>
-                        <div class="transfer-icon">
-                            <svg width="11.924" height="9.301" viewBox="0 0 11.924 9.301">
-                                <g id="Group_3946" data-name="Group 3946" transform="translate(0.572 0.707)">
-                                    <path id="Path_1788" data-name="Path 1788" d="M-16881,12903.62h10.145l-2.816,2.815" transform="translate(16881 -12898.549)" fill="none" stroke="#1877f2" stroke-linecap="round" stroke-width="1"></path>
-                                    <path id="Path_1789" data-name="Path 1789" d="M-16870.855,12906.434H-16881l2.816-2.814" transform="translate(16881.635 -12903.619)" fill="none" stroke="#1877f2" stroke-linecap="round" stroke-width="1"></path>
-                                </g>
+
+        <div class="modal fade" id="add_discount_modal" tabindex="-1" aria-labelledby="add_discount_label" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="add_discount_label">
+                            <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
                             </svg>
-                        </div>
-                        <div class="popup--discount-each-product--body-value--inputs-container">
-                            <input type="text" name="" id="discount-LE-input">
-                            <label for="discount-LE-input">جم</label>
-                        </div>
+                            <span>خصم على الفاتورة</span>
+                        </h5>
                     </div>
-                </div>
-                <div class="popup--discount-each-product--body-comment">
-                    <label for="discount-each-product--comment">تعليق</label>
-                    <input type="text" name="" id="discount-each-product--comment" placeholder="اكتب تعليقك">
-                </div>
-                <div class="popup--discount-each-product--body-footer">
-                    <button type="submit" class="submit-btn btn">تطبيق</button>
-                    <button class="cancel-submit-btn btn">الغاء</button>
+                    <form id="add_discount_form">
+                        <div class="modal-body">
+                            <div class="row mb-3">
+                                <div class="col-5 col-sm-5">
+                                    <div class="percentage-symbol">
+                                        <input type="number" class="form-control" id="" placeholder="00">
+                                    </div>
+                                </div>
+                                <div class="col-2 col-sm-2 d-flex justify-content-center align-items-center">
+                                    <svg width="17.1" height="14.3" viewBox="0 0 17.1 14.3">
+                                        <path fill="#1877F2" d="M11.4,14.1c-0.2,0-0.4-0.1-0.5-0.2c-0.3-0.3-0.3-0.7,0-1l2.9-2.9h-13c-0.4,0-0.7-0.3-0.7-0.7 s0.3-0.7,0.7-0.7h16.4l-5.3,5.3C11.7,14,11.6,14.1,11.4,14.1z M17.1,5.1c0-0.4-0.3-0.7-0.7-0.7h-13l2.9-2.9c0.3-0.3,0.3-0.7,0-1 s-0.7-0.3-1,0L0,5.8h16.4C16.8,5.8,17.1,5.4,17.1,5.1z"></path>
+                                    </svg>
+                                </div>
+                                <div class="col-5 col-sm-5">
+                                    <div class="currency-symbol" data-symbol="جـ.م">
+                                        <input type="number" class="form-control" id="" placeholder="00.00">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary">تطبيق</button>
+                            <button type="button" class="btn btn-link" data-bs-dismiss="modal">الغاء</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <!-- END discount-on-each-product -->
-        <!-- START Inventory popup -->
+
+
         <div class="modal fade inverntory-popup" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <!-- override Modal style in filestyle _products-card-list.scss -->
             <div class="modal-dialog modal-dialog-centered">
@@ -2171,8 +2159,6 @@
                 </div>
             </div>
         </div>
-        <!-- END Inventory popup -->
-        <!-- START Delivery Popup -->
         <div class="modal fade" id="order_delivring" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-modal="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -2212,107 +2198,89 @@
                 </div>
             </div>
         </div>
-        <!-- END Delivery Popup -->
-        <!-- START modal for adding new client -->
-        <div class="modal fade addNew_client-class" style="display:none" id="addNew_client" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="add_client_modal" tabindex="-1" aria-labelledby="add_client_label" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <p class="modal-title" id="myModalLabel"><img src="imgs/client_icon.svg">&nbsp; &nbsp;اضافة عميل</p>
+                        <h5 class="modal-title" id="add_client_label">
+                            <svg width="12.5" height="13.8" viewBox="0 0 12.5 13.8">
+                                <path fill="#060505" d="M12.5,10.5c-2.3,3.4-7,4.4-10.5,2c-0.8-0.5-1.5-1.2-2-2c2.3-3.4,7-4.4,10.5-2C11.3,9,11.9,9.7,12.5,10.5z M5.8,0c1.6,0,2.8,1.3,2.8,2.8S7.4,5.7,5.8,5.7S3,4.4,3,2.8S4.3,0,5.8,0z"></path>
+                            </svg>
+                            <span>اضافة عميل</span>
+                        </h5>
                     </div>
-                    <div class="modal-body deliver-container">
-                        <div class="d-flex">
-                            <div class="col-md-6" style="padding-left: 8px;">
-                                <p>
-                                    اسم العميل </p>
-                                <input type="text" id="client-name" class="form-control" placeholder="اكتب تعليق" tabindex="1">
-                            </div>
-                            <div class="col-md-6" style="padding-right: 8px;">
-                                <p>
-                                    رقم الموبيل </p>
-                                <input type="text" class="form-control" placeholder="اكتب تعليق">
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="col-md-6" style="padding-left: 6px;">
-                                <p>كود العميل</p>
-                                <input type="text" class="form-control" placeholder="اكتب تعليق">
-                            </div>
-                            <div class="col-md-2 mt-4">
-                                <input disabled type="text" class="form-control address-content text-center" placeholder="تغيير">
-                            </div>
-                        </div>
-                        <div class="divider mt-3"></div>
-                        <p>
-                            <span>
-                                (اختيارى)
-                            </span>
-                            العنوان1
-                        </p>
-                        <div class="d-flex">
-                            <div class="col-md-4">
-                                <p>المحافظة</p>
-                                <div class="select" style="padding-left: 11px;">
-                                    <input placeholder="اسوان" list="choose_country" name="choose_country" id="choose_country_input">
-                                    <datalist id="choose_country">
-                                        <option value="القاهرة">
-                                        <option value="طنطا">
-                                        <option value="سوهاج">
-                                        <option value="اسوان">
-                                        <option value="الشرقية">
-                                    </datalist>
+                    <form id="add_client_form">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 mb-3">
+                                    <label class="form-label" for="client_name">اسم العميل</label>
+                                    <input type="text" class="form-control" id="client_name" placeholder="">
+                                </div>
+                                <div class="col-12 col-sm-6 mb-3">
+                                    <label class="form-label" for="client_phone_number">رقم الموبيل</label>
+                                    <input type="tel" class="form-control" id="client_phone_number" placeholder="">
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <p>
-                                    المدينة </p>
-                                <div class="select" style="padding-left: 11px;">
-                                    <input placeholder="مدينة نصر" list="choose_city" name="choose_city" id="choose_city_input">
-                                    <datalist id="choose_city">
-                                        <option value="مدينة نصر">
-                                        <option value="شيراتون">
-                                        <option value="مصر الجديد">
-                                    </datalist>
+                            <div class="row">
+                                <div class="col-12 col-sm-6 mb-3">
+                                    <label class="form-label" for="client_code">كود العميل</label>
+                                    <input type="number" class="form-control" id="client_code" placeholder="">
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <p>
-                                    المنطقة </p>
-                                <div class="select">
-                                    <input placeholder="الحي السابع" list="choose_city" name="choose_city" id="choose_city_input">
-                                    <datalist id="choose_city">
-                                        <option value="مدينة نصر">
-                                        <option value="شيراتون">
-                                        <option value="مصر الجديد">
-                                    </datalist>
+                            <div class="row">
+                                <div class="col-12 col-sm-4 mb-3">
+                                    <label class="form-label" for="client_governorate">المحافظة</label>
+                                    <select class="form-select" id="client_governorate">
+                                        <option value="">القاهرة</option>
+                                        <option value="">طنطا</option>
+                                        <option value="">سوهاج</option>
+                                        <option value="">اسوان</option>
+                                        <option value="">الشرقية</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-4 mb-3">
+                                    <label class="form-label" for="client_city">المدينة</label>
+                                    <select class="form-select" id="client_city">
+                                        <option value="">مدينة نصر</option>
+                                        <option value="">شيراتون</option>
+                                        <option value="">مصر الجديد</option>
+                                        <option value="">المعادي</option>
+                                        <option value="">الجيزة</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-4 mb-3">
+                                    <label class="form-label" for="client_neighborhood">المدينة</label>
+                                    <select class="form-select" id="client_neighborhood">
+                                        <option value="">الحي السابع</option>
+                                        <option value="">الحي الثامن</option>
+                                    </select>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-6 mb-3">
+                                    <label class="form-label" for="client_street">الشارع</label>
+                                    <input type="text" class="form-control" id="" placeholder="صلاح سالم">
+                                </div>
+                                <div class="col-12 col-sm-2 mb-3">
+                                    <label class="form-label" for="client_building">العمارة</label>
+                                    <input type="text" class="form-control" id="" placeholder="1">
+                                </div>
+                                <div class="col-12 col-sm-2 mb-3">
+                                    <label class="form-label" for="client_floor">الدور</label>
+                                    <input type="number" class="form-control" id="" placeholder="1">
+                                </div>
+                                <div class="col-12 col-sm-2 mb-3">
+                                    <label class="form-label" for="client_apartment">الشقة</label>
+                                    <input type="number" class="form-control" id="" placeholder="2">
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-secondary">+ اضافة عنوان</button>
                         </div>
-                        <div class="d-flex">
-                            <div class="col-md-6">
-                                <p>الشارع</p>
-                                <input type="text" class="form-control" placeholder="صلاح سالم">
-                            </div>
-                            <div class="col-md-2" style="padding-right: 8px;">
-                                <p>العمارة</p>
-                                <input type="number" class="form-control" placeholder="1">
-                            </div>
-                            <div class="col-md-2" style="padding-right: 8px;">
-                                <p>الدور</p>
-                                <input type="number" class="form-control" placeholder="2">
-                            </div>
-                            <div class="col-md-2" style="padding-right: 8px;">
-                                <p>الشقة</p>
-                                <input type="number" class="form-control" placeholder="1">
-                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">حفظ</button>
+                            <button type="button" class="btn btn-link" data-bs-dismiss="modal">الغاء</button>
                         </div>
-                        <div class="divider mt-3"></div>
-                        <p class="addnew_address">+ اضافة عنوان</p>
-                        <div class="new-btns-container">
-                            <button type="button" class="btn-apply" data-bs-dismiss="modal">حفظ</button>
-                            <button type="button" class="btn-cancel cancel-submit-btn">الغاء</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -2368,7 +2336,6 @@
         </div>
         <!-- END discount-on-each-product -->
     </main>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script src="js/popper.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js" integrity="sha512-0bzaetZStCnsUgbCtGVxftzF/L32PNOnrMlYLXwBOKl8cUjTSSDfJVyyJsNwGoI0iE0WUqni2eEfO35kJjFj5g==" crossorigin="anonymous"></script>

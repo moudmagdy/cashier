@@ -83,7 +83,7 @@
             margin-bottom: 10px;
 
             h3 {
-                width: 145px;
+                width: 130px;
                 font-family: 'NotoSansArabic_Medium';
                 font-size: 13px;
                 @include line-clamp(1.5, 2);
@@ -91,7 +91,7 @@
             }
         }
         &-discountInput {
-            display: flex;
+            display: inline-flex;
             gap: 5px;
             width: max-content;
             font-size: 11px;

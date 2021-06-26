@@ -17,6 +17,15 @@ fieldset
 .form-label
     color: #A3AAB2
 
+.form-control
+    &[readonly]
+        background-color: #F5F5F5
+        border-color: #F5F5F5
+
+        &:focus
+            border-color: #F5F5F5
+            box-shadow: none
+
 .form-control,
 .form-select
     border: 1px solid #CBD0D6
@@ -53,3 +62,32 @@ fieldset
 
 .form-check-label
     color: #242424
+
+.currency-symbol
+    position: relative
+
+    &::before
+        position: absolute
+        left: 0.95rem
+        top: 50%
+        transform: translateY(-50%)
+        content: attr(data-symbol)
+        font-size: 12px
+
+    .form-control
+        padding-left: 2.8rem
+
+.percentage-symbol
+    position: relative
+
+    &::before
+        position: absolute
+        right: 0.95rem
+        top: 50%
+        transform: translateY(-50%)
+        content: "%"
+        font-size: 12px
+
+    .form-control
+        padding-right: 2.8rem
+        text-align: left

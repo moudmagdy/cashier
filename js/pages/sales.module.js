@@ -4,12 +4,12 @@ import '../components/modal.module.js';
 // to enbale menu in appbar
 import '../components/appBar-menu.module.js';
 // to enable function to get clicked client to get value and show in input in prdouct list 
-import clientListRenderer from './../components/client-list.module.js';
+// import clientListRenderer from './../components/client-list.module.js';
 
 import './../components/ChangeView.module.js';
 import './../components/main-menu.module.js';
 
-clientListRenderer('salesInvoice', 'clientsList', 'salesInvoice')
+// clientListRenderer('salesInvoice', 'clientsList', 'salesInvoice')
 
 
 
@@ -86,11 +86,11 @@ cards.forEach(card => {
 });
 
 
-const appBarHeight = document.querySelector('.appbar').offsetHeight;
+const controlPanelHeaderHeight = document.querySelector('.control-panel__header').offsetHeight;
 const addClientHeight = document.querySelector('.add-client__container').offsetHeight;
 const checkoutHeight = document.querySelector('.checkout').offsetHeight;
 
-productsListContainer.style.maxHeight = `calc(100vh - ${appBarHeight}px - ${addClientHeight}px - ${checkoutHeight}px)`;
+productsListContainer.style.maxHeight = `calc(100vh - ${controlPanelHeaderHeight}px - ${addClientHeight}px - ${checkoutHeight}px)`;
 
 document.querySelectorAll('.product__dropdown').forEach(dropdown => {
     dropdown.addEventListener('click', (e) => {

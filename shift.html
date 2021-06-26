@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Shift - Cashier</title>
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="shift-page has__slidable__cp">
+        <div class="main-menu">
+            <a href="#" class="main-menu__toggle">
+                <svg width="32" height="26" viewBox="0 0 32 26">
+                    <path d="M27,5.4H5V4.1h22V5.4z M27,12.4H7v1.4h20V12.4z M27,20.6H5v1.4h22V20.6z"></path>
+                </svg>
+            </a>
+            <a href="#" class="main-menu__logo">
+                <svg width="28" height="28" viewBox="0 0 28 28">
+                    <path d="M5.6,3.7c4-2.6,9.1-2.7,13.2-0.3l-3.4,4.4c-0.9-0.4-1.9-0.7-2.9-0.7c-1.1,0-2.2,0.3-3.1,0.8L5.6,3.7z M12.4,26.4C5.5,26.4,0,20.8,0,14c0-2.3,0.6-4.5,1.8-6.4l4.3,3.9c-1.4,3.5,0.2,7.4,3.7,8.8c1.9,0.8,4.1,0.7,5.8-0.3l0,0h0.1 c1.8-1.1,3-2.9,3.3-5v-0.2h-3c-0.1,0-0.1,0-0.1-0.1s0-0.1,0-0.2l0,0l6.2-8h0.1l0,0l0,0l5.6,8l0,0c0,0,0.1,0.1,0,0.2 c0,0.1-0.1,0.1-0.1,0.1h-3.1V15C24.3,21.3,18.9,26.4,12.4,26.4"></path>
+                </svg>
+            </a>
+            <nav>
+                <a href="sales.html" class="sales__page">المبيعات</a>
+                <a href="" class="cash-flow__page">حركة النقدية</a>
+                <a href="" class="bills__page">الفواتير</a>
+                <a href="expenses.html" class="expenses__page">المصروفات</a>
+                <a href="" class="maintenance__page">الصيانة</a>
+                <a href="" class="clients__page">العملاء</a>
+                <a href="" class="suppliers__page">الموردون</a>
+                <a href="shift.html" class="work-shift__page active">الوردية</a>
+                <a href="settings.html" class="settings__page">اعدادات</a>
+                <a href="" class="update-data__page">تحديث البيانات</a>
+                <a href="" class="management__page">الادارة</a>
+            </nav>
+        </div>
+        <div class="page__layout">
+            <nav class="page__layout__nav">
+                <a href="#" class="active" data-target-id="cash_tab">سجل النقدية</a>
+                <a href="#" data-target-id="invoice_tab">عملية نقدية</a>
+            </nav>
+            <div class="page__layout__row">
+                <section class="page__layout__col active" id="cash_tab">
+                    <header>
+                        <a href="#" class="main-menu__toggle">
+                            <svg width="32" height="26" viewBox="0 0 32 26">
+                                <path d="M27,5.4H5V4.1h22V5.4z M27,12.4H7v1.4h20V12.4z M27,20.6H5v1.4h22V20.6z"></path>
+                            </svg>
+                        </a>
+                        <h1 class="page__title">
+                            <a href="shift.html">الوردية</a>
+                        </h1>
+                    </header>
+                    <div class="shift-summary__container">
+                        <div class="shift-summary">
+                            <section>
+                                <h3>ملخص الوردية</h3>
+                                <p>
+                                    توقيت فتح الوردية
+                                    <strong>11:08 مساءاً</strong>
+                                    بتاريخ
+                                    <strong>25/6/2021</strong>
+                                    عن طريق الكاشير
+                                    <strong>عاصم السيد</strong>
+                                </p>
+                                <ul class="shift-summary__list list-unstyled">
+                                    <li>
+                                        <h5>الرصيد الافتتاحى</h5>
+                                        <span class="opening-balance-amount">1503.00</span>
+                                    </li>
+                                    <li>
+                                        <h5>إجمالى اليومية</h5>
+                                        <span class="daily-total-amount">5035.00</span>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h4>إجمالى العمليات</h4>
+                                <ul class="shift-summary__list list-unstyled">
+                                    <li>
+                                        <h5>المبيعات كاش</h5>
+                                        <span class="operations-amount revenue">3055.00</span>
+                                        <span class="receipt__count">23 فاتورة</span>
+                                    </li>
+                                    <li>
+                                        <h5>المبيعات ڤيزا</h5>
+                                        <span class="operations-amount revenue">3055.00</span>
+                                        <span class="receipt__count">3 فواتير</span>
+                                    </li>
+                                    <li>
+                                        <h5>المسترجعة</h5>
+                                        <span class="operations-amount outgoing">3055.00</span>
+                                        <span class="receipt__count">5 فواتير</span>
+                                    </li>
+                                    <li>
+                                        <h5>تحصيل نقدية</h5>
+                                        <span class="operations-amount revenue">750.00</span>
+                                    </li>
+                                    <li>
+                                        <h5>دفع نقدية</h5>
+                                        <span class="operations-amount outgoing">3000.00</span>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__layout__col" id="invoice_tab">
+                    <div class="end__shift__cta">
+                        <a class="logo" href="login.html">
+                            <svg width="71.14" height="64" viewBox="0 0 28 28">
+                                <path fill="#4080FF" d="M5.6,3.7c4-2.6,9.1-2.7,13.2-0.3l-3.4,4.4c-0.9-0.4-1.9-0.7-2.9-0.7c-1.1,0-2.2,0.3-3.1,0.8L5.6,3.7z M12.4,26.4C5.5,26.4,0,20.8,0,14c0-2.3,0.6-4.5,1.8-6.4l4.3,3.9c-1.4,3.5,0.2,7.4,3.7,8.8c1.9,0.8,4.1,0.7,5.8-0.3l0,0h0.1 c1.8-1.1,3-2.9,3.3-5v-0.2h-3c-0.1,0-0.1,0-0.1-0.1s0-0.1,0-0.2l0,0l6.2-8h0.1l0,0l0,0l5.6,8l0,0c0,0,0.1,0.1,0,0.2 c0,0.1-0.1,0.1-0.1,0.1h-3.1V15C24.3,21.3,18.9,26.4,12.4,26.4"></path>
+                            </svg>
+                        </a>
+                        <a href="" class="btn btn-primary end-shift">قفل الوردية</a>
+                    </div>
+                </section>
+            </div>
+            <div class="control-panel">
+                <div class="control-panel__header">
+                    <h4 class="control-panel__title">قفل الوردية</h4>
+                    <a href="#" class="control-panel__close-btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M9.7,9l8.3,8.3L17.3,18L9,9.7L0.7,18L0,17.3L8.3,9L0,0.7L0.7,0L9,8.3L17.3,0L18,0.7L9.7,9z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="control-panel__body">
+                    <div class="control-panel__view">
+                        <div class="control-panel__content">
+                            <div class="closed-shift">
+                                <h6>إجمالى اليومية</h6>
+                                <span class="daily-total-amount">5035.00</span>
+                                <form>
+                                    <div class="row mb-5">
+                                        <div class="col-7 mb-3">
+                                            <label class="form-label" for="cash_amount">النقدية بالدرج</label>
+                                            <input type="number" class="form-control" id="cash_amount" placeholder="00.00">
+                                        </div>
+                                        <div class="col-5 mb-3">
+                                            <label class="form-label" for="amount_difference">الفرق</label>
+                                            <input type="number" class="form-control" id="amount_difference" value="" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 mb-3">
+                                            <label class="form-label" for="shift_opening_balance">تسليم نقدية للمالك</label>
+                                            <div class="currency-symbol" data-symbol="جـ.م">
+                                                <input type="number" class="form-control" id="shift_opening_balance" placeholder="00.00">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mb-5">
+                                            <label class="form-label" for="shift_opening_comment">تعليق (اختياري)</label>
+                                            <textarea class="form-control" id="shift_opening_comment" placeholder="اكتب تعليق"></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg">قفل الوردية</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/popper.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/pages/shift.module.js" type="module"></script>
+</body>
+
+</html>

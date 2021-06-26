@@ -8,7 +8,12 @@
 
     &__row
         display: grid
-        grid-template-columns: 2fr 1fr
+        // grid-template-columns: 2fr minmax(415px, 1fr)
+        grid-template-columns: 2fr 415px
+        grid-template-rows: 1fr
+
+        @media (min-width: 1200px)
+            grid-template-columns: 2fr 500px
 
         @media (max-width: 992px)
             grid-template-columns: 1fr 1fr
@@ -70,18 +75,36 @@
         @include scroll-bar
         scroll-behavior: smooth
 
+    & > .control-panel
+        position: fixed
+        top: 0
+        right: 100%
+        width: 415px
+        z-index: 9999
+        transition: transform 0.3s cubic-bezier(0.8,-0.21, 0.35, 0.32)
+
+        @media (min-width: 1200px)
+            width: 500px
+
+        .control-panel__close-btn
+            +flex-center
+            width: 48px
+            height: 48px
+            background-color: rgba(255, 255, 255, 0.15)
+            border-radius: 50%
+            margin-right: auto
+            transition: background-color 0.3s
+
+            &:hover
+                background-color: rgba(255, 255, 255, 0.30)
+
+            svg
+                fill: $color-white
+
     .control-panel__bottom-bar
-        padding: 12px 24px
-
-        form
-            width: 100%
-
         label
             font-size: 12px
             color: #242424
-
-        .form-control
-            margin-bottom: 10px
 
         textarea
             resize: none
@@ -90,23 +113,32 @@
             width: 100%
             font-size: 1rem
             border-radius: 28px
-            padding: 0.975rem 3rem
-
-        .currency-symbol
-            position: relative
-
-            .form-control
-                padding-left: 2.8rem
-
-            &::before
-                position: absolute
-                left: 0.95rem
-                top: 50%
-                transform: translateY(-50%)
-                content: attr(data-symbol)
-                font-size: 12px
+            padding: 0.875rem 3rem
 
     .form-container
         max-width: 670px
         padding: 20px 15px
         margin: auto
+
+main
+    &.has__slidable__cp
+        position: relative
+        height: 100vh
+        overflow: hidden
+
+        &::after
+            content: ""
+            position: absolute
+            inset: 0
+            z-index: 999
+            background-color: transparent
+            pointer-events: none
+            transition: background-color 0.3s
+
+        &.control-panel--shown
+            &::after
+                pointer-events: auto
+                background-color: rgba(6, 5, 5, 0.35)
+
+            .control-panel
+                transform: translateX(100%)

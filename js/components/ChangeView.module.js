@@ -13,11 +13,12 @@ let allElementsInCard = document.querySelectorAll('.product *');
 let running = false;
 
 // Animation for Data view MENU
-let menuTl = new TimelineMax({ paused: true })
-menuTl.fromTo(changeViewMenu, 0.1, { display: 'none', opacity: 0 }, { display: 'block', opacity: 1, })
-    .fromTo(changeViewMenuItems, 0.3, { opacity: 0, top: '4rem', position: 'relative' }, { position: 'relative', opacity: 1, top: "0rem", stagger: 0.1, ease: Back.easeOut.config(1.7) }, '-=0.1')
-menuTl.reverse()
-changeViewBtn.addEventListener('click', () => { menuTl.reversed(!menuTl.reversed()) })
+let menuTl = new TimelineMax({ paused: true });
+menuTl.fromTo(changeViewMenu, 0.1, { display: 'none', opacity: 0 }, { display: 'block', opacity: 1, }).fromTo(changeViewMenuItems, 0.3, { opacity: 0, top: '4rem', position: 'relative' }, { position: 'relative', opacity: 1, top: "0rem", stagger: 0.1, ease: Back.easeOut.config(1.7) }, '-=0.1');
+menuTl.reverse();
+changeViewBtn.addEventListener('click', () => {
+    menuTl.reversed(!menuTl.reversed());
+});
 // END Animation for Data view MENU
 
 
@@ -133,7 +134,6 @@ changeViewMenuItems.forEach(ele => {
                     })
                 } else { running = false; }
                 break;
-
         }
     })
 });

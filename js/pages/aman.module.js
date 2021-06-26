@@ -4,7 +4,7 @@ const controlPanels = document.querySelectorAll('.control-panel');
 servicesItem.forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelector('main').classList.add('control-panel--shown');
+        document.querySelector('.has__slidable__cp').classList.add('control-panel--shown');
     });
 });
 
@@ -40,12 +40,15 @@ controlPanels.forEach(panel => {
         e.preventDefault();
 
         confirmCreditBtn.style.display = 'none';
-        panel.querySelectorAll('.form-label').forEach(label => {
+        panel.querySelectorAll('.row').forEach(label => {
             label.style.display = 'none';
         });
-        panel.querySelectorAll('.form-control').forEach(input => {
-            input.style.display = 'none';
-        });
+        // panel.querySelectorAll('.form-label').forEach(label => {
+        //     label.style.display = 'none';
+        // });
+        // panel.querySelectorAll('.form-control').forEach(input => {
+        //     input.style.display = 'none';
+        // });
         panel.querySelector('.key__buttons').style.display = 'none';
         panel.querySelector('.receipt').style.display = 'block';
         confirmReceiptBtn.style.display = 'block';
@@ -67,12 +70,15 @@ controlPanels.forEach(panel => {
         document.querySelector('.control-panel--shown').classList.remove('control-panel--shown');
         setTimeout(function () {
             confirmCreditBtn.style.display = 'block';
-            panel.querySelectorAll('.form-label').forEach(label => {
+            panel.querySelectorAll('.row').forEach(label => {
                 label.style.display = 'block';
             });
-            panel.querySelectorAll('.form-control').forEach(input => {
-                input.style.display = 'block';
-            });
+            // panel.querySelectorAll('.form-label').forEach(label => {
+            //     label.style.display = 'block';
+            // });
+            // panel.querySelectorAll('.form-control').forEach(input => {
+            //     input.style.display = 'block';
+            // });
             panel.querySelector('.key__buttons').style.display = 'flex';
             panel.querySelector('.receipt').style.display = 'none';
             successMessage.style.display = 'none'

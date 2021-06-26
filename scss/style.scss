@@ -49,7 +49,6 @@
 @import './components/checkout';
 @import './components/checkout-operations';
 @import './components/bill';
-@import './components/small/checkout-list';
 @import './components/small/appbar';
 @import './components/clients-list';
 @import './components/calculator';
@@ -77,10 +76,12 @@
 @import './components/popups/comment-on-invoice';
 
 // SCREENs
+@import './pages/login';
 @import './pages/sales';
 @import './pages/settings';
 @import './pages/expenses';
 @import './pages/aman';
+@import './pages/shift';
 
 @import './pages/newSalesOne';
 @import './pages/customer';

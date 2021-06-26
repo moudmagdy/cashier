@@ -1,0 +1,49 @@
+.login-page
+    +flex-center
+    align-content: center
+    flex-direction: column
+    min-height: 100vh
+    background-color: $color-white
+
+    .logo
+        margin-bottom: 5px
+
+        svg
+            +var(fill, color-brand)
+
+    h1
+        font-family: 'NotoSansArabic_Medium', sans-serif
+        font-size: 24px
+        color: #242424
+        line-height: 2.18
+        margin-bottom: 42px
+
+    .login-passcode__inputs
+        display: flex
+        gap: 22px
+        direction: ltr
+        padding-top: 26px
+
+        .form-control
+            width: 60px
+            background-color: #F5F5F5
+            font-size: 30px
+            border-width: 2px
+            border-color: #E2E9F0
+            border-radius: 8px
+            padding: 0.725rem 0.65rem
+            text-align: center
+
+            &:focus
+                +var(border-color, color-brand)
+                box-shadow: none
+
+    .forgot-login-passcode
+        display: inline-block
+        line-height: 2
+        color: #4D4D4D
+        font-size: 12px
+        margin-top: 124px
+
+        &:hover
+            text-decoration: none
