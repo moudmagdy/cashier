@@ -71,6 +71,7 @@
         z-index: 998
 
     &__scrollable-content
+        height: 100%
         overflow-y: auto
         @include scroll-bar
         scroll-behavior: smooth
@@ -85,35 +86,6 @@
 
         @media (min-width: 1200px)
             width: 500px
-
-        .control-panel__close-btn
-            +flex-center
-            width: 48px
-            height: 48px
-            background-color: rgba(255, 255, 255, 0.15)
-            border-radius: 50%
-            margin-right: auto
-            transition: background-color 0.3s
-
-            &:hover
-                background-color: rgba(255, 255, 255, 0.30)
-
-            svg
-                fill: $color-white
-
-    .control-panel__bottom-bar
-        label
-            font-size: 12px
-            color: #242424
-
-        textarea
-            resize: none
-
-        .btn-lg
-            width: 100%
-            font-size: 1rem
-            border-radius: 28px
-            padding: 0.875rem 3rem
 
     .form-container
         max-width: 670px

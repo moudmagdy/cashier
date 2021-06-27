@@ -11,7 +11,7 @@ let productsListContainer = document.querySelector('.products-list-container');
 tl3.to(productsListContainer, 0.3, { opacity: '0' });
 
 
-document.getElementById('btn--receive-cash').addEventListener('click', (e) => {
+document.getElementById('receive__cash__btn').addEventListener('click', (e) => {
     e.preventDefault()
     iziToast.show({
         title: 'تم بنجاح',

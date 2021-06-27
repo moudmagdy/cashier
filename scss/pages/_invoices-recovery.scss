@@ -98,11 +98,6 @@
         background-color: $red !important;
     }
     .checkout-list--item {
-        &-left{
-            &--price{
-                // font-family: 'bold',Arial, Helvetica, sans-serif;
-            }
-        }
         &.total-final{
         opacity: 1;
         display: flex;

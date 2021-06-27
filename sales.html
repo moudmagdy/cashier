@@ -1061,15 +1061,11 @@
                 </section>
                 <section class="page__layout__col" id="invoice_tab">
                     <div class="control-panel">
-                        <div class="control-panel__header appbar invoice">
-                            <!-- have have class invoice this to allow show invoice title and number and menu btn  -->
-                            <!-- appbar style in components/small/_appbar.scss -->
+                        <div class="control-panel__header">
                             <h4 class="control-panel__title">الفاتورة 1005#</h4>
-                            <div class="appbar-number">
-                                <span>6</span>
-                                <div class="appbar-number--box">
-                                    <span>44</span>
-                                </div>
+                            <div class="invoice__counters">
+                                <span class="invoice-items-count">6</span>
+                                <span class="invoice-items-quantity">44</span>
                             </div>
                             <div class="dropdown">
                                 <a class="dropdown-toggle" href="#" role="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
@@ -1079,686 +1075,543 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="">
                                     <li>
-                                        <a class="dropdown-item" href="#">Action</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="appbar-menu-btn">
-                                <svg width="4" height="18" viewBox="0 0 4 18">
-                                    <g id="Group_4318" data-name="Group 4318" transform="translate(0.194 -0.03)">
-                                        <circle id="Ellipse_409" data-name="Ellipse 409" cx="2" cy="2" r="2" transform="translate(-0.194 0.03)" fill="#212121"></circle>
-                                        <circle id="Ellipse_418" data-name="Ellipse 418" cx="2" cy="2" r="2" transform="translate(-0.194 7.03)" fill="#212121"></circle>
-                                        <circle id="Ellipse_419" data-name="Ellipse 419" cx="2" cy="2" r="2" transform="translate(-0.194 14.03)" fill="#212121"></circle>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="appbar-menu">
-                                <ul>
-                                    <li>
-                                        <a href="#" data-target-modal="popup--invoice">
-                                            <span>خصم علي الفاتورة</span>
-                                            <svg width="21.939" height="21.939" viewBox="0 0 21.939 21.939">
-                                                <g id="Group_4739" data-name="Group 4739" transform="translate(21.232 14.254) rotate(135)">
-                                                    <path id="Path_1791" data-name="Path 1791" d="M1.289,0H8.581A1.289,1.289,0,0,1,9.869,1.288V14.455a1.288,1.288,0,0,1-.419.951L5.8,18.738a1.288,1.288,0,0,1-1.738,0L.419,15.406A1.289,1.289,0,0,1,0,14.455V1.289A1.289,1.289,0,0,1,1.289,0Z" transform="translate(0 0)" fill="rgba(0,0,0,0)" stroke="#212121" stroke-width="1"></path>
-                                                    <circle id="Ellipse_394" data-name="Ellipse 394" cx="1.343" cy="1.343" r="1.343" transform="translate(3.591 11.514)" fill="rgba(0,0,0,0)" stroke="#212121" stroke-width="1"></circle>
-                                                </g>
+                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#invoice_discount_modal">
+                                            <svg width="18" height="18" viewBox="0 0 18 18">
+                                                <path d="M11.1,17.9c-0.6,0-1.3-0.2-1.8-0.7L0.7,8.6C0.2,8.1,0,7.4,0,6.7l0.2-4.1c0.1-1.3,1.1-2.3,2.4-2.4L6.7,0 c0.7,0,1.4,0.2,1.9,0.7l8.6,8.6c0.5,0.5,0.7,1.1,0.7,1.8s-0.3,1.3-0.7,1.8v0l-4.3,4.3C12.4,17.6,11.7,17.9,11.1,17.9z M6.8,1.4 C6.8,1.4,6.8,1.4,6.8,1.4L2.6,1.6c-0.6,0-1,0.5-1,1L1.4,6.7c0,0.3,0.1,0.6,0.3,0.8l8.6,8.6c0.4,0.4,1.1,0.4,1.5,0l4.3-4.3 c0.4-0.4,0.4-1.1,0-1.5L7.6,1.7C7.4,1.5,7.1,1.4,6.8,1.4z M5.6,7.6c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S6.7,7.6,5.6,7.6z M5.6,5 C5.2,5,5,5.2,5,5.6s0.3,0.6,0.6,0.6s0.6-0.3,0.6-0.6S5.9,5,5.6,5z"></path>
                                             </svg>
+                                            <span>خصم على الفاتورة</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="" data-bs-toggle="modal" data-bs-target="#order_delivring">
-                                            <span>نوصيل</span>
-                                            <svg width="18.528" height="12" viewBox="0 0 18.528 12">
-                                                <g id="Group_4745" data-name="Group 4745" transform="translate(0.5 0.5)">
-                                                    <path id="Rectangle_2161" data-name="Rectangle 2161" d="M1,0h9a1,1,0,0,1,1,1V9a0,0,0,0,1,0,0H0A0,0,0,0,1,0,9V1A1,1,0,0,1,1,0Z" fill="rgba(0,0,0,0)" stroke="#212121" stroke-width="1"></path>
-                                                    <path id="Path_1840" data-name="Path 1840" d="M35.082,8.792h3.946l2.554,3.113v4.249h-6.5Z" transform="translate(-24.054 -7.292)" fill="rgba(0,0,0,0)" stroke="#212121" stroke-width="1"></path>
-                                                    <circle id="Ellipse_415" data-name="Ellipse 415" cx="2" cy="2" r="2" transform="translate(3 7)" fill="#fff" stroke="#212121" stroke-width="1"></circle>
-                                                    <circle id="Ellipse_416" data-name="Ellipse 416" cx="2" cy="2" r="2" transform="translate(12 7)" fill="#fff" stroke="#212121" stroke-width="1"></circle>
-                                                </g>
+                                        <a class="dropdown-item" href="#">
+                                            <svg width="18" height="11.8" viewBox="0 0 18 11.8">
+                                                <path d="M15.2,1.4h-3.4C11.7,0.6,11,0,10.2,0H1.6C0.7,0,0,0.7,0,1.6v8.3h3c0.3,1.1,1.3,1.9,2.5,1.9S7.6,11,7.9,9.9h3.6 c0.3,1.1,1.3,1.9,2.5,1.9c1.2,0,2.3-0.9,2.5-2H18V4.8L15.2,1.4z M6.4,9.9c-0.2,0.3-0.6,0.6-1,0.6c-0.4,0-0.8-0.2-1-0.6 C4.3,9.7,4.2,9.5,4.2,9.2c0-0.3,0.1-0.5,0.2-0.7C4.6,8.2,5,8,5.4,8c0.4,0,0.8,0.2,1,0.6C6.6,8.8,6.7,9,6.7,9.2 C6.7,9.5,6.6,9.7,6.4,9.9z M10.5,8.6H7.9C7.6,7.5,6.6,6.7,5.4,6.7S3.2,7.5,3,8.6H1.3V1.6c0-0.2,0.1-0.3,0.3-0.3h8.6 c0.2,0,0.3,0.1,0.3,0.3V8.6z M15.1,9.8c-0.2,0.4-0.6,0.7-1.1,0.7c-0.5,0-0.9-0.3-1.1-0.7c-0.1-0.2-0.1-0.3-0.1-0.5 c0-0.3,0.1-0.6,0.3-0.8C13.3,8.2,13.6,8,14,8c0.4,0,0.7,0.2,0.9,0.4c0.2,0.2,0.3,0.5,0.3,0.8C15.2,9.4,15.2,9.6,15.1,9.8z M16.7,8.4 h-0.3c-0.3-1-1.3-1.8-2.4-1.8c-0.9,0-1.7,0.5-2.2,1.2V2.8h2.8l2.1,2.5V8.4z"></path>
                                             </svg>
+                                            <span>توصيل</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" id="save_invoice">
+                                        <a class="dropdown-item" id="save_invoice" href="#">
+                                            <svg width="18" height="16.1" viewBox="0 0 18 16.1">
+                                                <path d="M12.7,6.4L15.4,9L18,6.4l-1-1l-1.1,1.1C15.2,2.7,11.8-0.1,7.8,0C3.4,0.1-0.1,3.8,0,8.2c0.1,4.4,3.6,7.8,8,7.8c0,0,0,0,0,0 c2.2,0,4.4-0.9,5.9-2.6l-1-0.9c-1.2,1.4-3,2.1-4.8,2.1c0,0,0,0,0,0c-3.6,0-6.5-2.8-6.6-6.5C1.3,4.5,4.2,1.5,7.9,1.4 c3.1-0.1,5.7,1.9,6.5,4.7l-0.7-0.7L12.7,6.4z"></path>
+                                            </svg>
                                             <span>حفظ الفاتورة</span>
-                                            <svg width="21.939" height="21.939" viewBox="0 0 21.939 21.939">
-                                                <g id="Group_4739" data-name="Group 4739" transform="translate(21.232 14.254) rotate(135)">
-                                                    <path id="Path_1791" data-name="Path 1791" d="M1.289,0H8.581A1.289,1.289,0,0,1,9.869,1.288V14.455a1.288,1.288,0,0,1-.419.951L5.8,18.738a1.288,1.288,0,0,1-1.738,0L.419,15.406A1.289,1.289,0,0,1,0,14.455V1.289A1.289,1.289,0,0,1,1.289,0Z" transform="translate(0 0)" fill="rgba(0,0,0,0)" stroke="#212121" stroke-width="1"></path>
-                                                    <circle id="Ellipse_394" data-name="Ellipse 394" cx="1.343" cy="1.343" r="1.343" transform="translate(3.591 11.514)" fill="rgba(0,0,0,0)" stroke="#212121" stroke-width="1"></circle>
-                                                </g>
-                                            </svg>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#invoice_comment_modal">
+                                            <svg width="18" height="14.1" viewBox="0 0 18 14.1">
+                                                <path d="M13.4,4.6H4.6C4.3,4.6,4,4.3,4,4s0.3-0.6,0.6-0.6h8.8C13.7,3.4,14,3.7,14,4S13.7,4.6,13.4,4.6z M14,7.1 c0-0.3-0.3-0.6-0.6-0.6H4.6C4.3,6.5,4,6.8,4,7.1c0,0.3,0.3,0.6,0.6,0.6h8.8C13.7,7.7,14,7.4,14,7.1z M5.3,13.9l2.8-2.8 c0,0,0.1-0.1,0.2-0.1h7.5c1.2,0,2.2-1,2.2-2.2V2.2C18,1,17,0,15.8,0H2.2C1,0,0,1,0,2.2v6.6C0,10.1,1,11,2.2,11h1.6 c0.1,0,0.2,0.1,0.2,0.2l0,2.1c0,0.2,0.1,0.4,0.2,0.5c0.1,0.1,0.3,0.2,0.5,0.2c0,0,0,0,0,0C5,14.1,5.2,14.1,5.3,13.9z M2.2,9.9 c-0.6,0-1.1-0.5-1.1-1.1V2.2c0-0.6,0.5-1.1,1.1-1.1h13.6c0.6,0,1.1,0.5,1.1,1.1v6.6c0,0.6-0.5,1.1-1.1,1.1H8.3c-0.4,0-0.7,0.1-1,0.4 l-2.1,2.1v-1.1c0-0.8-0.6-1.4-1.4-1.4H2.2z"></path>
+                                            </svg>
                                             <span>اضافة تعليق</span>
-                                            <svg width="17.952" height="14.479" viewBox="0 0 17.952 14.479">
-                                                <g id="Group_4748" data-name="Group 4748" transform="translate(0.5 0.5)">
-                                                    <g id="Group_4747" data-name="Group 4747" transform="translate(4.733 5.462)">
-                                                        <line id="Line_434" data-name="Line 434" x1="6.769" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.101"></line>
-                                                    </g>
-                                                    <path id="Path_1872" data-name="Path 1872" d="M173.441,124.4l-3.505-2.279H158.128a1.639,1.639,0,0,1-1.639-1.639v-7.5a1.64,1.64,0,0,1,1.639-1.639H171.8a1.639,1.639,0,0,1,1.639,1.639Z" transform="translate(-156.489 -111.34)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"></path>
-                                                </g>
-                                            </svg>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" id="print_price">
-                                            <span>طباعة عرض سعر</span>
-                                            <svg width="17.952" height="14.479" viewBox="0 0 17.952 14.479">
-                                                <g id="Group_4748" data-name="Group 4748" transform="translate(0.5 0.5)">
-                                                    <g id="Group_4747" data-name="Group 4747" transform="translate(4.733 5.462)">
-                                                        <line id="Line_434" data-name="Line 434" x1="6.769" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.101"></line>
-                                                    </g>
-                                                    <path id="Path_1872" data-name="Path 1872" d="M173.441,124.4l-3.505-2.279H158.128a1.639,1.639,0,0,1-1.639-1.639v-7.5a1.64,1.64,0,0,1,1.639-1.639H171.8a1.639,1.639,0,0,1,1.639,1.639Z" transform="translate(-156.489 -111.34)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"></path>
-                                                </g>
+                                        <a class="dropdown-item delete__invoice" href="#">
+                                            <svg width="18" height="20.4" viewBox="0 0 18 20.4">
+                                                <path d="M18,3.3h-5.4V1.8c0-1-0.8-1.8-1.8-1.8H7.2c-1,0-1.8,0.8-1.8,1.8v1.6H0v1.5h1.5l1.4,12.6c0.2,1.7,1.7,3,3.4,3c0,0,0,0,0,0 h5.4c1.7,0,3.2-1.3,3.4-3l1.4-12.6H18V3.3z M6.9,1.8c0-0.2,0.1-0.3,0.3-0.3h3.6c0.2,0,0.3,0.1,0.3,0.3v1.6H6.9V1.8z M13.6,17.2 c-0.1,1-0.9,1.7-1.9,1.7H6.3c0,0,0,0,0,0c-1,0-1.8-0.7-1.9-1.7L3,4.8l12.1,0L13.6,17.2z"></path>
                                             </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" id="delete_invoice">
-                                            <span class="delete">مسح الفاتورة</span>
-                                            <svg width="17.005" height="18.898" viewBox="0 0 17.005 18.898">
-                                                <g id="Group_4746" data-name="Group 4746" transform="translate(0 0.5)">
-                                                    <path id="Path_1871" data-name="Path 1871" d="M163.571,55.384h5.092a2.525,2.525,0,0,0,2.508-2.239L172.545,41.1a.42.42,0,0,0-.418-.468H160.106a.42.42,0,0,0-.418.468l1.374,12.048A2.525,2.525,0,0,0,163.571,55.384Z" transform="translate(-157.614 -37.486)" fill="rgba(0,0,0,0)" stroke="#ff545d" stroke-width="1"></path>
-                                                    <path id="Rectangle_2308" data-name="Rectangle 2308" d="M.974,0H4.4a.974.974,0,0,1,.974.974V3.143a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V.974A.974.974,0,0,1,.974,0Z" transform="translate(5.817)" fill="rgba(0,0,0,0)" stroke="#ff545d" stroke-width="1"></path>
-                                                    <line id="Line_432" data-name="Line 432" x1="17.005" transform="translate(0 3.143)" fill="none" stroke="#ff545d" stroke-width="1"></line>
-                                                    <line id="Line_433" data-name="Line 433" x2="5.443" transform="translate(5.781 10.52)" fill="none" stroke="#ff545d" stroke-width="1"></line>
-                                                </g>
-                                            </svg>
+                                            <span>مسح الفاتورة</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="control-panel__body">
-                            <div class="invoice" id="salesInvoice">
+                            <div class="control-panel__view" id="salesInvoice" data-view="sales-invoice">
                                 <!-- stylefile name => _invoice.scss -->
-                                <div class="add-client__container">
-                                    <div class="invoice__add-client searchInput" id="invoice_search_input_container">
-                                        <!-- stylefile name => _searchInput.scss -->
-                                        <!-- <div class="image-container" id="removeClientNameFromInvoice">
-                                            <svg width="24" height="24" viewBox="0 0 24 24">
-                                                <rect width="24" height="24" rx="12" fill="#fff" opacity="0"></rect>
-                                                <g transform="translate(12.206 4) rotate(45)">
-                                                    <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                    <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                </g>
+                                <div class="select-item">
+                                    <a href="#" class="select-item__btn" data-view-target="clients-list">
+                                        <span class="select-item__btn__icon">
+                                            <svg width="25" height="25" viewBox="0 0 25 25">
+                                                <path fill="#A3AAB2" d="M12.5,0C19.4,0,25,5.6,25,12.5S19.4,25,12.5,25S0,19.4,0,12.5S5.6,0,12.5,0z" />
+                                                <path fill="#F5F5F5" d="M18.7,16.1c-2.3,3.4-7,4.4-10.5,2c-0.8-0.5-1.5-1.2-2-2c2.3-3.4,7-4.4,10.5-2C17.5,14.6,18.2,15.3,18.7,16.1z M12.5,5.6c1.6,0,2.8,1.3,2.8,2.8s-1.3,2.8-2.8,2.8S9.7,10,9.7,8.4S10.9,5.6,12.5,5.6z" />
                                             </svg>
-                                        </div> -->
-                                        <svg width="25" height="25" viewBox="0 0 25 25">
-                                            <path fill="#A3AAB2" d="M12.5,0C19.4,0,25,5.6,25,12.5S19.4,25,12.5,25S0,19.4,0,12.5S5.6,0,12.5,0z" />
-                                            <path fill="#F5F5F5" d="M18.7,16.1c-2.3,3.4-7,4.4-10.5,2c-0.8-0.5-1.5-1.2-2-2c2.3-3.4,7-4.4,10.5-2C17.5,14.6,18.2,15.3,18.7,16.1z M12.5,5.6c1.6,0,2.8,1.3,2.8,2.8s-1.3,2.8-2.8,2.8S9.7,10,9.7,8.4S10.9,5.6,12.5,5.6z" />
-                                        </svg>
-                                        <span>اضف عميل</span>
-                                        <!-- <input id="invoiceInput" value="" type="search" name="search" placeholder="اضف عميل"> -->
-                                        <div class="remove_search_input" id="remove_search_input">
+                                        </span>
+                                        <span class="select-item__btn__label">اختر بند الصرف</span>
+                                    </a>
+                                    <div class="item__selected">
+                                        <div class="item__selected__icon"></div>
+                                        <div class="item__selected__data"></div>
+                                        <a class="remove__selected-item" href="#">
                                             <svg width="15" height="15" viewBox="0 0 15 15">
                                                 <path fill="#060505" d="M8.4,7.5l6.6,6.6L14.1,15L7.5,8.4L0.9,15h0L0,14.1l6.6-6.6L0,0.9L0.9,0h0l6.6,6.6L14.1,0L15,0.9L8.4,7.5z"></path>
                                             </svg>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                                 <!-- Start work in added products list -->
-                                <div class="products-list-container page__layout__scrollable-content">
-                                    <!-- stylefile style in _products-list.scss -->
-                                    <!-- this class [ products-list-container ] is container for this component  -->
-                                    <ul class="products-list">
-                                        <li class="product-item-in-list">
-                                            <div class="product-item-in-list--data">
-                                                <div class="product-item-in-list--data-name">
-                                                    <h3>جونسون صابون استحمام مقاس كبير 55 مللم مع عرض خاص لفترة محدودة</h3>
+                                <div class="control-panel__content">
+                                    <div class="products-list-container page__layout__scrollable-content">
+                                        <!-- stylefile style in _products-list.scss -->
+                                        <!-- this class [ products-list-container ] is container for this component  -->
+                                        <ul class="products-list">
+                                            <li class="product-item-in-list">
+                                                <div class="product-item-in-list--data">
+                                                    <div class="product-item-in-list--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم مع عرض خاص لفترة محدودة</h3>
+                                                    </div>
+                                                    <div class="product-item-in-list--data-discountInput">
+                                                        <input type="number" name="" id="" placeholder="00.00" value="14.00">
+                                                    </div>
                                                 </div>
-                                                <div class="product-item-in-list--data-discountInput">
-                                                    <input type="number" name="" id="" placeholder="00.00" value="14.00">
+                                                <div class="product-item-in-list--counter">
+                                                    <a href="#" class="product-item-in-list--counter--plus">
+                                                        <svg width="13" height="13" viewBox="0 0 13 13">
+                                                            <path fill="#878A90" d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="product-item-in-list--counter-screen">
+                                                        <input type="number" name="counter" value="24" id="">
+                                                    </div>
+                                                    <a href="#" class="product-item-in-list--counter--minus">
+                                                        <svg width="13" height="1" viewBox="0 0 13 1">
+                                                            <path fill="#878A90" d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
+                                                        </svg>
+                                                    </a>
                                                 </div>
-                                            </div>
-                                            <div class="product-item-in-list--counter">
-                                                <span class="product-item-in-list--counter--plus">
-                                                    <svg width="13" height="13" viewBox="0 0 13 13">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
+                                                <a href="#" class="product-item-in-list--discount add-discount" data-bs-toggle="modal" data-bs-target="#product_discount_modal">
+                                                    <span>10%</span>
+                                                    <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                                        <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
                                                     </svg>
-                                                </span>
-                                                <div class="product-item-in-list--counter-screen">
-                                                    <input type="number" name="counter" value="24" id="">
+                                                </a>
+                                                <div class="product-item-in-list--price">
+                                                    <span>348.00</span>
                                                 </div>
-                                                <span class="product-item-in-list--counter--minus">
-                                                    <svg width="13" height="1" viewBox="0 0 13 1">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 0) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
+                                                <a href="#" class="product-item-in-list--delete">
+                                                    <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
+                                                        <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
                                                     </svg>
-                                                </span>
-                                            </div>
-                                            <div class="product-item-in-list--discount add-discount" data-bs-toggle="modal" data-bs-target="#add_discount_modal">
-                                                <span>10%</span>
-                                                <svg width="13" height="13.1" viewBox="0 0 13 13.1">
-                                                    <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="product-item-in-list--price">
-                                                <span>348.00</span>
-                                            </div>
-                                            <div class="product-item-in-list--delete">
-                                                <svg width="9.899" height="9.899" viewBox="0 0 9.899 9.899">
-                                                    <g id="Group_4007" data-name="Group 4007" transform="translate(4.95 -3.536) rotate(45)">
-                                                        <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                        </li>
-                                        <li class="product-item-in-list">
-                                            <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
-                                            <div class="product-item-in-list--data">
-                                                <div class="product-item-in-list--data-name">
-                                                    <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                </a>
+                                            </li>
+                                            <li class="product-item-in-list">
+                                                <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
+                                                <div class="product-item-in-list--data">
+                                                    <div class="product-item-in-list--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                    </div>
+                                                    <div class="product-item-in-list--data-discountInput">
+                                                        <input type="number" name="" id="" placeholder="00.00" value="14.00">
+                                                        <span>29.99</span>
+                                                    </div>
                                                 </div>
-                                                <div class="product-item-in-list--data-discountInput">
-                                                    <input type="number" name="" id="" placeholder="00.00" value="14.00">
-                                                    <span>29.99</span>
+                                                <div class="product-item-in-list--counter">
+                                                    <a href="#" class="product-item-in-list--counter--plus">
+                                                        <svg width="13" height="13" viewBox="0 0 13 13">
+                                                            <path fill="#878A90" d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="product-item-in-list--counter-screen">
+                                                        <input type="number" name="counter" value="24" id="">
+                                                    </div>
+                                                    <a href="#" class="product-item-in-list--counter--minus">
+                                                        <svg width="13" height="1" viewBox="0 0 13 1">
+                                                            <path fill="#878A90" d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
+                                                        </svg>
+                                                    </a>
                                                 </div>
-                                            </div>
-                                            <div class="product-item-in-list--counter">
-                                                <span class="product-item-in-list--counter--plus">
-                                                    <svg width="13" height="13" viewBox="0 0 13 13">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
+                                                <a href="#" class="product-item-in-list--discount number" data-bs-toggle="modal" data-bs-target="#product_discount_modal">
+                                                    <span>10%</span>
+                                                    <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                                        <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
                                                     </svg>
-                                                </span>
-                                                <div class="product-item-in-list--counter-screen"> <input type="number" name="counter" value="24" id=""></div>
-                                                <span class="product-item-in-list--counter--minus">
-                                                    <svg width="13" height="1" viewBox="0 0 13 1">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 0) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div class="product-item-in-list--discount number" data-target-modal="popup--discount-each-product">
-                                                <span>10%</span>
-                                                <svg width="13" height="13.1" viewBox="0 0 13 13.1">
-                                                    <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="product-item-in-list--price">
-                                                <span>348.00</span>
-                                            </div>
-                                            <div class="product-item-in-list--delete">
-                                                <svg width="9.899" height="9.899" viewBox="0 0 9.899 9.899">
-                                                    <g id="Group_4007" data-name="Group 4007" transform="translate(4.95 -3.536) rotate(45)">
-                                                        <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                        </li>
-                                        <li class="product-item-in-list">
-                                            <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
-                                            <div class="product-item-in-list--data">
-                                                <div class="product-item-in-list--data-name">
-                                                    <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                </a>
+                                                <div class="product-item-in-list--price">
+                                                    <span>348.00</span>
                                                 </div>
-                                                <div class="product-item-in-list--data-discountInput">
-                                                    <input type="number" name="" id="" placeholder="00.00" value="14.00">
-                                                    <span>29.99</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-in-list--counter">
-                                                <span class="product-item-in-list--counter--plus">
-                                                    <svg width="13" height="13" viewBox="0 0 13 13">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
+                                                <a href="#" class="product-item-in-list--delete">
+                                                    <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
+                                                        <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
                                                     </svg>
-                                                </span>
-                                                <div class="product-item-in-list--counter-screen">
-                                                    <input type="number" name="counter" value="24" id="">
+                                                </a>
+                                            </li>
+                                            <li class="product-item-in-list">
+                                                <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
+                                                <div class="product-item-in-list--data">
+                                                    <div class="product-item-in-list--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                    </div>
+                                                    <div class="product-item-in-list--data-discountInput">
+                                                        <input type="number" name="" id="" placeholder="00.00" value="14.00">
+                                                        <span>29.99</span>
+                                                    </div>
                                                 </div>
-                                                <span class="product-item-in-list--counter--minus">
-                                                    <svg width="13" height="1" viewBox="0 0 13 1">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 0) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div class="product-item-in-list--discount number" data-target-modal="popup--discount-each-product">
-                                                <span>10%</span>
-                                                <svg width="13" height="13.1" viewBox="0 0 13 13.1">
-                                                    <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="product-item-in-list--price">
-                                                <span>348.00</span>
-                                            </div>
-                                            <div class="product-item-in-list--delete">
-                                                <svg width="9.899" height="9.899" viewBox="0 0 9.899 9.899">
-                                                    <g id="Group_4007" data-name="Group 4007" transform="translate(4.95 -3.536) rotate(45)">
-                                                        <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                        </li>
-                                        <li class="product-item-in-list">
-                                            <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
-                                            <div class="product-item-in-list--data">
-                                                <div class="product-item-in-list--data-name">
-                                                    <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                <div class="product-item-in-list--counter">
+                                                    <a href="#" class="product-item-in-list--counter--plus">
+                                                        <svg width="13" height="13" viewBox="0 0 13 13">
+                                                            <path fill="#878A90" d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="product-item-in-list--counter-screen">
+                                                        <input type="number" name="counter" value="24" id="">
+                                                    </div>
+                                                    <a href="#" class="product-item-in-list--counter--minus">
+                                                        <svg width="13" height="1" viewBox="0 0 13 1">
+                                                            <path fill="#878A90" d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
+                                                        </svg>
+                                                    </a>
                                                 </div>
-                                                <div class="product-item-in-list--data-discountInput">
-                                                    <input type="number" name="" id="" placeholder="00.00" value="14.00">
-                                                    <span>29.99</span>
+                                                <a href="#" class="product-item-in-list--discount number" data-bs-toggle="modal" data-bs-target="#product_discount_modal">
+                                                    <span>10%</span>
+                                                    <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                                        <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
+                                                    </svg>
+                                                </a>
+                                                <div class="product-item-in-list--price">
+                                                    <span>348.00</span>
                                                 </div>
-                                            </div>
-                                            <div class="product-item-in-list--counter">
-                                                <span class="product-item-in-list--counter--plus">
-                                                    <svg width="13" height="13" viewBox="0 0 13 13">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
+                                                <a href="#" class="product-item-in-list--delete">
+                                                    <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
+                                                        <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
                                                     </svg>
-                                                </span>
-                                                <div class="product-item-in-list--counter-screen"> <input type="number" name="counter" value="24" id=""></div>
-                                                <span class="product-item-in-list--counter--minus">
-                                                    <svg width="13" height="1" viewBox="0 0 13 1">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 0) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
-                                                    </svg>
-
-                                                </span>
-                                            </div>
-                                            <div class="product-item-in-list--discount add-discount " data-target-modal="popup--discount-each-product">
-                                                <span>10%</span>
-                                                <svg width="13" height="13.1" viewBox="0 0 13 13.1">
-                                                    <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="product-item-in-list--price">
-                                                <span>348.00</span>
-                                            </div>
-                                            <div class="product-item-in-list--delete">
-                                                <svg width="9.899" height="9.899" viewBox="0 0 9.899 9.899">
-                                                    <g id="Group_4007" data-name="Group 4007" transform="translate(4.95 -3.536) rotate(45)">
-                                                        <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                    </g>
-                                                </svg>
-
-                                            </div>
-                                        </li>
-                                        <li class="product-item-in-list">
-                                            <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
-                                            <div class="product-item-in-list--data">
-                                                <div class="product-item-in-list--data-name">
-                                                    <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                </a>
+                                            </li>
+                                            <li class="product-item-in-list">
+                                                <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
+                                                <div class="product-item-in-list--data">
+                                                    <div class="product-item-in-list--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                    </div>
+                                                    <div class="product-item-in-list--data-discountInput">
+                                                        <input type="number" name="" id="" placeholder="00.00" value="14.00">
+                                                        <span>29.99</span>
+                                                    </div>
                                                 </div>
-                                                <div class="product-item-in-list--data-discountInput">
-                                                    <input type="number" name="" id="" placeholder="00.00" value="14.00">
-                                                    <span>29.99</span>
+                                                <div class="product-item-in-list--counter">
+                                                    <a href="#" class="product-item-in-list--counter--plus">
+                                                        <svg width="13" height="13" viewBox="0 0 13 13">
+                                                            <path fill="#878A90" d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="product-item-in-list--counter-screen">
+                                                        <input type="number" name="counter" value="24" id="">
+                                                    </div>
+                                                    <a href="#" class="product-item-in-list--counter--minus">
+                                                        <svg width="13" height="1" viewBox="0 0 13 1">
+                                                            <path fill="#878A90" d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
+                                                        </svg>
+                                                    </a>
                                                 </div>
-                                            </div>
-                                            <div class="product-item-in-list--counter">
-                                                <span class="product-item-in-list--counter--plus">
-                                                    <svg width="13" height="13" viewBox="0 0 13 13">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
+                                                <a href="#" class="product-item-in-list--discount add-discount" data-bs-toggle="modal" data-bs-target="#product_discount_modal">
+                                                    <span>10%</span>
+                                                    <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                                        <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
                                                     </svg>
-                                                </span>
-                                                <div class="product-item-in-list--counter-screen"> <input type="number" name="counter" value="24" id=""></div>
-                                                <span class="product-item-in-list--counter--minus">
-                                                    <svg width="13" height="1" viewBox="0 0 13 1">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 0) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
-                                                    </svg>
-
-                                                </span>
-                                            </div>
-                                            <div class="product-item-in-list--discount add-discount " data-target-modal="popup--discount-each-product">
-                                                <span>10%</span>
-                                                <svg width="13" height="13.1" viewBox="0 0 13 13.1">
-                                                    <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="product-item-in-list--price">
-                                                <span>348.00</span>
-                                            </div>
-                                            <div class="product-item-in-list--delete">
-                                                <svg width="9.899" height="9.899" viewBox="0 0 9.899 9.899">
-                                                    <g id="Group_4007" data-name="Group 4007" transform="translate(4.95 -3.536) rotate(45)">
-                                                        <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1">
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1">
-                                                    </g>
-                                                </svg>
-
-                                            </div>
-                                        </li>
-                                        <li class="product-item-in-list">
-                                            <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
-                                            <div class="product-item-in-list--data">
-                                                <div class="product-item-in-list--data-name">
-                                                    <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                </a>
+                                                <div class="product-item-in-list--price">
+                                                    <span>348.00</span>
                                                 </div>
-                                                <div class="product-item-in-list--data-discountInput">
-                                                    <input type="number" name="" id="" placeholder="00.00" value="14.00">
-                                                    <span>29.99</span>
+                                                <a href="#" class="product-item-in-list--delete">
+                                                    <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
+                                                        <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="product-item-in-list">
+                                                <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
+                                                <div class="product-item-in-list--data">
+                                                    <div class="product-item-in-list--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                    </div>
+                                                    <div class="product-item-in-list--data-discountInput">
+                                                        <input type="number" name="" id="" placeholder="00.00" value="14.00">
+                                                        <span>29.99</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="product-item-in-list--counter">
-                                                <span class="product-item-in-list--counter--plus">
-                                                    <svg width="13" height="13" viewBox="0 0 13 13">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                                <div class="product-item-in-list--counter-screen"> <input type="number" name="counter" value="24" id=""></div>
-                                                <span class="product-item-in-list--counter--minus">
-                                                    <svg width="13" height="1" viewBox="0 0 13 1">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 0) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
-                                                    </svg>
-
-                                                </span>
-                                            </div>
-                                            <div class="product-item-in-list--discount number">
-                                                <span>10%</span>
-                                                <svg width="13" height="13.1" viewBox="0 0 13 13.1">
-                                                    <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="product-item-in-list--price">
-                                                <span>348.00</span>
-                                            </div>
-                                            <div class="product-item-in-list--delete">
-                                                <svg width="9.899" height="9.899" viewBox="0 0 9.899 9.899">
-                                                    <g id="Group_4007" data-name="Group 4007" transform="translate(4.95 -3.536) rotate(45)">
-                                                        <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                    </g>
-                                                </svg>
-
-                                            </div>
-                                        </li>
-                                        <li class="product-item-in-list">
-                                            <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
-                                            <div class="product-item-in-list--data">
-                                                <div class="product-item-in-list--data-name">
-                                                    <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                <div class="product-item-in-list--counter">
+                                                    <a href="#" class="product-item-in-list--counter--plus">
+                                                        <svg width="13" height="13" viewBox="0 0 13 13">
+                                                            <path fill="#878A90" d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="product-item-in-list--counter-screen">
+                                                        <input type="number" name="counter" value="24" id="">
+                                                    </div>
+                                                    <a href="#" class="product-item-in-list--counter--minus">
+                                                        <svg width="13" height="1" viewBox="0 0 13 1">
+                                                            <path fill="#878A90" d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
+                                                        </svg>
+                                                    </a>
                                                 </div>
-                                                <div class="product-item-in-list--data-discountInput">
-                                                    <input type="number" name="" id="" placeholder="00.00" value="14.00">
-                                                    <span>29.99</span>
+                                                <a href="#" class="product-item-in-list--discount add-discount" data-bs-toggle="modal" data-bs-target="#product_discount_modal">
+                                                    <span>10%</span>
+                                                    <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                                        <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
+                                                    </svg>
+                                                </a>
+                                                <div class="product-item-in-list--price">
+                                                    <span>348.00</span>
                                                 </div>
-                                            </div>
-                                            <div class="product-item-in-list--counter">
-                                                <span class="product-item-in-list--counter--plus">
-                                                    <svg width="13" height="13" viewBox="0 0 13 13">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
+                                                <a href="#" class="product-item-in-list--delete">
+                                                    <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
+                                                        <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
                                                     </svg>
-                                                </span>
-                                                <div class="product-item-in-list--counter-screen"> <input type="number" name="counter" value="24" id=""></div>
-                                                <span class="product-item-in-list--counter--minus">
-                                                    <svg width="13" height="1" viewBox="0 0 13 1">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 0) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
-                                                    </svg>
-
-                                                </span>
-                                            </div>
-                                            <div class="product-item-in-list--discount number">
-                                                <span>10%</span>
-                                                <svg width="13" height="13.1" viewBox="0 0 13 13.1">
-                                                    <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="product-item-in-list--price">
-                                                <span>348.00</span>
-                                            </div>
-                                            <div class="product-item-in-list--delete">
-                                                <svg width="9.899" height="9.899" viewBox="0 0 9.899 9.899">
-                                                    <g id="Group_4007" data-name="Group 4007" transform="translate(4.95 -3.536) rotate(45)">
-                                                        <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                    </g>
-                                                </svg>
-
-                                            </div>
-                                        </li>
-                                        <li class="product-item-in-list">
-                                            <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
-                                            <div class="product-item-in-list--data">
-                                                <div class="product-item-in-list--data-name">
-                                                    <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                </a>
+                                            </li>
+                                            <li class="product-item-in-list">
+                                                <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
+                                                <div class="product-item-in-list--data">
+                                                    <div class="product-item-in-list--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                    </div>
+                                                    <div class="product-item-in-list--data-discountInput">
+                                                        <input type="number" name="" id="" placeholder="00.00" value="14.00">
+                                                        <span>29.99</span>
+                                                    </div>
                                                 </div>
-                                                <div class="product-item-in-list--data-discountInput">
-                                                    <input type="number" name="" id="" placeholder="00.00" value="14.00">
-                                                    <span>29.99</span>
+                                                <div class="product-item-in-list--counter">
+                                                    <a href="#" class="product-item-in-list--counter--plus">
+                                                        <svg width="13" height="13" viewBox="0 0 13 13">
+                                                            <path fill="#878A90" d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="product-item-in-list--counter-screen">
+                                                        <input type="number" name="counter" value="24" id="">
+                                                    </div>
+                                                    <a href="#" class="product-item-in-list--counter--minus">
+                                                        <svg width="13" height="1" viewBox="0 0 13 1">
+                                                            <path fill="#878A90" d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
+                                                        </svg>
+                                                    </a>
                                                 </div>
-                                            </div>
-                                            <div class="product-item-in-list--counter">
-                                                <span class="product-item-in-list--counter--plus">
-                                                    <svg width="13" height="13" viewBox="0 0 13 13">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
+                                                <a href="#" class="product-item-in-list--discount number" data-bs-toggle="modal" data-bs-target="#product_discount_modal">
+                                                    <span>10%</span>
+                                                    <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                                        <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
                                                     </svg>
-                                                </span>
-                                                <div class="product-item-in-list--counter-screen"> <input type="number" name="counter" value="24" id=""></div>
-                                                <span class="product-item-in-list--counter--minus">
-                                                    <svg width="13" height="1" viewBox="0 0 13 1">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 0) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div class="product-item-in-list--discount number">
-                                                <span>10%</span>
-                                                <svg width="13" height="13.1" viewBox="0 0 13 13.1">
-                                                    <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="product-item-in-list--price">
-                                                <span>348.00</span>
-                                            </div>
-                                            <div class="product-item-in-list--delete">
-                                                <svg width="9.899" height="9.899" viewBox="0 0 9.899 9.899">
-                                                    <g id="Group_4007" data-name="Group 4007" transform="translate(4.95 -3.536) rotate(45)">
-                                                        <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                    </g>
-                                                </svg>
-
-                                            </div>
-                                        </li>
-                                        <li class="product-item-in-list">
-                                            <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
-                                            <div class="product-item-in-list--data">
-                                                <div class="product-item-in-list--data-name">
-                                                    <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                </a>
+                                                <div class="product-item-in-list--price">
+                                                    <span>348.00</span>
                                                 </div>
-                                                <div class="product-item-in-list--data-discountInput">
-                                                    <input type="number" name="" id="" placeholder="00.00" value="14.00">
-                                                    <span>29.99</span>
+                                                <a href="#" class="product-item-in-list--delete">
+                                                    <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
+                                                        <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="product-item-in-list">
+                                                <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
+                                                <div class="product-item-in-list--data">
+                                                    <div class="product-item-in-list--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                    </div>
+                                                    <div class="product-item-in-list--data-discountInput">
+                                                        <input type="number" name="" id="" placeholder="00.00" value="14.00">
+                                                        <span>29.99</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="product-item-in-list--counter">
-                                                <span class="product-item-in-list--counter--plus">
-                                                    <svg width="13" height="13" viewBox="0 0 13 13">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                                <div class="product-item-in-list--counter-screen"> <input type="number" name="counter" value="24" id=""></div>
-                                                <span class="product-item-in-list--counter--minus">
-                                                    <svg width="13" height="1" viewBox="0 0 13 1">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 0) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div class="product-item-in-list--discount number">
-                                                <span>10%</span>
-                                                <svg width="13" height="13.1" viewBox="0 0 13 13.1">
-                                                    <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="product-item-in-list--price">
-                                                <span>348.00</span>
-                                            </div>
-                                            <div class="product-item-in-list--delete">
-                                                <svg width="9.899" height="9.899" viewBox="0 0 9.899 9.899">
-                                                    <g id="Group_4007" data-name="Group 4007" transform="translate(4.95 -3.536) rotate(45)">
-                                                        <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                    </g>
-                                                </svg>
-
-                                            </div>
-                                        </li>
-                                        <li class="product-item-in-list">
-                                            <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
-                                            <div class="product-item-in-list--data">
-                                                <div class="product-item-in-list--data-name">
-                                                    <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                <div class="product-item-in-list--counter">
+                                                    <a href="#" class="product-item-in-list--counter--plus">
+                                                        <svg width="13" height="13" viewBox="0 0 13 13">
+                                                            <path fill="#878A90" d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="product-item-in-list--counter-screen">
+                                                        <input type="number" name="counter" value="24" id="">
+                                                    </div>
+                                                    <a href="#" class="product-item-in-list--counter--minus">
+                                                        <svg width="13" height="1" viewBox="0 0 13 1">
+                                                            <path fill="#878A90" d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
+                                                        </svg>
+                                                    </a>
                                                 </div>
-                                                <div class="product-item-in-list--data-discountInput">
-                                                    <input type="number" name="" id="" placeholder="00.00" value="14.00">
-                                                    <span>29.99</span>
+                                                <a href="#" class="product-item-in-list--discount number" data-bs-toggle="modal" data-bs-target="#product_discount_modal">
+                                                    <span>10%</span>
+                                                    <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                                        <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
+                                                    </svg>
+                                                </a>
+                                                <div class="product-item-in-list--price">
+                                                    <span>348.00</span>
                                                 </div>
-                                            </div>
-                                            <div class="product-item-in-list--counter">
-                                                <span class="product-item-in-list--counter--plus">
-                                                    <svg width="13" height="13" viewBox="0 0 13 13">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
+                                                <a href="#" class="product-item-in-list--delete">
+                                                    <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
+                                                        <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
                                                     </svg>
-                                                </span>
-                                                <div class="product-item-in-list--counter-screen"> <input type="number" name="counter" value="24" id=""></div>
-                                                <span class="product-item-in-list--counter--minus">
-                                                    <svg width="13" height="1" viewBox="0 0 13 1">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 0) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
-                                                    </svg>
-
-                                                </span>
-                                            </div>
-                                            <div class="product-item-in-list--discount number">
-                                                <span>10%</span>
-                                                <svg width="13" height="13.1" viewBox="0 0 13 13.1">
-                                                    <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="product-item-in-list--price">
-                                                <span>348.00</span>
-                                            </div>
-                                            <div class="product-item-in-list--delete">
-                                                <svg width="9.899" height="9.899" viewBox="0 0 9.899 9.899">
-                                                    <g id="Group_4007" data-name="Group 4007" transform="translate(4.95 -3.536) rotate(45)">
-                                                        <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                    </g>
-                                                </svg>
-
-                                            </div>
-                                        </li>
-                                        <li class="product-item-in-list">
-                                            <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
-                                            <div class="product-item-in-list--data">
-                                                <div class="product-item-in-list--data-name">
-                                                    <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                </a>
+                                            </li>
+                                            <li class="product-item-in-list">
+                                                <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
+                                                <div class="product-item-in-list--data">
+                                                    <div class="product-item-in-list--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                    </div>
+                                                    <div class="product-item-in-list--data-discountInput">
+                                                        <input type="number" name="" id="" placeholder="00.00" value="14.00">
+                                                        <span>29.99</span>
+                                                    </div>
                                                 </div>
-                                                <div class="product-item-in-list--data-discountInput">
-                                                    <input type="number" name="" id="" placeholder="00.00" value="14.00">
-                                                    <span>29.99</span>
+                                                <div class="product-item-in-list--counter">
+                                                    <a href="#" class="product-item-in-list--counter--plus">
+                                                        <svg width="13" height="13" viewBox="0 0 13 13">
+                                                            <path fill="#878A90" d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="product-item-in-list--counter-screen">
+                                                        <input type="number" name="counter" value="24" id="">
+                                                    </div>
+                                                    <a href="#" class="product-item-in-list--counter--minus">
+                                                        <svg width="13" height="1" viewBox="0 0 13 1">
+                                                            <path fill="#878A90" d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
+                                                        </svg>
+                                                    </a>
                                                 </div>
-                                            </div>
-                                            <div class="product-item-in-list--counter">
-                                                <span class="product-item-in-list--counter--plus">
-                                                    <svg width="13" height="13" viewBox="0 0 13 13">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
+                                                <a href="#" class="product-item-in-list--discount number" data-bs-toggle="modal" data-bs-target="#product_discount_modal">
+                                                    <span>10%</span>
+                                                    <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                                        <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
                                                     </svg>
-                                                </span>
-                                                <div class="product-item-in-list--counter-screen"> <input type="number" name="counter" value="24" id=""></div>
-                                                <span class="product-item-in-list--counter--minus">
-                                                    <svg width="13" height="1" viewBox="0 0 13 1">
-                                                        <g id="Group_4007" data-name="Group 4007" transform="translate(0.5 0.5)">
-                                                            <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 0) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        </g>
+                                                </a>
+                                                <div class="product-item-in-list--price">
+                                                    <span>348.00</span>
+                                                </div>
+                                                <a href="#" class="product-item-in-list--delete">
+                                                    <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
+                                                        <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
                                                     </svg>
-
-                                                </span>
-                                            </div>
-                                            <div class="product-item-in-list--discount number">
-                                                <span>10%</span>
-                                                <svg width="13" height="13.1" viewBox="0 0 13 13.1">
-                                                    <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="product-item-in-list--price">
-                                                <span>348.00</span>
-                                            </div>
-                                            <div class="product-item-in-list--delete">
-                                                <svg width="9.899" height="9.899" viewBox="0 0 9.899 9.899">
-                                                    <g id="Group_4007" data-name="Group 4007" transform="translate(4.95 -3.536) rotate(45)">
-                                                        <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                        <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                    </g>
-                                                </svg>
-
-                                            </div>
-                                        </li>
-                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="product-item-in-list">
+                                                <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
+                                                <div class="product-item-in-list--data">
+                                                    <div class="product-item-in-list--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                    </div>
+                                                    <div class="product-item-in-list--data-discountInput">
+                                                        <input type="number" name="" id="" placeholder="00.00" value="14.00">
+                                                        <span>29.99</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item-in-list--counter">
+                                                    <a href="#" class="product-item-in-list--counter--plus">
+                                                        <svg width="13" height="13" viewBox="0 0 13 13">
+                                                            <path fill="#878A90" d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="product-item-in-list--counter-screen">
+                                                        <input type="number" name="counter" value="24" id="">
+                                                    </div>
+                                                    <a href="#" class="product-item-in-list--counter--minus">
+                                                        <svg width="13" height="1" viewBox="0 0 13 1">
+                                                            <path fill="#878A90" d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                                <a href="#" class="product-item-in-list--discount number" data-bs-toggle="modal" data-bs-target="#product_discount_modal">
+                                                    <span>10%</span>
+                                                    <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                                        <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
+                                                    </svg>
+                                                </a>
+                                                <div class="product-item-in-list--price">
+                                                    <span>348.00</span>
+                                                </div>
+                                                <a href="#" class="product-item-in-list--delete">
+                                                    <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
+                                                        <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="product-item-in-list">
+                                                <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
+                                                <div class="product-item-in-list--data">
+                                                    <div class="product-item-in-list--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                    </div>
+                                                    <div class="product-item-in-list--data-discountInput">
+                                                        <input type="number" name="" id="" placeholder="00.00" value="14.00">
+                                                        <span>29.99</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item-in-list--counter">
+                                                    <a href="#" class="product-item-in-list--counter--plus">
+                                                        <svg width="13" height="13" viewBox="0 0 13 13">
+                                                            <path fill="#878A90" d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="product-item-in-list--counter-screen">
+                                                        <input type="number" name="counter" value="24" id="">
+                                                    </div>
+                                                    <a href="#" class="product-item-in-list--counter--minus">
+                                                        <svg width="13" height="1" viewBox="0 0 13 1">
+                                                            <path fill="#878A90" d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                                <a href="#" class="product-item-in-list--discount number" data-bs-toggle="modal" data-bs-target="#product_discount_modal">
+                                                    <span>10%</span>
+                                                    <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                                        <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
+                                                    </svg>
+                                                </a>
+                                                <div class="product-item-in-list--price">
+                                                    <span>348.00</span>
+                                                </div>
+                                                <a href="#" class="product-item-in-list--delete">
+                                                    <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
+                                                        <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="product-item-in-list">
+                                                <!-- this ITEM is Standalond item but dont have seprate Scss file nut you can copu Li code will work fine with you in any ul -->
+                                                <div class="product-item-in-list--data">
+                                                    <div class="product-item-in-list--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                    </div>
+                                                    <div class="product-item-in-list--data-discountInput">
+                                                        <input type="number" name="" id="" placeholder="00.00" value="14.00">
+                                                        <span>29.99</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-item-in-list--counter">
+                                                    <a href="#" class="product-item-in-list--counter--plus">
+                                                        <svg width="13" height="13" viewBox="0 0 13 13">
+                                                            <path fill="#878A90" d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="product-item-in-list--counter-screen">
+                                                        <input type="number" name="counter" value="24" id="">
+                                                    </div>
+                                                    <a href="#" class="product-item-in-list--counter--minus">
+                                                        <svg width="13" height="1" viewBox="0 0 13 1">
+                                                            <path fill="#878A90" d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                                <a href="#" class="product-item-in-list--discount number" data-bs-toggle="modal" data-bs-target="#product_discount_modal">
+                                                    <span>10%</span>
+                                                    <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                                        <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
+                                                    </svg>
+                                                </a>
+                                                <div class="product-item-in-list--price">
+                                                    <span>348.00</span>
+                                                </div>
+                                                <a href="#" class="product-item-in-list--delete">
+                                                    <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
+                                                        <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="control-panel__bottom-bar">
                                     <div class="checkout">
                                         <ul class="checkout__list list-unstyled">
                                             <li class="checkout__list__item">
                                                 <h5>الاجمالي</h5>
-                                                <span class="invoice-total-amount">302.25</span>
+                                                <span class="checkout__item__detail invoice-total-amount">302.25</span>
                                             </li>
-                                            <li class="checkout__list__item">
+                                            <li class="checkout__list__item invoice-discount">
                                                 <h5>الخصم الكلي</h5>
-                                                <div class="invoice-discount">
+                                                <div class="checkout__item__detail discount-details">
                                                     <span class="discount-percentage">10%</span>
                                                     <span class="discount-amount">25.00</span>
                                                 </div>
-                                                <a href="#" class="checkout-list--item-left--delete">
+                                                <a href="#" class="checkout__remove-item">
                                                     <svg width="24" height="24" viewBox="0 0 24 24">
                                                         <path fill="#C6CFD9" d="M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12s12-5.4,12-12S18.6,0,12,0z M12,23C5.9,23,1,18.1,1,12S5.9,1,12,1 s11,4.9,11,11S18.1,23,12,23z M17.7,16.9L12.7,12l4.9-4.9l-0.7-0.7L12,11.3L7.1,6.3L6.3,7.1l4.9,4.9l-4.9,4.9l0.7,0.7l4.9-4.9 l4.9,4.9L17.7,16.9z"></path>
                                                     </svg>
@@ -1766,313 +1619,296 @@
                                             </li>
                                             <li class="checkout__list__item">
                                                 <h5>التوصيل</h5>
-                                                <span>25.00</span>
-                                                <a href="#" class="checkout-list--item-left--delete">
+                                                <span class="checkout__item__detail delivery-fees-amount">25.00</span>
+                                                <a href="#" class="checkout__remove-item">
                                                     <svg width="24" height="24" viewBox="0 0 24 24">
                                                         <path fill="#C6CFD9" d="M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12s12-5.4,12-12S18.6,0,12,0z M12,23C5.9,23,1,18.1,1,12S5.9,1,12,1 s11,4.9,11,11S18.1,23,12,23z M17.7,16.9L12.7,12l4.9-4.9l-0.7-0.7L12,11.3L7.1,6.3L6.3,7.1l4.9,4.9l-4.9,4.9l0.7,0.7l4.9-4.9 l4.9,4.9L17.7,16.9z"></path>
                                                     </svg>
                                                 </a>
                                             </li>
+                                            <li class="checkout__list__item">
+                                                <div class="invoice__comment">
+                                                    <span>المنتج اخير ولا يمكن استرجاعه</span>
+                                                    <svg width="22.1" height="17.4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22.1 17.4" xml:space="preserve">
+                                                        <path d="M16.5,5.6H5.6c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7h10.8c0.4,0,0.7,0.3,0.7,0.7S16.8,5.6,16.5,5.6z M17.2,8.7 c0-0.4-0.3-0.7-0.7-0.7H5.6C5.2,8,4.9,8.3,4.9,8.7s0.3,0.7,0.7,0.7h10.8C16.8,9.4,17.2,9.1,17.2,8.7z M6.5,17.1l3.5-3.5 c0.1-0.1,0.1-0.1,0.2-0.1h9.2c1.5,0,2.7-1.2,2.7-2.7V2.7c0-1.5-1.2-2.7-2.7-2.7H2.7C1.2,0,0,1.2,0,2.7v8.2c0,1.5,1.2,2.7,2.7,2.7h2 c0.2,0,0.3,0.1,0.3,0.3l0,2.6c0,0.2,0.1,0.4,0.3,0.6c0.2,0.2,0.4,0.3,0.6,0.3c0,0,0,0,0,0C6.1,17.4,6.3,17.3,6.5,17.1z M2.7,12.1 c-0.7,0-1.3-0.6-1.3-1.3V2.7C1.4,2,2,1.4,2.7,1.4h16.7c0.7,0,1.3,0.6,1.3,1.3v8.1c0,0.7-0.6,1.3-1.3,1.3h-9.2 c-0.5,0-0.9,0.2-1.2,0.5l-2.6,2.6v-1.4c0-0.9-0.8-1.7-1.7-1.7H2.7z" />
+                                                    </svg>
+                                                </div>
+                                            </li>
                                         </ul>
-                                        <div class="checkout-btn-container">
-                                            <a href="#" class="btn--receive-cash" id="btn--receive-cash">
-                                                <span>استلام كاش</span>
-                                                <span class="btn--receive-cash--price">385.00</span>
-                                            </a>
-                                            <a href="" class="btn--receive-payment">
+                                        <div class="checkout__cta__container">
+                                            <a href="" class="btn btn-secondary btn-lg receive__payment__btn">
                                                 <svg width="30.4" height="22" viewBox="0 0 30.4 22">
                                                     <path fill="#F5F5F5" d="M28.4,0H7.9c-1.1,0-2,0.9-2,2v3.1H2c-1.1,0-2,0.9-2,2V20c0,1.1,0.9,2,2,2h22.2c1.1,0,2-0.9,2-2v-4.8h2.2 c1.1,0,2-0.9,2-2V2C30.4,0.9,29.5,0,28.4,0z"></path>
                                                     <path fill="#1877F2" opacity="0.52" enable-background="new" d="M25.4,8.3h5.1v2.5h-5.1V8.3z M23.5,2.8h5.1v0.7h-5.1V2.8z M21.7,2.8h1.4v0.7h-1.4V2.8z M19.9,2.8h1.4v0.7h-1.4V2.8z"></path>
                                                     <path fill="#1877F2" d="M30.4,2v11.2c0,1.1-0.9,2-2,2h-2.2v-1h2.2c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H7.9c-0.6,0-1,0.4-1,1v3.1h-1V2 c0-1.1,0.9-2,2-2h20.5C29.5,0,30.4,0.9,30.4,2z M24.2,6.1c0.6,0,1,0.4,1,1v7.1h1V7.1c0-1.1-0.9-2-2-2H6.9v1H24.2z M25.2,20 c0,0.6-0.4,1-1,1H2c-0.6,0-1-0.4-1-1V7.1c0-0.6,0.4-1,1-1h3.9v-1H2c-1.1,0-2,0.9-2,2V20c0,1.1,0.9,2,2,2h22.2c1.1,0,2-0.9,2-2v-4.8 h-1V20z M6.9,6.1v-1h-1v1H6.9z M25.2,14.2v1h1v-1H25.2z M22,15.4l0.5,0v-3.7l-0.5,0c-0.9,0-1.7-0.7-1.8-1.6l-1,0 c0.1,1.3,1,2.4,2.3,2.6v1.7c-1.3,0.2-2.2,1.3-2.3,2.6l1,0C20.2,16.1,21,15.4,22,15.4z M7,17c-0.1-1.3-1-2.4-2.3-2.6v-1.7 c1.3-0.2,2.2-1.3,2.3-2.6l-1,0c0,0.9-0.9,1.7-1.8,1.6l-0.5,0v3.7l0.5,0c0.9,0,1.7,0.7,1.8,1.6L7,17z M10.9,13.2c0,1.3,1,2.3,2.3,2.3 s2.3-1,2.3-2.3s-1-2.3-2.3-2.3S10.9,11.9,10.9,13.2z"></path>
                                                 </svg>
                                             </a>
+                                            <button type="button" class="btn btn-primary btn-lg receive__cash__btn">
+                                                <span>استلام كاش</span>
+                                                <span class="receive__cash__amount">385.00</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="clients-list" id="clientsList">
-                                <div class="search-container">
-                                    <div class="clients-list__search__input" id="invoice_search_input_container">
-                                        <div class="image-container" id="removeClientNameFromInvoice">
-                                            <svg id="Group_4925" data-name="Group 4925" width="24" height="24" viewBox="0 0 24 24">
-                                                <rect id="Rectangle_1731" data-name="Rectangle 1731" width="24" height="24" rx="12" fill="#fff" opacity="0"></rect>
-                                                <g id="Group_4007" data-name="Group 4007" transform="translate(12.206 4) rotate(45)">
-                                                    <line id="Line_343" data-name="Line 343" y2="12" transform="translate(6)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                    <line id="Line_344" data-name="Line 344" y2="12" transform="translate(12 6) rotate(90)" fill="none" stroke="#878a90" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></line>
-                                                </g>
-                                            </svg>
-                                        </div>
+                            <div class="control-panel__view clients-list" id="clientsList" data-view="clients-list">
+                                <div class="items-search">
+                                    <div class="items-search__input">
                                         <svg width="15" height="13.9" viewBox="0 0 15 13.9">
                                             <path d="M14.8,12.7l-2.4-2.4c1.6-2.6,1.3-6-0.9-8.3C8.8-0.7,4.6-0.7,2,2C0.7,3.2,0,4.9,0,6.7s0.7,3.5,2,4.7 c1.3,1.3,2.9,2,4.7,2s3.5-0.7,4.7-2c0,0,0.1-0.1,0.1-0.1l2.3,2.3c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2 C15.1,13.4,15.1,12.9,14.8,12.7z M6.7,12C5.3,12,4,11.4,3,10.4c-1-1-1.6-2.3-1.6-3.7S2,4,3,2.9c1-1,2.3-1.6,3.7-1.6s2.7,0.6,3.7,1.6 c2.1,2.1,2.1,5.4,0,7.5C9.4,11.4,8.1,12,6.7,12z"></path>
                                         </svg>
-                                        <input type="search" name="search" id="invoiceInput" placeholder="ابحث باسم المحل او رقم الموبيل">
+                                        <input type="search" name="" id="" placeholder="اضف عميل">
                                     </div>
-                                    <div class="back-btn" id="backBtn">
+                                    <div class="items-search__back-btn">
                                         <svg width="15" height="15" viewBox="0 0 15 15">
                                             <path fill="#060505" d="M15,8.1H2.3l4.1,4.1L5.5,13L0,7.5L5.5,2l0.8,0.8L2.3,6.9H15V8.1z"></path>
                                         </svg>
                                     </div>
                                 </div>
                                 <nav class="page__layout__nav">
-                                    <a href="#" class="active" data-target-id="client_list_individuals">افراد</a>
-                                    <a href="#" data-target-id="client_list_shope">محلات</a>
-                                    <a href="#" data-target-id="client_list_suppliers">موردين</a>
+                                    <a href="#" class="active" data-target-id="individuals_list">افراد</a>
+                                    <a href="#" data-target-id="shops_list">محلات</a>
+                                    <a href="#" data-target-id="suppliers_list">موردين</a>
                                 </nav>
-                                <a href="#" class="add-client" data-bs-toggle="modal" data-bs-target="#add_client_modal">
+                                <a href="#" class="add-item__btn" data-bs-toggle="modal" data-bs-target="#add_client_modal">
                                     <svg width="10.2" height="10.2" viewBox="0 0 10.2 10.2">
                                         <path fill="#1877F2" d="M10.2,4.8c0,0.4-0.4,0.8-0.8,0.8H5.9v3.8c0,0.4-0.4,0.8-0.8,0.8S4.3,9.8,4.3,9.4V5.6H0.8C0.4,5.6,0,5.2,0,4.8 S0.4,4,0.8,4h3.5V0.8C4.3,0.4,4.7,0,5.1,0s0.8,0.4,0.8,0.8V4h3.5C9.8,4,10.2,4.4,10.2,4.8z"></path>
                                     </svg>
                                     <span>اضافة عميل</span>
                                 </a>
                                 <div class="clients-list--container">
-                                    <div class="clients-list--individuals customers-tab-content active" id="client_list_individuals">
-                                        <ul class="clients-list-users">
-                                            <!-- you can use this component only stylefile  => _Clients-list.scss -->
+                                    <div class="clients-list--individuals customers-tab-content active" id="individuals_list">
+                                        <ul class="control-panel__list list-unstyled clients-list-users">
+                                            <!-- you can use this component only stylefile  => _clients-list.scss -->
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="clients-list-users-item">
-                                                    <div class="clients-list-users-item-data">
-                                                        <div class="clients-list-users-item-data--photo">
-                                                            <img src="images/client-icon-neutral.svg">
-                                                        </div>
-                                                        <div class="clients-list-users-item-data--name">
-                                                            <span>عاصم الجزيري</span>
-                                                            <span>01126622221</span>
-                                                        </div>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
                                                         <span>00.00</span>
                                                     </div>
-                                                </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="control-panel__list-item clients-list-users-item">
+                                                    <div class="control-panel__list-item__icon">
+                                                        <img src="images/client-icon-neutral.svg">
+                                                    </div>
+                                                    <div class="control-panel__list-item__data">
+                                                        <span>عاصم الجزيري</span>
+                                                        <span>01126622221</span>
+                                                    </div>
+                                                    <div class="clients-list-users-item-price">
+                                                        <span>00.00</span>
+                                                    </div>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="clients-list--shope customers-tab-content" id="client_list_shope">
+                                    <div class="clients-list--shops customers-tab-content" id="shops_list">
                                     </div>
-                                    <div class="clients-list--suppliers customers-tab-content" id="client_list_suppliers">
+                                    <div class="clients-list--suppliers customers-tab-content" id="suppliers_list">
                                     </div>
                                 </div>
                             </div>
@@ -2081,19 +1917,109 @@
                 </section>
             </div>
         </div>
-
-        <div class="modal fade" id="add_discount_modal" tabindex="-1" aria-labelledby="add_discount_label" aria-hidden="true">
+        <div class="modal fade" id="invoice_discount_modal" tabindex="-1" aria-labelledby="invoice_discount_label" aria-hidden="true">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="add_discount_label">
+                        <h5 class="modal-title" id="invoice_discount_label">
                             <svg width="13" height="13.1" viewBox="0 0 13 13.1">
                                 <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
                             </svg>
                             <span>خصم على الفاتورة</span>
                         </h5>
                     </div>
-                    <form id="add_discount_form">
+                    <form id="invoice_discount_form">
+                        <div class="modal-body">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <div class="remove-action">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="#FF6B73" d="M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12s12-5.4,12-12S18.6,0,12,0z M12,23C5.9,23,1,18.1,1,12S5.9,1,12,1 s11,4.9,11,11S18.1,23,12,23z M17.7,16.9L12.7,12l4.9-4.9l-0.7-0.7L12,11.3L7.1,6.3L6.3,7.1l4.9,4.9l-4.9,4.9l0.7,0.7l4.9-4.9 l4.9,4.9L17.7,16.9z"></path>
+                                        </svg>
+                                        <span>الغاء الخصم</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-5 col-sm-5">
+                                    <div class="percentage-symbol">
+                                        <input type="number" class="form-control" id="" placeholder="00">
+                                    </div>
+                                </div>
+                                <div class="col-2 col-sm-2 d-flex justify-content-center align-items-center">
+                                    <svg width="17.1" height="14.3" viewBox="0 0 17.1 14.3">
+                                        <path fill="#1877F2" d="M11.4,14.1c-0.2,0-0.4-0.1-0.5-0.2c-0.3-0.3-0.3-0.7,0-1l2.9-2.9h-13c-0.4,0-0.7-0.3-0.7-0.7 s0.3-0.7,0.7-0.7h16.4l-5.3,5.3C11.7,14,11.6,14.1,11.4,14.1z M17.1,5.1c0-0.4-0.3-0.7-0.7-0.7h-13l2.9-2.9c0.3-0.3,0.3-0.7,0-1 s-0.7-0.3-1,0L0,5.8h16.4C16.8,5.8,17.1,5.4,17.1,5.1z"></path>
+                                    </svg>
+                                </div>
+                                <div class="col-5 col-sm-5">
+                                    <div class="currency-symbol" data-symbol="جـ.م">
+                                        <input type="number" class="form-control" id="" placeholder="00.00">
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="before-discount">360.00</span>
+                            <span class="after-discount">360.00</span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary">تطبيق</button>
+                            <button type="button" class="btn btn-link" data-bs-dismiss="modal">الغاء</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="invoice_comment_modal" tabindex="-1" aria-labelledby="invoice_comment_label" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="invoice_comment_label">
+                            <svg width="18" height="14.1" viewBox="0 0 18 14.1">
+                                <path d="M13.4,4.6H4.6C4.3,4.6,4,4.3,4,4s0.3-0.6,0.6-0.6h8.8C13.7,3.4,14,3.7,14,4S13.7,4.6,13.4,4.6z M14,7.1 c0-0.3-0.3-0.6-0.6-0.6H4.6C4.3,6.5,4,6.8,4,7.1c0,0.3,0.3,0.6,0.6,0.6h8.8C13.7,7.7,14,7.4,14,7.1z M5.3,13.9l2.8-2.8 c0,0,0.1-0.1,0.2-0.1h7.5c1.2,0,2.2-1,2.2-2.2V2.2C18,1,17,0,15.8,0H2.2C1,0,0,1,0,2.2v6.6C0,10.1,1,11,2.2,11h1.6 c0.1,0,0.2,0.1,0.2,0.2l0,2.1c0,0.2,0.1,0.4,0.2,0.5c0.1,0.1,0.3,0.2,0.5,0.2c0,0,0,0,0,0C5,14.1,5.2,14.1,5.3,13.9z M2.2,9.9 c-0.6,0-1.1-0.5-1.1-1.1V2.2c0-0.6,0.5-1.1,1.1-1.1h13.6c0.6,0,1.1,0.5,1.1,1.1v6.6c0,0.6-0.5,1.1-1.1,1.1H8.3c-0.4,0-0.7,0.1-1,0.4 l-2.1,2.1v-1.1c0-0.8-0.6-1.4-1.4-1.4H2.2z"></path>
+                            </svg>
+                            <span>تعليق على الفاتورة</span>
+                        </h5>
+                    </div>
+                    <form id="invoice_comment_form">
+                        <div class="modal-body">
+                            <div class="remove-action">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="#FF6B73" d="M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12s12-5.4,12-12S18.6,0,12,0z M12,23C5.9,23,1,18.1,1,12S5.9,1,12,1 s11,4.9,11,11S18.1,23,12,23z M17.7,16.9L12.7,12l4.9-4.9l-0.7-0.7L12,11.3L7.1,6.3L6.3,7.1l4.9,4.9l-4.9,4.9l0.7,0.7l4.9-4.9 l4.9,4.9L17.7,16.9z"></path>
+                                </svg>
+                                <span>مسح التعليق</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <label for="add_invoice_comment" class="form-label">اضف تعليق</label>
+                                    <textarea class="form-control" id="add_invoice_comment" rows="3" placeholder="اكتب تعليق"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="show_in_receipt">
+                                        <label class="form-check-label" for="show_in_receipt">اظهار فى فاتورة العميل</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary">تطبيق</button>
+                            <button type="button" class="btn btn-link" data-bs-dismiss="modal">الغاء</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="product_discount_modal" tabindex="-1" aria-labelledby="product_discount_label" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="product_discount_label">
+                            <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
+                            </svg>
+                            <span>خصم على المنتج</span>
+                        </h5>
+                    </div>
+                    <form id="product_discount_form">
                         <div class="modal-body">
                             <div class="row mb-3">
                                 <div class="col-5 col-sm-5">
@@ -2112,6 +2038,22 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <div class="remove-action">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="#FF6B73" d="M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12s12-5.4,12-12S18.6,0,12,0z M12,23C5.9,23,1,18.1,1,12S5.9,1,12,1 s11,4.9,11,11S18.1,23,12,23z M17.7,16.9L12.7,12l4.9-4.9l-0.7-0.7L12,11.3L7.1,6.3L6.3,7.1l4.9,4.9l-4.9,4.9l0.7,0.7l4.9-4.9 l4.9,4.9L17.7,16.9z"></path>
+                                        </svg>
+                                        <span>مسح التعليق</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="product_discount_comment" class="form-label">اضف تعليق</label>
+                                    <textarea class="form-control" id="product_discount_comment" rows="3" placeholder="اكتب تعليق"></textarea>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-outline-primary">تطبيق</button>
@@ -2121,6 +2063,19 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <div class="modal fade inverntory-popup" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

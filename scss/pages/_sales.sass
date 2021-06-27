@@ -7,12 +7,37 @@
         @media (max-width: 768px)
             display: flex
 
-    .clients-list
-        display: none
-
 #add_discount_modal
     .currency-symbol,
     .percentage-symbol
         &::before
             font-size: 14px
             color: #4080FF
+
+.remove-action
+    display: flex
+    align-items: center
+    gap: 5px
+    width: max-content
+    font-size: 12px
+    background-color: rgba(255, 107, 115, 0.1)
+    border-radius: 18px
+    padding: 0.25rem 0.4215rem
+    margin: 0 auto
+
+    span
+        color: #FF6B73
+
+.modal-body
+    .before-discount,
+    .after-discount
+        display: flex
+        width: max-content
+        margin: auto
+
+    .before-discount
+        font-size: 10px
+        text-decoration: line-through
+
+    .after-discount
+        font-family: 'NotoSansArabic_SemiBold', sans-serif
