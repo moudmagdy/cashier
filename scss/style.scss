@@ -57,28 +57,13 @@
 // import menus
 // @import './components/menus/change-view-menu';
 
-// Main menu
+@import './components/layout';
 @import './components/main-menu';
 
-//import main layout for system
-@import './components/layout';
-
-
-// SCREENs
 @import './pages/passcode';
 @import './pages/sales';
 @import './pages/settings';
 @import './pages/expenses';
 @import './pages/aman';
 @import './pages/shift';
-
-@import './pages/newSalesOne';
-@import './pages/customer';
-@import './pages/customer-two';
-@import './pages/CustomerPage-SideContanet';
-@import './pages/cash-management';
-// @import './pages/bill-cash';
 @import './pages/invoices';
-@import './pages/maintenance';
-@import './pages/invoices-recovery';
-// @import './pages/recovery-bill-cash-page';
