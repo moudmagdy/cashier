@@ -8,7 +8,7 @@ import '../components/appBar-menu.module.js';
 import './../components/main-menu.module.js';
 
 let tl3 = new TimelineMax({ paused: true });
-let productsListContainer = document.querySelector('.products-list-container');
+let productsListContainer = document.querySelector('.invoice__list__container');
 tl3.to(productsListContainer, 0.3, { opacity: '0' });
 
 // Start animation for All Cards in Homepage
@@ -16,7 +16,7 @@ tl3.to(productsListContainer, 0.3, { opacity: '0' });
 let cards = document.querySelectorAll('.product');
 
 
-let productItemInList = document.querySelectorAll('.product-item-in-list');
+let productItemInList = document.querySelectorAll('.invoice__item');
 
 let tl1 = new TimelineMax({ paused: true });
 

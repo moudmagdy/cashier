@@ -16,7 +16,7 @@ import './../components/ChangeView.module.js';
 
 
 let tl3 = new TimelineMax({ paused: true });
-let productsListContainer = document.querySelector('.products-list-container');
+let productsListContainer = document.querySelector('.invoice__list__container');
 tl3.to(productsListContainer, 0.3, { opacity: '0' });
 
 
@@ -69,7 +69,7 @@ document.querySelector('.receive__cash__btn').addEventListener('click', (e) => {
 let cards = document.querySelectorAll('.product');
 
 
-let productItemInList = document.querySelectorAll('.product-item-in-list');
+let productItemInList = document.querySelectorAll('.invoice__item');
 
 let tl1 = new TimelineMax({ paused: true });
 
@@ -141,7 +141,7 @@ document.querySelectorAll('.product__dropdown').forEach(dropdown => {
     });
 });
 
-document.querySelectorAll('.product-item-in-list--discount').forEach(item => {
+document.querySelectorAll('.invoice__item--discount').forEach(item => {
     item.addEventListener('click', () => {
         document.querySelector('#product_discount_modal .modal-dialog').style.position = 'fixed';
         document.querySelector('#product_discount_modal .modal-dialog').style.top = item.offsetTop + 60 + 'px';

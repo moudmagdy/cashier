@@ -1,4 +1,4 @@
-.products-list {
+.invoice__list {
     width: 100%;
     height: 100%;
     list-style: none;
@@ -11,7 +11,7 @@
     font-size: 1rem;
 }
 
-.product-item-in-list {
+.invoice__item {
     position: relative;
     display: flex;
     // justify-content: space-between;
@@ -242,18 +242,18 @@
     }
 
     &:hover {
-        .product-item-in-list--counter--minus,
-        .product-item-in-list--counter--plus {
+        .invoice__item--counter--minus,
+        .invoice__item--counter--plus {
             opacity: 1;
             pointer-events: auto;
         }
 
-        .product-item-in-list--discount {
+        .invoice__item--discount {
             visibility: visible;
             opacity: 1;
         }
 
-        .product-item-in-list--delete {
+        .invoice__item--delete {
             visibility: visible;
             opacity: 1;
         }
