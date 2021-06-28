@@ -48,14 +48,16 @@
         z-index: 1;
     }
     &--data {
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 40%;
         margin-left: 10px;
 
         &-name {
             margin-bottom: 10px;
 
             h3 {
-                width: 130px;
-                font-family: 'NotoSansArabic_Medium';
+                font-family: 'NotoSansArabic_Medium', sans-serif;
                 font-size: 13px;
                 @include line-clamp(1.5, 2);
                 margin-bottom: 0;
@@ -63,7 +65,7 @@
         }
         &-discountInput {
             display: inline-flex;
-            gap: 5px;
+            gap: 10px;
             width: max-content;
             font-size: 11px;
             
@@ -75,6 +77,8 @@
             input {
                 width: 45px;
                 border: none;
+                border-radius: 2px;
+
                 &::-webkit-outer-spin-button,
                 &::-webkit-inner-spin-button {
                     -webkit-appearance: none;
@@ -84,6 +88,10 @@
                 &[type=number] {
                     background-color: transparent;
                     -moz-appearance: textfield;
+                }
+
+                &:hover {
+                    box-shadow: 0 0 0 1px #d6d1d1;;
                 }
 
                 &:focus {

@@ -13,6 +13,7 @@
 @import './components/buttons';
 @import './components/search-bar';
 @import './components/collapsible';
+@import './components/payment-methods';
 @import './layout/forms';
 @import './common/modal-reset';
 
@@ -62,16 +63,6 @@
 //import main layout for system
 @import './components/layout';
 
-// POPUPS
-@import './components/popups/discount-each-product';
-@import './components/popups/status_popup';
-@import './components/popups/inventory-popup';
-@import './components/popups/delivery-popup';
-@import './components/popups/add-new-client';
-@import './components/popups/discount-invoice';
-@import './components/popups/add-new-customer';
-@import './components/popups/invoice-discount-popup';
-@import './components/popups/comment-on-invoice';
 
 // SCREENs
 @import './pages/passcode';
@@ -86,8 +77,8 @@
 @import './pages/customer-two';
 @import './pages/CustomerPage-SideContanet';
 @import './pages/cash-management';
-@import './pages/bill-cash';
+// @import './pages/bill-cash';
 @import './pages/invoices';
 @import './pages/maintenance';
 @import './pages/invoices-recovery';
-@import './pages/recovery-bill-cash-page';
+// @import './pages/recovery-bill-cash-page';

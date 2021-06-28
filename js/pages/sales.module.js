@@ -1,5 +1,6 @@
 import './../components/main-menu.module.js';
 import '../components/layout-nav.module.js';
+import '../components/collapsible.module.js';
 // to enable popup and positioning popup 
 // import '../components/modal.module.js';
 // to enbale menu in appbar
@@ -138,4 +139,34 @@ document.querySelectorAll('.product__dropdown').forEach(dropdown => {
     dropdown.addEventListener('click', (e) => {
         e.stopPropagation();
     });
+});
+
+document.querySelectorAll('.product-item-in-list--discount').forEach(item => {
+    item.addEventListener('click', () => {
+        document.querySelector('#product_discount_modal .modal-dialog').style.position = 'fixed';
+        document.querySelector('#product_discount_modal .modal-dialog').style.top = item.offsetTop + 60 + 'px';
+        document.querySelector('#product_discount_modal .modal-dialog').style.left = item.offsetLeft + 'px';
+    });
+});
+
+document.querySelectorAll('.address__container').forEach(address => {
+    address.addEventListener('click', (e) => {
+        e.preventDefault();
+        address.closest('.addresses__list').querySelector('.selected').classList.remove('selected');
+        address.classList.add('selected');
+    });
+});
+
+const receivePaymentBtn = document.querySelector('.receive__payment__btn');
+const paymentMethods = document.querySelector('.payment-methods');
+const paymentMethodsBackBtn = document.querySelector('.payment-methods .back-btn');
+
+receivePaymentBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    paymentMethods.classList.add('shown');
+});
+
+paymentMethodsBackBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    paymentMethods.classList.remove('shown');
 });

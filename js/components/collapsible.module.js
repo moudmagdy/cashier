@@ -12,6 +12,18 @@ collapseContainers.forEach(container => {
     });
 });
 
+document.querySelectorAll('.modal').forEach(modal => {
+    if (modal.querySelectorAll('.collapsible').length > 0) {
+        modal.addEventListener('shown.bs.modal', function () {
+            if (modal.querySelector('.collapsible').classList.contains('collapsed')) {
+                modal.querySelector('.collapsible .collapse__container').style.maxHeight = 0;
+            } else {
+                modal.querySelector('.collapsible .collapse__container').style.maxHeight = modal.querySelector('.collapsible .collapse__container').scrollHeight + 'px';
+            }
+        });
+    }
+});
+
 collapseToggles.forEach(collapseToggle => {
     collapseToggle.addEventListener('click', (e) => {
         e.preventDefault();

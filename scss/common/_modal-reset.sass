@@ -1,3 +1,6 @@
+.modal
+    +scroll-bar
+
 .modal-dialog
     box-shadow: 0px 1px 20px rgba(0,0,0,0.15)
     margin: 4.5rem auto
@@ -19,6 +22,16 @@
     padding: 0.85rem 20px
     border-top-right-radius: 8px
     border-top-left-radius: 8px
+
+    .btn-close
+        +flex-center
+        width: 24px
+        height: 24px
+        background: none
+        background-color: #fff
+        border-radius: 50%
+        cursor: pointer
+        margin-right: auto
 
 .modal-title
     +flex-center

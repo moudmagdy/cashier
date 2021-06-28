@@ -59,37 +59,37 @@
                 height: 24px
                 margin-right: auto
 
-    .checkout__cta__container
+.checkout__cta__container
+    display: flex
+    gap: 16px
+    width: 100%
+
+    .btn
+        &:focus
+            box-shadow: none
+
+    .btn-lg.receive__payment__btn
+        @include flex-center
+        flex-basis: 56px
+        border-radius: 12px
+        padding: 0.65rem 0.625rem
+
+        svg
+            width: 32px
+
+    .btn-lg.receive__cash__btn
         display: flex
-        gap: 16px
-        width: 100%
+        justify-content: space-between
+        align-items: center
+        border-radius: 28px
+        padding: 0.875rem 1.75rem
 
-        .btn
-            &:focus
-                box-shadow: none
+        span
+            &:first-child
+                font-family: 'NotoSansArabic_Medium'
+                font-size: 16px
 
-        .btn-lg.receive__payment__btn
-            @include flex-center
-            flex-basis: 56px
-            border-radius: 12px
-            padding: 0.65rem 0.625rem
-
-            svg
-                width: 32px
-
-        .btn-lg.receive__cash__btn
-            display: flex
-            justify-content: space-between
-            align-items: center
-            border-radius: 28px
-            padding: 0.875rem 1.75rem
-
-            span
-                &:first-child
-                    font-family: 'NotoSansArabic_Medium'
-                    font-size: 16px
-
-                &:last-child
-                    font-family: 'NotoSansArabic_SemiBold'
-                    font-size: 22px
-                    line-height: 1.1
+            &:last-child
+                font-family: 'NotoSansArabic_SemiBold'
+                font-size: 22px
+                line-height: 1.1

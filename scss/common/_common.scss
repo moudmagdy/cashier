@@ -46,6 +46,37 @@
   }
 }
 
+.dropdown-toggle {
+  &::after {
+    display: none
+  }
+}
+
+.dropdown-menu {
+  text-align: right;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.16);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'NotoSansArabic_Medium', sans-serif;
+  font-size: 14px;
+  padding: 12px 16px;
+
+  &:hover {
+    background-color: #E2F2FE;
+  }
+
+  &:active, &:focus {
+    color: inherit;
+    background-color: #E2F2FE;
+  }
+}
+
 
 
 * {
@@ -70,32 +101,9 @@ body {
 }
 
 
-.ltr {
-  direction: rtl !important;
-}
-
-.ltr .sidemenu {
-  right: auto;
-  left: 0;
-}
-
-.ltr .page__layout {
-  padding: 0 0 0 104px;
-
-}
-
-.pushLandR25 {
-  padding: 0 25px;
-}
-
-.hide {
-  display: none;
-}
 
 
-.preventClick {
-  pointer-events: none !important;
-}
+
 
 
 .discount-number {

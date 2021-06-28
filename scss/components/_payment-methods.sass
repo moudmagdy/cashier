@@ -1,0 +1,81 @@
+.payment-methods
+    position: absolute
+    inset: 0
+    background-color: $color-white
+    border-left: 1px solid #E4E6EB
+    border-right: 1px solid #E4E6EB
+    opacity: 0
+    pointer-events: none
+    transform: translateX(-100px)
+    transition: opacity 200ms cubic-bezier(0.85, 0.47, 0.11, 0.88), transform 350ms cubic-bezier(0.85, 0.47, 0.11, 0.88)
+
+    &.shown
+        opacity: 1
+        pointer-events: auto
+        transform: translateX(0)
+
+    &__header
+        display: flex
+        align-items: center
+        height: 52px
+        border-bottom: 1px solid #E4E6EB
+        padding: 10px 15px
+
+    &__content
+        display: flex
+        flex-direction: column
+        max-width: 390px
+        padding: 40px 0
+        margin: auto
+
+        .form-label
+            color: inherit
+            font-size: 12px
+
+        .received-amount
+            display: flex
+            align-items: center
+            height: 72px
+            max-width: 390px
+            border: 2px solid $color-brand
+            border-radius: 8px
+            padding: 15px 10px
+
+            input[type="number"]
+                width: 100%
+                font-family: 'NotoSansArabic_Medium', sans-serif
+                font-size: 24px
+                border: none
+                background-color: transparent
+                margin-left: 24px
+
+                &::placeholder
+                    color: #C6CFD9
+                    font-size: 24px
+
+            .currency
+                font-family: 'NotoSansArabic_Medium', sans-serif
+                +var(color, color-brand)
+                margin-left: 30px
+                margin-right: auto
+
+            .amount
+                font-family: 'NotoSansArabic_Medium', sans-serif
+                font-size: 14px
+                color: #465479
+                background-color: #F5F5F5
+                border-radius: 7px
+                padding: 0.6rem 0.755rem
+                margin-right: auto
+
+        .key__buttons
+            gap: 18px
+            padding: 0 15px
+            margin-bottom: 15px
+
+            .key__btn
+                font-size: 20px
+                padding: 1.075rem 1rem
+
+        .receive__cash__btn
+            flex: 100%

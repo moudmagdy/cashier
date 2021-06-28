@@ -65,29 +65,9 @@
 
     .features__dropdown
         .features__dropdown__menu
-            text-align: right
-            border: none
-            border-radius: 8px
-            box-shadow: 1px 0px 12px 0px rgba(0, 0, 0, 0.16)
-
             .dropdown-item
-                font-family: 'NotoSansArabic_Medium'
-                font-size: 14px
-                padding: 12px 16px
-
                 svg
                     @include var(fill, color-text-primary)
-                    margin-left: 5px
-
-                &:hover
-                    background-color: #EBF6FF
-
-                &:active
-                    @include var(background-color, color-brand)
-                    color: #fff
-
-                    svg
-                        fill: #fff
 
     .search__bar__dropdown
         @media (max-width: 576px)
