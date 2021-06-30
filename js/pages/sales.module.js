@@ -163,10 +163,14 @@ const paymentMethodsBackBtn = document.querySelector('.payment-methods .back-btn
 
 receivePaymentBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    paymentMethods.classList.add('shown');
+    if (!paymentMethods.classList.contains('shown')) {
+        paymentMethods.classList.add('shown');
+    }
 });
 
 paymentMethodsBackBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    paymentMethods.classList.remove('shown');
+    if (paymentMethods.classList.contains('shown')) {
+        paymentMethods.classList.remove('shown');
+    }
 });

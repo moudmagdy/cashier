@@ -1,7 +1,7 @@
 .products__list
     position: relative
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
     gap: 16px
     transition: all 0.4s ease-in
     padding: 10px 22px 20px 15px
@@ -54,12 +54,6 @@
                         width: 15px
                         @include var(fill, color-text-primary)
                         margin-left: 5px
-
-                    &:active
-                        @include var(background-color, color-brand)
-
-                        svg
-                            fill: #fff
 
     &__image
         width: 100%

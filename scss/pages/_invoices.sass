@@ -1,0 +1,84 @@
+.invoices-page
+    overflow: hidden
+
+    & > .page__layout > .page__layout__nav
+        display: none
+
+        @media (max-width: 768px)
+            display: flex
+
+    .control-panel
+        .control-panel__header
+            background-color: $color-white
+            color: inherit
+            border-bottom: 1px solid #efefef
+
+            .invoice__counters
+                .invoice-items-quantity
+                    border-color: currentColor
+
+            .dropdown-toggle
+                svg
+                    fill: inherit
+
+                &:hover
+                    background-color: #F5F5F5
+
+        .select-item
+            border-bottom: 1px solid #efefef
+
+    .checkout
+        .checkout__cta__container
+            display: none
+
+        .checkout__list
+            margin-bottom: 0
+
+        .checkout__list__item
+            &:last-child
+                border-bottom: none
+
+            h5
+                flex: 0 1 50%
+
+            .checkout__item__detail
+                flex: 0 1 50%
+
+            &.main-item
+                height: 56px
+                border-color: transparent
+
+                h5,
+                .checkout__item__detail
+                    color: #060505
+
+                h5
+                    font-size: 16px
+
+                .checkout__item__detail
+                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+                    font-size: 22px
+
+            &:not(.main-item)
+                display: none
+
+        &.slide
+            .checkout__list__item
+                display: flex
+
+                &.main-item
+                    border-color: #efefef
+
+    .invoice__item
+        justify-content: space-between
+
+    .invoice__item--price
+        margin: 0 15px 0 0
+
+    .operations__group__item
+        .operations__item__amount
+            span
+                &.icon
+                    svg
+                        width: 20px
+                        height: 13px

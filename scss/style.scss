@@ -14,6 +14,8 @@
 @import './components/search-bar';
 @import './components/collapsible';
 @import './components/payment-methods';
+@import './components/operations';
+@import './components/filters-buttons';
 @import './layout/forms';
 @import './common/modal-reset';
 
@@ -42,7 +44,6 @@
 @import './components/customer-card';
 @import './components/customer-card-placeholder';
 @import './components/btns/payments-buttons';
-@import './components/invoice';
 @import './components/products-list';
 @import './components/invoice-list';
 @import './components/checkout';

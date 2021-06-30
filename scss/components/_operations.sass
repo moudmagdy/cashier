@@ -1,0 +1,125 @@
+.operations
+    padding: 0 18px
+
+    &__group
+        border-top: 1px solid #dbe1e5
+
+        &__header
+            font-size: 12px
+            padding: 4px 10px
+            margin-bottom: 0
+            border-bottom-width: 1px
+            border-bottom-style: solid
+            border-bottom-color: transparent
+            transition: border-bottom-color 0ms ease 350ms
+
+            a
+                @include var(color, color-text-primary)
+                border-radius: 4px
+                padding: 0.694rem 0.975rem
+
+                &:hover
+                    @include var(color, color-text-primary)
+                    background-color: #E6E6E6
+
+        &.collapsed
+            &:last-of-type
+                border-bottom: 1px solid #dbe1e5
+
+        &:not(.collapsed)
+            .operations__group__header
+                border-bottom-color: #dbe1e5
+                transition: border-bottom-color 0ms ease
+
+        &__item
+            display: flex
+            align-items: center
+            padding: 0.875rem 0.5rem
+
+            & > *
+                flex: 1 1
+                padding: 0 15px
+
+            &:hover
+                background-color: #fff
+
+            .operations__item__comment
+                flex-basis: 30%
+                min-height: 36px
+                font-family: 'NotoSansArabic_Medium', sans-serif
+                font-size: 12px
+                display: -webkit-box
+                -webkit-box-orient: vertical
+                overflow: hidden
+                text-overflow: ellipsis
+                -webkit-line-clamp: 2
+
+            .operations__item__subject
+                span
+                    display: inline-block
+                    @include var(color, color-text-primary)
+                    font-size: 12px
+                    border: 1px solid $color-text-primary
+                    border-radius: 24px
+                    padding: 0.388rem 0.8rem
+
+            .operations__item__time
+                font-size: 12px
+
+            .operations__item__amount
+                display: flex
+                justify-content: flex-end
+                align-items: center
+                gap: 3px
+
+                span
+                    display: inline-block
+                    font-family: 'NotoSansArabic_SemiBold'
+
+                    &.icon
+                        +flex-center
+                        width: 32px
+                        height: 32px
+                        background-color: #fff
+                        border-radius: 50%
+
+                        svg
+                            width: 11px
+                            height: 11px
+
+            .operations__item__invoice-number
+                flex: 0 1 15%
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+                font-size: 14px
+
+            .operations__item__client-data
+                flex: 1 1 30%
+                font-size: 12px
+
+.total-operations
+    display: flex
+    gap: 10px
+
+    &__icon
+        +flex-center
+        width: 48px
+        height: 48px
+        background-color: #fff
+        border-radius: 50%
+
+    svg
+        width: 14px
+        height: 14px
+
+    .total-amount
+        h6
+            font-size: 12px
+            color: #A3AAB2
+
+        &__number,
+        &__currency
+            display: inline-block
+            font-family: 'NotoSansArabic_SemiBold'
+            font-size: 20px
+            line-height: 1
+            @include var(color, color-text-primary)

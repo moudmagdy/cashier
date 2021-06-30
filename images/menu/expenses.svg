@@ -1,10 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
-    <g id="Ellipse_602" data-name="Ellipse 602" fill="none" stroke="#f0d341" stroke-miterlimit="10" stroke-width="2">
-        <circle cx="14" cy="14" r="14" stroke="none"/>
-        <circle cx="14" cy="14" r="13" fill="none"/>
-    </g>
-    <g id="Group_5926" data-name="Group 5926" transform="translate(8.913 8.452)">
-        <path id="Path_2032" data-name="Path 2032" d="M1811.119,1111.865h6.3v6.3" transform="translate(-1806.957 -1111.757)" fill="none" stroke="#f0d341" stroke-miterlimit="10" stroke-width="2"/>
-        <line id="Line_489" data-name="Line 489" x1="10.634" y2="10.634" fill="none" stroke="#f0d341" stroke-miterlimit="10" stroke-width="2"/>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 28 28" xml:space="preserve">
+	<path fill="#F0D341" d="M14,28C6.3,28,0,21.7,0,14S6.3,0,14,0s14,6.3,14,14S21.7,28,14,28z M14,2C7.4,2,2,7.4,2,14 c0,6.6,5.4,12,12,12c6.6,0,12-5.4,12-12C26,7.4,20.6,2,14,2z M13.1,7.6v2H17l-8.8,8.8l1.4,1.4l8.8-8.8v3.8h2V7.6H13.1z"/>
 </svg>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Invoices - Cashier</title>
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="invoices-page">
+        <div class="main-menu">
+            <div class="main-menu__header">
+                <a href="#" class="main-menu__toggle">
+                    <svg width="32" height="26" viewBox="0 0 32 26">
+                        <path d="M27,5.4H5V4.1h22V5.4z M27,12.4H7v1.4h20V12.4z M27,20.6H5v1.4h22V20.6z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="main-menu__logo">
+                    <svg width="28" height="28" viewBox="0 0 28 28">
+                        <path d="M5.6,3.7c4-2.6,9.1-2.7,13.2-0.3l-3.4,4.4c-0.9-0.4-1.9-0.7-2.9-0.7c-1.1,0-2.2,0.3-3.1,0.8L5.6,3.7z M12.4,26.4C5.5,26.4,0,20.8,0,14c0-2.3,0.6-4.5,1.8-6.4l4.3,3.9c-1.4,3.5,0.2,7.4,3.7,8.8c1.9,0.8,4.1,0.7,5.8-0.3l0,0h0.1 c1.8-1.1,3-2.9,3.3-5v-0.2h-3c-0.1,0-0.1,0-0.1-0.1s0-0.1,0-0.2l0,0l6.2-8h0.1l0,0l0,0l5.6,8l0,0c0,0,0.1,0.1,0,0.2 c0,0.1-0.1,0.1-0.1,0.1h-3.1V15C24.3,21.3,18.9,26.4,12.4,26.4"></path>
+                    </svg>
+                </a>
+            </div>
+            <nav>
+                <a href="sales.html" class="sales__page">المبيعات</a>
+                <a href="invoices.html" class="invoices__page active">الفواتير</a>
+                <a href="cash-flow.html" class="cash-flow__page">حركة النقدية</a>
+                <a href="expenses.html" class="expenses__page">المصروفات</a>
+                <a href="aman.html" class="aman__page">امان</a>
+                <a href="maintenance.html" class="maintenance__page">الصيانة</a>
+                <a href="shift.html" class="shift__page">الوردية</a>
+                <a href="clients.html" class="clients__page">العملاء</a>
+                <a href="suppliers.html" class="suppliers__page">الموردون</a>
+                <a href="settings.html" class="settings__page">اعدادات</a>
+                <a href="" class="update-data__page">تحديث البيانات</a>
+                <a href="" class="management__page">الادارة</a>
+            </nav>
+        </div>
+        <div class="page__layout">
+            <nav class="page__layout__nav">
+                <a href="#" class="active" data-target-id="cash_tab">سجل النقدية</a>
+                <a href="#" data-target-id="invoice_tab">عملية نقدية</a>
+            </nav>
+            <div class="page__layout__row">
+                <section class="page__layout__col active" id="cash_tab">
+                    <header>
+                        <a href="#" class="main-menu__toggle">
+                            <svg width="32" height="26" viewBox="0 0 32 26">
+                                <path d="M27,5.4H5V4.1h22V5.4z M27,12.4H7v1.4h20V12.4z M27,20.6H5v1.4h22V20.6z"></path>
+                            </svg>
+                        </a>
+                        <h1 class="page__title">
+                            <a href="sales.html">الفواتير</a>
+                        </h1>
+                    </header>
+                    <div class="search__bar">
+                        <div class="search__bar__input">
+                            <svg width="15" height="13.9" viewBox="0 0 15 13.9">
+                                <path d="M14.8,12.7l-2.4-2.4c1.6-2.6,1.3-6-0.9-8.3C8.8-0.7,4.6-0.7,2,2C0.7,3.2,0,4.9,0,6.7s0.7,3.5,2,4.7 c1.3,1.3,2.9,2,4.7,2s3.5-0.7,4.7-2c0,0,0.1-0.1,0.1-0.1l2.3,2.3c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2 C15.1,13.4,15.1,12.9,14.8,12.7z M6.7,12C5.3,12,4,11.4,3,10.4c-1-1-1.6-2.3-1.6-3.7S2,4,3,2.9c1-1,2.3-1.6,3.7-1.6s2.7,0.6,3.7,1.6 c2.1,2.1,2.1,5.4,0,7.5C9.4,11.4,8.1,12,6.7,12z"></path>
+                            </svg>
+                            <input type="search" name="search" placeholder="ابحث برقم الفاتورة, المنتج, العميل, السعر">
+                        </div>
+                    </div>
+                    <div class="filters__buttons">
+                        <a href="#" class="filter__btn selected" data-filter="all">الكل</a>
+                        <a href="#" class="filter__btn" data-filter="returned">المسترجعة</a>
+                        <a href="#" class="filter__btn" data-filter="saved">المحفوظة</a>
+                        <a href="#" class="filter__btn" data-filter="offers">عروض اسعار</a>
+                        <a href="#" class="filter__btn" data-filter="maintenance">صيانة</a>
+                    </div>
+                    <div class="page__layout__scrollable-content">
+                        <div class="operations">
+                            <div class="operations__group collapsible">
+                                <h3 class="operations__group__header">
+                                    <a href="#" class="collapse__toggle" role="button" aria-expanded="true">الثلاثاء، 22 ديسمبر 2020</a>
+                                </h3>
+                                <div class="operations__group__list collapse__container">
+                                    <div class="operations__group__item" data-subject="rent">
+                                        <div class="operations__item__invoice-number">#1005</div>
+                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
+                                        <div class="operations__item__time">05:00م</div>
+                                        <div class="operations__item__amount">
+                                            <span>150.00</span>
+                                            <span class="icon">
+                                                <svg width="20.5" height="13.2" viewBox="0 0 20.5 13.2">
+                                                    <path fill="#1877F2" d="M18.5,13.2H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h16.5c1.1,0,2,0.9,2,2v9.2C20.5,12.3,19.6,13.2,18.5,13.2z M2,1C1.4,1,1,1.4,1,2v9.2c0,0.6,0.4,1,1,1h16.5c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H2z M16.2,8h0.5V5.2h-0.5c-1,0-1.7-0.5-1.7-0.9 h-1c0,1,0.9,1.7,2.2,1.9v0.9C14.4,7.2,13.5,8,13.5,9h1C14.5,8.5,15.2,8,16.2,8z M4.7,7.1V6.2C5.9,6,6.9,5.3,6.9,4.3h-1 c0,0.4-0.7,0.9-1.7,0.9H3.7V8h0.5c1,0,1.7,0.5,1.7,0.9h1C6.9,8,5.9,7.2,4.7,7.1z M10.3,4.2c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2 s-2.2-1-2.2-2.2S9.1,4.2,10.3,4.2z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="operations__group__item" data-subject="rent">
+                                        <div class="operations__item__invoice-number">#1005</div>
+                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
+                                        <div class="operations__item__time">05:00م</div>
+                                        <div class="operations__item__amount">
+                                            <span>150.00</span>
+                                            <span class="icon">
+                                                <svg width="20.5" height="13.2" viewBox="0 0 20.5 13.2">
+                                                    <path fill="#1877F2" d="M18.5,13.2H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h16.5c1.1,0,2,0.9,2,2v9.2C20.5,12.3,19.6,13.2,18.5,13.2z M2,1C1.4,1,1,1.4,1,2v9.2c0,0.6,0.4,1,1,1h16.5c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H2z M16.2,8h0.5V5.2h-0.5c-1,0-1.7-0.5-1.7-0.9 h-1c0,1,0.9,1.7,2.2,1.9v0.9C14.4,7.2,13.5,8,13.5,9h1C14.5,8.5,15.2,8,16.2,8z M4.7,7.1V6.2C5.9,6,6.9,5.3,6.9,4.3h-1 c0,0.4-0.7,0.9-1.7,0.9H3.7V8h0.5c1,0,1.7,0.5,1.7,0.9h1C6.9,8,5.9,7.2,4.7,7.1z M10.3,4.2c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2 s-2.2-1-2.2-2.2S9.1,4.2,10.3,4.2z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="operations__group__item" data-subject="rent">
+                                        <div class="operations__item__invoice-number">#1005</div>
+                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
+                                        <div class="operations__item__time">05:00م</div>
+                                        <div class="operations__item__amount">
+                                            <span>150.00</span>
+                                            <span class="icon">
+                                                <svg width="20.5" height="13.2" viewBox="0 0 20.5 13.2">
+                                                    <path fill="#1877F2" d="M18.5,13.2H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h16.5c1.1,0,2,0.9,2,2v9.2C20.5,12.3,19.6,13.2,18.5,13.2z M2,1C1.4,1,1,1.4,1,2v9.2c0,0.6,0.4,1,1,1h16.5c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H2z M16.2,8h0.5V5.2h-0.5c-1,0-1.7-0.5-1.7-0.9 h-1c0,1,0.9,1.7,2.2,1.9v0.9C14.4,7.2,13.5,8,13.5,9h1C14.5,8.5,15.2,8,16.2,8z M4.7,7.1V6.2C5.9,6,6.9,5.3,6.9,4.3h-1 c0,0.4-0.7,0.9-1.7,0.9H3.7V8h0.5c1,0,1.7,0.5,1.7,0.9h1C6.9,8,5.9,7.2,4.7,7.1z M10.3,4.2c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2 s-2.2-1-2.2-2.2S9.1,4.2,10.3,4.2z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="operations__group__item" data-subject="rent">
+                                        <div class="operations__item__invoice-number">#1005</div>
+                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
+                                        <div class="operations__item__time">05:00م</div>
+                                        <div class="operations__item__amount">
+                                            <span>150.00</span>
+                                            <span class="icon">
+                                                <svg width="20.5" height="13.2" viewBox="0 0 20.5 13.2">
+                                                    <path fill="#1877F2" d="M18.5,13.2H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h16.5c1.1,0,2,0.9,2,2v9.2C20.5,12.3,19.6,13.2,18.5,13.2z M2,1C1.4,1,1,1.4,1,2v9.2c0,0.6,0.4,1,1,1h16.5c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H2z M16.2,8h0.5V5.2h-0.5c-1,0-1.7-0.5-1.7-0.9 h-1c0,1,0.9,1.7,2.2,1.9v0.9C14.4,7.2,13.5,8,13.5,9h1C14.5,8.5,15.2,8,16.2,8z M4.7,7.1V6.2C5.9,6,6.9,5.3,6.9,4.3h-1 c0,0.4-0.7,0.9-1.7,0.9H3.7V8h0.5c1,0,1.7,0.5,1.7,0.9h1C6.9,8,5.9,7.2,4.7,7.1z M10.3,4.2c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2 s-2.2-1-2.2-2.2S9.1,4.2,10.3,4.2z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="operations__group__item" data-subject="rent">
+                                        <div class="operations__item__invoice-number">#1005</div>
+                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
+                                        <div class="operations__item__time">05:00م</div>
+                                        <div class="operations__item__amount">
+                                            <span>150.00</span>
+                                            <span class="icon">
+                                                <svg width="20.5" height="13.2" viewBox="0 0 20.5 13.2">
+                                                    <path fill="#1877F2" d="M18.5,13.2H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h16.5c1.1,0,2,0.9,2,2v9.2C20.5,12.3,19.6,13.2,18.5,13.2z M2,1C1.4,1,1,1.4,1,2v9.2c0,0.6,0.4,1,1,1h16.5c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H2z M16.2,8h0.5V5.2h-0.5c-1,0-1.7-0.5-1.7-0.9 h-1c0,1,0.9,1.7,2.2,1.9v0.9C14.4,7.2,13.5,8,13.5,9h1C14.5,8.5,15.2,8,16.2,8z M4.7,7.1V6.2C5.9,6,6.9,5.3,6.9,4.3h-1 c0,0.4-0.7,0.9-1.7,0.9H3.7V8h0.5c1,0,1.7,0.5,1.7,0.9h1C6.9,8,5.9,7.2,4.7,7.1z M10.3,4.2c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2 s-2.2-1-2.2-2.2S9.1,4.2,10.3,4.2z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="operations__group__item" data-subject="rent">
+                                        <div class="operations__item__invoice-number">#1005</div>
+                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
+                                        <div class="operations__item__time">05:00م</div>
+                                        <div class="operations__item__amount">
+                                            <span>150.00</span>
+                                            <span class="icon">
+                                                <svg width="20.5" height="13.2" viewBox="0 0 20.5 13.2">
+                                                    <path fill="#1877F2" d="M18.5,13.2H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h16.5c1.1,0,2,0.9,2,2v9.2C20.5,12.3,19.6,13.2,18.5,13.2z M2,1C1.4,1,1,1.4,1,2v9.2c0,0.6,0.4,1,1,1h16.5c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H2z M16.2,8h0.5V5.2h-0.5c-1,0-1.7-0.5-1.7-0.9 h-1c0,1,0.9,1.7,2.2,1.9v0.9C14.4,7.2,13.5,8,13.5,9h1C14.5,8.5,15.2,8,16.2,8z M4.7,7.1V6.2C5.9,6,6.9,5.3,6.9,4.3h-1 c0,0.4-0.7,0.9-1.7,0.9H3.7V8h0.5c1,0,1.7,0.5,1.7,0.9h1C6.9,8,5.9,7.2,4.7,7.1z M10.3,4.2c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2 s-2.2-1-2.2-2.2S9.1,4.2,10.3,4.2z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="operations__group__item" data-subject="rent">
+                                        <div class="operations__item__invoice-number">#1005</div>
+                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
+                                        <div class="operations__item__time">05:00م</div>
+                                        <div class="operations__item__amount">
+                                            <span>150.00</span>
+                                            <span class="icon">
+                                                <svg width="20.5" height="13.2" viewBox="0 0 20.5 13.2">
+                                                    <path fill="#1877F2" d="M18.5,13.2H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h16.5c1.1,0,2,0.9,2,2v9.2C20.5,12.3,19.6,13.2,18.5,13.2z M2,1C1.4,1,1,1.4,1,2v9.2c0,0.6,0.4,1,1,1h16.5c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H2z M16.2,8h0.5V5.2h-0.5c-1,0-1.7-0.5-1.7-0.9 h-1c0,1,0.9,1.7,2.2,1.9v0.9C14.4,7.2,13.5,8,13.5,9h1C14.5,8.5,15.2,8,16.2,8z M4.7,7.1V6.2C5.9,6,6.9,5.3,6.9,4.3h-1 c0,0.4-0.7,0.9-1.7,0.9H3.7V8h0.5c1,0,1.7,0.5,1.7,0.9h1C6.9,8,5.9,7.2,4.7,7.1z M10.3,4.2c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2 s-2.2-1-2.2-2.2S9.1,4.2,10.3,4.2z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="operations__group__item" data-subject="rent">
+                                        <div class="operations__item__invoice-number">#1005</div>
+                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
+                                        <div class="operations__item__time">05:00م</div>
+                                        <div class="operations__item__amount">
+                                            <span>150.00</span>
+                                            <span class="icon">
+                                                <svg width="20.5" height="13.2" viewBox="0 0 20.5 13.2">
+                                                    <path fill="#1877F2" d="M18.5,13.2H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h16.5c1.1,0,2,0.9,2,2v9.2C20.5,12.3,19.6,13.2,18.5,13.2z M2,1C1.4,1,1,1.4,1,2v9.2c0,0.6,0.4,1,1,1h16.5c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H2z M16.2,8h0.5V5.2h-0.5c-1,0-1.7-0.5-1.7-0.9 h-1c0,1,0.9,1.7,2.2,1.9v0.9C14.4,7.2,13.5,8,13.5,9h1C14.5,8.5,15.2,8,16.2,8z M4.7,7.1V6.2C5.9,6,6.9,5.3,6.9,4.3h-1 c0,0.4-0.7,0.9-1.7,0.9H3.7V8h0.5c1,0,1.7,0.5,1.7,0.9h1C6.9,8,5.9,7.2,4.7,7.1z M10.3,4.2c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2 s-2.2-1-2.2-2.2S9.1,4.2,10.3,4.2z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="operations__group__item" data-subject="rent">
+                                        <div class="operations__item__invoice-number">#1005</div>
+                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
+                                        <div class="operations__item__time">05:00م</div>
+                                        <div class="operations__item__amount">
+                                            <span>150.00</span>
+                                            <span class="icon">
+                                                <svg width="20.5" height="13.2" viewBox="0 0 20.5 13.2">
+                                                    <path fill="#1877F2" d="M18.5,13.2H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h16.5c1.1,0,2,0.9,2,2v9.2C20.5,12.3,19.6,13.2,18.5,13.2z M2,1C1.4,1,1,1.4,1,2v9.2c0,0.6,0.4,1,1,1h16.5c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H2z M16.2,8h0.5V5.2h-0.5c-1,0-1.7-0.5-1.7-0.9 h-1c0,1,0.9,1.7,2.2,1.9v0.9C14.4,7.2,13.5,8,13.5,9h1C14.5,8.5,15.2,8,16.2,8z M4.7,7.1V6.2C5.9,6,6.9,5.3,6.9,4.3h-1 c0,0.4-0.7,0.9-1.7,0.9H3.7V8h0.5c1,0,1.7,0.5,1.7,0.9h1C6.9,8,5.9,7.2,4.7,7.1z M10.3,4.2c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2 s-2.2-1-2.2-2.2S9.1,4.2,10.3,4.2z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="operations__group__item" data-subject="rent">
+                                        <div class="operations__item__invoice-number">#1005</div>
+                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
+                                        <div class="operations__item__time">05:00م</div>
+                                        <div class="operations__item__amount">
+                                            <span>150.00</span>
+                                            <span class="icon">
+                                                <svg width="20.5" height="13.2" viewBox="0 0 20.5 13.2">
+                                                    <path fill="#1877F2" d="M18.5,13.2H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h16.5c1.1,0,2,0.9,2,2v9.2C20.5,12.3,19.6,13.2,18.5,13.2z M2,1C1.4,1,1,1.4,1,2v9.2c0,0.6,0.4,1,1,1h16.5c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H2z M16.2,8h0.5V5.2h-0.5c-1,0-1.7-0.5-1.7-0.9 h-1c0,1,0.9,1.7,2.2,1.9v0.9C14.4,7.2,13.5,8,13.5,9h1C14.5,8.5,15.2,8,16.2,8z M4.7,7.1V6.2C5.9,6,6.9,5.3,6.9,4.3h-1 c0,0.4-0.7,0.9-1.7,0.9H3.7V8h0.5c1,0,1.7,0.5,1.7,0.9h1C6.9,8,5.9,7.2,4.7,7.1z M10.3,4.2c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2 s-2.2-1-2.2-2.2S9.1,4.2,10.3,4.2z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="total-operations">
+                            <div class="total-operations__icon">
+                                <svg width="14" height="14" viewBox="0 0 14 14">
+                                    <path fill="#51DC90" d="M0.1,4.3l1.1,8.6L9.9,14l0.2-1.6l-6.6-0.9L13.9,1.2L12.7,0L2.5,10.2L1.7,4.1L0.1,4.3z"></path>
+                                </svg>
+                            </div>
+                            <div class="total-amount">
+                                <h6>اجمالى الفواتير</h6>
+                                <span class="total-amount__number">19250.00</span>
+                                <span class="total-amount__currency">جـ</span>
+                            </div>
+                        </div>
+                        <div class="total-operations">
+                            <div class="total-operations__icon">
+                                <svg width="14" height="14" viewBox="0 0 14 14">
+                                    <path fill="#51DC90" d="M0.1,4.3l1.1,8.6L9.9,14l0.2-1.6l-6.6-0.9L13.9,1.2L12.7,0L2.5,10.2L1.7,4.1L0.1,4.3z"></path>
+                                </svg>
+                            </div>
+                            <div class="total-amount">
+                                <h6>فواتير كاش</h6>
+                                <span class="total-amount__number">18250.00</span>
+                                <span class="total-amount__currency">جـ</span>
+                            </div>
+                        </div>
+                        <div class="total-operations">
+                            <div class="total-operations__icon">
+                                <svg width="14" height="14" viewBox="0 0 14 14">
+                                    <path fill="#51DC90" d="M0.1,4.3l1.1,8.6L9.9,14l0.2-1.6l-6.6-0.9L13.9,1.2L12.7,0L2.5,10.2L1.7,4.1L0.1,4.3z"></path>
+                                </svg>
+                            </div>
+                            <div class="total-amount">
+                                <h6>فواتير ڤيزا</h6>
+                                <span class="total-amount__number">1000.00</span>
+                                <span class="total-amount__currency">جـ</span>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+                <section class="page__layout__col" id="invoice_tab">
+                    <div class="control-panel">
+                        <div class="control-panel__header">
+                            <h4 class="control-panel__title">الفاتورة 1005#</h4>
+                            <div class="invoice__counters">
+                                <span class="invoice-items-count">6</span>
+                                <span class="invoice-items-quantity">44</span>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg width="10" height="2" viewBox="0 0 10 2">
+                                        <path d="M10,1c0,0.6-0.4,1-1,1S8,1.6,8,1s0.4-1,1-1S10,0.4,10,1z M6,1c0,0.6-0.4,1-1,1S4,1.6,4,1s0.4-1,1-1 S6,0.4,6,1z M2,1c0,0.6-0.4,1-1,1S0,1.6,0,1s0.4-1,1-1S2,0.4,2,1z"></path>
+                                    </svg>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="">
+                                    <li>
+                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#invoice_discount_modal">
+                                            <svg width="18" height="18" viewBox="0 0 18 18">
+                                                <path d="M11.1,17.9c-0.6,0-1.3-0.2-1.8-0.7L0.7,8.6C0.2,8.1,0,7.4,0,6.7l0.2-4.1c0.1-1.3,1.1-2.3,2.4-2.4L6.7,0 c0.7,0,1.4,0.2,1.9,0.7l8.6,8.6c0.5,0.5,0.7,1.1,0.7,1.8s-0.3,1.3-0.7,1.8v0l-4.3,4.3C12.4,17.6,11.7,17.9,11.1,17.9z M6.8,1.4 C6.8,1.4,6.8,1.4,6.8,1.4L2.6,1.6c-0.6,0-1,0.5-1,1L1.4,6.7c0,0.3,0.1,0.6,0.3,0.8l8.6,8.6c0.4,0.4,1.1,0.4,1.5,0l4.3-4.3 c0.4-0.4,0.4-1.1,0-1.5L7.6,1.7C7.4,1.5,7.1,1.4,6.8,1.4z M5.6,7.6c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S6.7,7.6,5.6,7.6z M5.6,5 C5.2,5,5,5.2,5,5.6s0.3,0.6,0.6,0.6s0.6-0.3,0.6-0.6S5.9,5,5.6,5z"></path>
+                                            </svg>
+                                            <span>استرجاع الفاتورة</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <svg width="18" height="14.1" viewBox="0 0 18 14.1">
+                                                <path d="M13.4,4.6H4.6C4.3,4.6,4,4.3,4,4s0.3-0.6,0.6-0.6h8.8C13.7,3.4,14,3.7,14,4S13.7,4.6,13.4,4.6z M14,7.1 c0-0.3-0.3-0.6-0.6-0.6H4.6C4.3,6.5,4,6.8,4,7.1c0,0.3,0.3,0.6,0.6,0.6h8.8C13.7,7.7,14,7.4,14,7.1z M5.3,13.9l2.8-2.8 c0,0,0.1-0.1,0.2-0.1h7.5c1.2,0,2.2-1,2.2-2.2V2.2C18,1,17,0,15.8,0H2.2C1,0,0,1,0,2.2v6.6C0,10.1,1,11,2.2,11h1.6 c0.1,0,0.2,0.1,0.2,0.2l0,2.1c0,0.2,0.1,0.4,0.2,0.5c0.1,0.1,0.3,0.2,0.5,0.2c0,0,0,0,0,0C5,14.1,5.2,14.1,5.3,13.9z M2.2,9.9 c-0.6,0-1.1-0.5-1.1-1.1V2.2c0-0.6,0.5-1.1,1.1-1.1h13.6c0.6,0,1.1,0.5,1.1,1.1v6.6c0,0.6-0.5,1.1-1.1,1.1H8.3c-0.4,0-0.7,0.1-1,0.4 l-2.1,2.1v-1.1c0-0.8-0.6-1.4-1.4-1.4H2.2z"></path>
+                                            </svg>
+                                            <span>طباعة الفاتورة</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <svg width="18" height="14.1" viewBox="0 0 18 14.1">
+                                                <path d="M13.4,4.6H4.6C4.3,4.6,4,4.3,4,4s0.3-0.6,0.6-0.6h8.8C13.7,3.4,14,3.7,14,4S13.7,4.6,13.4,4.6z M14,7.1 c0-0.3-0.3-0.6-0.6-0.6H4.6C4.3,6.5,4,6.8,4,7.1c0,0.3,0.3,0.6,0.6,0.6h8.8C13.7,7.7,14,7.4,14,7.1z M5.3,13.9l2.8-2.8 c0,0,0.1-0.1,0.2-0.1h7.5c1.2,0,2.2-1,2.2-2.2V2.2C18,1,17,0,15.8,0H2.2C1,0,0,1,0,2.2v6.6C0,10.1,1,11,2.2,11h1.6 c0.1,0,0.2,0.1,0.2,0.2l0,2.1c0,0.2,0.1,0.4,0.2,0.5c0.1,0.1,0.3,0.2,0.5,0.2c0,0,0,0,0,0C5,14.1,5.2,14.1,5.3,13.9z M2.2,9.9 c-0.6,0-1.1-0.5-1.1-1.1V2.2c0-0.6,0.5-1.1,1.1-1.1h13.6c0.6,0,1.1,0.5,1.1,1.1v6.6c0,0.6-0.5,1.1-1.1,1.1H8.3c-0.4,0-0.7,0.1-1,0.4 l-2.1,2.1v-1.1c0-0.8-0.6-1.4-1.4-1.4H2.2z"></path>
+                                            </svg>
+                                            <span>تكرار الفاتورة</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="control-panel__body">
+                            <div class="control-panel__view">
+                                <div class="select-item">
+                                    <div class="invoice__client">
+                                        <svg width="25" height="25" viewBox="0 0 25 25">
+                                            <path fill="#A3AAB2" d="M12.5,0C19.4,0,25,5.6,25,12.5S19.4,25,12.5,25S0,19.4,0,12.5S5.6,0,12.5,0z" />
+                                            <path fill="#F5F5F5" d="M18.7,16.1c-2.3,3.4-7,4.4-10.5,2c-0.8-0.5-1.5-1.2-2-2c2.3-3.4,7-4.4,10.5-2C17.5,14.6,18.2,15.3,18.7,16.1z M12.5,5.6c1.6,0,2.8,1.3,2.8,2.8s-1.3,2.8-2.8,2.8S9.7,10,9.7,8.4S10.9,5.6,12.5,5.6z" />
+                                        </svg>
+                                        <span>لا يوجد عميل</span>
+                                    </div>
+                                </div>
+                                <div class="control-panel__content">
+                                    <div class="invoice__list__container page__layout__scrollable-content">
+                                        <ul class="invoice__list">
+                                            <li class="invoice__item">
+                                                <div class="invoice__item--data">
+                                                    <div class="invoice__item--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم مع عرض خاص لفترة محدودة</h3>
+                                                    </div>
+                                                    <span class="invoice__item__price">14.00</span>
+                                                </div>
+                                                <div class="invoice__item--counter">
+                                                    <div class="invoice__item--counter-screen">
+                                                        <span>24</span>
+                                                    </div>
+                                                </div>
+                                                <div class="invoice__item--price">
+                                                    <span>348.00</span>
+                                                </div>
+                                            </li>
+                                            <li class="invoice__item">
+                                                <div class="invoice__item--data">
+                                                    <div class="invoice__item--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم مع عرض خاص لفترة محدودة</h3>
+                                                    </div>
+                                                    <span class="invoice__item__price">14.00</span>
+                                                </div>
+                                                <div class="invoice__item--counter">
+                                                    <div class="invoice__item--counter-screen">
+                                                        <span>24</span>
+                                                    </div>
+                                                </div>
+                                                <div class="invoice__item--price">
+                                                    <span>348.00</span>
+                                                </div>
+                                            </li>
+                                            <li class="invoice__item">
+                                                <div class="invoice__item--data">
+                                                    <div class="invoice__item--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم مع عرض خاص لفترة محدودة</h3>
+                                                    </div>
+                                                    <span class="invoice__item__price">14.00</span>
+                                                </div>
+                                                <div class="invoice__item--counter">
+                                                    <div class="invoice__item--counter-screen">
+                                                        <span>24</span>
+                                                    </div>
+                                                </div>
+                                                <div class="invoice__item--price">
+                                                    <span>348.00</span>
+                                                </div>
+                                            </li>
+                                            <li class="invoice__item">
+                                                <div class="invoice__item--data">
+                                                    <div class="invoice__item--data-name">
+                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم مع عرض خاص لفترة محدودة</h3>
+                                                    </div>
+                                                    <span class="invoice__item__price">14.00</span>
+                                                </div>
+                                                <div class="invoice__item--counter">
+                                                    <div class="invoice__item--counter-screen">
+                                                        <span>24</span>
+                                                    </div>
+                                                </div>
+                                                <div class="invoice__item--price">
+                                                    <span>348.00</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="control-panel__bottom-bar">
+                                    <div class="checkout slidable">
+                                        <a href="#" class="checkout__slide__toggle">
+                                            <svg width="30" height="13" viewBox="0 0 30 13">
+                                                <path fill="#C6CFD9" d="M27.5,12.8c-0.4,0-0.8-0.1-1.2-0.3L14.9,5.9L3.7,12.5c-1.2,0.7-2.7,0.3-3.4-0.9C-0.3,10.5,0,8.9,1.2,8.3 l13.7-8.1l13.9,8.1c1.2,0.7,1.6,2.2,0.9,3.4C29.2,12.4,28.4,12.8,27.5,12.8z"></path>
+                                            </svg>
+                                        </a>
+                                        <ul class="checkout__list list-unstyled">
+                                            <li class="checkout__list__item">
+                                                <h5>الاجمالي</h5>
+                                                <span class="checkout__item__detail invoice-total-amount">320.00</span>
+                                            </li>
+                                            <li class="checkout__list__item invoice-discount">
+                                                <h5>الخصم الكلي</h5>
+                                                <div class="checkout__item__detail discount-details">
+                                                    <span class="discount-percentage">10%</span>
+                                                    <span class="discount-amount">25.00</span>
+                                                </div>
+                                            </li>
+                                            <li class="checkout__list__item">
+                                                <h5>التوصيل</h5>
+                                                <span class="checkout__item__detail delivery-fees-amount">25.00</span>
+                                            </li>
+                                            <li class="checkout__list__item main-item">
+                                                <h5>الاجمالي الكلي</h5>
+                                                <span class="checkout__item__detail">360.00</span>
+                                            </li>
+                                            <li class="checkout__list__item">
+                                                <h5>المدفوع</h5>
+                                                <span class="checkout__item__detail">25.00</span>
+                                            </li>
+                                            <li class="checkout__list__item">
+                                                <h5>الباقي</h5>
+                                                <span class="checkout__item__detail">25.00</span>
+                                            </li>
+                                        </ul>
+                                        <div class="checkout__cta__container">
+                                            <button type="button" class="btn btn-primary btn-lg receive__cash__btn">
+                                                <span>استكمال الفاتورة</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="js/popper.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/pages/invoices.module.js" type="module"></script>
+</body>
+
+</html>
