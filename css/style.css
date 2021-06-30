@@ -4541,6 +4541,12 @@ main.has__slidable__cp.control-panel--shown .control-panel {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
 }
+.cash-flow-page .control-panel__content:empty {
+  background-image: url(../images/client-placeholder-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center 60px;
+  background-size: 160px 160px;
+}
 .cash-flow-page .control-panel__bottom-bar .btn-lg {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4572,6 +4578,7 @@ main.has__slidable__cp.control-panel--shown .control-panel {
   width: 12px;
   height: 12px;
 }
+
 .expenses-page {
   overflow: hidden;
 }
