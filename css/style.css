@@ -4525,6 +4525,10 @@ main.has__slidable__cp.control-panel--shown .control-panel {
     display: flex;
   }
 }
+.cash-flow-page .operations__group__item .operations__item__client-data {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
 
 .expenses-page {
   overflow: hidden;
