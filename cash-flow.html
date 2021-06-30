@@ -293,7 +293,24 @@
                                                 <textarea class="form-control" name="comment" id="comment" placeholder="اكتب تعليقك"></textarea>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-lg">حفظ</button>
+                                        <div class="d-flex gap-3">
+                                            <button type="submit" class="btn btn-outline-danger btn-lg">
+                                                <span class="icon">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14">
+                                                        <path d="M13.9,9.7l-1.1-8.6L4.1,0L3.9,1.6l6.6,0.9L0.1,12.8L1.3,14L11.5,3.8l0.8,6.1L13.9,9.7z"></path>
+                                                    </svg>
+                                                </span>
+                                                <span>دفع</span>
+                                            </button>
+                                            <button type="submit" class="btn btn-outline-success btn-lg">
+                                                <span class="icon">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14">
+                                                        <path d="M0.1,4.3l1.1,8.6L9.9,14l0.2-1.6l-6.6-0.9L13.9,1.2L12.7,0L2.5,10.2L1.7,4.1L0.1,4.3z"></path>
+                                                    </svg>
+                                                </span>
+                                                <span>تحصيل</span>
+                                            </button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -561,6 +578,99 @@
                         </div>
                     </div>
                 </section>
+            </div>
+        </div>
+        <div class="modal fade" id="add_client_modal" tabindex="-1" aria-labelledby="add_client_label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="add_client_label">
+                            <svg width="12.5" height="13.8" viewBox="0 0 12.5 13.8">
+                                <path fill="#060505" d="M12.5,10.5c-2.3,3.4-7,4.4-10.5,2c-0.8-0.5-1.5-1.2-2-2c2.3-3.4,7-4.4,10.5-2C11.3,9,11.9,9.7,12.5,10.5z M5.8,0c1.6,0,2.8,1.3,2.8,2.8S7.4,5.7,5.8,5.7S3,4.4,3,2.8S4.3,0,5.8,0z"></path>
+                            </svg>
+                            <span>اضافة عميل</span>
+                        </h5>
+                    </div>
+                    <form id="add_client_form">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 mb-3">
+                                    <label class="form-label" for="add_client_name">اسم العميل</label>
+                                    <input type="text" class="form-control" id="add_client_name" placeholder="">
+                                </div>
+                                <div class="col-12 col-sm-6 mb-3">
+                                    <label class="form-label" for="add_client_phone_number">رقم الموبيل</label>
+                                    <input type="tel" class="form-control" id="add_client_phone_number" placeholder="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-6 mb-3">
+                                    <label class="form-label" for="add_client_code">كود العميل</label>
+                                    <input type="number" class="form-control" id="add_client_code" placeholder="">
+                                </div>
+                            </div>
+                            <fieldset class="collapsible pb-0">
+                                <legend>
+                                    <a href="#" class="collapse__toggle" aria-expanded="true">عنوان 1</a>
+                                </legend>
+                                <div class="collapse__container">
+                                    <div class="row pt-3">
+                                        <div class="col-12 col-sm-4 mb-3">
+                                            <label class="form-label" for="add_client_governorate">المحافظة</label>
+                                            <select class="form-select" id="add_client_governorate">
+                                                <option value="">القاهرة</option>
+                                                <option value="">طنطا</option>
+                                                <option value="">سوهاج</option>
+                                                <option value="">اسوان</option>
+                                                <option value="">الشرقية</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-sm-4 mb-3">
+                                            <label class="form-label" for="add_client_city">المدينة</label>
+                                            <select class="form-select" id="add_client_city">
+                                                <option value="">مدينة نصر</option>
+                                                <option value="">شيراتون</option>
+                                                <option value="">مصر الجديد</option>
+                                                <option value="">المعادي</option>
+                                                <option value="">الجيزة</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-sm-4 mb-3">
+                                            <label class="form-label" for="add_client_neighborhood">المدينة</label>
+                                            <select class="form-select" id="add_client_neighborhood">
+                                                <option value="">الحي السابع</option>
+                                                <option value="">الحي الثامن</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 mb-3">
+                                            <label class="form-label" for="add_client_street">الشارع</label>
+                                            <input type="text" class="form-control" id="add_client_street" placeholder="صلاح سالم">
+                                        </div>
+                                        <div class="col-12 col-sm-2 mb-3">
+                                            <label class="form-label" for="add_client_building">العمارة</label>
+                                            <input type="text" class="form-control" id="add_client_building" placeholder="1">
+                                        </div>
+                                        <div class="col-12 col-sm-2 mb-3">
+                                            <label class="form-label" for="add_client_floor">الدور</label>
+                                            <input type="number" class="form-control" id="add_client_floor" placeholder="1">
+                                        </div>
+                                        <div class="col-12 col-sm-2 mb-3">
+                                            <label class="form-label" for="add_client_apartment">الشقة</label>
+                                            <input type="number" class="form-control" id="add_client_apartment" placeholder="2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <button type="button" class="btn btn-secondary">+ اضافة عنوان</button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">حفظ</button>
+                            <button type="button" class="btn btn-link" data-bs-dismiss="modal">الغاء</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </main>

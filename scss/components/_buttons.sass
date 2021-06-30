@@ -5,6 +5,14 @@
     border-radius: 20px
     padding: 0.475rem 1.25rem
 
+    svg
+        fill: currentColor
+        transition: fill 0.15s ease-in-out
+
+    &:hover, &:active, &:focus
+        svg
+            fill: currentColor
+
 .btn-lg
     border-radius: 24px
     padding: 0.725rem 3rem
@@ -104,6 +112,7 @@
 .btn-success,
 .btn-outline-success
     &:active, &:focus
+        color: #fff
         background-color: darken(#4CC784, 10%)
         border-color: darken(#4CC784, 10%)
 
@@ -127,6 +136,7 @@
 .btn-danger,
 .btn-outline-danger
     &:active, &:focus
+        color: #fff
         background-color: darken(#FF6B73, 10%)
         border-color: darken(#FF6B73, 10%)
 
