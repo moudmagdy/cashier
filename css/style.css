@@ -4543,8 +4543,7 @@ main.has__slidable__cp.control-panel--shown .control-panel {
 }
 .cash-flow-page .control-panel__content:empty {
   background-image: url(../images/client-placeholder-icon.svg);
-  background-repeat: no-repeat;
-  background-position: center 60px;
+  background-position: center 50px;
   background-size: 160px 160px;
 }
 .cash-flow-page .control-panel__bottom-bar .btn-lg {
