@@ -3655,15 +3655,19 @@ fieldset:not(:last-child) {
 }
 .page__layout__col {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr;
-  -ms-flex-line-pack: start;
-      align-content: start;
-  max-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
 }
 .page__layout__col.active {
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 @media (max-width: 768px) {
   .page__layout__col {
@@ -3681,6 +3685,7 @@ fieldset:not(:last-child) {
       -ms-flex-align: center;
           align-items: center;
   height: 72px;
+  min-height: 72px;
   background-color: #F5F5F5;
   border-top: 1px solid #dbe1e5;
   margin-top: auto;
@@ -4505,6 +4510,20 @@ main.has__slidable__cp.control-panel--shown .control-panel {
 .invoices-page .operations__group__item .operations__item__amount span.icon svg {
   width: 20px;
   height: 13px;
+}
+
+.cash-flow-page {
+  overflow: hidden;
+}
+.cash-flow-page > .page__layout > .page__layout__nav {
+  display: none;
+}
+@media (max-width: 768px) {
+  .cash-flow-page > .page__layout > .page__layout__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .expenses-page {
