@@ -1,65 +1,31 @@
-@import './abstracts/functions';
 @import './abstracts/variables';
+@import './abstracts/functions';
 @import './abstracts/mixins';
-
-
-@import './helpers/mixins';
-@import './helpers/variables';
-@import './common/common';
-
 
 @import './base/fonts';
 @import './base/typography';
-@import './components/buttons';
-@import './components/search-bar';
-@import './components/collapsible';
-@import './components/payment-methods';
-@import './components/operations';
-@import './components/filters-buttons';
-@import './layout/forms';
-@import './common/modal-reset';
 
+@import './common/common';
 
-
-
-// here import componetns
-
-// Side
-@import './components/side-receiveDevice';
-
-// buttons
-@import './components/btns/default-btn';
-// @import './components/sidemenu-btn';
-@import './components/btns/default-blue';
-
-// @import './components/small/features-btns';
-@import './components/small/increaseicon';
-@import './components/small/decreaseicon';
+@import './components/layout';
 @import './components/layout-tabs';
-@import './components/total-payment';
-@import './components/searchInput';
-@import './components/filter';
-@import './components/accordion';
-@import './components/pay-receive-list';
-@import './components/customer-card';
-@import './components/customer-card-placeholder';
-@import './components/btns/payments-buttons';
+@import './components/buttons';
+@import './components/modal-reset';
+@import './components/main-menu';
+@import './components/search-bar';
+@import './components/control-panel';
 @import './components/products-list';
 @import './components/invoice-list';
 @import './components/checkout';
-@import './components/checkout-operations';
-@import './components/bill';
-@import './components/small/control-panel';
+@import './components/payment-methods';
+@import './components/collapsible';
+@import './components/operations';
+@import './components/filters-buttons';
+
 @import './components/clients-list';
-@import './components/calculator';
-@import './components/menus/selectorMenu';
-@import './components/receiveFromOut';
+@import './components/customer-card';
 
-// import menus
-// @import './components/menus/change-view-menu';
-
-@import './components/layout';
-@import './components/main-menu';
+@import './layout/forms';
 
 @import './pages/passcode';
 @import './pages/sales';
