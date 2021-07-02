@@ -249,16 +249,16 @@ button:focus,
 
 .form-control,
 .form-select {
-  border: 1px solid #CBD0D6;
+  border: 2px solid #CBD0D6;
   border-radius: 12px;
-  padding: 0.788rem 0.95rem;
+  padding: 0.725rem 0.95rem;
 }
 .form-control:focus,
 .form-select:focus {
   border-color: #1877F2;
   border-color: var(--color-brand);
-  -webkit-box-shadow: 0 0 0 0.25rem #a9ccfa;
-          box-shadow: 0 0 0 0.25rem #a9ccfa;
+  -webkit-box-shadow: 0 0 0 0.25rem #d9e9fd;
+          box-shadow: 0 0 0 0.25rem #d9e9fd;
 }
 
 .form-select {
