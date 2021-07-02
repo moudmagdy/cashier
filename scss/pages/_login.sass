@@ -1,0 +1,63 @@
+.login-page
+    +flex-center
+    align-content: center
+    flex-direction: column
+    min-height: 100vh
+    background-color: $color-white
+
+    .logo
+        margin-bottom: rem(15px)
+
+        svg
+            +var(fill, color-brand)
+
+    form
+        display: flex
+        flex-direction: column
+
+    h1
+        font-size: rem(24px)
+        color: #4D4D4D
+        line-height: 1.5
+        margin-bottom: rem(10px)
+
+    p
+        color: #4D4D4D
+        margin-bottom: rem(24px)
+
+    svg
+        margin-top: rem(30px)
+
+    .btn
+        align-self: center
+        border-radius: 28px
+        padding: 0.975rem 5.098rem
+        margin: auto
+
+    .form-label
+        color: #242424
+
+    textarea
+        resize: none
+
+    .login-passcode__inputs
+        display: flex
+        gap: 22px
+        direction: ltr
+        padding-top: rem(26px)
+
+        .form-control
+            width: rem(60px)
+            height: rem(72px)
+            font-size: rem(30px)
+            text-align: center
+            padding: 0.725rem 0.65rem
+
+    .forgot-credentials
+        display: inline-block
+        line-height: 2
+        color: #4D4D4D
+        font-size: rem(12px)
+
+        &:hover
+            text-decoration: none

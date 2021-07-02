@@ -3131,18 +3131,46 @@ main.has__slidable__cp.control-panel--shown .control-panel {
   background-color: #fff;
 }
 .login-page .logo {
-  margin-bottom: 5px;
+  margin-bottom: 0.9375rem;
 }
 .login-page .logo svg {
   fill: #1877F2;
   fill: var(--color-brand);
 }
+.login-page form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .login-page h1 {
-  font-family: "NotoSansArabic_Medium", sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
+  color: #4D4D4D;
+  line-height: 1.5;
+  margin-bottom: 0.625rem;
+}
+.login-page p {
+  color: #4D4D4D;
+  margin-bottom: 1.5rem;
+}
+.login-page svg {
+  margin-top: 1.875rem;
+}
+.login-page .btn {
+  -ms-flex-item-align: center;
+      align-self: center;
+  border-radius: 28px;
+  padding: 0.975rem 5.098rem;
+  margin: auto;
+}
+.login-page .form-label {
   color: #242424;
-  line-height: 2.18;
-  margin-bottom: 42px;
+}
+.login-page textarea {
+  resize: none;
 }
 .login-page .login-passcode__inputs {
   display: -webkit-box;
@@ -3150,33 +3178,22 @@ main.has__slidable__cp.control-panel--shown .control-panel {
   display: flex;
   gap: 22px;
   direction: ltr;
-  padding-top: 26px;
+  padding-top: 1.625rem;
 }
 .login-page .login-passcode__inputs .form-control {
-  width: 60px;
-  height: 72px;
-  background-color: #F5F5F5;
-  font-size: 30px;
-  border-width: 2px;
-  border-color: #E2E9F0;
-  border-radius: 8px;
-  padding: 0.725rem 0.65rem;
+  width: 3.75rem;
+  height: 4.5rem;
+  font-size: 1.875rem;
   text-align: center;
+  padding: 0.725rem 0.65rem;
 }
-.login-page .login-passcode__inputs .form-control:focus {
-  border-color: #1877F2;
-  border-color: var(--color-brand);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-.login-page .forgot-login-passcode {
+.login-page .forgot-credentials {
   display: inline-block;
   line-height: 2;
   color: #4D4D4D;
-  font-size: 12px;
-  margin-top: 124px;
+  font-size: 0.75rem;
 }
-.login-page .forgot-login-passcode:hover {
+.login-page .forgot-credentials:hover {
   text-decoration: none;
 }
 
@@ -3815,21 +3832,9 @@ main.has__slidable__cp.control-panel--shown .control-panel {
   background-color: #fff;
   padding: 15px 24px;
 }
-.closed-shift .logo {
-  margin-bottom: 10px;
-}
-.closed-shift h3 {
-  font-size: 22px;
-  color: #4D4D4D;
-  margin-bottom: 15px;
-}
 .closed-shift h6 {
   color: #4D4D4D;
   margin-bottom: 10px;
-}
-.closed-shift p {
-  color: #4D4D4D;
-  margin-bottom: 60px;
 }
 .closed-shift .daily-total-amount {
   font-family: "NotoSansArabic_SemiBold", sans-serif;
@@ -3851,22 +3856,6 @@ main.has__slidable__cp.control-panel--shown .control-panel {
 }
 .closed-shift .btn-lg {
   width: 100%;
-}
-
-.new-shift-page .closed-shift {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 100vh;
-}
-.new-shift-page .closed-shift form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 header .header__btns {

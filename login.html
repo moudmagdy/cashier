@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>Start shift - Cashier</title>
+    <title>Login - Cashier</title>
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,22 +19,22 @@
                 <path fill="#4080FF" d="M5.6,3.7c4-2.6,9.1-2.7,13.2-0.3l-3.4,4.4c-0.9-0.4-1.9-0.7-2.9-0.7c-1.1,0-2.2,0.3-3.1,0.8L5.6,3.7z M12.4,26.4C5.5,26.4,0,20.8,0,14c0-2.3,0.6-4.5,1.8-6.4l4.3,3.9c-1.4,3.5,0.2,7.4,3.7,8.8c1.9,0.8,4.1,0.7,5.8-0.3l0,0h0.1 c1.8-1.1,3-2.9,3.3-5v-0.2h-3c-0.1,0-0.1,0-0.1-0.1s0-0.1,0-0.2l0,0l6.2-8h0.1l0,0l0,0l5.6,8l0,0c0,0,0.1,0.1,0,0.2 c0,0.1-0.1,0.1-0.1,0.1h-3.1V15C24.3,21.3,18.9,26.4,12.4,26.4"></path>
             </svg>
         </a>
-        <h1>الورديـة مغلـقـة</h1>
-        <p>ادخل الرصيد الافتتاحى لتبدأ ورديتك</p>
+        <h1 class="mb-5">تسجيل الدخول</h1>
         <form>
             <div class="row">
                 <div class="col-12 mb-3">
-                    <label class="form-label" for="shift_opening_balance">رصيد فتح الوردية</label>
-                    <div class="currency-symbol" data-symbol="جـ.م">
-                        <input type="number" class="form-control" id="shift_opening_balance" placeholder="00.00">
-                    </div>
+                    <label class="form-label" for="login_username">اسم المستخدم</label>
+                    <input type="text" class="form-control" id="login_username" placeholder="اكتب اسم المستخدم">
                 </div>
                 <div class="col-12 mb-5">
-                    <label class="form-label" for="shift_opening_comment">تعليق (اختياري)</label>
-                    <textarea class="form-control" id="shift_opening_comment" placeholder="اكتب تعليق"></textarea>
+                    <label class="form-label" for="login_password">كلمة المرور</label>
+                    <input type="password" class="form-control" id="login_password" placeholder="اكتب كلمة المرور">
+                    <div class="text-end">
+                        <a class="forgot-credentials" href="">نسيت كلمة المرور؟</a>
+                    </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">ابدأ الوردية</button>
+            <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
         </form>
     </main>
     <script src="js/popper.min.js" defer></script>
