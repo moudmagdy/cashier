@@ -11,7 +11,23 @@ fieldset
         padding-bottom: 20px
         border-bottom: 1px solid #ececec
 
-[type=number]
+input
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+
+    &[type="number"]
+        -moz-appearance: textfield
+
+.btn,
+button,
+[type="submit"],
+[type="button"]
+    &:focus
+        box-shadow: none !important
+
+[type="number"]
     direction: rtl
 
 .form-label

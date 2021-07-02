@@ -1,0 +1,19 @@
+.clients-list
+    flex-direction: column
+
+    .customers-tab-content
+        display: none
+
+        &.active
+            display: block
+
+    &--container
+        overflow-y: auto
+        +scroll-bar
+
+    &-users
+        &-item
+            &-price
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+                font-size: 1rem
+                margin-right: auto

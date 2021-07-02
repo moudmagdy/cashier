@@ -5,9 +5,11 @@
 @import './base/fonts';
 @import './base/typography';
 
-@import './common/common';
+@import './main';
 
-@import './components/layout';
+@import './layout/forms';
+@import './layout/layout';
+
 @import './components/layout-tabs';
 @import './components/buttons';
 @import './components/modal-reset';
@@ -21,11 +23,7 @@
 @import './components/collapsible';
 @import './components/operations';
 @import './components/filters-buttons';
-
 @import './components/clients-list';
-@import './components/customer-card';
-
-@import './layout/forms';
 
 @import './pages/passcode';
 @import './pages/sales';
