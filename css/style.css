@@ -421,6 +421,13 @@ button:focus,
   margin-bottom: 0;
 }
 .page__layout header .page__title a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
   text-decoration: none;
   color: inherit;
 }
@@ -1675,8 +1682,16 @@ main.has__slidable__cp.control-panel--shown .control-panel {
   background-color: rgba(255, 133, 145, 0.1);
 }
 .control-panel__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
   font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 15px;
+  line-height: 1.5;
   margin-bottom: 0;
 }
 .control-panel__body {
@@ -3156,9 +3171,6 @@ main.has__slidable__cp.control-panel--shown .control-panel {
   color: #4D4D4D;
   margin-bottom: 1.5rem;
 }
-.login-page svg {
-  margin-top: 1.875rem;
-}
 .login-page .btn {
   -ms-flex-item-align: center;
       align-self: center;
@@ -3447,6 +3459,47 @@ main.has__slidable__cp.control-panel--shown .control-panel {
 .invoices-page .operations__group__item .operations__item__amount span.icon svg {
   width: 20px;
   height: 13px;
+}
+
+.return-page {
+  overflow: hidden;
+}
+.return-page > .page__layout > .page__layout__nav {
+  display: none;
+}
+@media (max-width: 768px) {
+  .return-page > .page__layout > .page__layout__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.return-page .control-panel .control-panel__header {
+  background-color: #FF6B73;
+}
+.return-page .control-panel .control-panel__header .cancel-return {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: currentColor;
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-size: 0.75rem;
+}
+.return-page .control-panel .control-panel__header .cancel-return svg {
+  fill: currentColor;
+  width: 10px;
+  height: 10px;
+}
+.return-page .control-panel .select-item {
+  border-bottom: 1px solid #efefef;
+}
+.return-page .checkout .checkout__list__item.return-amount {
+  color: #FF6B73;
 }
 
 .cash-flow-page {

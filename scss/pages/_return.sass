@@ -1,0 +1,34 @@
+.return-page
+    overflow: hidden
+
+    & > .page__layout > .page__layout__nav
+        display: none
+
+        @media (max-width: 768px)
+            display: flex
+
+    .control-panel
+        .control-panel__header
+            background-color: #FF6B73
+
+            .cancel-return
+                display: flex
+                align-items: center
+                gap: 10px
+                text-decoration: none
+                color: currentColor
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+                font-size: rem(12px)
+
+                svg
+                    fill: currentColor
+                    width: 10px
+                    height: 10px
+
+        .select-item
+            border-bottom: 1px solid #efefef
+
+    .checkout
+        .checkout__list__item
+            &.return-amount
+                color: #FF6B73
