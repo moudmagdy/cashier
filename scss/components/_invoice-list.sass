@@ -63,10 +63,11 @@
             font-size: 11px
 
         &-discountInput
-            display: inline-flex
+            display: flex
+            align-items: center
             gap: 10px
             width: max-content
-            font-size: 11px
+            font-size: 14px
 
             span
                 text-decoration: line-through
@@ -74,8 +75,10 @@
 
             input
                 width: 45px
+                line-height: 1.2
                 border: none
-                border-radius: 2px
+                border-radius: rem(4px)
+                padding: rem(2px) rem(5px)
 
                 &::-webkit-outer-spin-button,
                 &::-webkit-inner-spin-button
@@ -203,7 +206,7 @@
                 color: #fff
 
     &--price
-        font-family: 'NotoSansArabic_Medium'
+        font-family: 'NotoSansArabic_SemiBold', sans-serif
         font-size: 15px
 
         &.return-amount

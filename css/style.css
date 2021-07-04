@@ -2227,7 +2227,7 @@ main.has__slidable__cp.control-panel--shown .control-panel {
 }
 .product__price {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
 }
 .product__quantity {
   position: absolute;
@@ -2369,14 +2369,17 @@ main.has__slidable__cp.control-panel--shown .control-panel {
   font-size: 11px;
 }
 .invoice__item--data-discountInput {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-size: 11px;
+  font-size: 14px;
 }
 .invoice__item--data-discountInput span {
   text-decoration: line-through;
@@ -2384,8 +2387,10 @@ main.has__slidable__cp.control-panel--shown .control-panel {
 }
 .invoice__item--data-discountInput input {
   width: 45px;
+  line-height: 1.2;
   border: none;
-  border-radius: 2px;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.3125rem;
 }
 .invoice__item--data-discountInput input::-webkit-outer-spin-button, .invoice__item--data-discountInput input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -2552,7 +2557,7 @@ main.has__slidable__cp.control-panel--shown .control-panel {
   color: #fff;
 }
 .invoice__item--price {
-  font-family: "NotoSansArabic_Medium";
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 15px;
 }
 .invoice__item--price.return-amount {
