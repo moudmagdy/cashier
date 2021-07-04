@@ -11,6 +11,9 @@
         .control-panel__header
             background-color: #FF6B73
 
+            .invoice__counters
+                margin: 0 1rem 0 0
+
             .cancel-return
                 display: flex
                 align-items: center
@@ -28,7 +31,58 @@
         .select-item
             border-bottom: 1px solid #efefef
 
+    .product--selected::before
+        border-color: #F02849
+
+    .product__quantity
+        background-color: #F02849
+
+    .page__layout__col > footer
+        height: rem(67px)
+        min-height: rem(67px)
+        background-color: $color-white
+        border: none
+
+    .select-all
+        color: #F02849
+        border-color: #F02849
+
+        &:hover
+            color: $color-white
+            background-color: #F02849
+
+    .checkout__list__item
+        justify-content: space-between
+
+        & > *
+            flex: 1 1 50%
+
+    .invoice__item--counter
+        justify-content: center
+        flex-wrap: wrap
+        max-width: rem(102px)
+
+    .invoice__item--price
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        gap: 10px
+
+        span
+            &:first-child
+                color: #F02849
+
+            &:last-child
+                font-size: rem(11px)
+
+    .item__total-quantity
+        font-size: rem(11px)
+
     .checkout
         .checkout__list__item
             &.return-amount
-                color: #FF6B73
+                h5
+                    color: #FF6B73
+
+                span
+                    color: #F02849

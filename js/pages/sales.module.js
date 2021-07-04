@@ -80,9 +80,12 @@ tl1.play()
 
 
 cards.forEach(card => {
+    let quantity = 1;
     card.addEventListener('click', (e) => {
         e.stopPropagation();
-        card.classList.toggle('product--selected');
+        card.classList.add('product--selected');
+        card.querySelector('.product__quantity').textContent = quantity;
+        quantity++
     });
 });
 

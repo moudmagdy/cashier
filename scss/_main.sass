@@ -64,3 +64,20 @@ body
     &:active, &:focus
         color: inherit
         background-color: #E2F2FE
+
+.select-all
+    display: flex
+    flex: 1 1 100%
+    justify-content: center
+    font-family: 'NotoSansArabic_Medium', sans-serif
+    font-size: rem(12px)
+    text-decoration: none
+    +var(color, color-brand)
+    border: 2px solid $color-brand
+    border-radius: rem(6px)
+    padding: 0.575rem 0.785rem
+    transition: all 0.3s
+
+    &:hover
+        color: $color-white
+        background-color: $color-brand

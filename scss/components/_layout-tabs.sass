@@ -25,12 +25,12 @@
             bottom: 0
             width: 0
             height: 0
-            background-color: $blue
+            +var(background-color, color-brand)
             transform: translateX(-50%)
             transition: all 0.2s ease-in-out
 
         &.active
-            color: $blue
+            +var(color, color-brand)
 
             &::after
                 height: 2px
