@@ -1529,6 +1529,12 @@ main.has__slidable__cp.control-panel--shown .page__layout > .control-panel {
 .search__bar.has-tabs {
   gap: 0;
 }
+@media (max-width: 992px) {
+  .search__bar.has-tabs {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
 .search__bar.has-tabs .search__bar__input {
   border-radius: 0 1.375rem 1.375rem 0;
 }
