@@ -1544,10 +1544,11 @@ main.has__slidable__cp.control-panel--shown .page__layout > .control-panel {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #E2E9F0;
+  gap: 0.3125rem;
+  border: 0.125rem solid #C6CFD9;
   border-right: none;
   border-radius: 1.375rem 0 0 1.375rem;
-  padding: 0.313rem 0.5rem;
+  padding: 0.25rem 0.5rem;
 }
 .search__bar__tabs a {
   font-family: "NotoSansArabic_Medium", sans-serif;
