@@ -1,3 +1,6 @@
+import '../components/main-menu.module.js';
+import '../components/collapsible.module.js';
+
 const servicesItem = document.querySelectorAll('.services__group__item a');
 const controlPanels = document.querySelectorAll('.control-panel');
 

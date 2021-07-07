@@ -1,5 +1,5 @@
-import './../components/main-menu.module.js';
-import '../components/layout-nav.module.js';
+import '../components/main-menu.module.js';
+import '../components/layout-tabs.module.js';
 
 
 let products = document.querySelectorAll('.products__list .product');

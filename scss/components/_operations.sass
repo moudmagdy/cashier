@@ -34,11 +34,11 @@
         &__item
             display: flex
             align-items: center
-            padding: 0.875rem 0.5rem
+            gap: rem(10px)
+            padding: 0.875rem 1rem
 
             & > *
                 flex: 1 1
-                padding: 0 15px
 
             &:hover
                 background-color: #fff
@@ -62,6 +62,10 @@
                     border: 1px solid $color-text-primary
                     border-radius: 24px
                     padding: 0.388rem 0.8rem
+
+            .operations__item__date-time
+                display: flex
+                gap: 10px
 
             .operations__item__time
                 font-size: 12px
@@ -94,11 +98,26 @@
             .operations__item__invoice-number
                 flex: 0 1 15%
                 font-family: 'NotoSansArabic_SemiBold', sans-serif
-                font-size: 14px
+                font-size: rem(14px)
 
             .operations__item__client-data
                 flex: 1 1 30%
-                font-size: 12px
+                font-size: rem(12px)
+
+            .operations__item__invoice-info
+                display: block
+                flex: 1 1 20%
+                font-size: rem(14px)
+
+            .operations__item__date-time
+                font-size: rem(12px)
+
+            .operations__item__location
+                font-size: rem(14px)
+
+            .operations__item__type
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+                font-size: rem(14px)
 
 .total-operations
     display: flex

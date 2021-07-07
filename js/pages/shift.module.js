@@ -1,5 +1,5 @@
-import '../components/layout-nav.module.js';
-import './../components/main-menu.module.js';
+import '../components/layout-tabs.module.js';
+import '../components/main-menu.module.js';
 
 const endShiftBtn = document.querySelector('.end-shift');
 const controlPanels = document.querySelector('.control-panel');

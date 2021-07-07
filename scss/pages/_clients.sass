@@ -1,0 +1,264 @@
+.clients-page
+    overflow: hidden
+
+    & > .page__layout > .layout__tabs
+        display: none
+
+        @media (max-width: 768px)
+            display: flex
+
+    .total-credits
+        +flex-center
+        gap: rem(5px)
+
+        h6
+            font-size: rem(12px)
+            margin-bottom: 0
+
+        &__amount,
+        &__currency
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+            font-size: rem(24px)
+
+        .debtor
+            color: #F02849
+
+        .creditor
+            color: #30B360
+
+    .control-panel
+        .select-item
+            .item__selected
+                display: flex
+
+    .control-panel__content:empty
+        background-image: none
+
+    .client__data
+        display: flex
+        align-items: center
+        gap: rem(10px)
+
+        img
+            width: rem(28px)
+            height: rem(28px)
+
+        h5
+            font-size: rem(14px)
+            white-space: nowrap
+            margin-bottom: 0
+
+    .client-balance-amount
+        font-family: 'NotoSansArabic_SemiBold', sans-serif
+        font-size: rem(14px)
+
+        &.debtor
+            color: #F02849
+
+        &.creditor
+            color: #30B360
+
+    .client-data__list
+        display: flex
+        flex-direction: column
+        overflow-y: scroll
+        @include scroll-bar
+        scroll-behavior: smooth
+        padding: rem(20px) rem(24px)
+
+    .client-data__item
+        display: flex
+        align-items: center
+        gap: 10px
+
+        &:not(:last-child)
+            margin-bottom: 20px
+
+    .client-data__icon
+        width: rem(24px)
+        height: rem(24px)
+        background-color: #C6CFD9
+        border-radius: 50%
+
+    .client-data__detail
+        display: flex
+        flex-direction: column
+        gap: 5px
+
+    .client-data__detail__title
+        font-size: rem(12px)
+        color: #A3AAB2
+        margin-bottom: 0
+
+    .client-data__detail__info
+        font-family: 'NotoSansArabic_Medium', sans-serif
+        font-size: rem(14px)
+
+    .flex-table__row
+        &:hover,
+        &.selected
+            .flex-table__col
+                transition: color 0.3s
+
+                &:nth-child(2),
+                &:nth-child(3)
+                    color: #A3AAB2
+
+    .operations-and-invoices__toggle
+        position: relative
+        +flex-center
+        width: 100%
+        font-family: 'NotoSansArabic_Medium', sans-serif
+        font-size: rem(12px)
+        +var(color, color-brand)
+        text-decoration: none
+        background-color: #F5F5F5
+        border-radius: rem(12px)
+        padding: 0.825rem 1.5rem
+        transition: all 0.3s
+
+        &::before
+            content: ""
+            position: absolute
+            inset: 0
+            border: rem(3px) solid #F5F5F5
+            border-radius: rem(12px)
+            transition: border-color 0.3s
+
+        &:hover
+            color: darken(#1877F2, 5%)
+            background-color: darken(#F5F5F5, 5%)
+
+            &::before
+                border-color: darken(#F5F5F5, 5%)
+
+    .operations-and-invoices
+        position: absolute
+        inset: 0
+        display: flex
+        flex-direction: column
+        background-color: $color-white
+        border-left: 1px solid #E4E6EB
+        border-right: 1px solid #E4E6EB
+        opacity: 0
+        pointer-events: none
+        transform: translateX(-100px)
+        transition: opacity 200ms cubic-bezier(0.85, 0.47, 0.11, 0.88), transform 350ms cubic-bezier(0.85, 0.47, 0.11, 0.88)
+
+        .layout__container
+            display: flex
+            flex-direction: column
+            overflow: hidden
+
+        .layout__tab__content
+            flex-direction: column
+            overflow: hidden
+
+            .search__bar
+                padding: rem(10px) rem(24px) rem(15px)
+
+                .search__bar__input
+                    height: rem(36px)
+                    background-color: #F5F5F5
+                    border: none
+                    border-radius: rem(18px)
+
+                .search__bar__dropdown
+                    .dropdown-toggle
+                        background-color: #F5F5F5
+                        border: none
+                        border-radius: rem(8px)
+                        padding: 0.575rem 0.65rem
+
+    &.operations-and-invoices--shown
+        .operations-and-invoices
+            opacity: 1
+            pointer-events: auto
+            transform: translateX(0)
+
+        .operations-and-invoices__toggle
+            &::before
+                +var(border-color, color-brand)
+
+    .operations
+        display: flex
+        flex-direction: column
+        overflow: hidden
+        padding: 0
+
+    .operations__group
+        display: flex
+        flex-direction: column
+        border: none
+        overflow: hidden
+
+    .operations__group__list
+        overflow-y: auto
+        @include scroll-bar
+        scroll-behavior: smooth
+        padding: 0 rem(15px) rem(15px)
+
+    .operations__group__item
+        &:hover
+            background-color: #F5F5F5
+
+.selected-client
+    +flex-center
+    flex-direction: column
+    padding: rem(28px) rem(24px)
+    border-bottom: 1px solid #E4E6EB
+
+    img
+        width: rem(96px)
+        height: rem(96px)
+        margin-bottom: rem(15px)
+
+    .client__name
+        font-size: rem(18px)
+
+    .client-balance-amount
+        font-size: rem(19px)
+
+    .client__group
+        font-size: rem(12px)
+        color: #4D4D4D
+        border: 1px solid #C6CFD9
+        border-radius: rem(14px)
+        padding: 0.263rem 0.5rem
+        margin-top: 10px
+
+.client__actions
+    display: flex
+    width: 100%
+    max-width: rem(336px)
+    justify-content: space-between
+    align-items: center
+    margin-bottom: rem(20px)
+    padding-top: rem(15px)
+
+.client__action
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: rem(5px)
+    text-decoration: none
+
+    &__icon
+        +flex-center
+        width: rem(56px)
+        height: rem(56px)
+        background-color: #F5F5F5
+        border-radius: rem(12px)
+
+        svg
+            fill: #A3AAB2
+            transition: fill 0.3s
+
+    &__title
+        +var(color, color-brand)
+        font-size: rem(12px)
+
+    &:hover
+        .client__action__icon
+            svg
+                fill: #4D4D4D

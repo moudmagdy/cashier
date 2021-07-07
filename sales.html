@@ -46,13 +46,12 @@
         </div>
         <div class="page__layout">
             <!-- to control mainb layout tabs from JS [layoutTabs] -->
-            <nav class="page__layout__nav">
-                <a href="#" class="active" data-target-id="cash_tab">سجل النقدية</a>
-                <a href="#" data-target-id="invoice_tab">عملية نقدية</a>
+            <nav class="layout__tabs">
+                <a href="#" data-tab="products" class="active-tab">المنتجات</a>
+                <a href="#" data-tab="invoice">الفاتورة</a>
             </nav>
-            <div class="page__layout__row">
-                <!-- page__layout__col class used for a loop in js to render it depend on click in layoutTabs js component -->
-                <section class="page__layout__col active" id="cash_tab">
+            <div class="page__layout__row layout__container">
+                <section class="page__layout__col layout__tab__content active-tab" data-tab="products">
                     <header>
                         <a href="#" class="main-menu__toggle">
                             <svg width="32" height="26" viewBox="0 0 32 26">
@@ -1108,7 +1107,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="page__layout__col" id="invoice_tab">
+                <section class="page__layout__col layout__tab__content" data-tab="invoice">
                     <div class="control-panel">
                         <div class="control-panel__header">
                             <h4 class="control-panel__title">
@@ -1714,10 +1713,10 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <nav class="page__layout__nav">
-                                    <a href="#" class="active" data-target-id="individuals_list">افراد</a>
-                                    <a href="#" data-target-id="shops_list">محلات</a>
-                                    <a href="#" data-target-id="suppliers_list">موردين</a>
+                                <nav class="layout__tabs">
+                                    <a href="#" data-tab="individuals_list" class="active-tab">افراد</a>
+                                    <a href="#" data-tab="shops_list">محلات</a>
+                                    <a href="#" data-tab="suppliers_list">موردين</a>
                                 </nav>
                                 <a href="#" class="add-item__btn" data-bs-toggle="modal" data-bs-target="#add_client_modal">
                                     <svg width="10.2" height="10.2" viewBox="0 0 10.2 10.2">
@@ -1725,8 +1724,8 @@
                                     </svg>
                                     <span>اضافة عميل</span>
                                 </a>
-                                <div class="clients-list--container">
-                                    <div class="clients-list--individuals customers-tab-content active" id="individuals_list">
+                                <div class="clients-list--container layout__container">
+                                    <div class="clients-list--individuals layout__tab__content active-tab" data-tab="individuals_list">
                                         <ul class="control-panel__list list-unstyled clients-list-users">
                                             <!-- you can use this component only stylefile  => _clients-list.scss -->
                                             <li>
@@ -1955,9 +1954,9 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="clients-list--shops customers-tab-content" id="shops_list">
+                                    <div class="clients-list--shops layout__tab__content" data-tab="shops_list">
                                     </div>
-                                    <div class="clients-list--suppliers customers-tab-content" id="suppliers_list">
+                                    <div class="clients-list--suppliers layout__tab__content" data-tab="suppliers_list">
                                     </div>
                                 </div>
                             </div>

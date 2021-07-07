@@ -1,14 +1,7 @@
-import './../components/main-menu.module.js';
-import '../components/layout-nav.module.js';
+import '../components/main-menu.module.js';
+import '../components/layout-tabs.module.js';
 import '../components/collapsible.module.js';
-// to enable popup and positioning popup 
-// import '../components/modal.module.js';
-// to enbale menu in appbar
-// import '../components/appBar-menu.module.js';
-// to enable function to get clicked client to get value and show in input in prdouct list 
-// import clientListRenderer from './../components/client-list.module.js';
-
-import './../components/ChangeView.module.js';
+import '../components/ChangeView.module.js';
 
 // clientListRenderer('salesInvoice', 'clientsList', 'salesInvoice')
 

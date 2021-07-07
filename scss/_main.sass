@@ -81,3 +81,58 @@ body
     &:hover
         color: $color-white
         background-color: $color-brand
+
+.control-panel__header,
+.page__layout__col > header
+    .dropdown-toggle
+        @include flex-center
+        width: 48px
+        height: 48px
+        border-radius: 50%
+        transition: background-color 0.3s
+
+        svg
+            fill: $color-white
+            width: 18px
+            height: 4px
+
+        &:hover
+            background-color: darken($color-brand, 3%)
+
+        &.show
+            background-color: $color-white
+
+            svg
+                fill: $color-brand
+
+    .dropdown-menu
+        min-width: 225px
+
+    .dropdown-item
+        padding: 1rem 1.25rem
+
+        &.delete__invoice
+            color: #FF6B73
+
+            svg
+                fill: #FF6B73
+
+            &:hover, &:active, &:focus
+                background-color: rgba(255, 133, 145, 0.1)
+
+.page__layout__col > header
+    .dropdown
+        margin-right: auto
+
+    .dropdown-toggle
+        svg
+            fill: #060505
+
+        &:hover
+            background-color: darken(#F5F5F5, 3%)
+
+        &.show
+            background-color: #EBF6FF
+
+            svg
+                +var(fill, color-brand)

@@ -1,7 +1,7 @@
 .cash-flow-page
     overflow: hidden
 
-    & > .page__layout > .page__layout__nav
+    & > .page__layout > .layout__tabs
         display: none
 
         @media (max-width: 768px)
@@ -16,22 +16,6 @@
             background-image: url(../images/client-placeholder-icon.svg)
             background-position: center 50px
             background-size: 160px 160px
-
-    .control-panel__bottom-bar
-        .btn-lg
-            +flex-center
-            gap: 5px
-
-            .icon
-                +flex-center
-                width: 24px
-                height: 24px
-                border: 2px solid currentColor
-                border-radius: 50%
-
-                svg
-                    width: 12px
-                    height: 12px
 
 .added__client
     display: flex

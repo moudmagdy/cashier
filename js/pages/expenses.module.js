@@ -1,6 +1,6 @@
-import './../components/main-menu.module.js';
-import '../components/layout-nav.module.js';
-import './../components/collapsible.module.js';
+import '../components/main-menu.module.js';
+import '../components/layout-tabs.module.js';
+import '../components/collapsible.module.js';
 
 const groupHeaders = document.querySelectorAll('.operations__group__header a');
 const searchBarDropdownItems = document.querySelectorAll('.search__bar__dropdown .dropdown-item');

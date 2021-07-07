@@ -4,17 +4,21 @@
     align-items: center
 
 @mixin scroll-bar
-    scrollbar-color: $gray6 $gray5
+    scrollbar-color: #BDBEC3 #F0F0F0
     scrollbar-width: thin
 
     &::-webkit-scrollbar
         width: 8px
+        height: 8px
 
     &::-webkit-scrollbar-track
-        background-color: $gray5
+        background-color: #F0F0F0
 
     &::-webkit-scrollbar-thumb
-        background-color: $gray6
+        background-color: #BDBEC3
+
+    &::-webkit-scrollbar-corner
+        background-color: transparent
 
 @mixin line-clamp($line-height, $lines-count)
     display: block

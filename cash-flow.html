@@ -43,12 +43,12 @@
             </nav>
         </div>
         <div class="page__layout">
-            <nav class="page__layout__nav">
-                <a href="#" class="active" data-target-id="cash_tab">سجل النقدية</a>
-                <a href="#" data-target-id="invoice_tab">عملية نقدية</a>
+            <nav class="layout__tabs">
+                <a href="#" data-tab="cash_record">سجل النقدية</a>
+                <a href="#" data-tab="cash_operation" class="active-tab">عملية نقدية</a>
             </nav>
-            <div class="page__layout__row">
-                <section class="page__layout__col active" id="cash_tab">
+            <div class="page__layout__row layout__container">
+                <section class="page__layout__col layout__tab__content" data-tab="cash_record">
                     <header>
                         <a href="#" class="main-menu__toggle">
                             <svg width="32" height="26" viewBox="0 0 32 26">
@@ -246,7 +246,7 @@
                         </div>
                     </footer>
                 </section>
-                <section class="page__layout__col" id="invoice_tab">
+                <section class="page__layout__col layout__tab__content active-tab" data-tab="cash_operation">
                     <div class="control-panel">
                         <div class="control-panel__header">
                             <h4 class="control-panel__title">عملية نقدية</h4>
@@ -348,10 +348,10 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <nav class="page__layout__nav">
-                                    <a href="#" class="active" data-target-id="individuals_list">افراد</a>
-                                    <a href="#" data-target-id="shops_list">محلات</a>
-                                    <a href="#" data-target-id="suppliers_list">موردين</a>
+                                <nav class="layout__tabs">
+                                    <a href="#" data-tab="individuals_list" class="active-tab">افراد</a>
+                                    <a href="#" data-tab="shops_list">محلات</a>
+                                    <a href="#" data-tab="suppliers_list">موردين</a>
                                 </nav>
                                 <a href="#" class="add-item__btn" data-bs-toggle="modal" data-bs-target="#add_client_modal">
                                     <svg width="10.2" height="10.2" viewBox="0 0 10.2 10.2">
@@ -359,8 +359,8 @@
                                     </svg>
                                     <span>اضافة عميل</span>
                                 </a>
-                                <div class="clients-list--container">
-                                    <div class="clients-list--individuals customers-tab-content active" id="individuals_list">
+                                <div class="clients-list--container layout__container">
+                                    <div class="clients-list--individuals layout__tab__content active-tab" data-tab="individuals_list">
                                         <ul class="control-panel__list list-unstyled clients-list-users">
                                             <!-- you can use this component only stylefile  => _clients-list.scss -->
                                             <li>
@@ -589,9 +589,9 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="clients-list--shops customers-tab-content" id="shops_list">
+                                    <div class="clients-list--shops layout__tab__content" data-tab="shops_list">
                                     </div>
-                                    <div class="clients-list--suppliers customers-tab-content" id="suppliers_list">
+                                    <div class="clients-list--suppliers layout__tab__content" data-tab="suppliers_list">
                                     </div>
                                 </div>
                             </div>

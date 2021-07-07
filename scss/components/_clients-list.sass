@@ -1,15 +1,12 @@
 .clients-list
     flex-direction: column
 
-    .customers-tab-content
-        display: none
-
-        &.active
-            display: block
-
     &--container
         overflow-y: auto
         +scroll-bar
+
+        & > *
+            flex-direction: column
 
     &-users
         &-item

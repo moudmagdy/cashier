@@ -1,4 +1,4 @@
-.page__layout__nav
+.layout__tabs
     position: relative
     display: flex
     width: 100%
@@ -29,9 +29,21 @@
             transform: translateX(-50%)
             transition: all 0.2s ease-in-out
 
-        &.active
+        &.active-tab
             +var(color, color-brand)
 
             &::after
                 height: 2px
                 width: 100%
+
+.layout__container
+    .layout__tab__content
+        &:not(.page__layout__col)
+            display: none
+
+        @media (max-width: 768px)
+            &.page__layout__col
+                display: none
+
+        &.active-tab
+            display: flex
