@@ -88,13 +88,13 @@ const selectItemBtn = document.querySelector('.select-item__btn');
 selectItemBtn.addEventListener('click', (e) => {
     e.preventDefault();
     let btnDataAttr = selectItemBtn.getAttribute('data-view-target');
-    document.querySelector('[data-view="' + btnDataAttr + '"]').classList.add('view--payment-methods--shown');
+    document.querySelector('[data-view="' + btnDataAttr + '"]').classList.add('view--shown');
 });
 
 const viewBackBtn = document.querySelector('.items-search__back-btn');
 viewBackBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    viewBackBtn.closest('[data-view]').classList.remove('view--payment-methods--shown');
+    viewBackBtn.closest('[data-view]').classList.remove('view--shown');
 });
 
 
@@ -107,7 +107,7 @@ viewListItem.forEach(item => {
 
         document.querySelector('.item__selected__icon').innerHTML = itemImg;
         document.querySelector('.item__selected__data').innerHTML = itemData;
-        item.closest('[data-view]').classList.remove('view--payment-methods--shown');
+        item.closest('[data-view]').classList.remove('view--shown');
         document.querySelector('.item__selected').style.display = 'flex';
         document.querySelector('.select-item__btn').style.display = 'none';
     });
