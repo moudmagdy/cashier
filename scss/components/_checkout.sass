@@ -79,39 +79,58 @@
 
 .checkout__cta__container
     display: flex
-    gap: 16px
+    gap: rem(16px)
     width: 100%
 
     .btn
         &:focus
             box-shadow: none
 
-    .btn-lg.receive__payment__btn
+    .receive__payment__btn
+        position: relative
         @include flex-center
-        flex-basis: 56px
-        border-radius: 12px
+        flex-basis: rem(56px)
+        border-radius: rem(12px)
         padding: 0.65rem 0.625rem
 
         svg
-            width: 32px
+            width: rem(32px)
 
-    .btn-lg.receive__cash__btn
+        &::before
+            content: ""
+            position: absolute
+            inset: rem(-2px)
+            border: rem(3px) solid #e8e8e8
+            border-radius: rem(12px)
+            transition: border-color 0.3s
+
+        &:hover
+            &::before
+                border-color: darken(#e8e8e8, 5%)
+
+    .receive__cash__btn
         display: flex
         justify-content: space-between
         align-items: center
-        border-radius: 28px
+        border-radius: rem(28px)
         padding: 0.875rem 1.75rem
 
         span
             &:last-child
                 font-family: 'NotoSansArabic_SemiBold'
-                font-size: 22px
+                font-size: rem(22px)
                 line-height: 1.1
 
             &:first-child,
             &:only-child
                 font-family: 'NotoSansArabic_Medium'
-                font-size: 16px
+                font-size: rem(16px)
 
             &:only-child
                 margin: 0 auto
+
+.payment-methods--shown
+    .checkout__cta__container
+        .receive__payment__btn
+            &::before
+                +var(border-color, color-brand)

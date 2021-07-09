@@ -15,19 +15,18 @@ products.forEach(product => {
 
 
 const receivePaymentBtn = document.querySelector('.receive__payment__btn');
-const paymentMethods = document.querySelector('.payment-methods');
 const paymentMethodsBackBtn = document.querySelector('.payment-methods .back-btn');
 
 receivePaymentBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    if (!paymentMethods.classList.contains('shown')) {
-        paymentMethods.classList.add('shown');
+    if (!document.querySelector('main').classList.contains('payment-methods--shown')) {
+        document.querySelector('main').classList.add('payment-methods--shown');
     }
 });
 
 paymentMethodsBackBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    if (paymentMethods.classList.contains('shown')) {
-        paymentMethods.classList.remove('shown');
+    if (document.querySelector('main').classList.contains('payment-methods--shown')) {
+        document.querySelector('main').classList.remove('payment-methods--shown');
     }
 });

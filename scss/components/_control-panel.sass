@@ -8,7 +8,6 @@
     &__header
         display: flex
         align-items: center
-        justify-content: space-between
         min-height: 52px
         max-height: 52px
         color: #fff
@@ -20,9 +19,9 @@
 
         .invoice__counters
             @include flex-center
-            gap: 8px
+            gap: rem(8px)
             position: relative
-            margin-left: 35px
+            margin: auto
 
             .invoice-items-count
                 font-family: 'NotoSansArabic_SemiBold'
@@ -39,8 +38,8 @@
 
         .control-panel__close-btn
             @include flex-center
-            width: 48px
-            height: 48px
+            width: rem(48px)
+            height: rem(48px)
             border-radius: 50%
             margin-right: auto
             transition: background-color 0.3s
@@ -51,12 +50,15 @@
             svg
                 fill: $color-white
 
+        .dropdown
+            margin-right: auto
+
     &__title
         display: flex
         align-items: center
-        gap: 5px
+        gap: rem(5px)
         font-family: 'NotoSansArabic_Medium', sans-serif
-        font-size: 15px
+        font-size: rem(15px)
         line-height: 1.5
         margin-bottom: 0
 
@@ -109,13 +111,13 @@
         align-items: center
         background-color: #fff
         box-shadow: 0px -1px 5px rgba(0,0,0,0.12)
-        border-top-left-radius: 16px
-        border-top-right-radius: 16px
-        padding: 12px 24px 10px
+        border-top-left-radius: rem(16px)
+        border-top-right-radius: rem(16px)
+        padding: rem(12px) rem(24px) rem(10px)
         margin-top: auto
 
         label
-            font-size: 12px
+            font-size: rem(12px)
             color: #242424
 
         textarea
@@ -137,31 +139,31 @@
                 border-radius: 50%
 
                 svg
-                    width: 12px
-                    height: 12px
+                    width: rem(12px)
+                    height: rem(12px)
 
     .select-item
-        height: 52px
-        min-height: 52px
-        padding: 4px 24px
+        height: rem(52px)
+        min-height: rem(52px)
+        padding: rem(4px) rem(24px)
 
         &__btn
             display: flex
             align-items: center
             width: 100%
-            height: 44px
+            height: rem(44px)
             background-color: #F2F2F2
             text-decoration: none
-            border-radius: 22px
-            padding: 0 10px
+            border-radius: rem(22px)
+            padding: 0 rem(10px)
 
             & > *
                 pointer-events: none
 
             &__icon
-                width: 24px
-                height: 24px
-                margin-left: 10px
+                width: rem(24px)
+                height: rem(24px)
+                margin-left: rem(10px)
 
                 img,
                 svg
@@ -169,18 +171,18 @@
                     height: inherit
 
             &__label
-                font-size: 12px
+                font-size: rem(12px)
                 color: #4D4D4D
 
         .item__selected
             display: none
             align-items: center
             width: 100%
-            height: 44px
+            height: rem(44px)
             background-color: lighten(#4DCDE6, 35%)
             text-decoration: none
-            border-radius: 22px
-            padding: 0 10px
+            border-radius: rem(22px)
+            padding: 0 rem(10px)
 
             &.creditor
                 background-color: lighten(#30B360, 46%)
@@ -189,29 +191,29 @@
                 background-color: lighten(#FF6B73, 25%)
 
             &__icon
-                width: 24px
-                height: 24px
-                margin-left: 10px
+                width: rem(24px)
+                height: rem(24px)
+                margin-left: rem(10px)
 
                 img, svg
                     width: 100%
                     height: 100%
 
             &__data
-                font-size: 12px
+                font-size: rem(12px)
 
             .remove__selected-item
                 @include flex-center
-                width: 24px
-                height: 24px
+                width: rem(24px)
+                height: rem(24px)
                 background-color: #fff
                 border-radius: 50%
                 cursor: pointer
                 margin-right: auto
 
                 svg
-                    width: 10px
-                    height: 10px
+                    width: rem(10px)
+                    height: rem(10px)
 
         .invoice__client
             display: flex
@@ -219,31 +221,31 @@
             height: 100%
 
             svg, img
-                width: 24px
-                height: 24px
-                margin-left: 10px
+                width: rem(24px)
+                height: rem(24px)
+                margin-left: rem(10px)
 
             span
                 font-family: 'NotoSansArabic_Medium', sans-serif
-                font-size: 12px
+                font-size: rem(12px)
                 color: #4D4D4D
 
     .items-search
         display: flex
         justify-content: space-around
         align-items: center
-        gap: 10px
-        padding: 4px 24px
+        gap: rem(10px)
+        padding: rem(4px) rem(24px)
 
         &__input
             display: flex
             align-items: center
             flex: 1 1 100%
             width: 100%
-            height: 44px
+            height: rem(44px)
             background-color: #F5F5F5
-            border-radius: 22px
-            padding: 0 16px
+            border-radius: rem(22px)
+            padding: 0 rem(16px)
 
             svg
                 pointer-events: none
@@ -253,9 +255,9 @@
                 flex: 1 1 100%
                 height: 100%
                 background-color: transparent
-                font-size: 12px
+                font-size: rem(12px)
                 border: none
-                padding: 4px 12px
+                padding: 4px rem(12px)
 
                 &:focus
                     outline: none
@@ -288,7 +290,7 @@
         @include flex-center
         gap: 8px
         font-family: 'NotoSansArabic_Medium'
-        font-size: 12px
+        font-size: rem(12px)
         @include var(color, color-brand)
         text-decoration: none
         border-bottom: 1px solid #F0F2F5
@@ -323,16 +325,16 @@
                 display: flex
                 justify-content: center
                 flex-direction: column
-                min-height: 43px
+                min-height: rem(43px)
 
                 span
                     &:first-child
                         font-family: 'NotoSansArabic_Medium', sans-serif
-                        font-size: 14px
+                        font-size: rem(14px)
                         line-height: 1.6
 
                     &:last-child
-                        font-size: 12px
+                        font-size: rem(12px)
                         margin-top: 3px
 
                     &:only-child

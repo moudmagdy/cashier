@@ -1,5 +1,6 @@
 const mainMenu = document.querySelector('.main-menu');
 const mainMenuToggles = document.querySelectorAll('.main-menu__toggle');
+const headerMainMenuToggle = document.querySelector('.page__layout header > .main-menu__toggle');
 const menuNav = mainMenu.querySelector('nav');
 const menuNavElementsLength = menuNav.querySelectorAll('a').length;
 // const theRestNavElments = menuNav.querySelectorAll('a:nth-last-child(-n+' + (menuNavElementsLength - 8) + ')');
@@ -8,9 +9,15 @@ const theRestNavElments = menuNav.querySelectorAll('a:nth-child(+n+8)');
 mainMenuToggles.forEach(mainMenuToggle => {
   mainMenuToggle.addEventListener('click', (e) => {
     e.preventDefault();
-    mainMenu.classList.toggle('main-menu--opened');
+    document.querySelector('main').classList.toggle('main-menu--opened');
   });
 });
+
+function closeMainMenu(e) {
+  if (!headerMainMenuToggle.contains(e.target) && (!mainMenu.contains(e.target))) {
+    document.querySelector('main').classList.remove('main-menu--opened');
+  }
+}
 
 function createSubmenu() {
   const newSubmenu = document.createElement('div');
@@ -38,4 +45,5 @@ function createSubmenu() {
   });
 }
 
+document.addEventListener('click', (e) => document.querySelector('main').classList.contains('main-menu--opened') ? closeMainMenu(e) : "");
 window.addEventListener('load', createSubmenu);

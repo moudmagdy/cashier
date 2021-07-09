@@ -2,13 +2,14 @@
     position: relative
     display: grid
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
-    gap: 16px
+    gap: rem(16px)
     transition: all 0.4s ease-in
-    padding: 10px 22px 20px 15px
+    padding: rem(10px) rem(30px) 0 rem(23px)
+    margin-bottom: rem(20px)
 
     &.listview__grid
         grid-template-columns: repeat(auto-fill, minmax(225px, 1fr))
-        gap: 12px
+        gap: rem(12px)
 
 .product
     position: relative
@@ -16,16 +17,16 @@
     flex-direction: column
     background-color: #fff
     border: 1px solid #E2E9F0
-    border-radius: 8px
+    border-radius: rem(8px)
     cursor: pointer
-    padding: 3px
+    padding: rem(3px)
 
     &::before
         content: ""
         position: absolute
         inset: 0
-        border: 3px solid transparent
-        border-radius: 8px
+        border: rem(3px) solid transparent
+        border-radius: rem(8px)
         pointer-events: none
         transition: border-color 0.3s ease
 
@@ -106,8 +107,8 @@
         display: flex
         justify-content: center
         align-items: center
-        width: 24px
-        height: 24px
+        width: rem(24px)
+        height: rem(24px)
         font-size: 11px
         color: #fff
         pointer-events: none

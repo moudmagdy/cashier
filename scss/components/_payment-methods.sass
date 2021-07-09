@@ -9,11 +9,6 @@
     transform: translateX(-100px)
     transition: opacity 200ms cubic-bezier(0.85, 0.47, 0.11, 0.88), transform 350ms cubic-bezier(0.85, 0.47, 0.11, 0.88)
 
-    &.shown
-        opacity: 1
-        pointer-events: auto
-        transform: translateX(0)
-
     &__header
         display: flex
         align-items: center
@@ -79,3 +74,9 @@
 
         .receive__cash__btn
             flex: 100%
+
+.payment-methods--shown
+    .payment-methods
+        opacity: 1
+        pointer-events: auto
+        transform: translateX(0)

@@ -88,13 +88,13 @@ const selectItemBtn = document.querySelector('.select-item__btn');
 selectItemBtn.addEventListener('click', (e) => {
     e.preventDefault();
     let btnDataAttr = selectItemBtn.getAttribute('data-view-target');
-    document.querySelector('[data-view="' + btnDataAttr + '"]').classList.add('view--shown');
+    document.querySelector('[data-view="' + btnDataAttr + '"]').classList.add('view--payment-methods--shown');
 });
 
 const viewBackBtn = document.querySelector('.items-search__back-btn');
 viewBackBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    viewBackBtn.closest('[data-view]').classList.remove('view--shown');
+    viewBackBtn.closest('[data-view]').classList.remove('view--payment-methods--shown');
 });
 
 
@@ -107,7 +107,7 @@ viewListItem.forEach(item => {
 
         document.querySelector('.item__selected__icon').innerHTML = itemImg;
         document.querySelector('.item__selected__data').innerHTML = itemData;
-        item.closest('[data-view]').classList.remove('view--shown');
+        item.closest('[data-view]').classList.remove('view--payment-methods--shown');
         document.querySelector('.item__selected').style.display = 'flex';
         document.querySelector('.select-item__btn').style.display = 'none';
     });
@@ -154,19 +154,18 @@ document.querySelectorAll('.address__container').forEach(address => {
 });
 
 const receivePaymentBtn = document.querySelector('.receive__payment__btn');
-const paymentMethods = document.querySelector('.payment-methods');
 const paymentMethodsBackBtn = document.querySelector('.payment-methods .back-btn');
 
 receivePaymentBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    if (!paymentMethods.classList.contains('shown')) {
-        paymentMethods.classList.add('shown');
+    if (!document.querySelector('main').classList.contains('payment-methods--shown')) {
+        document.querySelector('main').classList.add('payment-methods--shown');
     }
 });
 
 paymentMethodsBackBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    if (paymentMethods.classList.contains('shown')) {
-        paymentMethods.classList.remove('shown');
+    if (document.querySelector('main').classList.contains('payment-methods--shown')) {
+        document.querySelector('main').classList.remove('payment-methods--shown');
     }
 });

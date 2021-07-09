@@ -97,24 +97,23 @@
         margin: auto
 
 main
-    &.has__slidable__cp
-        position: relative
-        height: 100vh
-        overflow: hidden
+    position: relative
+    height: 100vh
+    overflow: hidden
 
+    &::after
+        content: ""
+        position: absolute
+        inset: 0
+        z-index: 999
+        background-color: transparent
+        pointer-events: none
+        transition: background-color 0.3s
+
+    &.control-panel--shown
         &::after
-            content: ""
-            position: absolute
-            inset: 0
-            z-index: 999
-            background-color: transparent
-            pointer-events: none
-            transition: background-color 0.3s
+            pointer-events: auto
+            background-color: rgba(6, 5, 5, 0.35)
 
-        &.control-panel--shown
-            &::after
-                pointer-events: auto
-                background-color: rgba(6, 5, 5, 0.35)
-
-            .page__layout > .control-panel
-                transform: translateX(100%)
+        .page__layout > .control-panel
+            transform: translateX(100%)

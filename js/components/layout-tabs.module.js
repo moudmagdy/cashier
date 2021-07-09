@@ -34,9 +34,6 @@ LayoutTabs.forEach(tab => {
             sibling.classList.remove('active-tab')
         }
 
-        // console.log(document.querySelector('.layout__tab__content[data-tab="' + tabDataAttr + '"]'));
-
-        // document.querySelector('.layout__tab__content[data-tab="' + tabDataAttr + '"]').parentNode.querySelector('.layout__tab__content.active-tab').classList.remove('active-tab');
         document.querySelector('.layout__tab__content[data-tab="' + tabDataAttr + '"]').classList.add('active-tab');
     });
 });

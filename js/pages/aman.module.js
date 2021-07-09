@@ -7,7 +7,7 @@ const controlPanels = document.querySelectorAll('.control-panel');
 servicesItem.forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelector('.has__slidable__cp').classList.add('control-panel--shown');
+        document.querySelector('main').classList.add('control-panel--shown');
     });
 });
 

@@ -7,12 +7,12 @@ const closeBtn = controlPanels.querySelector('.control-panel__close-btn');
 
 endShiftBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    document.querySelector('.has__slidable__cp').classList.add('control-panel--shown');
+    document.querySelector('main').classList.add('control-panel--shown');
 });
 
 closeBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    document.querySelector('.has__slidable__cp').classList.remove('control-panel--shown');
+    document.querySelector('main').classList.remove('control-panel--shown');
 });
 
 
