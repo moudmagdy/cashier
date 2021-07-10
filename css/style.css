@@ -3111,16 +3111,16 @@ main.control-panel--shown .page__layout > .control-panel {
 }
 
 .operations {
-  padding: 0 18px;
+  padding: 0 1.125rem;
 }
 .operations__group {
   border-top: 1px solid #dbe1e5;
 }
 .operations__group__header {
-  font-size: 12px;
-  padding: 4px 10px;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.625rem;
   margin-bottom: 0;
-  border-bottom-width: 1px;
+  border-bottom-width: 0.0625rem;
   border-bottom-style: solid;
   border-bottom-color: transparent;
   -webkit-transition: border-bottom-color 0ms ease 350ms;
@@ -3130,7 +3130,7 @@ main.control-panel--shown .page__layout > .control-panel {
 .operations__group__header a {
   color: #060505;
   color: var(--color-text-primary);
-  border-radius: 4px;
+  border-radius: 0.25rem;
   padding: 0.694rem 0.975rem;
 }
 .operations__group__header a:hover {
@@ -3168,9 +3168,9 @@ main.control-panel--shown .page__layout > .control-panel {
 .operations__group__item .operations__item__comment {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
-  min-height: 36px;
+  min-height: 2.25rem;
   font-family: "NotoSansArabic_Medium", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -3182,19 +3182,19 @@ main.control-panel--shown .page__layout > .control-panel {
   display: inline-block;
   color: #060505;
   color: var(--color-text-primary);
-  font-size: 12px;
+  font-size: 0.75rem;
   border: 1px solid #060505;
-  border-radius: 24px;
+  border-radius: 1.5rem;
   padding: 0.388rem 0.8rem;
 }
 .operations__group__item .operations__item__date-time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
 }
 .operations__group__item .operations__item__time {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .operations__group__item .operations__item__amount {
   display: -webkit-box;
@@ -3206,7 +3206,7 @@ main.control-panel--shown .page__layout > .control-panel {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 3px;
+  gap: 0.1875rem;
 }
 .operations__group__item .operations__item__amount span {
   display: inline-block;
@@ -3222,14 +3222,14 @@ main.control-panel--shown .page__layout > .control-panel {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   background-color: #fff;
   border-radius: 50%;
 }
 .operations__group__item .operations__item__amount span.icon svg {
-  width: 11px;
-  height: 11px;
+  width: 0.6875rem;
+  height: 0.6875rem;
 }
 .operations__group__item .operations__item__amount.return-amount span {
   color: #F02849;
@@ -3269,7 +3269,7 @@ main.control-panel--shown .page__layout > .control-panel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
 }
 .total-operations__icon {
   display: -webkit-box;
@@ -3281,26 +3281,43 @@ main.control-panel--shown .page__layout > .control-panel {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
   background-color: #fff;
   border-radius: 50%;
 }
+@media (max-width: 1024px) {
+  .total-operations__icon {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+}
 .total-operations svg {
-  width: 14px;
-  height: 14px;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+@media (max-width: 1024px) {
+  .total-operations svg {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
 }
 .total-operations .total-amount h6 {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #A3AAB2;
 }
 .total-operations .total-amount__number, .total-operations .total-amount__currency {
   display: inline-block;
   font-family: "NotoSansArabic_SemiBold";
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1;
   color: #060505;
   color: var(--color-text-primary);
+}
+@media (max-width: 1024px) {
+  .total-operations .total-amount__number, .total-operations .total-amount__currency {
+    font-size: 1rem;
+  }
 }
 
 .flex-table {
@@ -3843,9 +3860,6 @@ main.control-panel--shown .page__layout > .control-panel {
 .return-page .control-panel .control-panel__header {
   background-color: #FF6B73;
 }
-.return-page .control-panel .control-panel__header .invoice__counters {
-  margin: 0 1rem 0 0;
-}
 .return-page .control-panel .control-panel__header .cancel-return {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3867,6 +3881,11 @@ main.control-panel--shown .page__layout > .control-panel {
 .return-page .control-panel .select-item {
   border-bottom: 1px solid #efefef;
 }
+.return-page .invoice__item--data {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 32%;
+          flex: 0 1 32%;
+}
 .return-page .product--selected::before {
   border-color: #F02849;
 }
@@ -3883,9 +3902,12 @@ main.control-panel--shown .page__layout > .control-panel {
   color: #F02849;
   border-color: #F02849;
 }
-.return-page .select-all:hover {
+.return-page .select-all:hover, .return-page .select-all.active {
   color: #fff;
   background-color: #F02849;
+}
+.return-page .select-all.active:hover {
+  background-color: #d60f30;
 }
 .return-page .checkout__list__item {
   -webkit-box-pack: justify;
@@ -3932,6 +3954,9 @@ main.control-panel--shown .page__layout > .control-panel {
 }
 .return-page .checkout .checkout__list__item.return-amount span {
   color: #F02849;
+}
+.return-page.payment-methods--shown .checkout__cta__container .receive__payment__btn::before {
+  border-color: #FF6B73;
 }
 
 .cash-flow-page {

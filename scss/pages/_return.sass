@@ -11,9 +11,6 @@
         .control-panel__header
             background-color: #FF6B73
 
-            .invoice__counters
-                margin: 0 1rem 0 0
-
             .cancel-return
                 display: flex
                 align-items: center
@@ -31,6 +28,9 @@
         .select-item
             border-bottom: 1px solid #efefef
 
+    .invoice__item--data
+        flex: 0 1 32%
+
     .product--selected::before
         border-color: #F02849
 
@@ -47,9 +47,14 @@
         color: #F02849
         border-color: #F02849
 
-        &:hover
+        &:hover,
+        &.active
             color: $color-white
             background-color: #F02849
+
+        &.active
+            &:hover
+                background-color: darken(#F02849, 10%)
 
     .checkout__list__item
         justify-content: space-between
@@ -86,3 +91,9 @@
 
                 span
                     color: #F02849
+
+    &.payment-methods--shown
+        .checkout__cta__container
+            .receive__payment__btn
+                &::before
+                    border-color: #FF6B73
