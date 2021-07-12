@@ -33,9 +33,9 @@
         display: flex
         justify-content: center
         flex-direction: column
-        width: rem(415px)
+        width: rem(375px)
         height: 100%
-        padding: rem(60px) rem(24px)
+        padding: rem(50px) rem(20px)
 
     .form__step
         display: flex
@@ -73,10 +73,6 @@
         display: inline-block
         font-family: 'NotoSansArabic_SemiBold', sans-serif
         font-size: rem(17px)
-
-    label
-        a
-            text-decoration: underline
 
     form
         margin-top: 40px
@@ -128,7 +124,7 @@
         .btn
             align-self: center
             border-radius: rem(28px)
-            padding: 0.975rem 2.39rem
+            padding: 0.725rem 3rem
 
     .form-label
         color: #242424
@@ -154,9 +150,9 @@
 
 .code__inputs
     display: flex
-    gap: 22px
+    justify-content: space-between
+    gap: 25px
     direction: ltr
-    width: max-content
 
     .form-control
         width: rem(65px)
@@ -164,6 +160,11 @@
         font-size: rem(30px)
         text-align: center
         padding: 0.725rem 0.65rem
+
+        &[readonly]
+            +var(color, color-brand)
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+            font-size: rem(48px)
 
 .store-url__field
     direction: ltr

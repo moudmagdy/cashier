@@ -3583,9 +3583,9 @@ main.control-panel--shown .page__layout > .control-panel {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 25.9375rem;
+  width: 23.4375rem;
   height: 100%;
-  padding: 3.75rem 1.5rem;
+  padding: 3.125rem 1.25rem;
 }
 .login-page .form__step {
   display: -webkit-box;
@@ -3635,9 +3635,6 @@ main.control-panel--shown .page__layout > .control-panel {
   display: inline-block;
   font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 1.0625rem;
-}
-.login-page label a {
-  text-decoration: underline;
 }
 .login-page form {
   margin-top: 40px;
@@ -3702,7 +3699,7 @@ main.control-panel--shown .page__layout > .control-panel {
   -ms-flex-item-align: center;
       align-self: center;
   border-radius: 1.75rem;
-  padding: 0.975rem 2.39rem;
+  padding: 0.725rem 3rem;
 }
 .login-page .form-label {
   color: #242424;
@@ -3733,11 +3730,11 @@ main.control-panel--shown .page__layout > .control-panel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 22px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 25px;
   direction: ltr;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .code__inputs .form-control {
   width: 4.0625rem;
@@ -3745,6 +3742,12 @@ main.control-panel--shown .page__layout > .control-panel {
   font-size: 1.875rem;
   text-align: center;
   padding: 0.725rem 0.65rem;
+}
+.code__inputs .form-control[readonly] {
+  color: #1877F2;
+  color: var(--color-brand);
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-size: 3rem;
 }
 
 .store-url__field {
