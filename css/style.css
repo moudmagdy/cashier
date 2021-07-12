@@ -99,6 +99,7 @@ label > span {
 body {
   direction: rtl;
   background-color: #F5F5F5;
+  overflow: hidden;
 }
 
 * {
