@@ -24,16 +24,21 @@
             left: 50%
             bottom: 0
             width: 0
-            height: 0
+            height: 2px
             +var(background-color, color-brand)
             transform: translateX(-50%)
             transition: all 0.2s ease-in-out
 
+        &:hover
+            background-color: #f7f8f9
+            border-radius: rem(8px) rem(8px) 0 0
+
         &.active-tab
+            background-color: #f7f8f9
+            border-radius: rem(8px) rem(8px) 0 0
             +var(color, color-brand)
 
             &::after
-                height: 2px
                 width: 100%
 
 .layout__container

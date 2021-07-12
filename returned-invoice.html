@@ -44,11 +44,11 @@
         </div>
         <div class="page__layout">
             <nav class="layout__tabs">
-                <a href="#" class="active" data-tab="cash_tab">سجل النقدية</a>
-                <a href="#" data-tab="invoice_tab">عملية نقدية</a>
+                <a href="#" data-tab="invoices_record" class="active-tab">سجل الفواتير</a>
+                <a href="#" data-tab="invoice_details">تفاصيل الفاتورة</a>
             </nav>
-            <div class="page__layout__row">
-                <section class="page__layout__col active" id="cash_tab">
+            <div class="page__layout__row layout__container">
+                <section class="page__layout__col layout__tab__content active-tab" data-tab="invoices_record">
                     <header>
                         <a href="#" class="main-menu__toggle">
                             <svg width="32" height="26" viewBox="0 0 32 26">
@@ -254,7 +254,7 @@
                         </div>
                     </footer>
                 </section>
-                <section class="page__layout__col" id="invoice_tab">
+                <section class="page__layout__col layout__tab__content" data-tab="invoice_details">
                     <div class="control-panel">
                         <div class="control-panel__header">
                             <h4 class="control-panel__title">

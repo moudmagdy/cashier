@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Sign up - Cashier</title>
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="login-page">
+        <section class="page__content">
+            <div class="content__wrapper">
+                <a class="logo" href="login.html">
+                    <svg width="71.14" height="64" viewBox="0 0 28 28">
+                        <path fill="#4080FF" d="M5.6,3.7c4-2.6,9.1-2.7,13.2-0.3l-3.4,4.4c-0.9-0.4-1.9-0.7-2.9-0.7c-1.1,0-2.2,0.3-3.1,0.8L5.6,3.7z M12.4,26.4C5.5,26.4,0,20.8,0,14c0-2.3,0.6-4.5,1.8-6.4l4.3,3.9c-1.4,3.5,0.2,7.4,3.7,8.8c1.9,0.8,4.1,0.7,5.8-0.3l0,0h0.1 c1.8-1.1,3-2.9,3.3-5v-0.2h-3c-0.1,0-0.1,0-0.1-0.1s0-0.1,0-0.2l0,0l6.2-8h0.1l0,0l0,0l5.6,8l0,0c0,0,0.1,0.1,0,0.2 c0,0.1-0.1,0.1-0.1,0.1h-3.1V15C24.3,21.3,18.9,26.4,12.4,26.4"></path>
+                    </svg>
+                </a>
+                <div class="form__step">
+                    <h2>إنشاء حساب جديد</h2>
+                    <p>ادخل بياناتك لإنشاء حساب جديد</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <label class="form-label" for="login_phone">اسم التاجر</label>
+                                <input type="tel" class="form-control" id="login_phone" placeholder="">
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label" for="register_phone">رقم الموبايل</label>
+                                <input type="tel" class="form-control" id="register_phone" placeholder="اكتب رقم الموبايل">
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label" for="register_password">كلمة المرور</label>
+                                <div class="password__field">
+                                    <input type="password" class="form-control" id="register_password" placeholder="اكتب كلمة المرور">
+                                    <a href="#" class="show__password">
+                                        <svg width="18" height="15" viewBox="0 0 18 15">
+                                            <path d="M0,7.5c0.9-5,5.7-8.3,10.7-7.3c3.7,0.7,6.7,3.6,7.3,7.3c-0.9,5-5.7,8.3-10.7,7.3C3.6,14.2,0.7,11.2,0,7.5z M9,11.7c2.3,0,4.2-1.9,4.2-4.2S11.3,3.3,9,3.3c-2.3,0-4.2,1.9-4.2,4.2C4.8,9.8,6.7,11.7,9,11.7C9,11.7,9,11.7,9,11.7z M9,10 c-1.4,0-2.5-1.1-2.5-2.5S7.6,5,9,5s2.5,1.1,2.5,2.5S10.4,10,9,10z"></path>
+                                        </svg>
+                                        <svg width="18" height="17.6" viewBox="0 0 18 17.6">
+                                            <path d="M2.8,3.8L0.2,1.2L1.4,0l16.5,16.5l-1.2,1.2l-2.8-2.8C9.6,17.6,4,16.3,1.3,12.1C0.6,11.1,0.2,10,0,8.8 C0.4,6.9,1.3,5.1,2.8,3.8L2.8,3.8z M11.3,12.3l-1.2-1.2c-1.2,0.6-2.7,0.1-3.3-1.2c-0.3-0.7-0.3-1.5,0-2.2L5.5,6.5 C4.3,8.4,4.8,11,6.7,12.3C8.1,13.2,9.9,13.2,11.3,12.3L11.3,12.3z M5.7,2c4.7-1.8,10,0.5,11.9,5.2c0.2,0.5,0.4,1.1,0.5,1.7 c-0.3,1.4-0.8,2.7-1.7,3.8l-3.2-3.2c0.3-2.3-1.2-4.4-3.5-4.7c-0.4-0.1-0.8-0.1-1.2,0L5.7,2L5.7,2z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label" for="confirm_register_password">تأكيد كلمة المرور</label>
+                                <div class="password__field">
+                                    <input type="password" class="form-control" id="confirm_register_password" placeholder="اكتب كلمة المرور">
+                                    <a href="#" class="show__password">
+                                        <svg width="18" height="15" viewBox="0 0 18 15">
+                                            <path d="M0,7.5c0.9-5,5.7-8.3,10.7-7.3c3.7,0.7,6.7,3.6,7.3,7.3c-0.9,5-5.7,8.3-10.7,7.3C3.6,14.2,0.7,11.2,0,7.5z M9,11.7c2.3,0,4.2-1.9,4.2-4.2S11.3,3.3,9,3.3c-2.3,0-4.2,1.9-4.2,4.2C4.8,9.8,6.7,11.7,9,11.7C9,11.7,9,11.7,9,11.7z M9,10 c-1.4,0-2.5-1.1-2.5-2.5S7.6,5,9,5s2.5,1.1,2.5,2.5S10.4,10,9,10z"></path>
+                                        </svg>
+                                        <svg width="18" height="17.6" viewBox="0 0 18 17.6">
+                                            <path d="M2.8,3.8L0.2,1.2L1.4,0l16.5,16.5l-1.2,1.2l-2.8-2.8C9.6,17.6,4,16.3,1.3,12.1C0.6,11.1,0.2,10,0,8.8 C0.4,6.9,1.3,5.1,2.8,3.8L2.8,3.8z M11.3,12.3l-1.2-1.2c-1.2,0.6-2.7,0.1-3.3-1.2c-0.3-0.7-0.3-1.5,0-2.2L5.5,6.5 C4.3,8.4,4.8,11,6.7,12.3C8.1,13.2,9.9,13.2,11.3,12.3L11.3,12.3z M5.7,2c4.7-1.8,10,0.5,11.9,5.2c0.2,0.5,0.4,1.1,0.5,1.7 c-0.3,1.4-0.8,2.7-1.7,3.8l-3.2-3.2c0.3-2.3-1.2-4.4-3.5-4.7c-0.4-0.1-0.8-0.1-1.2,0L5.7,2L5.7,2z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="policy_checkbox">
+                                    <label class="form-check-label" for="policy_checkbox">اوافق على <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">شروط الاستخدام</a> و<a href="#" data-bs-toggle="modal" data-bs-target="#policyModal">سياسة الخصوصية</a>.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary create-account--btn">إنشاء حساب</button>
+                    </form>
+                </div>
+                <div class="form__step d-none">
+                    <h2>تفحص هاتفك</h2>
+                    <p>من فضلك قم بكتابـة رمـز التـأكيد المرسل الى رقم <span class="phone-number">010 138 75 381</span>.</p>
+                    <form>
+                        <div class="code__inputs">
+                            <input type="password" class="form-control" maxlength="1" autofocus>
+                            <input type="password" class="form-control" maxlength="1">
+                            <input type="password" class="form-control" maxlength="1">
+                            <input type="password" class="form-control" maxlength="1">
+                        </div>
+                        <div class="resend__code">
+                            <div class="resend__code__countdown">
+                                <span>اعادة ارسال الكود</span>
+                                <span class="timer">01:00</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary resend--btn d-none">إعادة ارسال الكود</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="form__step d-none">
+                    <h2>تم انشاء حسابك بنجاح</h2>
+                    <div class="d-flex justify-content-center pt-5 pb-5">
+                        <svg width="124" height="124" viewBox="0 0 124 124">
+                            <path fill="#30B360" d="M62,124C27.8,124,0,96.2,0,62S27.8,0,62,0s62,27.8,62,62S96.2,124,62,124z"></path>
+                            <path fill="#fff" d="M52.7,84.9c-0.6,0-1.3-0.2-1.8-0.7L29.7,63c-1-1-1-2.6,0-3.5c1-1,2.6-1,3.5,0l19.4,19.4l38.1-38.1 c1-1,2.6-1,3.5,0c1,1,1,2.6,0,3.5L54.4,84.2C53.9,84.7,53.3,84.9,52.7,84.9z"></path>
+                        </svg>
+                    </div>
+                    <p>سيتم توجيهك تلقائيا الى صفحة <a href="login.html">تسجيل الدخول</a></p>
+                </div>
+            </div>
+        </section>
+        <aside class="page__aside"></aside>
+        <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="termsModalLabel">شروط الاستخدام</h5>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">أوافق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="policyModal" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="policyModalLabel">سياسة الخصوصية</h5>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">أوافق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/popper.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/pages/sign-up.module.js" type="module"></script>
+</body>
+
+</html>
