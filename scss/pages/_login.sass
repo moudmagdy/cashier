@@ -8,6 +8,7 @@
         flex-direction: column
         align-content: center
         flex: 1 auto
+        padding: 0 rem(20px)
 
         @media (min-width: 992px)
             flex: 1 0 55%
@@ -40,12 +41,13 @@
             display: none
 
     .content__wrapper
+        position: relative
         display: flex
         justify-content: center
         flex-direction: column
-        width: rem(375px)
+        width: rem(335px)
         height: 100%
-        padding: rem(50px) rem(20px)
+        padding: rem(110px) 0 rem(50px)
 
     .form__step
         display: flex
@@ -53,9 +55,10 @@
         align-content: center
 
     .logo
+        position: absolute
+        top: rem(50px)
         display: flex
         width: max-content
-        margin-bottom: rem(30px)
 
         svg
             width: rem(40px)
