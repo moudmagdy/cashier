@@ -12,9 +12,6 @@
         pointer-events: none
         transition: background-color 0.3s
 
-    & > .page__layout > .layout__tabs
-        display: none
-
     .end__shift__cta
         +flex-center
         flex-direction: column
@@ -24,12 +21,17 @@
             margin-top: auto
 
         .btn
-            border-radius: 28px
+            border-radius: rem(28px)
             padding: 0.975rem 5.098rem
-            margin-bottom: 60px
+            margin-bottom: rem(60px)
 
 .shift-summary__container
-    padding: 15px 28px
+    display: flex
+    flex-direction: column
+    overflow-y: auto
+    +scroll-bar
+    scroll-behavior: smooth
+    padding: 0 rem(24px) rem(24px)
 
 .shift-summary
     max-width: 700px
@@ -37,6 +39,9 @@
     border: 1px solid #E2E9F0
     border-radius: 8px
     padding: 40px 84px 60px
+
+    @media (max-width: 992px)
+        padding: 40px 84px 60px
 
     h3
         font-size: calc(1.1rem + .5vw)
