@@ -3567,6 +3567,16 @@ main.control-panel--shown .page__layout > .control-panel {
   background-position: 50% 10%, 100% 100%;
   background-size: 40%, contain;
 }
+.login-page .page__aside.passcode {
+  background-image: url(../images/lock-bg.svg), url(../images/branch-artwork-2.svg);
+  background-position: 50% 10%, 100% 100%;
+  background-size: 30%, contain;
+}
+.login-page .page__aside.forgot-passcode {
+  background-image: url(../images/key-icon.svg), url(../images/branch-artwork-2.svg);
+  background-position: 50% 10%, 100% 100%;
+  background-size: 30%, contain;
+}
 @media (max-width: 992px) {
   .login-page .page__aside {
     display: none;
