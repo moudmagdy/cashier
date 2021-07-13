@@ -4438,23 +4438,13 @@ button:focus,
   margin-bottom: 10px;
 }
 
-.shift-page {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
+@media (max-width: 768px) {
+  .shift-page .page__layout__col:last-of-type {
+    display: none;
+  }
 }
-.shift-page::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 999;
-  background-color: transparent;
-  pointer-events: none;
-  -webkit-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-.shift-page .end__shift__cta {
+
+.end__shift__cta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4468,15 +4458,11 @@ button:focus,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 100vh;
-}
-.shift-page .end__shift__cta > * {
   margin-top: auto;
 }
-.shift-page .end__shift__cta .btn {
+.end__shift__cta .btn {
   border-radius: 1.75rem;
   padding: 0.975rem 5.098rem;
-  margin-bottom: 3.75rem;
 }
 
 .shift-summary__container {
@@ -4508,15 +4494,39 @@ button:focus,
 }
 
 .shift-summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 700px;
   background-color: #fff;
   border: 1px solid #E2E9F0;
   border-radius: 8px;
-  padding: 40px 84px 60px;
+  padding: 28px 30px;
 }
-@media (max-width: 992px) {
+.shift-summary .end__shift__cta .btn {
+  width: 100%;
+  padding: 0.975rem 3rem;
+}
+@media (min-width: 768px) {
   .shift-summary {
-    padding: 40px 84px 60px;
+    padding: 40px 40px 60px;
+  }
+  .shift-summary .end__shift__cta {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .shift-summary {
+    padding: 35px 60px 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .shift-summary {
+    padding: 35px 80px 50px;
   }
 }
 .shift-summary h3 {
@@ -4525,13 +4535,13 @@ button:focus,
 }
 .shift-summary h4 {
   font-family: "NotoSansArabic_SemiBold", sans-serif;
-  font-size: 16px;
-  margin-top: 45px;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  margin-bottom: 1.125rem;
 }
 .shift-summary p {
-  font-size: 14px;
-  margin-bottom: 30px;
+  line-height: 2;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
 }
 
 .shift-summary__list {
@@ -4550,29 +4560,30 @@ button:focus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 54px;
+  gap: 0.9375rem;
+  height: 3.375rem;
   border-bottom: 1px solid #efefef;
   padding: 0.85rem 1rem;
 }
 .shift-summary__list li h5 {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 65%;
-          flex: 0 1 65%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   font-size: 16px;
   color: #4D4D4D;
   margin: 0;
 }
 .shift-summary__list li .receipt__count {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 15%;
-          flex: 0 1 15%;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
 }
 .shift-summary__list li .opening-balance-amount,
 .shift-summary__list li .daily-total-amount,
 .shift-summary__list li .operations-amount {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 20%;
-          flex: 0 1 20%;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
 }
 .shift-summary__list li .opening-balance-amount,
 .shift-summary__list li .daily-total-amount {

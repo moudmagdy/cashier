@@ -1,20 +1,21 @@
 import '../components/layout-tabs.module.js';
 import '../components/main-menu.module.js';
 
-const endShiftBtn = document.querySelector('.end-shift');
+const endShiftBtns = document.querySelectorAll('.end-shift--btn');
 const controlPanels = document.querySelector('.control-panel');
 const closeBtn = controlPanels.querySelector('.control-panel__close-btn');
 
-endShiftBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    document.querySelector('main').classList.add('control-panel--shown');
+endShiftBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('body').classList.add('control-panel--shown');
+    });
 });
 
 closeBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    document.querySelector('main').classList.remove('control-panel--shown');
+    document.querySelector('body').classList.remove('control-panel--shown');
 });
-
 
 window.addEventListener('load', () => {
     document.querySelector('#amount_difference').value = document.querySelector('.closed-shift .daily-total-amount').textContent;

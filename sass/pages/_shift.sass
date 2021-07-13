@@ -1,29 +1,17 @@
 .shift-page
-    position: relative
-    height: 100vh
-    overflow: hidden
+    @media (max-width: 768px)
+        .page__layout__col
+            &:last-of-type
+                display: none
 
-    &::after
-        content: ""
-        position: absolute
-        inset: 0
-        z-index: 999
-        background-color: transparent
-        pointer-events: none
-        transition: background-color 0.3s
+.end__shift__cta
+    +flex-center
+    flex-direction: column
+    margin-top: auto
 
-    .end__shift__cta
-        +flex-center
-        flex-direction: column
-        min-height: 100vh
-
-        & > *
-            margin-top: auto
-
-        .btn
-            border-radius: rem(28px)
-            padding: 0.975rem 5.098rem
-            margin-bottom: rem(60px)
+    .btn
+        border-radius: rem(28px)
+        padding: 0.975rem 5.098rem
 
 .shift-summary__container
     display: flex
@@ -34,14 +22,30 @@
     padding: 0 rem(24px) rem(24px)
 
 .shift-summary
+    display: flex
+    flex-direction: column
     max-width: 700px
     background-color: #fff
     border: 1px solid #E2E9F0
     border-radius: 8px
-    padding: 40px 84px 60px
+    padding: 28px 30px
 
-    @media (max-width: 992px)
-        padding: 40px 84px 60px
+    .end__shift__cta
+        .btn
+            width: 100%
+            padding: 0.975rem 3rem
+
+    @media (min-width: 768px)
+        padding: 40px 40px 60px
+
+        .end__shift__cta
+            display: none
+
+    @media (min-width: 1024px)
+        padding: 35px 60px 50px
+
+    @media (min-width: 1200px)
+        padding: 35px 80px 50px
 
     h3
         font-size: calc(1.1rem + .5vw)
@@ -49,13 +53,13 @@
 
     h4
         font-family: 'NotoSansArabic_SemiBold', sans-serif
-        font-size: 16px
-        margin-top: 45px
-        margin-bottom: 20px
+        font-size: rem(16px)
+        margin-bottom: rem(18px)
 
     p
-        font-size: 14px
-        margin-bottom: 30px
+        line-height: 2
+        font-size: rem(14px)
+        margin-bottom: rem(24px)
 
 .shift-summary__list
     display: flex
@@ -64,23 +68,24 @@
     li
         display: flex
         align-items: center
-        height: 54px
+        gap: rem(15px)
+        height: rem(54px)
         border-bottom: 1px solid #efefef
         padding: 0.85rem 1rem
 
         h5
-            flex: 0 1 65%
+            flex: 0 0 50%
             font-size: 16px
             color: #4D4D4D
             margin: 0
 
         .receipt__count
-            flex: 0 1 15%
+            flex: 0 0 15%
 
         .opening-balance-amount,
         .daily-total-amount,
         .operations-amount
-            flex: 0 1 20%
+            flex: 0 0 25%
 
         .opening-balance-amount,
         .daily-total-amount
