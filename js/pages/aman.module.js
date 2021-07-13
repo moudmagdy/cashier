@@ -7,7 +7,7 @@ const controlPanels = document.querySelectorAll('.control-panel');
 servicesItem.forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelector('main').classList.add('control-panel--shown');
+        document.querySelector('body').classList.add('control-panel--shown');
     });
 });
 
@@ -24,7 +24,7 @@ controlPanels.forEach(panel => {
 
     closeBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelector('main').classList.remove('control-panel--shown');
+        document.querySelector('body').classList.remove('control-panel--shown');
     });
 
     keyBtns.forEach(keyBtn => {

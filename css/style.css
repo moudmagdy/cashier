@@ -101,6 +101,23 @@ body {
   background-color: #F5F5F5;
   overflow: hidden;
 }
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 999;
+  background-color: transparent;
+  pointer-events: none;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+main {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
 
 * {
   outline: none;
@@ -593,32 +610,6 @@ button:focus,
   max-width: 670px;
   padding: 20px 15px;
   margin: auto;
-}
-
-main {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-main::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 999;
-  background-color: transparent;
-  pointer-events: none;
-  -webkit-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-main.control-panel--shown::after {
-  pointer-events: auto;
-  background-color: rgba(6, 5, 5, 0.35);
-}
-main.control-panel--shown .page__layout > .control-panel {
-  -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-          transform: translateX(100%);
 }
 
 .layout__tabs {
@@ -2239,6 +2230,16 @@ main.control-panel--shown .page__layout > .control-panel {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+}
+
+.control-panel--shown::after {
+  pointer-events: auto;
+  background-color: rgba(6, 5, 5, 0.35);
+}
+.control-panel--shown .page__layout > .control-panel {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .products__list {
@@ -5008,11 +5009,31 @@ main.control-panel--shown .page__layout > .control-panel {
   fill: #4D4D4D;
 }
 
+.settings-page .page__layout .page__content {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-color: #BDBEC3 #F0F0F0;
+  scrollbar-width: thin;
+}
+.settings-page .page__layout .page__content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.settings-page .page__layout .page__content::-webkit-scrollbar-track {
+  background-color: #F0F0F0;
+}
+.settings-page .page__layout .page__content::-webkit-scrollbar-thumb {
+  background-color: #BDBEC3;
+}
+.settings-page .page__layout .page__content::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
 header .header__btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 24px;
+  gap: 18px;
   margin-right: auto;
 }
 

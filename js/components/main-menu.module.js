@@ -9,13 +9,13 @@ const theRestNavElments = menuNav.querySelectorAll('a:nth-child(+n+8)');
 mainMenuToggles.forEach(mainMenuToggle => {
   mainMenuToggle.addEventListener('click', (e) => {
     e.preventDefault();
-    document.querySelector('main').classList.toggle('main-menu--opened');
+    document.querySelector('body').classList.toggle('main-menu--opened');
   });
 });
 
 function closeMainMenu(e) {
   if (!headerMainMenuToggle.contains(e.target) && (!mainMenu.contains(e.target))) {
-    document.querySelector('main').classList.remove('main-menu--opened');
+    document.querySelector('body').classList.remove('main-menu--opened');
   }
 }
 
@@ -45,5 +45,5 @@ function createSubmenu() {
   });
 }
 
-document.addEventListener('click', (e) => document.querySelector('main').classList.contains('main-menu--opened') ? closeMainMenu(e) : "");
+document.addEventListener('click', (e) => document.querySelector('body').classList.contains('main-menu--opened') ? closeMainMenu(e) : "");
 window.addEventListener('load', createSubmenu);
