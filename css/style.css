@@ -589,23 +589,6 @@ button:focus,
 .page__layout__scrollable-content::-webkit-scrollbar-corner {
   background-color: transparent;
 }
-.page__layout > .control-panel {
-  position: fixed;
-  top: 0;
-  right: 100%;
-  width: 415px;
-  z-index: 9999;
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.8, -0.21, 0.35, 0.32);
-  transition: -webkit-transform 0.3s cubic-bezier(0.8, -0.21, 0.35, 0.32);
-  -o-transition: transform 0.3s cubic-bezier(0.8, -0.21, 0.35, 0.32);
-  transition: transform 0.3s cubic-bezier(0.8, -0.21, 0.35, 0.32);
-  transition: transform 0.3s cubic-bezier(0.8, -0.21, 0.35, 0.32), -webkit-transform 0.3s cubic-bezier(0.8, -0.21, 0.35, 0.32);
-}
-@media (min-width: 1200px) {
-  .page__layout > .control-panel {
-    width: 500px;
-  }
-}
 .page__layout .form-container {
   max-width: 670px;
   padding: 20px 15px;
@@ -2230,6 +2213,29 @@ button:focus,
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+}
+
+.page__layout > .control-panel {
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 415px;
+  z-index: 9999;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.8, -0.21, 0.35, 0.32);
+  transition: -webkit-transform 0.3s cubic-bezier(0.8, -0.21, 0.35, 0.32);
+  -o-transition: transform 0.3s cubic-bezier(0.8, -0.21, 0.35, 0.32);
+  transition: transform 0.3s cubic-bezier(0.8, -0.21, 0.35, 0.32);
+  transition: transform 0.3s cubic-bezier(0.8, -0.21, 0.35, 0.32), -webkit-transform 0.3s cubic-bezier(0.8, -0.21, 0.35, 0.32);
+}
+@media (min-width: 1200px) {
+  .page__layout > .control-panel {
+    width: 500px;
+  }
+}
+@media (max-width: 576px) {
+  .page__layout > .control-panel {
+    width: 100%;
+  }
 }
 
 .control-panel--shown::after {
