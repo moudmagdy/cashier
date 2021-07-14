@@ -8,9 +8,9 @@ import '../components/ChangeView.module.js';
 
 
 
-let tl3 = new TimelineMax({ paused: true });
-let productsListContainer = document.querySelector('.invoice__list__container');
-tl3.to(productsListContainer, 0.3, { opacity: '0' });
+// let tl3 = new TimelineMax({ paused: true });
+// let productsListContainer = document.querySelector('.invoice__list__container');
+// tl3.to(productsListContainer, 0.3, { opacity: '0' });
 
 
 document.getElementById('save_invoice').addEventListener('click', (e) => {
@@ -62,14 +62,13 @@ document.querySelector('.receive__cash__btn').addEventListener('click', (e) => {
 let cards = document.querySelectorAll('.product');
 
 
-let productItemInList = document.querySelectorAll('.invoice__item');
+// let productItemInList = document.querySelectorAll('.invoice__item');
 
-let tl1 = new TimelineMax({ paused: true });
+// let tl1 = new TimelineMax({ paused: true });
 
 
-tl1.fromTo(cards, 0.5, { opacity: 0, top: '5rem' }, { opacity: 1, top: '0rem', stagger: 0.08, ease: Back.easeOut.config(1.7) })
-    .fromTo(productItemInList, 0.5, { opacity: 0, top: '5rem' }, { opacity: 1, top: '0rem', stagger: 0.08, ease: Back.easeOut.config(1.7) }, '-=1.5')
-tl1.play()
+// tl1.fromTo(cards, 0.5, { opacity: 0, top: '5rem' }, { opacity: 1, top: '0rem', stagger: 0.08, ease: Back.easeOut.config(1.7) }).fromTo(productItemInList, 0.5, { opacity: 0, top: '5rem' }, { opacity: 1, top: '0rem', stagger: 0.08, ease: Back.easeOut.config(1.7) }, '-=1.5')
+// tl1.play();
 
 
 cards.forEach(card => {
