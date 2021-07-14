@@ -502,7 +502,6 @@ button:focus,
 @media (max-width: 768px) {
   .page__layout__row {
     grid-template-columns: 1fr;
-    height: calc(100vh - 48px);
   }
 }
 .page__layout__col {
