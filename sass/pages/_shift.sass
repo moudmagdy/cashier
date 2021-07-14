@@ -1,4 +1,16 @@
 .shift-page
+    .page__layout
+        header
+            border-bottom: 1px solid #efefef
+
+    .page__layout__col
+        &:first-of-type
+            background-color: $color-white
+            border-right: 1px solid #efefef
+
+        &:last-of-type
+            background-color: #C8C9E2
+
     @media (max-width: 768px)
         .page__layout__col
             &:last-of-type
@@ -25,9 +37,6 @@
     display: flex
     flex-direction: column
     max-width: 700px
-    background-color: #fff
-    border: 1px solid #E2E9F0
-    border-radius: 8px
     padding: 28px 30px
 
     .end__shift__cta

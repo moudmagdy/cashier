@@ -4439,6 +4439,16 @@ button:focus,
   margin-bottom: 10px;
 }
 
+.shift-page .page__layout header {
+  border-bottom: 1px solid #efefef;
+}
+.shift-page .page__layout__col:first-of-type {
+  background-color: #fff;
+  border-right: 1px solid #efefef;
+}
+.shift-page .page__layout__col:last-of-type {
+  background-color: #C8C9E2;
+}
 @media (max-width: 768px) {
   .shift-page .page__layout__col:last-of-type {
     display: none;
@@ -4503,9 +4513,6 @@ button:focus,
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 700px;
-  background-color: #fff;
-  border: 1px solid #E2E9F0;
-  border-radius: 8px;
   padding: 28px 30px;
 }
 .shift-summary .end__shift__cta .btn {
