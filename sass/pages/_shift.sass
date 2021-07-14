@@ -25,18 +25,13 @@
         border-radius: rem(28px)
         padding: 0.975rem 5.098rem
 
-.shift-summary__container
-    display: flex
-    flex-direction: column
-    overflow-y: auto
-    +scroll-bar
-    scroll-behavior: smooth
-    padding: 0 rem(24px) rem(24px)
-
 .shift-summary
     display: flex
     flex-direction: column
     max-width: 700px
+    overflow-y: auto
+    +scroll-bar
+    scroll-behavior: smooth
     padding: 28px 30px
 
     .end__shift__cta
@@ -45,16 +40,16 @@
             padding: 0.975rem 3rem
 
     @media (min-width: 768px)
-        padding: 40px 40px 60px
+        padding: 40px 40px 50px
 
         .end__shift__cta
             display: none
 
     @media (min-width: 1024px)
-        padding: 35px 60px 50px
+        padding: 40px 60px 50px
 
     @media (min-width: 1200px)
-        padding: 35px 80px 50px
+        padding: 40px 80px 50px
 
     h3
         font-size: calc(1.1rem + .5vw)
