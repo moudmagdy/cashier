@@ -18,6 +18,7 @@ $variables: (
 );
 
 :root {
+    --animate-duration: 500ms;
     --default-font-size: #{map-get($variables, default-font-size)};
     --main-menu-width: #{map-get($variables, main-menu-width)};
     --color-brand: #{map-get($variables, color-brand)};
