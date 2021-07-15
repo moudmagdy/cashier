@@ -102,17 +102,27 @@
             background-color: rgba(198, 207, 217, 0.2)
 
             svg
-                @include var(fill, color-brand)
+                +var(fill, color-brand)
 
         &.active
             svg
-                @include var(fill, color-brand)
+                +var(fill, color-brand)
 
     .features__dropdown
         .features__dropdown__menu
             .dropdown-item
                 svg
-                    @include var(fill, color-text-primary)
+                    +var(fill, color-text-primary)
+
+                &.active
+                    svg
+                        fill: $color-white
+
+                    &:hover
+                        +var(background-color, color-brand)
+
+                    &:active
+                        color: $color-white
 
     .search__bar__dropdown
         @media (max-width: 576px)
@@ -139,7 +149,7 @@
                 margin-right: auto
 
             &.show
-                @include var(border-color, color-brand)
+                +var(border-color, color-brand)
 
             svg
                 margin-left: 5px
@@ -173,5 +183,5 @@
                     background-color: #EBF6FF
 
                 &:active
-                    @include var(background-color, color-brand)
+                    +var(background-color, color-brand)
                     color: #fff

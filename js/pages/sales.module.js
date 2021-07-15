@@ -1,17 +1,7 @@
 import '../components/main-menu.module.js';
 import '../components/layout-tabs.module.js';
 import '../components/collapsible.module.js';
-import '../components/ChangeView.module.js';
-
-// clientListRenderer('salesInvoice', 'clientsList', 'salesInvoice')
-
-
-
-
-// let tl3 = new TimelineMax({ paused: true });
-// let productsListContainer = document.querySelector('.invoice__list__container');
-// tl3.to(productsListContainer, 0.3, { opacity: '0' });
-
+import '../components/change-view.module.js';
 
 document.getElementById('save_invoice').addEventListener('click', (e) => {
     e.preventDefault()
@@ -21,7 +11,7 @@ document.getElementById('save_invoice').addEventListener('click', (e) => {
         color: 'green',
         transitionIn: 'fadeInUp',
     });
-})
+});
 
 // document.getElementById('print_price').addEventListener('click', (e) => {
 //     e.preventDefault()
@@ -31,7 +21,7 @@ document.getElementById('save_invoice').addEventListener('click', (e) => {
 //         color: 'green',
 //         transitionIn: 'fadeInUp',
 //     });
-// })
+// });
 
 document.querySelector('.delete__invoice').addEventListener('click', (e) => {
     e.preventDefault()
@@ -42,9 +32,7 @@ document.querySelector('.delete__invoice').addEventListener('click', (e) => {
         color: 'red',
         transitionIn: 'fadeInUp',
     });
-})
-
-
+});
 document.querySelector('.receive__cash__btn').addEventListener('click', (e) => {
     e.preventDefault()
     // tl3.play()
@@ -54,22 +42,10 @@ document.querySelector('.receive__cash__btn').addEventListener('click', (e) => {
         color: 'green',
         transitionIn: 'fadeInUp',
     });
-})
+});
 
-
-// Start animation for All Cards in Homepage
 
 let cards = document.querySelectorAll('.product');
-
-
-// let productItemInList = document.querySelectorAll('.invoice__item');
-
-// let tl1 = new TimelineMax({ paused: true });
-
-
-// tl1.fromTo(cards, 0.5, { opacity: 0, top: '5rem' }, { opacity: 1, top: '0rem', stagger: 0.08, ease: Back.easeOut.config(1.7) }).fromTo(productItemInList, 0.5, { opacity: 0, top: '5rem' }, { opacity: 1, top: '0rem', stagger: 0.08, ease: Back.easeOut.config(1.7) }, '-=1.5')
-// tl1.play();
-
 
 cards.forEach(card => {
     let quantity = 1;

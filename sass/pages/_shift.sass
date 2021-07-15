@@ -28,7 +28,6 @@
 .shift-summary
     display: flex
     flex-direction: column
-    max-width: 700px
     overflow-y: auto
     +scroll-bar
     scroll-behavior: smooth
@@ -40,6 +39,7 @@
             padding: 0.975rem 3rem
 
     @media (min-width: 768px)
+        max-width: 700px
         padding: 40px 40px 50px
 
         .end__shift__cta
@@ -78,19 +78,19 @@
         padding: 0.85rem 1rem
 
         h5
-            flex: 0 0 70%
+            flex: 0 0 50%
             font-size: 16px
             color: #4D4D4D
             margin: 0
 
         .receipt__count
             white-space: nowrap
-            // flex: 0 0 15%
+            flex: 0 0 25%
 
         .opening-balance-amount,
         .daily-total-amount,
         .operations-amount
-            // flex: 0 0 25%
+            flex: 0 0 25%
 
         .opening-balance-amount,
         .daily-total-amount
