@@ -105,10 +105,19 @@
                 +var(fill, color-brand)
 
         &.active
+            background-color: rgba(198, 207, 217, 0.2)
+
             svg
                 +var(fill, color-brand)
 
     .features__dropdown
+        .dropdown-toggle
+            &.show
+                background-color: rgba(198, 207, 217, 0.2)
+
+                svg
+                    +var(fill, color-brand)
+
         .features__dropdown__menu
             .dropdown-item
                 svg

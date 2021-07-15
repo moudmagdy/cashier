@@ -1,6 +1,6 @@
 import '../components/main-menu.module.js';
 import '../components/layout-tabs.module.js';
-
+import '../components/change-view.module.js';
 
 const productsList = document.querySelector('.products__list');
 const products = document.querySelectorAll('.products__list .product');

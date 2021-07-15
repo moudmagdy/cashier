@@ -1622,7 +1622,17 @@ button:focus,
   fill: #1877F2;
   fill: var(--color-brand);
 }
+.search__bar__feature.active {
+  background-color: rgba(198, 207, 217, 0.2);
+}
 .search__bar__feature.active svg {
+  fill: #1877F2;
+  fill: var(--color-brand);
+}
+.search__bar .features__dropdown .dropdown-toggle.show {
+  background-color: rgba(198, 207, 217, 0.2);
+}
+.search__bar .features__dropdown .dropdown-toggle.show svg {
   fill: #1877F2;
   fill: var(--color-brand);
 }

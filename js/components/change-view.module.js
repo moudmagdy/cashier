@@ -17,8 +17,6 @@ function animateProducts() {
     });
 }
 
-window.addEventListener('load', animateProducts);
-
 changeViewDropdownItems.forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
@@ -32,18 +30,44 @@ changeViewDropdownItems.forEach(item => {
             case 'grid-view':
                 productsList.classList.remove('list-view');
                 productsList.classList.remove('grid-view--no-title');
+                localStorage.setItem('view', clickedItem);
                 animateProducts();
                 break;
             case 'grid-view--no-title':
                 productsList.classList.add('grid-view--no-title');
                 productsList.classList.remove('list-view');
+                localStorage.setItem('view', clickedItem);
                 animateProducts();
                 break;
             case 'list-view':
                 productsList.classList.add('list-view');
                 productsList.classList.remove('grid-view--no-title');
+                localStorage.setItem('view', clickedItem);
                 animateProducts();
                 break;
         }
     });
 });
+
+function getSavedView() {
+    const savedView = localStorage.getItem('view') ? localStorage.getItem('view') : null;
+    if (savedView) {
+        document.querySelector('.layout__feature + ul li a').classList.remove('active');
+        if (savedView == 'grid-view') {
+            productsList.classList.remove('list-view');
+            productsList.classList.remove('grid-view--no-title');
+            document.querySelector('.layout__feature + ul li a[data-view="grid-view"]').classList.add('active');
+        } else if (savedView == 'grid-view--no-title') {
+            productsList.classList.add('grid-view--no-title');
+            productsList.classList.remove('list-view');
+            document.querySelector('.layout__feature + ul li a[data-view="grid-view--no-title"]').classList.add('active');
+        } else if (savedView == 'list-view') {
+            productsList.classList.add('list-view');
+            productsList.classList.remove('grid-view--no-title');
+            document.querySelector('.layout__feature + ul li a[data-view="list-view"]').classList.add('active');
+        }
+    }
+}
+
+window.addEventListener('load', animateProducts);
+window.addEventListener('load', getSavedView);
