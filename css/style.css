@@ -2437,9 +2437,6 @@ button:focus,
 .products__list.list-view .product__details {
   margin-top: 0;
 }
-.products__list.grid-view--no-title .product {
-  aspect-ratio: 1/1;
-}
 .products__list.grid-view--no-title .product__image {
   height: 6.25rem;
 }
