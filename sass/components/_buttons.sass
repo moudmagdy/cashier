@@ -36,8 +36,8 @@
 
 .btn-primary
     color: #fff
-    @include var(background-color, color-brand)
-    @include var(border-color, color-brand)
+    +var(background-color, color-brand)
+    +var(border-color, color-brand)
 
     &:hover
         background-color: darken($color-brand, 10%)
@@ -48,12 +48,12 @@
         border-color: lighten($color-brand, 10%)
 
 .btn-outline-primary
-    @include var(color, color-brand)
-    @include var(border-color, color-brand)
+    +var(color, color-brand)
+    +var(border-color, color-brand)
 
     &:hover
-        @include var(background-color, color-brand)
-        @include var(border-color, color-brand)
+        +var(background-color, color-brand)
+        +var(border-color, color-brand)
 
 .btn-primary,
 .btn-outline-primary
@@ -62,7 +62,7 @@
         border-color: darken($color-brand, 15%)
 
 .btn-secondary
-    @include var(color, color-brand)
+    +var(color, color-brand)
     background-color: #e8e8e8
     border-color: #e8e8e8
 
@@ -77,11 +77,11 @@
         border-color: lighten(#e8e8e8, 5%)
 
 .btn-outline-secondary
-    @include var(color, color-brand)
+    +var(color, color-brand)
     border-color: #e8e8e8
 
     &:hover
-        @include var(color, color-brand)
+        +var(color, color-brand)
         background-color: #e8e8e8
         border-color: #e8e8e8
 

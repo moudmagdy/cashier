@@ -14,12 +14,12 @@
             transition: border-bottom-color 0ms ease 350ms
 
             a
-                @include var(color, color-text-primary)
+                +var(color, color-text-primary)
                 border-radius: rem(4px)
                 padding: 0.694rem 0.975rem
 
                 &:hover
-                    @include var(color, color-text-primary)
+                    +var(color, color-text-primary)
                     background-color: #E6E6E6
 
         &.collapsed
@@ -57,7 +57,7 @@
             .operations__item__subject
                 span
                     display: inline-block
-                    @include var(color, color-text-primary)
+                    +var(color, color-text-primary)
                     font-size: rem(12px)
                     border: 1px solid $color-text-primary
                     border-radius: rem(24px)
@@ -153,7 +153,7 @@
             font-family: 'NotoSansArabic_SemiBold'
             font-size: rem(20px)
             line-height: 1
-            @include var(color, color-text-primary)
+            +var(color, color-text-primary)
 
             @media (max-width: 1024px)
                 font-size: rem(16px)

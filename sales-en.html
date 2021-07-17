@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>المبيعات - كاشير</title>
-    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <title>Sales - Cashier</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style-ltr.min.css">
 </head>
 
 <body>
@@ -30,24 +31,24 @@
                 </a>
             </div>
             <nav>
-                <a href="sales.html" class="sales__page active">المبيعات</a>
-                <a href="invoices.html" class="invoices__page">الفواتير</a>
-                <a href="cash-flow.html" class="cash-flow__page">حركة النقدية</a>
-                <a href="expenses.html" class="expenses__page">المصروفات</a>
-                <a href="aman.html" class="aman__page">امان</a>
-                <a href="maintenance.html" class="maintenance__page">الصيانة</a>
-                <a href="shift.html" class="shift__page">الوردية</a>
-                <a href="clients.html" class="clients__page">العملاء</a>
-                <a href="suppliers.html" class="suppliers__page">الموردون</a>
-                <a href="settings.html" class="settings__page">اعدادات</a>
-                <a href="" class="update-data__page">تحديث البيانات</a>
-                <a href="" class="management__page">الادارة</a>
+                <a href="sales-en.html" class="sales__page active">Sales</a>
+                <a href="invoices-en.html" class="invoices__page">Invoices</a>
+                <a href="cash-flow-en.html" class="cash-flow__page">Cash Flow</a>
+                <a href="expenses-en.html" class="expenses__page">Expenses</a>
+                <a href="aman-en.html" class="aman__page">Aman</a>
+                <a href="maintenance-en.html" class="maintenance__page">Maintenance</a>
+                <a href="shift-en.html" class="shift__page">Shift</a>
+                <a href="clients-en.html" class="clients__page">Clients</a>
+                <a href="suppliers-en.html" class="suppliers__page">Suppliers</a>
+                <a href="settings-en.html" class="settings__page">Settings</a>
+                <a href="" class="update-data__page">Updating Data</a>
+                <a href="" class="management__page">Management</a>
             </nav>
         </div>
         <div class="page__layout">
             <nav class="layout__tabs">
-                <a href="#" data-tab="products" class="active-tab">المنتجات</a>
-                <a href="#" data-tab="invoice">الفاتورة</a>
+                <a href="#" data-tab="products" class="active-tab">Products</a>
+                <a href="#" data-tab="invoice">Invoice</a>
             </nav>
             <div class="page__layout__row layout__container">
                 <section class="page__layout__col layout__tab__content active-tab" data-tab="products">
@@ -58,7 +59,7 @@
                             </svg>
                         </a>
                         <h1 class="page__title">
-                            <a href="sales.html">المبيعات</a>
+                            <a href="sales.html">Sales</a>
                         </h1>
                     </header>
                     <div class="search__bar">
@@ -66,7 +67,7 @@
                             <svg width="15" height="13.9" viewBox="0 0 15 13.9">
                                 <path d="M14.8,12.7l-2.4-2.4c1.6-2.6,1.3-6-0.9-8.3C8.8-0.7,4.6-0.7,2,2C0.7,3.2,0,4.9,0,6.7s0.7,3.5,2,4.7 c1.3,1.3,2.9,2,4.7,2s3.5-0.7,4.7-2c0,0,0.1-0.1,0.1-0.1l2.3,2.3c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2 C15.1,13.4,15.1,12.9,14.8,12.7z M6.7,12C5.3,12,4,11.4,3,10.4c-1-1-1.6-2.3-1.6-3.7S2,4,3,2.9c1-1,2.3-1.6,3.7-1.6s2.7,0.6,3.7,1.6 c2.1,2.1,2.1,5.4,0,7.5C9.4,11.4,8.1,12,6.7,12z"></path>
                             </svg>
-                            <input type="search" name="search" placeholder="ابحث عن منتج او باركود">
+                            <input type="search" name="search" placeholder="Search for a product or barcode">
                         </div>
                         <div class="search__bar__features">
                             <div class="features__dropdown dropdown">
@@ -81,7 +82,7 @@
                                             <svg width="18" height="18" viewBox="0 0 18 18">
                                                 <path d="M0.5,0h7C7.8,0,8,0.2,8,0.5v7C8,7.8,7.8,8,7.5,8h-7C0.2,8,0,7.8,0,7.5v-7C0,0.2,0.2,0,0.5,0z M0.5,10h7 C7.8,10,8,10.2,8,10.5v7C8,17.8,7.8,18,7.5,18h-7C0.2,18,0,17.8,0,17.5v-7C0,10.2,0.2,10,0.5,10z M10.5,0h7C17.8,0,18,0.2,18,0.5v7 C18,7.8,17.8,8,17.5,8h-7C10.2,8,10,7.8,10,7.5v-7C10,0.2,10.2,0,10.5,0z M10.5,10h7c0.3,0,0.5,0.2,0.5,0.5v7c0,0.3-0.2,0.5-0.5,0.5 h-7c-0.3,0-0.5-0.2-0.5-0.5v-7C10,10.2,10.2,10,10.5,10z"></path>
                                             </svg>
-                                            <span>صورة واسم المنتج</span>
+                                            <span>Image and product title</span>
                                         </a>
                                     </li>
                                     <li>
@@ -89,7 +90,7 @@
                                             <svg width="18" height="18" viewBox="0 0 18 18">
                                                 <path d="M0.5,0h7C7.8,0,8,0.2,8,0.5v7C8,7.8,7.8,8,7.5,8h-7C0.2,8,0,7.8,0,7.5v-7C0,0.2,0.2,0,0.5,0z M0.5,10h7 C7.8,10,8,10.2,8,10.5v7C8,17.8,7.8,18,7.5,18h-7C0.2,18,0,17.8,0,17.5v-7C0,10.2,0.2,10,0.5,10z M10.5,0h7C17.8,0,18,0.2,18,0.5v7 C18,7.8,17.8,8,17.5,8h-7C10.2,8,10,7.8,10,7.5v-7C10,0.2,10.2,0,10.5,0z M10.5,10h7c0.3,0,0.5,0.2,0.5,0.5v7c0,0.3-0.2,0.5-0.5,0.5 h-7c-0.3,0-0.5-0.2-0.5-0.5v-7C10,10.2,10.2,10,10.5,10z"></path>
                                             </svg>
-                                            <span>صورة وسعر فقط</span>
+                                            <span>Image and price only</span>
                                         </a>
                                     </li>
                                     <li>
@@ -97,7 +98,7 @@
                                             <svg width="18" height="18" viewBox="0 0 18 18">
                                                 <path d="M18,2.5v0.6v1.1v0.6c0,0.2-0.2,0.4-0.4,0.4h-0.6H1.1H0.4C0.2,5.3,0,5.1,0,4.9V4.2V3.2V2.5 c0-0.2,0.2-0.4,0.4-0.4h0.6h15.9h0.6C17.8,2.1,18,2.3,18,2.5z M17.6,7.4h-0.6H1.1H0.4C0.2,7.4,0,7.6,0,7.8v0.6v1.1v0.6 c0,0.2,0.2,0.4,0.4,0.4h0.6h15.9h0.6c0.2,0,0.4-0.2,0.4-0.4V9.5V8.5V7.8C18,7.6,17.8,7.4,17.6,7.4z M17.6,12.7h-0.6H1.1H0.4 c-0.2,0-0.4,0.2-0.4,0.4v0.6v1.1v0.6c0,0.2,0.2,0.4,0.4,0.4h0.6h15.9h0.6c0.2,0,0.4-0.2,0.4-0.4v-0.6v-1.1v-0.6 C18,12.9,17.8,12.7,17.6,12.7z" />
                                             </svg>
-                                            <span>قائمة</span>
+                                            <span>Listview</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -134,7 +135,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -142,7 +143,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -151,7 +152,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم بالإضافة لعرض خاص لمدة شهر">جونسون، صابون للاستحمام 15 ملم بالإضافة لعرض خاص لمدة شهر</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -169,7 +170,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -177,7 +178,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -186,7 +187,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -204,7 +205,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -212,7 +213,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -221,7 +222,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -239,7 +240,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -247,7 +248,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -256,7 +257,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -274,7 +275,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -282,7 +283,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -291,7 +292,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -309,7 +310,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -317,7 +318,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -326,7 +327,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -344,7 +345,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -352,7 +353,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -361,7 +362,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -379,7 +380,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -387,7 +388,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -396,7 +397,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -414,7 +415,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -422,7 +423,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -431,7 +432,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -449,7 +450,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -457,7 +458,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -466,7 +467,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -484,7 +485,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -492,7 +493,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -501,7 +502,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -519,7 +520,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -527,7 +528,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -536,7 +537,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -554,7 +555,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -562,7 +563,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -571,7 +572,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -589,7 +590,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -597,7 +598,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -606,7 +607,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -624,7 +625,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -632,7 +633,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -641,7 +642,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -659,7 +660,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -667,7 +668,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -676,7 +677,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -694,7 +695,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -702,7 +703,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -711,7 +712,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -729,7 +730,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -737,7 +738,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -746,7 +747,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -764,7 +765,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -772,7 +773,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -781,7 +782,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -799,7 +800,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -807,7 +808,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -816,7 +817,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -834,7 +835,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -842,7 +843,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -851,7 +852,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -869,7 +870,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -877,7 +878,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -886,7 +887,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -904,7 +905,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -912,7 +913,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -921,7 +922,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -939,7 +940,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -947,7 +948,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -956,7 +957,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -974,7 +975,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -982,7 +983,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -991,7 +992,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -1009,7 +1010,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>اضف الى المفضلة</span>
+                                                <span>Add to Favourites</span>
                                             </a>
                                         </li>
                                         <li>
@@ -1017,7 +1018,7 @@
                                                 <svg width="14.5" height="12.6" viewBox="0 0 14.5 12.6">
                                                     <path d="M7.3,11.2l5.4-5.5c0.9-0.9,0.9-2.2,0.6-3C12.9,1.7,12,1.1,11,1l0,0l0,0c-0.1,0-0.1,0-0.2,0C9.7,1,8.7,1.5,8,2.3l-0.8,1 l-0.8-1C5.8,1.5,4.8,1,3.7,1C3.7,1,3.6,1,3.6,1l0,0l0,0C2.5,1.1,1.6,1.7,1.2,2.7c-0.3,0.8-0.3,2,0.6,3L7.3,11.2 M7.3,12.6L1.1,6.4 C-1.2,4.1,0.3,0.2,3.5,0c0.1,0,0.2,0,0.2,0c1.4,0,2.7,0.7,3.5,1.7C8.1,0.7,9.3,0,10.8,0c0.1,0,0.2,0,0.2,0c3.2,0.2,4.7,4.1,2.4,6.4 L7.3,12.6z"></path>
                                                 </svg>
-                                                <span>المخزون</span>
+                                                <span>In Stock</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -1026,7 +1027,7 @@
                                     <img src="images/default-image.jpg" alt="">
                                 </div>
                                 <div class="product__details">
-                                    <h3 class="product__title" title="جونسون، صابون للاستحمام 15 ملم">جونسون، صابون للاستحمام 15 ملم</h3>
+                                    <h3 class="product__title" title="Johnson Baby Oil, 75 ml">Johnson Baby Oil, 75 ml</h3>
                                     <span class="product__price">14.00</span>
                                 </div>
                                 <div class="product__quantity">12</div>
@@ -1043,17 +1044,17 @@
                         </div>
                         <div class="payment-methods__content">
                             <div class="mb-5">
-                                <label for="" class="form-label">طريقة الدفع</label>
+                                <label for="" class="form-label">Payment method</label>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>كاش</option>
-                                    <option value="visa">ڤيزا</option>
+                                    <option selected>Cash</option>
+                                    <option value="visa">Visa</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="" class="form-label">المبلغ المستلم</label>
+                                <label for="" class="form-label">Received amount</label>
                                 <div class="received-amount">
                                     <input type="number" placeholder="00.00">
-                                    <span class="currency">جـ.م</span>
+                                    <span class="currency">EGP</span>
                                     <span class="amount">360.00</span>
                                 </div>
                             </div>
@@ -1073,7 +1074,7 @@
                             </div>
                             <div class="checkout__cta__container">
                                 <button type="button" class="btn btn-primary btn-lg receive__cash__btn">
-                                    <span>استلام</span>
+                                    <span>Receive</span>
                                     <span class="receive__cash__amount">385.00</span>
                                 </button>
                             </div>
@@ -1084,7 +1085,7 @@
                     <div class="control-panel">
                         <div class="control-panel__header">
                             <h4 class="control-panel__title">
-                                <span>الفاتورة</span>
+                                <span>Invoice</span>
                                 <span class="invoice-id">#1005</span>
                             </h4>
                             <div class="invoice__counters">
@@ -1103,7 +1104,7 @@
                                             <svg width="18" height="18" viewBox="0 0 18 18">
                                                 <path d="M11.1,17.9c-0.6,0-1.3-0.2-1.8-0.7L0.7,8.6C0.2,8.1,0,7.4,0,6.7l0.2-4.1c0.1-1.3,1.1-2.3,2.4-2.4L6.7,0 c0.7,0,1.4,0.2,1.9,0.7l8.6,8.6c0.5,0.5,0.7,1.1,0.7,1.8s-0.3,1.3-0.7,1.8v0l-4.3,4.3C12.4,17.6,11.7,17.9,11.1,17.9z M6.8,1.4 C6.8,1.4,6.8,1.4,6.8,1.4L2.6,1.6c-0.6,0-1,0.5-1,1L1.4,6.7c0,0.3,0.1,0.6,0.3,0.8l8.6,8.6c0.4,0.4,1.1,0.4,1.5,0l4.3-4.3 c0.4-0.4,0.4-1.1,0-1.5L7.6,1.7C7.4,1.5,7.1,1.4,6.8,1.4z M5.6,7.6c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S6.7,7.6,5.6,7.6z M5.6,5 C5.2,5,5,5.2,5,5.6s0.3,0.6,0.6,0.6s0.6-0.3,0.6-0.6S5.9,5,5.6,5z"></path>
                                             </svg>
-                                            <span>خصم على الفاتورة</span>
+                                            <span>Discount on the invoice</span>
                                         </a>
                                     </li>
                                     <li>
@@ -1111,7 +1112,7 @@
                                             <svg width="18" height="11.8" viewBox="0 0 18 11.8">
                                                 <path d="M15.2,1.4h-3.4C11.7,0.6,11,0,10.2,0H1.6C0.7,0,0,0.7,0,1.6v8.3h3c0.3,1.1,1.3,1.9,2.5,1.9S7.6,11,7.9,9.9h3.6 c0.3,1.1,1.3,1.9,2.5,1.9c1.2,0,2.3-0.9,2.5-2H18V4.8L15.2,1.4z M6.4,9.9c-0.2,0.3-0.6,0.6-1,0.6c-0.4,0-0.8-0.2-1-0.6 C4.3,9.7,4.2,9.5,4.2,9.2c0-0.3,0.1-0.5,0.2-0.7C4.6,8.2,5,8,5.4,8c0.4,0,0.8,0.2,1,0.6C6.6,8.8,6.7,9,6.7,9.2 C6.7,9.5,6.6,9.7,6.4,9.9z M10.5,8.6H7.9C7.6,7.5,6.6,6.7,5.4,6.7S3.2,7.5,3,8.6H1.3V1.6c0-0.2,0.1-0.3,0.3-0.3h8.6 c0.2,0,0.3,0.1,0.3,0.3V8.6z M15.1,9.8c-0.2,0.4-0.6,0.7-1.1,0.7c-0.5,0-0.9-0.3-1.1-0.7c-0.1-0.2-0.1-0.3-0.1-0.5 c0-0.3,0.1-0.6,0.3-0.8C13.3,8.2,13.6,8,14,8c0.4,0,0.7,0.2,0.9,0.4c0.2,0.2,0.3,0.5,0.3,0.8C15.2,9.4,15.2,9.6,15.1,9.8z M16.7,8.4 h-0.3c-0.3-1-1.3-1.8-2.4-1.8c-0.9,0-1.7,0.5-2.2,1.2V2.8h2.8l2.1,2.5V8.4z"></path>
                                             </svg>
-                                            <span>توصيل</span>
+                                            <span>Delivery</span>
                                         </a>
                                     </li>
                                     <li>
@@ -1119,7 +1120,7 @@
                                             <svg width="18" height="16.1" viewBox="0 0 18 16.1">
                                                 <path d="M12.7,6.4L15.4,9L18,6.4l-1-1l-1.1,1.1C15.2,2.7,11.8-0.1,7.8,0C3.4,0.1-0.1,3.8,0,8.2c0.1,4.4,3.6,7.8,8,7.8c0,0,0,0,0,0 c2.2,0,4.4-0.9,5.9-2.6l-1-0.9c-1.2,1.4-3,2.1-4.8,2.1c0,0,0,0,0,0c-3.6,0-6.5-2.8-6.6-6.5C1.3,4.5,4.2,1.5,7.9,1.4 c3.1-0.1,5.7,1.9,6.5,4.7l-0.7-0.7L12.7,6.4z"></path>
                                             </svg>
-                                            <span>حفظ الفاتورة</span>
+                                            <span>Save the invoice</span>
                                         </a>
                                     </li>
                                     <li>
@@ -1127,7 +1128,7 @@
                                             <svg width="18" height="14.1" viewBox="0 0 18 14.1">
                                                 <path d="M13.4,4.6H4.6C4.3,4.6,4,4.3,4,4s0.3-0.6,0.6-0.6h8.8C13.7,3.4,14,3.7,14,4S13.7,4.6,13.4,4.6z M14,7.1 c0-0.3-0.3-0.6-0.6-0.6H4.6C4.3,6.5,4,6.8,4,7.1c0,0.3,0.3,0.6,0.6,0.6h8.8C13.7,7.7,14,7.4,14,7.1z M5.3,13.9l2.8-2.8 c0,0,0.1-0.1,0.2-0.1h7.5c1.2,0,2.2-1,2.2-2.2V2.2C18,1,17,0,15.8,0H2.2C1,0,0,1,0,2.2v6.6C0,10.1,1,11,2.2,11h1.6 c0.1,0,0.2,0.1,0.2,0.2l0,2.1c0,0.2,0.1,0.4,0.2,0.5c0.1,0.1,0.3,0.2,0.5,0.2c0,0,0,0,0,0C5,14.1,5.2,14.1,5.3,13.9z M2.2,9.9 c-0.6,0-1.1-0.5-1.1-1.1V2.2c0-0.6,0.5-1.1,1.1-1.1h13.6c0.6,0,1.1,0.5,1.1,1.1v6.6c0,0.6-0.5,1.1-1.1,1.1H8.3c-0.4,0-0.7,0.1-1,0.4 l-2.1,2.1v-1.1c0-0.8-0.6-1.4-1.4-1.4H2.2z"></path>
                                             </svg>
-                                            <span>اضافة تعليق</span>
+                                            <span>Add a comment</span>
                                         </a>
                                     </li>
                                     <li>
@@ -1135,7 +1136,7 @@
                                             <svg width="18" height="20.4" viewBox="0 0 18 20.4">
                                                 <path d="M18,3.3h-5.4V1.8c0-1-0.8-1.8-1.8-1.8H7.2c-1,0-1.8,0.8-1.8,1.8v1.6H0v1.5h1.5l1.4,12.6c0.2,1.7,1.7,3,3.4,3c0,0,0,0,0,0 h5.4c1.7,0,3.2-1.3,3.4-3l1.4-12.6H18V3.3z M6.9,1.8c0-0.2,0.1-0.3,0.3-0.3h3.6c0.2,0,0.3,0.1,0.3,0.3v1.6H6.9V1.8z M13.6,17.2 c-0.1,1-0.9,1.7-1.9,1.7H6.3c0,0,0,0,0,0c-1,0-1.8-0.7-1.9-1.7L3,4.8l12.1,0L13.6,17.2z"></path>
                                             </svg>
-                                            <span>مسح الفاتورة</span>
+                                            <span>Delete the invoice</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -1143,7 +1144,6 @@
                         </div>
                         <div class="control-panel__body">
                             <div class="control-panel__view" id="salesInvoice" data-view="sales-invoice">
-                                <!-- stylefile name => _invoice.scss -->
                                 <div class="select-item">
                                     <a href="#" class="select-item__btn" data-view-target="clients-list">
                                         <span class="select-item__btn__icon">
@@ -1152,7 +1152,7 @@
                                                 <path fill="#F5F5F5" d="M18.7,16.1c-2.3,3.4-7,4.4-10.5,2c-0.8-0.5-1.5-1.2-2-2c2.3-3.4,7-4.4,10.5-2C17.5,14.6,18.2,15.3,18.7,16.1z M12.5,5.6c1.6,0,2.8,1.3,2.8,2.8s-1.3,2.8-2.8,2.8S9.7,10,9.7,8.4S10.9,5.6,12.5,5.6z" />
                                             </svg>
                                         </span>
-                                        <span class="select-item__btn__label">اضف عميل</span>
+                                        <span class="select-item__btn__label">Add client</span>
                                     </a>
                                     <div class="item__selected">
                                         <div class="item__selected__icon"></div>
@@ -1170,7 +1170,7 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم مع عرض خاص لفترة محدودة</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <div class="invoice__item--data-discountInput">
                                                         <input type="number" name="" id="" placeholder="00.00" value="14.00">
@@ -1209,7 +1209,7 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <div class="invoice__item--data-discountInput">
                                                         <input type="number" name="" id="" placeholder="00.00" value="14.00">
@@ -1249,7 +1249,7 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <div class="invoice__item--data-discountInput">
                                                         <input type="number" name="" id="" placeholder="00.00" value="14.00">
@@ -1289,47 +1289,7 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
-                                                    </div>
-                                                    <div class="invoice__item--data-discountInput">
-                                                        <input type="number" name="" id="" placeholder="00.00" value="14.00">
-                                                        <span>29.99</span>
-                                                    </div>
-                                                </div>
-                                                <div class="invoice__item--counter">
-                                                    <a href="#" class="invoice__item--counter--plus">
-                                                        <svg width="13" height="13" viewBox="0 0 13 13">
-                                                            <path fill="#878A90" d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
-                                                        </svg>
-                                                    </a>
-                                                    <div class="invoice__item--counter-screen">
-                                                        <input type="number" name="counter" value="24" id="">
-                                                    </div>
-                                                    <a href="#" class="invoice__item--counter--minus">
-                                                        <svg width="13" height="1" viewBox="0 0 13 1">
-                                                            <path fill="#878A90" d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
-                                                        </svg>
-                                                    </a>
-                                                </div>
-                                                <a href="#" class="invoice__item--discount add-discount" data-bs-toggle="modal" data-bs-target="#product_discount_modal">
-                                                    <span>10%</span>
-                                                    <svg width="13" height="13.1" viewBox="0 0 13 13.1">
-                                                        <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
-                                                    </svg>
-                                                </a>
-                                                <div class="invoice__item--price">
-                                                    <span>348.00</span>
-                                                </div>
-                                                <a href="#" class="invoice__item--delete">
-                                                    <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
-                                                        <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                            <li class="invoice__item">
-                                                <div class="invoice__item--data">
-                                                    <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <div class="invoice__item--data-discountInput">
                                                         <input type="number" name="" id="" placeholder="00.00" value="14.00">
@@ -1369,7 +1329,47 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
+                                                    </div>
+                                                    <div class="invoice__item--data-discountInput">
+                                                        <input type="number" name="" id="" placeholder="00.00" value="14.00">
+                                                        <span>29.99</span>
+                                                    </div>
+                                                </div>
+                                                <div class="invoice__item--counter">
+                                                    <a href="#" class="invoice__item--counter--plus">
+                                                        <svg width="13" height="13" viewBox="0 0 13 13">
+                                                            <path fill="#878A90" d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="invoice__item--counter-screen">
+                                                        <input type="number" name="counter" value="24" id="">
+                                                    </div>
+                                                    <a href="#" class="invoice__item--counter--minus">
+                                                        <svg width="13" height="1" viewBox="0 0 13 1">
+                                                            <path fill="#878A90" d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                                <a href="#" class="invoice__item--discount add-discount" data-bs-toggle="modal" data-bs-target="#product_discount_modal">
+                                                    <span>10%</span>
+                                                    <svg width="13" height="13.1" viewBox="0 0 13 13.1">
+                                                        <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
+                                                    </svg>
+                                                </a>
+                                                <div class="invoice__item--price">
+                                                    <span>348.00</span>
+                                                </div>
+                                                <a href="#" class="invoice__item--delete">
+                                                    <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
+                                                        <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="invoice__item">
+                                                <div class="invoice__item--data">
+                                                    <div class="invoice__item--data-name">
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <div class="invoice__item--data-discountInput">
                                                         <input type="number" name="" id="" placeholder="00.00" value="14.00">
@@ -1409,7 +1409,7 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <div class="invoice__item--data-discountInput">
                                                         <input type="number" name="" id="" placeholder="00.00" value="14.00">
@@ -1449,7 +1449,7 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <div class="invoice__item--data-discountInput">
                                                         <input type="number" name="" id="" placeholder="00.00" value="14.00">
@@ -1489,7 +1489,7 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <div class="invoice__item--data-discountInput">
                                                         <input type="number" name="" id="" placeholder="00.00" value="14.00">
@@ -1529,7 +1529,7 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <div class="invoice__item--data-discountInput">
                                                         <input type="number" name="" id="" placeholder="00.00" value="14.00">
@@ -1569,7 +1569,7 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <div class="invoice__item--data-discountInput">
                                                         <input type="number" name="" id="" placeholder="00.00" value="14.00">
@@ -1613,11 +1613,11 @@
                                     <div class="checkout">
                                         <ul class="checkout__list list-unstyled">
                                             <li class="checkout__list__item">
-                                                <h5>الاجمالي</h5>
+                                                <h5>Total</h5>
                                                 <span class="checkout__item__detail invoice-total-amount">302.25</span>
                                             </li>
                                             <li class="checkout__list__item invoice-discount">
-                                                <h5>الخصم الكلي</h5>
+                                                <h5>Total discount</h5>
                                                 <div class="checkout__item__detail discount-details">
                                                     <span class="discount-percentage">10%</span>
                                                     <span class="discount-amount">25.00</span>
@@ -1629,7 +1629,7 @@
                                                 </a>
                                             </li>
                                             <li class="checkout__list__item">
-                                                <h5>التوصيل</h5>
+                                                <h5>Delivery</h5>
                                                 <span class="checkout__item__detail delivery-fees-amount">25.00</span>
                                                 <a href="#" class="checkout__remove-item">
                                                     <svg width="24" height="24" viewBox="0 0 24 24">
@@ -1639,7 +1639,7 @@
                                             </li>
                                             <li class="checkout__list__item">
                                                 <div class="invoice__comment">
-                                                    <span>المنتج اخير ولا يمكن استرجاعه</span>
+                                                    <span>Product can't be returned</span>
                                                     <svg width="22.1" height="17.4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22.1 17.4" xml:space="preserve">
                                                         <path d="M16.5,5.6H5.6c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7h10.8c0.4,0,0.7,0.3,0.7,0.7S16.8,5.6,16.5,5.6z M17.2,8.7 c0-0.4-0.3-0.7-0.7-0.7H5.6C5.2,8,4.9,8.3,4.9,8.7s0.3,0.7,0.7,0.7h10.8C16.8,9.4,17.2,9.1,17.2,8.7z M6.5,17.1l3.5-3.5 c0.1-0.1,0.1-0.1,0.2-0.1h9.2c1.5,0,2.7-1.2,2.7-2.7V2.7c0-1.5-1.2-2.7-2.7-2.7H2.7C1.2,0,0,1.2,0,2.7v8.2c0,1.5,1.2,2.7,2.7,2.7h2 c0.2,0,0.3,0.1,0.3,0.3l0,2.6c0,0.2,0.1,0.4,0.3,0.6c0.2,0.2,0.4,0.3,0.6,0.3c0,0,0,0,0,0C6.1,17.4,6.3,17.3,6.5,17.1z M2.7,12.1 c-0.7,0-1.3-0.6-1.3-1.3V2.7C1.4,2,2,1.4,2.7,1.4h16.7c0.7,0,1.3,0.6,1.3,1.3v8.1c0,0.7-0.6,1.3-1.3,1.3h-9.2 c-0.5,0-0.9,0.2-1.2,0.5l-2.6,2.6v-1.4c0-0.9-0.8-1.7-1.7-1.7H2.7z" />
                                                     </svg>
@@ -1655,7 +1655,7 @@
                                                 </svg>
                                             </button>
                                             <button type="button" class="btn btn-primary btn-lg receive__cash__btn">
-                                                <span>استلام كاش</span>
+                                                <span>Receive cash</span>
                                                 <span class="receive__cash__amount">385.00</span>
                                             </button>
                                         </div>
@@ -1668,7 +1668,7 @@
                                         <svg width="15" height="13.9" viewBox="0 0 15 13.9">
                                             <path d="M14.8,12.7l-2.4-2.4c1.6-2.6,1.3-6-0.9-8.3C8.8-0.7,4.6-0.7,2,2C0.7,3.2,0,4.9,0,6.7s0.7,3.5,2,4.7 c1.3,1.3,2.9,2,4.7,2s3.5-0.7,4.7-2c0,0,0.1-0.1,0.1-0.1l2.3,2.3c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2 C15.1,13.4,15.1,12.9,14.8,12.7z M6.7,12C5.3,12,4,11.4,3,10.4c-1-1-1.6-2.3-1.6-3.7S2,4,3,2.9c1-1,2.3-1.6,3.7-1.6s2.7,0.6,3.7,1.6 c2.1,2.1,2.1,5.4,0,7.5C9.4,11.4,8.1,12,6.7,12z"></path>
                                         </svg>
-                                        <input type="search" name="" id="" placeholder="اضف عميل">
+                                        <input type="search" name="" id="" placeholder="Add client">
                                     </div>
                                     <div class="items-search__back-btn">
                                         <svg width="15" height="15" viewBox="0 0 15 15">
@@ -1677,27 +1677,26 @@
                                     </div>
                                 </div>
                                 <nav class="layout__tabs">
-                                    <a href="#" data-tab="individuals_list" class="active-tab">افراد</a>
-                                    <a href="#" data-tab="shops_list">محلات</a>
-                                    <a href="#" data-tab="suppliers_list">موردين</a>
+                                    <a href="#" data-tab="individuals_list" class="active-tab">Individuals</a>
+                                    <a href="#" data-tab="shops_list">Shops</a>
+                                    <a href="#" data-tab="suppliers_list">Suppliers</a>
                                 </nav>
                                 <a href="#" class="add-item__btn" data-bs-toggle="modal" data-bs-target="#add_client_modal">
                                     <svg width="10.2" height="10.2" viewBox="0 0 10.2 10.2">
                                         <path fill="#1877F2" d="M10.2,4.8c0,0.4-0.4,0.8-0.8,0.8H5.9v3.8c0,0.4-0.4,0.8-0.8,0.8S4.3,9.8,4.3,9.4V5.6H0.8C0.4,5.6,0,5.2,0,4.8 S0.4,4,0.8,4h3.5V0.8C4.3,0.4,4.7,0,5.1,0s0.8,0.4,0.8,0.8V4h3.5C9.8,4,10.2,4.4,10.2,4.8z"></path>
                                     </svg>
-                                    <span>اضافة عميل</span>
+                                    <span>Add client</span>
                                 </a>
                                 <div class="clients-list--container layout__container">
                                     <div class="clients-list--individuals layout__tab__content active-tab" data-tab="individuals_list">
                                         <ul class="control-panel__list list-unstyled clients-list-users">
-                                            <!-- you can use this component only stylefile  => _clients-list.scss -->
                                             <li>
                                                 <a href="#" class="control-panel__list-item clients-list-users-item">
                                                     <div class="control-panel__list-item__icon">
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1711,7 +1710,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1725,7 +1724,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1739,7 +1738,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1753,7 +1752,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1767,7 +1766,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1781,7 +1780,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1795,7 +1794,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1809,7 +1808,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1823,7 +1822,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1837,7 +1836,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1851,7 +1850,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1865,7 +1864,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1879,7 +1878,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1893,7 +1892,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1907,7 +1906,7 @@
                                                         <img src="images/client-icon-neutral.svg">
                                                     </div>
                                                     <div class="control-panel__list-item__data">
-                                                        <span>عاصم الجزيري</span>
+                                                        <span>Assim Elgzery</span>
                                                         <span>01126622221</span>
                                                     </div>
                                                     <div class="clients-list-users-item-price">
@@ -1936,7 +1935,7 @@
                             <svg width="13" height="13.1" viewBox="0 0 13 13.1">
                                 <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
                             </svg>
-                            <span>خصم على الفاتورة</span>
+                            <span>Discount on the invoice</span>
                         </h5>
                     </div>
                     <form id="invoice_discount_form">
@@ -1947,7 +1946,7 @@
                                         <svg width="24" height="24" viewBox="0 0 24 24">
                                             <path fill="#FF6B73" d="M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12s12-5.4,12-12S18.6,0,12,0z M12,23C5.9,23,1,18.1,1,12S5.9,1,12,1 s11,4.9,11,11S18.1,23,12,23z M17.7,16.9L12.7,12l4.9-4.9l-0.7-0.7L12,11.3L7.1,6.3L6.3,7.1l4.9,4.9l-4.9,4.9l0.7,0.7l4.9-4.9 l4.9,4.9L17.7,16.9z"></path>
                                         </svg>
-                                        <span>الغاء الخصم</span>
+                                        <span>Cancel the discount</span>
                                     </div>
                                 </div>
                             </div>
@@ -1963,7 +1962,7 @@
                                     </svg>
                                 </div>
                                 <div class="col-5 col-sm-5">
-                                    <div class="currency-symbol" data-symbol="جـ.م">
+                                    <div class="currency-symbol" data-symbol="EGP">
                                         <input type="number" class="form-control" id="invoice_discount_amount" placeholder="00.00">
                                     </div>
                                 </div>
@@ -1972,7 +1971,7 @@
                             <span class="after-discount">360.00</span>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-primary">تطبيق</button>
+                            <button type="button" class="btn btn-outline-primary">Submit</button>
                             <button type="button" class="btn btn-link" data-bs-dismiss="modal">الغاء</button>
                         </div>
                     </form>
@@ -1987,7 +1986,7 @@
                             <svg width="18" height="14.1" viewBox="0 0 18 14.1">
                                 <path d="M13.4,4.6H4.6C4.3,4.6,4,4.3,4,4s0.3-0.6,0.6-0.6h8.8C13.7,3.4,14,3.7,14,4S13.7,4.6,13.4,4.6z M14,7.1 c0-0.3-0.3-0.6-0.6-0.6H4.6C4.3,6.5,4,6.8,4,7.1c0,0.3,0.3,0.6,0.6,0.6h8.8C13.7,7.7,14,7.4,14,7.1z M5.3,13.9l2.8-2.8 c0,0,0.1-0.1,0.2-0.1h7.5c1.2,0,2.2-1,2.2-2.2V2.2C18,1,17,0,15.8,0H2.2C1,0,0,1,0,2.2v6.6C0,10.1,1,11,2.2,11h1.6 c0.1,0,0.2,0.1,0.2,0.2l0,2.1c0,0.2,0.1,0.4,0.2,0.5c0.1,0.1,0.3,0.2,0.5,0.2c0,0,0,0,0,0C5,14.1,5.2,14.1,5.3,13.9z M2.2,9.9 c-0.6,0-1.1-0.5-1.1-1.1V2.2c0-0.6,0.5-1.1,1.1-1.1h13.6c0.6,0,1.1,0.5,1.1,1.1v6.6c0,0.6-0.5,1.1-1.1,1.1H8.3c-0.4,0-0.7,0.1-1,0.4 l-2.1,2.1v-1.1c0-0.8-0.6-1.4-1.4-1.4H2.2z"></path>
                             </svg>
-                            <span>تعليق على الفاتورة</span>
+                            <span>Comment on the invoice</span>
                         </h5>
                     </div>
                     <form id="invoice_comment_form">
@@ -1996,23 +1995,23 @@
                                 <svg width="24" height="24" viewBox="0 0 24 24">
                                     <path fill="#FF6B73" d="M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12s12-5.4,12-12S18.6,0,12,0z M12,23C5.9,23,1,18.1,1,12S5.9,1,12,1 s11,4.9,11,11S18.1,23,12,23z M17.7,16.9L12.7,12l4.9-4.9l-0.7-0.7L12,11.3L7.1,6.3L6.3,7.1l4.9,4.9l-4.9,4.9l0.7,0.7l4.9-4.9 l4.9,4.9L17.7,16.9z"></path>
                                 </svg>
-                                <span>مسح التعليق</span>
+                                <span>Delete the comment</span>
                             </div>
                             <div class="row">
                                 <div class="col-12 mb-3">
-                                    <label for="add_invoice_comment" class="form-label">اضف تعليق</label>
+                                    <label for="add_invoice_comment" class="form-label">Add a comment</label>
                                     <textarea class="form-control" id="add_invoice_comment" rows="2" placeholder="اكتب تعليق"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="show_in_receipt">
-                                        <label class="form-check-label" for="show_in_receipt">اظهار فى فاتورة العميل</label>
+                                        <label class="form-check-label" for="show_in_receipt">Show in client invoice</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-primary">تطبيق</button>
+                            <button type="button" class="btn btn-outline-primary">Submit</button>
                             <button type="button" class="btn btn-link" data-bs-dismiss="modal">الغاء</button>
                         </div>
                     </form>
@@ -2027,7 +2026,7 @@
                             <svg width="13" height="13.1" viewBox="0 0 13 13.1">
                                 <path fill="#060505" d="M8.1,13c-0.5,0-0.9-0.2-1.2-0.5l-0.1-0.1L0.5,6.2C0.2,5.9,0,5.4,0,4.9l0.1-3c0-0.9,0.8-1.7,1.7-1.7l3-0.1 c0.5,0,1,0.2,1.4,0.5l6.3,6.3c0.7,0.7,0.7,1.8,0,2.5l-3.1,3.1C9,12.8,8.5,13,8.1,13C8.1,13,8.1,13,8.1,13z M7.5,11.8 C7.7,11.9,7.9,12,8.1,12h0c0.2,0,0.4-0.1,0.6-0.2l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1L5.5,1.2C5.3,1.1,5.1,1,4.9,1l-3,0.1 c-0.4,0-0.7,0.3-0.8,0.8L1,4.9c0,0.2,0.1,0.4,0.2,0.6L7.5,11.8z M4.1,5.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5 S4.9,5.5,4.1,5.5z M4.1,3.6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5S4.3,3.6,4.1,3.6z"></path>
                             </svg>
-                            <span>خصم على المنتج</span>
+                            <span>Product discount</span>
                         </h5>
                     </div>
                     <form id="product_discount_form">
@@ -2044,7 +2043,7 @@
                                     </svg>
                                 </div>
                                 <div class="col-5 col-sm-5">
-                                    <div class="currency-symbol" data-symbol="جـ.م">
+                                    <div class="currency-symbol" data-symbol="EGP">
                                         <input type="number" class="form-control" id="product_discount_amount" placeholder="00.00">
                                     </div>
                                 </div>
@@ -2055,19 +2054,19 @@
                                         <svg width="24" height="24" viewBox="0 0 24 24">
                                             <path fill="#FF6B73" d="M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12s12-5.4,12-12S18.6,0,12,0z M12,23C5.9,23,1,18.1,1,12S5.9,1,12,1 s11,4.9,11,11S18.1,23,12,23z M17.7,16.9L12.7,12l4.9-4.9l-0.7-0.7L12,11.3L7.1,6.3L6.3,7.1l4.9,4.9l-4.9,4.9l0.7,0.7l4.9-4.9 l4.9,4.9L17.7,16.9z"></path>
                                         </svg>
-                                        <span>مسح التعليق</span>
+                                        <span>Delete the comment</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <label for="product_discount_comment" class="form-label">اضف تعليق</label>
+                                    <label for="product_discount_comment" class="form-label">Add a comment</label>
                                     <textarea class="form-control" id="product_discount_comment" rows="2" placeholder="اكتب تعليق"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-primary">تطبيق</button>
+                            <button type="button" class="btn btn-outline-primary">Submit</button>
                             <button type="button" class="btn btn-link" data-bs-dismiss="modal">الغاء</button>
                         </div>
                     </form>
@@ -2082,35 +2081,35 @@
                             <svg width="12.5" height="13.8" viewBox="0 0 12.5 13.8">
                                 <path fill="#060505" d="M12.5,10.5c-2.3,3.4-7,4.4-10.5,2c-0.8-0.5-1.5-1.2-2-2c2.3-3.4,7-4.4,10.5-2C11.3,9,11.9,9.7,12.5,10.5z M5.8,0c1.6,0,2.8,1.3,2.8,2.8S7.4,5.7,5.8,5.7S3,4.4,3,2.8S4.3,0,5.8,0z"></path>
                             </svg>
-                            <span>اضافة عميل</span>
+                            <span>Add client</span>
                         </h5>
                     </div>
                     <form id="add_client_form">
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-12 col-sm-6 mb-3">
-                                    <label class="form-label" for="add_client_name">اسم العميل</label>
+                                    <label class="form-label" for="add_client_name">Client name</label>
                                     <input type="text" class="form-control" id="add_client_name" placeholder="">
                                 </div>
                                 <div class="col-12 col-sm-6 mb-3">
-                                    <label class="form-label" for="add_client_phone_number">رقم الموبيل</label>
+                                    <label class="form-label" for="add_client_phone_number">Mobile number</label>
                                     <input type="tel" class="form-control" id="add_client_phone_number" placeholder="">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 col-sm-6 mb-3">
-                                    <label class="form-label" for="add_client_code">كود العميل</label>
+                                    <label class="form-label" for="add_client_code">Client code</label>
                                     <input type="number" class="form-control" id="add_client_code" placeholder="">
                                 </div>
                             </div>
                             <fieldset class="collapsible pb-0">
                                 <legend>
-                                    <a href="#" class="collapse__toggle" aria-expanded="true">عنوان 1</a>
+                                    <a href="#" class="collapse__toggle" aria-expanded="true">Address 1</a>
                                 </legend>
                                 <div class="collapse__container">
                                     <div class="row pt-3">
                                         <div class="col-12 col-sm-4 mb-3">
-                                            <label class="form-label" for="add_client_governorate">المحافظة</label>
+                                            <label class="form-label" for="add_client_governorate">Governorate</label>
                                             <select class="form-select" id="add_client_governorate">
                                                 <option value="">القاهرة</option>
                                                 <option value="">طنطا</option>
@@ -2122,36 +2121,36 @@
                                         <div class="col-12 col-sm-4 mb-3">
                                             <label class="form-label" for="add_client_city">المدينة</label>
                                             <select class="form-select" id="add_client_city">
-                                                <option value="">مدينة نصر</option>
-                                                <option value="">شيراتون</option>
-                                                <option value="">مصر الجديد</option>
-                                                <option value="">المعادي</option>
-                                                <option value="">الجيزة</option>
+                                                <option value="">Nasr city</option>
+                                                <option value="">Sheraton</option>
+                                                <option value="">Heliopolis</option>
+                                                <option value="">Maadi</option>
+                                                <option value="">Giza</option>
                                             </select>
                                         </div>
                                         <div class="col-12 col-sm-4 mb-3">
                                             <label class="form-label" for="add_client_neighborhood">المدينة</label>
                                             <select class="form-select" id="add_client_neighborhood">
-                                                <option value="">الحي السابع</option>
-                                                <option value="">الحي الثامن</option>
+                                                <option value="">7th district</option>
+                                                <option value="">8th district</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-12 col-sm-6 mb-3">
-                                            <label class="form-label" for="add_client_street">الشارع</label>
+                                            <label class="form-label" for="add_client_street">Street</label>
                                             <input type="text" class="form-control" id="add_client_street" placeholder="صلاح سالم">
                                         </div>
                                         <div class="col-12 col-sm-2 mb-3">
-                                            <label class="form-label" for="add_client_building">العمارة</label>
+                                            <label class="form-label" for="add_client_building">Building</label>
                                             <input type="text" class="form-control" id="add_client_building" placeholder="1">
                                         </div>
                                         <div class="col-12 col-sm-2 mb-3">
-                                            <label class="form-label" for="add_client_floor">الدور</label>
+                                            <label class="form-label" for="add_client_floor">Floor</label>
                                             <input type="number" class="form-control" id="add_client_floor" placeholder="1">
                                         </div>
                                         <div class="col-12 col-sm-2 mb-3">
-                                            <label class="form-label" for="add_client_apartment">الشقة</label>
+                                            <label class="form-label" for="add_client_apartment">Apartment</label>
                                             <input type="number" class="form-control" id="add_client_apartment" placeholder="2">
                                         </div>
                                     </div>
@@ -2175,7 +2174,7 @@
                             <svg width="18" height="11.8" viewBox="0 0 18 11.8">
                                 <path d="M15.2,1.4h-3.4C11.7,0.6,11,0,10.2,0H1.6C0.7,0,0,0.7,0,1.6v8.3h3c0.3,1.1,1.3,1.9,2.5,1.9S7.6,11,7.9,9.9h3.6 c0.3,1.1,1.3,1.9,2.5,1.9c1.2,0,2.3-0.9,2.5-2H18V4.8L15.2,1.4z M6.4,9.9c-0.2,0.3-0.6,0.6-1,0.6c-0.4,0-0.8-0.2-1-0.6 C4.3,9.7,4.2,9.5,4.2,9.2c0-0.3,0.1-0.5,0.2-0.7C4.6,8.2,5,8,5.4,8c0.4,0,0.8,0.2,1,0.6C6.6,8.8,6.7,9,6.7,9.2 C6.7,9.5,6.6,9.7,6.4,9.9z M10.5,8.6H7.9C7.6,7.5,6.6,6.7,5.4,6.7S3.2,7.5,3,8.6H1.3V1.6c0-0.2,0.1-0.3,0.3-0.3h8.6 c0.2,0,0.3,0.1,0.3,0.3V8.6z M15.1,9.8c-0.2,0.4-0.6,0.7-1.1,0.7c-0.5,0-0.9-0.3-1.1-0.7c-0.1-0.2-0.1-0.3-0.1-0.5 c0-0.3,0.1-0.6,0.3-0.8C13.3,8.2,13.6,8,14,8c0.4,0,0.7,0.2,0.9,0.4c0.2,0.2,0.3,0.5,0.3,0.8C15.2,9.4,15.2,9.6,15.1,9.8z M16.7,8.4 h-0.3c-0.3-1-1.3-1.8-2.4-1.8c-0.9,0-1.7,0.5-2.2,1.2V2.8h2.8l2.1,2.5V8.4z"></path>
                             </svg>
-                            <span>التوصيل</span>
+                            <span>Delivery</span>
                         </h5>
                     </div>
                     <form id="order_delivery_form">
@@ -2186,20 +2185,20 @@
                                         <img src="images/client-icon-neutral.svg">
                                     </div>
                                     <div class="item__selected__data">
-                                        <span>عاصم الجزيري</span>
+                                        <span>Assim Elgzery</span>
                                         <span>01126622221</span>
                                     </div>
                                 </div>
                                 <ul class="addresses__list list-unstyled">
                                     <li class="addresses__item">
                                         <div class="address__container selected">
-                                            <span class="address__details">شقة 4, دور 3, 7 ش حسن المأمون,مصر الجديدة, القاهرة</span>
+                                            <span class="address__details">شقة 4, دور 3, 7 ش حسن المأمون,Heliopolisة, القاهرة</span>
                                             <a href="#" class="edit__address">تعديل</a>
                                         </div>
                                     </li>
                                     <li class="addresses__item">
                                         <div class="address__container">
-                                            <span class="address__details">شقة 4, دور 3, 7 ش حسن المأمون,مصر الجديدة, القاهرة</span>
+                                            <span class="address__details">شقة 4, دور 3, 7 ش حسن المأمون,Heliopolisة, القاهرة</span>
                                             <a href="#" class="edit__address">تعديل</a>
                                         </div>
                                     </li>
@@ -2218,20 +2217,20 @@
                                 </div>
                                 <div class="col-12 col-sm-6 mb-3">
                                     <label class="form-label" for="delivery_fee">قيمة الديلفرى</label>
-                                    <div class="currency-symbol" data-symbol="جـ.م">
+                                    <div class="currency-symbol" data-symbol="EGP">
                                         <input type="number" class="form-control" id="delivery_fee" placeholder="00.00">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <label class="form-label" for="delivery_comment">اضف تعليق</label>
+                                    <label class="form-label" for="delivery_comment">Add a comment</label>
                                     <input type="number" class="form-control" id="delivery_comment" placeholder="اكتب تعليق">
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-primary">تطبيق</button>
+                            <button type="button" class="btn btn-outline-primary">Submit</button>
                             <button type="button" class="btn btn-link" data-bs-dismiss="modal">الغاء</button>
                         </div>
                     </form>
@@ -2253,48 +2252,48 @@
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-12 col-sm-4 mb-3">
-                                    <label class="form-label" for="delivery_client_governorate">المحافظة</label>
+                                    <label class="form-label" for="delivery_client_governorate">Governorate</label>
                                     <select class="form-select" id="delivery_client_governorate">
-                                        <option value="">القاهرة</option>
-                                        <option value="">طنطا</option>
-                                        <option value="">سوهاج</option>
-                                        <option value="">اسوان</option>
-                                        <option value="">الشرقية</option>
+                                        <option value="">Cairo</option>
+                                        <option value="">Tanta</option>
+                                        <option value="">Sohag</option>
+                                        <option value="">Asswan</option>
+                                        <option value="">AlSharqeyyah</option>
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-4 mb-3">
-                                    <label class="form-label" for="delivery_client_city">المدينة</label>
+                                    <label class="form-label" for="delivery_client_city">City</label>
                                     <select class="form-select" id="delivery_client_city">
-                                        <option value="">مدينة نصر</option>
-                                        <option value="">شيراتون</option>
-                                        <option value="">مصر الجديد</option>
-                                        <option value="">المعادي</option>
-                                        <option value="">الجيزة</option>
+                                        <option value="">Nasr city</option>
+                                        <option value="">Sheraton</option>
+                                        <option value="">Heliopolis</option>
+                                        <option value="">Maadi</option>
+                                        <option value="">Giza</option>
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-4 mb-3">
                                     <label class="form-label" for="delivery_client_neighborhood">المدينة</label>
                                     <select class="form-select" id="delivery_client_neighborhood">
-                                        <option value="">الحي السابع</option>
-                                        <option value="">الحي الثامن</option>
+                                        <option value="">7th district</option>
+                                        <option value="">8th district</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 col-sm-6 mb-3">
-                                    <label class="form-label" for="delivery_client_street">الشارع</label>
+                                    <label class="form-label" for="delivery_client_street">Street</label>
                                     <input type="text" class="form-control" id="delivery_client_street" placeholder="صلاح سالم">
                                 </div>
                                 <div class="col-12 col-sm-2 mb-3">
-                                    <label class="form-label" for="delivery_client_building">العمارة</label>
+                                    <label class="form-label" for="delivery_client_building">Building</label>
                                     <input type="text" class="form-control" id="delivery_client_building" placeholder="1">
                                 </div>
                                 <div class="col-12 col-sm-2 mb-3">
-                                    <label class="form-label" for="delivery_client_floor">الدور</label>
+                                    <label class="form-label" for="delivery_client_floor">Floor</label>
                                     <input type="number" class="form-control" id="delivery_client_floor" placeholder="1">
                                 </div>
                                 <div class="col-12 col-sm-2 mb-3">
-                                    <label class="form-label" for="delivery_client_apartment">الشقة</label>
+                                    <label class="form-label" for="delivery_client_apartment">Apartment</label>
                                     <input type="number" class="form-control" id="delivery_client_apartment" placeholder="2">
                                 </div>
                             </div>
@@ -2311,7 +2310,7 @@
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="product_inventory_label">جونسون، صابون للاستحمام 15ملم</h5>
+                        <h5 class="modal-title" id="product_inventory_label">Johnson Baby Oil, 75 ml</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                             <svg width="15" height="15" viewBox="0 0 15 15">
                                 <path fill="#060505" d="M8.4,7.5l6.6,6.6L14.1,15L7.5,8.4L0.9,15h0L0,14.1l6.6-6.6L0,0.9L0.9,0h0l6.6,6.6L14.1,0L15,0.9L8.4,7.5z"></path>
@@ -2325,19 +2324,19 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">الفرع</th>
-                                    <th scope="col">سعر البيع</th>
-                                    <th class="text-center" scope="col">المخزون المتاحة</th>
+                                    <th scope="col">Branch</th>
+                                    <th scope="col">Selling Price</th>
+                                    <th class="text-center" scope="col">In Stock</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>شبرا</td>
+                                    <td>Shobra</td>
                                     <td>4.00</td>
                                     <td class="text-center">12</td>
                                 </tr>
                                 <tr>
-                                    <td>شبرا</td>
+                                    <td>Shobra</td>
                                     <td>4.00</td>
                                     <td class="text-center">12</td>
                                 </tr>

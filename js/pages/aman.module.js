@@ -89,3 +89,29 @@ controlPanels.forEach(panel => {
         }, 350);
     });
 });
+
+
+// Getting page style direction to implement horizontal scrolling
+document.querySelector('.services').addEventListener('wheel', function (e) {
+    let bodyElement = document.querySelector('body');
+    let direction;
+
+    if (window.getComputedStyle) {
+        // all browsers
+        direction = window.getComputedStyle(bodyElement, null).getPropertyValue('direction');
+    } else {
+        // IE5-8
+        direction = bodyElement.currentStyle.direction;
+    }
+    if (direction == 'rtl') {
+        // document.querySelector('.services').scrollLeft += e.deltaY;
+        this.scrollLeft += (e.wheelDelta);
+    } else {
+        this.scrollLeft -= (e.wheelDelta);
+    }
+    e.preventDefault();
+}, false);
+
+document.querySelector('.services__group__list').addEventListener('wheel', function (e) {
+    e.stopPropagation();
+});

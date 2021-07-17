@@ -11,7 +11,7 @@
         min-height: 52px
         max-height: 52px
         color: #fff
-        @include var(background-color, color-brand)
+        +var(background-color, color-brand)
         padding: 5px 16px
 
         @media (max-width: 767px)
@@ -150,6 +150,7 @@
         &__btn
             display: flex
             align-items: center
+            gap: rem(10px)
             width: 100%
             height: rem(44px)
             background-color: #F2F2F2
@@ -163,7 +164,6 @@
             &__icon
                 width: rem(24px)
                 height: rem(24px)
-                margin-left: rem(10px)
 
                 img,
                 svg
@@ -289,9 +289,9 @@
         height: 48px
         +flex-center
         gap: 8px
-        font-family: 'NotoSansArabic_Medium'
+        font-family: 'NotoSansArabic_Medium', sans-serif
         font-size: rem(12px)
-        @include var(color, color-brand)
+        +var(color, color-brand)
         text-decoration: none
         border-bottom: 1px solid #F0F2F5
         padding: 15px 20px

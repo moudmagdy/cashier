@@ -1,0 +1,136 @@
+:root {
+  --animate-duration: 500ms;
+  --default-font-size: 1rem;
+  --main-menu-width: 88px;
+  --color-brand: #1877F2;
+  --color-brand-aman: #3DBEC8;
+  --color-bg: #F5F5F5;
+  --color-text-primary: #060505;
+}
+
+body {
+  direction: ltr;
+  font-family: "NotoSans_Regular", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "NotoSans_SemiBold", sans-serif;
+}
+
+h4,
+h5 {
+  font-family: "NotoSans_Medium", sans-serif;
+}
+
+h6 {
+  font-family: "NotoSans_Regular", sans-serif;
+}
+
+fieldset legend {
+  font-family: "NotoSans_SemiBold", sans-serif;
+}
+
+label {
+  font-family: "NotoSans_Medium", sans-serif;
+}
+
+.collapse__toggle {
+  font-family: "NotoSans_SemiBold", sans-serif;
+}
+
+.btn-link {
+  font-family: "NotoSans_Medium", sans-serif;
+}
+
+[type=number],
+[type=tel] {
+  direction: ltr;
+}
+
+@media (min-width: 1025px) {
+  .page__layout {
+    padding-right: 0;
+    padding-left: 88px;
+    padding-left: var(--main-menu-width);
+  }
+}
+
+.main-menu {
+  right: 100%;
+  left: auto;
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+.main-menu__toggle {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.main-menu__toggle svg {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+.main-menu nav a {
+  font-family: "NotoSans_Medium", sans-serif;
+}
+@media (min-width: 1025px) {
+  .main-menu {
+    right: auto;
+    left: 0;
+  }
+  .main-menu__toggle {
+    margin-right: 0;
+    margin-left: 1.1875rem;
+  }
+  .main-menu nav .submenu .submenu__content {
+    right: auto;
+    left: 100%;
+  }
+}
+
+.main-menu--opened .main-menu {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+}
+@media (min-width: 1025px) {
+  .main-menu--opened .main-menu {
+    border-radius: 0 0.75rem 0.75rem 0;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+  .main-menu--opened .main-menu .main-menu__toggle {
+    margin-left: 0;
+  }
+}
+
+.layout__tabs a {
+  font-family: "NotoSans_Medium", sans-serif;
+}
+
+.product__dropdown {
+  right: auto;
+  left: 0.125rem;
+}
+
+.product__quantity {
+  right: -7px;
+  left: auto;
+}
+
+.control-panel__header .dropdown {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.control-panel .add-item__btn {
+  font-family: "NotoSans_Medium", sans-serif;
+}
+
+.control-panel .items-search__back-btn svg {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+}

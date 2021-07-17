@@ -45,12 +45,12 @@
         transition: all 0.3s
 
         &:hover
-            @include var(border-color, color-brand)
+            +var(border-color, color-brand)
 
         &.selected
             color: #fff
-            @include var(background-color, color-brand)
-            @include var(border-color, color-brand)
+            +var(background-color, color-brand)
+            +var(border-color, color-brand)
 
         &:first-of-type
             margin-top: 15px

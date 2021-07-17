@@ -2,11 +2,12 @@
     position: relative
     display: flex
     flex-direction: column
+    align-content: flex-start
     width: 100%
     height: 100vh
 
     @media (min-width: 1025px)
-        @include var(padding-right, main-menu-width)
+        +var(padding-right, main-menu-width)
 
     &__row
         display: grid
@@ -47,6 +48,7 @@
     header
         display: flex
         align-items: center
+        gap: rem(15px)
         min-height: 52px
         padding: 0 22px
 
@@ -55,7 +57,7 @@
 
         .main-menu__toggle
             display: none
-            margin-left: 15px
+
             @media (max-width: 1024px)
                 display: block
 
@@ -78,7 +80,7 @@
     &__scrollable-content
         height: 100%
         overflow-y: auto
-        @include scroll-bar
+        +scroll-bar
         scroll-behavior: smooth
 
     .form-container

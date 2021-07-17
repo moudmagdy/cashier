@@ -26,6 +26,9 @@ changeViewDropdownItems.forEach(item => {
         products.forEach((product) => {
             product.removeAttribute('style');
         });
+
+        document.querySelector('.products__list').parentElement.scrollTo({ top: 0, behavior: 'smooth' });
+
         switch (clickedItem) {
             case 'grid-view':
                 productsList.classList.remove('list-view');

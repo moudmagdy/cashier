@@ -2,12 +2,12 @@ html
     font-size: 16px
 
 body
-    font-family: 'NotoSans-Regular', sans-serif
+    font-family: 'NotoSans_Regular', sans-serif
     font-family: 'NotoSansArabic_Regular', sans-serif
     font-weight: normal
     font-style: normal
-    @include var(color, color-text-primary)
-    @include var(font-size, default-font-size)
+    +var(color, color-text-primary)
+    +var(font-size, default-font-size)
 
 h1,
 h2,
@@ -26,7 +26,7 @@ header
         font-size: 1rem
         font-weight: 600
         font-style: normal
-        @include var(color, color-text-primary)
+        +var(color, color-text-primary)
 
 fieldset
     legend

@@ -1,20 +1,20 @@
 @font-face {
-    font-family: 'NotoSans-Regular';
-    src: url('/path-to/NotoSans-Regular.woff2') format('woff2'),
-        url('/path-to/NotoSans-Regular.woff') format('woff'),
-        url('/path-to/NotoSans-Regular.ttf')  format('truetype');
+    font-family: 'NotoSans_Regular';
+    src: url('../fonts/NotoSans-Regular.woff2') format('woff2'),
+        url('../fonts/NotoSans-Regular.woff') format('woff'),
+        url('../fonts/NotoSans-Regular.ttf')  format('truetype');
 }
 @font-face {
-    font-family: 'NotoSans-Medium';
-    src: url('/path-to/NotoSans-Medium.woff2') format('woff2'),
-        url('/path-to/NotoSans-Medium.woff') format('woff'),
-        url('/path-to/NotoSans-Medium.ttf')  format('truetype');
+    font-family: 'NotoSans_Medium';
+    src: url('../fonts/NotoSans-Medium.woff2') format('woff2'),
+        url('../fonts/NotoSans-Medium.woff') format('woff'),
+        url('../fonts/NotoSans-Medium.ttf')  format('truetype');
 }
 @font-face {
-    font-family: 'NotoSans-SemiBold';
-    src: url('/path-to/NotoSans-SemiBold.woff2') format('woff2'),
-        url('/path-to/NotoSans-SemiBold.woff') format('woff'),
-        url('/path-to/NotoSans-SemiBold.ttf')  format('truetype');
+    font-family: 'NotoSans_SemiBold';
+    src: url('../fonts/NotoSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/NotoSans-SemiBold.woff') format('woff'),
+        url('../fonts/NotoSans-SemiBold.ttf')  format('truetype');
 }
 @font-face {
     font-family: 'NotoSansArabic_SemiBold';

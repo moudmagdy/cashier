@@ -3,10 +3,10 @@
     top: 0
     right: auto
     left: 100%
-    width: 168px
+    width: rem(168px)
     height: 100vh
     background-color: #fff
-    border-radius: 12px 0 0 12px
+    border-radius: rem(12px) 0 0 rem(12px)
     opacity: 0
     pointer-events: none
     z-index: 999
@@ -14,34 +14,32 @@
 
     &__header
         display: flex
+        gap: rem(10px)
         align-items: center
-        height: 52px
+        height: rem(52px)
+        padding: 0 rem(10px)
 
     &__toggle,
     &__logo
         display: inline-block
 
     &__toggle
-        margin-top: 11px
-        margin-bottom: 11px
-        margin-right: 10px
-        transition: margin-right 0.3s ease-in-out
+        transition: margin 0.3s ease-in-out
 
         svg
-            width: 30px
-            height: 30px
+            width: rem(30px)
+            height: rem(30px)
             fill: #212121
 
     &__logo
-        width: 28px
-        height: 28px
+        width: rem(28px)
+        height: rem(28px)
         opacity: 1
-        margin-right: 10px
 
         svg
             width: 28px
             height: 28px
-            @include var(fill, color-brand)
+            +var(fill, color-brand)
 
     nav
         padding: 0 4px
@@ -75,7 +73,7 @@
                     background-color: rgba(24, 119, 242, 0.08)
 
                 &.active
-                    @include var(color, color-brand)
+                    +var(color, color-brand)
                     background-color: rgba(24, 119, 242, 0.08)
 
                     &::before
@@ -231,7 +229,7 @@
     @media (min-width: 1025px)
         right: 0
         left: auto
-        @include var(width, main-menu-width)
+        +var(width, main-menu-width)
         pointer-events: auto
         opacity: 1
         border-radius: 0
@@ -239,7 +237,7 @@
         transition: width 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), border-radius 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), box-shadow 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17)
 
         &__toggle
-            margin-right: 29px
+            margin-right: 19px
 
         &__logo
             opacity: 0
@@ -319,12 +317,11 @@
             transform: none
 
             .main-menu__toggle
-                margin-right: 10px
+                margin-right: 0
 
             .main-menu__logo
                 opacity: 1
                 pointer-events: auto
-                margin-right: 10px
 
             nav
                 a
