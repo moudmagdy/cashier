@@ -1,6 +1,7 @@
 import '../components/main-menu.module.js';
 import '../components/collapsible.module.js';
 
+const services = document.querySelector('.services');
 const servicesItem = document.querySelectorAll('.services__group__item a');
 const controlPanels = document.querySelectorAll('.control-panel');
 
@@ -92,7 +93,7 @@ controlPanels.forEach(panel => {
 
 
 // Getting page style direction to implement horizontal scrolling
-document.querySelector('.services').addEventListener('wheel', function (e) {
+services.addEventListener('wheel', (e) => {
     let bodyElement = document.querySelector('body');
     let direction;
 
@@ -104,14 +105,24 @@ document.querySelector('.services').addEventListener('wheel', function (e) {
         direction = bodyElement.currentStyle.direction;
     }
     if (direction == 'rtl') {
-        // document.querySelector('.services').scrollLeft += e.deltaY;
-        this.scrollLeft += (e.wheelDelta);
+        // services.scrollLeft += e.deltaY;
+        services.scrollLeft += (e.wheelDelta);
     } else {
-        this.scrollLeft -= (e.wheelDelta);
+        services.scrollLeft -= (e.wheelDelta);
     }
     e.preventDefault();
 }, false);
 
-document.querySelector('.services__group__list').addEventListener('wheel', function (e) {
+document.querySelector('.services__group__list').addEventListener('wheel', (e) => {
     e.stopPropagation();
+});
+
+const balanceReloadBtn = document.querySelector('.credit__balance__reload-btn')
+balanceReloadBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    balanceReloadBtn.classList.add('refreshing');
+
+    setTimeout(function () {
+        balanceReloadBtn.classList.remove('refreshing');
+    }, 1000);
 });

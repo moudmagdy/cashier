@@ -3,6 +3,9 @@
     top: 0
     right: auto
     left: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
     width: rem(168px)
     height: 100vh
     background-color: #fff
@@ -17,6 +20,8 @@
         gap: rem(10px)
         align-items: center
         height: rem(52px)
+        min-height: rem(52px)
+        overflow: hidden
         padding: 0 rem(10px)
 
     &__toggle,
@@ -42,12 +47,16 @@
             +var(fill, color-brand)
 
     nav
+        height: 100%
+        overflow-y: hidden
+        overflow-y: clip
+        overflow-x: visible
         padding: 0 4px
 
         a
             display: flex
             align-items: center
-            gap: 5px
+            gap: rem(5px)
             color: #A3AAB2
             font-family: 'NotoSansArabic_Medium', sans-serif
             font-size: 14px
@@ -57,6 +66,9 @@
             text-decoration: none
             border-radius: 8px
             padding: 0.569rem 0.59rem
+
+            @media (max-width: 1024px)
+                display: flex !important
 
             &::before
                 content: ""
@@ -255,12 +267,8 @@
                     height: 36px
 
             .submenu
-                display: block
-
-            & > a:nth-child(+n+8)
-                display: none
-
-            .submenu
+                display: flex
+                flex-direction: column
                 position: relative
 
                 & > a
@@ -284,7 +292,8 @@
                     display: flex
                     flex-wrap: wrap
                     gap: 4px
-                    width: 256px
+                    max-width: 256px
+                    width: max-content
                     background-color: $color-white
                     border-radius: 12px
                     box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.16)
@@ -295,7 +304,9 @@
 
                     a
                         flex: 0 0 100%
-                        max-width: 80px
+                        width: rem(80px)
+                        max-width: rem(80px)
+                        height: rem(76px)
 
                 &.submenu-shown
                     .submenu__content
@@ -325,6 +336,7 @@
 
             nav
                 a
+                    display: flex !important
                     flex-direction: row
                     justify-content: flex-start
                     font-size: 14px
@@ -333,9 +345,6 @@
                         width: 28px
                         height: 28px
                         animation: iconScale 0.2s linear forwards
-
-                & > a:nth-child(+n+8)
-                    display: flex
 
                 .submenu
                     display: none

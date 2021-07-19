@@ -42,29 +42,34 @@
                 max-width: 500px
                 flex: 0 0 50%
 
-            .credit__balance__container
+            .credit__balance
                 display: flex
                 align-items: center
                 gap: rem(8px)
 
-            .credit__balance
-                span
-                    font-size: 19
+                &__data
+                    span
+                        font-size: 19
 
-                    &:last-child
-                        font-family: 'NotoSansArabic_SemiBold'
+                        &:last-child
+                            font-family: 'NotoSansArabic_SemiBold', sans-serif
 
-            .credit__balance__reload__btn
-                +flex-center
-                width: 36px
-                height: 36px
-                border-radius: 8px
+                &__reload-btn
+                    +flex-center
+                    width: 36px
+                    height: 36px
+                    border-radius: 8px
 
-                svg
-                    width: 25px
+                    svg
+                        width: 25px
 
-                &:hover
-                    background-color: #C6CFD9
+                    &:hover
+                        background-color: #C6CFD9
+
+                    &.refreshing
+                        svg
+                            transform: rotate(360deg)
+                            transition: transform 0.3s
 
         section
             display: flex
@@ -76,6 +81,10 @@
             .control-panel__content:empty
                 background-image: none
 
+            &__close-btn
+                &:hover
+                    background-color: darken($color-brand-aman, 3%)
+
     .spinner
         display: none
         margin: 125px auto 170px
@@ -83,12 +92,12 @@
 .services
     // display: grid
     // grid-template-columns: repeat(4, 1fr) minmax(400px, 2fr)
-    // grid-template-rows: 100%
+    // grid-template-rows: 1fr
     display: flex
     gap: rem(24px)
     width: 100%
     height: 100%
-    overflow-x: scroll
+    overflow-x: auto
     overflow-y: hidden
     +scroll-bar
     padding: 0 rem(28px) rem(10px)
@@ -129,7 +138,7 @@
             display: flex
             flex-direction: column
             gap: rem(8px)
-            overflow: hidden
+            overflow-y: auto
             +scroll-bar
 
         &:not(.collapsed)
@@ -137,7 +146,7 @@
                 overflow-y: auto
 
         &__item
-            font-size: 12px
+            font-size: rem(12px)
             background-color: $color-white
             border: 1px solid #E2E9F0
             border-radius: rem(8px)
@@ -152,9 +161,9 @@
                 padding: 1.2rem 0.98rem
 
                 .services__item__icon
-                    width: 32px
-                    height: 32px
-                    margin-left: 10px
+                    width: rem(32px)
+                    height: rem(32px)
+                    margin-left: rem(10px)
 
                     img, svg
                         width: 100%
@@ -168,15 +177,15 @@
     flex-wrap: wrap
     justify-content: center
     align-items: center
-    gap: 10px 30px
-    padding: 20px 10px 24px
+    gap: rem(10px) rem(30px)
+    padding: rem(20px) rem(10px) rem(24px)
 
     .key__btn
         flex: 1 0 25%
         background-color: #F0F2F5
         font-family: 'NotoSansArabic_Medium'
-        font-size: 15px
-        border-radius: 8px
+        font-size: rem(15px)
+        border-radius: rem(8px)
         border: none
         padding: 0.613rem 0.85rem
         transition: background-color 0.3s
@@ -192,14 +201,14 @@
                 fill: darken(#C6CFD9, 25%)
 
 .receipt
-    padding: 10px 24px
+    padding: rem(10px) rem(24px)
 
     li
         display: flex
         justify-content: space-between
         align-items: center
-        height: 48px
-        padding: 10px 24px
+        height: rem(48px)
+        padding: rem(10px) rem(24px)
 
         &:hover
             background-color: #F5F5F5
@@ -210,7 +219,7 @@
         span
             &:first-child
                 font-family: 'NotoSansArabic_Medium', sans-serif
-                font-size: 12px
+                font-size: rem(12px)
 
             &:last-child
                 font-family: 'NotoSansArabic_SemiBold', sans-serif
@@ -218,9 +227,9 @@
 .success__message
     display: none
     text-align: center
-    padding: 30px 24px 80px
+    padding: rem(30px) rem(24px) rem(80px)
 
     span
         display: block
         font-family: 'NotoSansArabic_Medium', sans-serif
-        margin-bottom: 30px
+        margin-bottom: rem(30px)
