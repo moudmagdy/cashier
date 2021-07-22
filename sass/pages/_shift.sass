@@ -56,9 +56,14 @@
         margin-bottom: 24px
 
     h4
-        font-family: 'NotoSansArabic_SemiBold', sans-serif
         font-size: rem(16px)
         margin-bottom: rem(18px)
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif
 
     p
         line-height: 2
@@ -95,12 +100,22 @@
         .opening-balance-amount,
         .daily-total-amount
             color: #060505
-            font-family: 'NotoSansArabic_SemiBold', sans-serif
             font-size: 22px
 
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_SemiBold', sans-serif
+
         .operations-amount
-            font-family: 'NotoSansArabic_SemiBold', sans-serif
             font-size: 17px
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_SemiBold', sans-serif
 
             &.revenue
                 color: #3ABD76
@@ -109,9 +124,14 @@
                 color: #FF6B73
 
         .receipt__count
-            font-family: 'NotoSansArabic_Medium', sans-serif
             font-size: 12px
             color: #4D4D4D
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_Medium', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_Medium', sans-serif
 
 .closed-shift
     width: 100%
@@ -129,10 +149,15 @@
         margin-bottom: 10px
 
     .daily-total-amount
-        font-family: 'NotoSansArabic_SemiBold', sans-serif
         font-size: 40px
         color: #060505
         margin-bottom: 24px
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif
 
     .form-label
         color: #242424

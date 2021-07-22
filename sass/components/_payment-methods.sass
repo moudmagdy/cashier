@@ -20,6 +20,15 @@
         border-bottom: rem(1px) solid #E4E6EB
         padding: rem(10px) rem(15px)
 
+        .back-btn
+            +flex-center
+            width: rem(25px)
+            height: rem(25px)
+
+            [dir="ltr"] &
+                svg
+                    transform: scaleX(-1)
+
     &__content
         display: flex
         flex-direction: column
@@ -39,6 +48,7 @@
         .received-amount
             display: flex
             align-items: center
+            gap: rem(24px)
             height: rem(72px)
             max-width: rem(390px)
             border: rem(2px) solid $color-brand
@@ -47,30 +57,42 @@
 
             input[type="number"]
                 width: 100%
-                font-family: 'NotoSansArabic_Medium', sans-serif
                 font-size: rem(24px)
-                border: none
                 background-color: transparent
-                margin-left: rem(24px)
+                border: none
+                padding: 0
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
 
                 &::placeholder
                     color: #C6CFD9
                     font-size: rem(24px)
 
             .currency
-                font-family: 'NotoSansArabic_Medium', sans-serif
                 +var(color, color-brand)
-                margin-left: rem(30px)
-                margin-right: auto
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
 
             .amount
-                font-family: 'NotoSansArabic_Medium', sans-serif
                 font-size: rem(14px)
                 color: #465479
                 background-color: #F5F5F5
                 border-radius: rem(7px)
                 padding: 0.6rem 0.755rem
-                margin-right: auto
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
 
         .key__buttons
             gap: rem(18px)

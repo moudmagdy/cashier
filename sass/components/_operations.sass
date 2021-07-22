@@ -46,13 +46,18 @@
             .operations__item__comment
                 flex-basis: 30%
                 min-height: rem(36px)
-                font-family: 'NotoSansArabic_Medium', sans-serif
                 font-size: rem(12px)
                 display: -webkit-box
                 -webkit-box-orient: vertical
                 overflow: hidden
                 text-overflow: ellipsis
                 -webkit-line-clamp: 2
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
 
             .operations__item__subject
                 span
@@ -78,7 +83,12 @@
 
                 span
                     display: inline-block
-                    font-family: 'NotoSansArabic_SemiBold'
+
+                    [dir="rtl"] &
+                        font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                    [dir="ltr"] &
+                        font-family: 'NotoSans_SemiBold', sans-serif
 
                     &.icon
                         +flex-center
@@ -97,8 +107,13 @@
 
             .operations__item__invoice-number
                 flex: 0 1 15%
-                font-family: 'NotoSansArabic_SemiBold', sans-serif
                 font-size: rem(14px)
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_SemiBold', sans-serif
 
             .operations__item__client-data
                 flex: 1 1 30%
@@ -116,8 +131,13 @@
                 font-size: rem(14px)
 
             .operations__item__type
-                font-family: 'NotoSansArabic_SemiBold', sans-serif
                 font-size: rem(14px)
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_SemiBold', sans-serif
 
 .total-operations
     display: flex
@@ -150,10 +170,15 @@
         &__number,
         &__currency
             display: inline-block
-            font-family: 'NotoSansArabic_SemiBold'
             font-size: rem(20px)
             line-height: 1
             +var(color, color-text-primary)
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_SemiBold', sans-serif
 
             @media (max-width: 1024px)
                 font-size: rem(16px)

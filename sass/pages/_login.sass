@@ -73,10 +73,15 @@
 
     p
         display: inline-block
-        font-family: 'NotoSansArabic_SemiBold', sans-serif
         font-size: rem(17px)
         color: #A3AAB2
         margin-bottom: 0
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif
 
     a
         +var(color, color-brand)
@@ -84,8 +89,13 @@
 
     .sign-up-cta
         display: inline-block
-        font-family: 'NotoSansArabic_SemiBold', sans-serif
         font-size: rem(17px)
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif
 
     form
         margin-top: 40px
@@ -96,7 +106,11 @@
 
     [type="number"],
     [type="tel"]
-        direction: rtl
+        [dir="rtl"] &
+            direction: rtl
+
+        [dir="ltr"] &
+            direction: ltr
 
     .password__field
         position: relative
@@ -146,9 +160,14 @@
         resize: none
 
     .forgot-credentials
-        font-family: 'NotoSansArabic_Medium', sans-serif
         font-size: rem(12px)
         margin-bottom: 0.5rem
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
 
 .resend__code__countdown
     font-size: rem(14px)
@@ -176,8 +195,13 @@
 
         &[readonly]
             +var(color, color-brand)
-            font-family: 'NotoSansArabic_SemiBold', sans-serif
             font-size: rem(48px)
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_SemiBold', sans-serif
 
 .store-url__field
     direction: ltr
@@ -190,9 +214,14 @@
         position: absolute
         right: 0.95rem
         color: #4D4D4D
-        font-family: 'NotoSansArabic_Medium', sans-serif
         font-size: rem(14px)
         pointer-events: none
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
 
     [type="text"]
         padding-right: 6.5rem

@@ -11,6 +11,12 @@
     &-users
         &-item
             &-price
-                font-family: 'NotoSansArabic_SemiBold', sans-serif
                 font-size: 1rem
-                margin-right: auto
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+                    margin-right: auto
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_SemiBold', sans-serif
+                    margin-left: auto

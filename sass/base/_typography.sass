@@ -2,24 +2,40 @@ html
     font-size: 16px
 
 body
-    font-family: 'NotoSans_Regular', sans-serif
-    font-family: 'NotoSansArabic_Regular', sans-serif
     font-weight: normal
     font-style: normal
     +var(color, color-text-primary)
     +var(font-size, default-font-size)
 
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Regular', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Regular', sans-serif
+
 h1,
 h2,
 h3
-    font-family: 'NotoSansArabic_SemiBold', sans-serif
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_SemiBold', sans-serif
 
 h4,
 h5
-    font-family: 'NotoSansArabic_Medium', sans-serif
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif
 
 h6
-    font-family: 'NotoSansArabic_Regular', sans-serif
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Regular', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Regular', sans-serif
 
 header
     .page__title
@@ -30,23 +46,42 @@ header
 
 fieldset
     legend
-        font-family: 'NotoSansArabic_SemiBold', sans-serif
         font-size: 14px
 
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif
+
 label
-    font-family: 'NotoSansArabic_Medium', sans-serif
-    font-size: 14px
+    font-size: rem(14px)
+
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif
 
     & > span
-        font-size: 12px
+        font-size: rem(12px)
 
 .form-control,
 .form-select
-    font-size: 14px
+    font-size: rem(14px)
 
 .collapse__toggle
-    font-family: 'NotoSansArabic_SemiBold', sans-serif
-    font-size: 14px
+    font-size: rem(14px)
+
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_SemiBold', sans-serif
 
 .btn-link
-    font-family: 'NotoSansArabic_Medium', sans-serif
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif

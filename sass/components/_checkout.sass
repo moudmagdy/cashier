@@ -1,7 +1,12 @@
 .checkout
     width: 100%
-    font-family: 'NotoSansArabic_Medium', sans-serif
     color: #4D4D4D
+
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif
 
     .checkout__slide__toggle
         display: flex
@@ -27,13 +32,14 @@
         &__item
             display: flex
             align-items: center
-            height: 40px
+            gap: rem(10px)
+            height: rem(40px)
             border-bottom: 1px solid #efefef
-            padding: 8px 10px
+            padding: rem(8px) rem(10px)
 
             h5
                 flex: 0 1 65%
-                font-size: 14px
+                font-size: rem(14px)
                 font-family: inherit
                 color: inherit
                 margin-bottom: 0
@@ -44,12 +50,26 @@
                 justify-content: flex-end
                 align-content: center
 
+                [dir="rtl"] &
+                    margin-right: auto
+
+                [dir="ltr"] &
+                    margin-left: auto
+
+                &.invoice-total-amount
+                    [dir="rtl"] &
+                        margin-left: rem(34px)
+
+                    [dir="ltr"] &
+                        margin-right: rem(34px)
+
             &.invoice-discount
                 color: #FF6B73
 
                 .discount-details
                     display: flex
                     align-items: center
+                    gap: rem(10px)
 
                     .discount-percentage
                         width: max-content
@@ -60,22 +80,28 @@
                         border-radius: 12px
                         padding: 0.225rem 0.392rem
 
-                    .discount-amount
-                        margin-right: 10px
-
             .invoice__comment
                 +flex-center
                 gap: 10px
-                margin-right: auto
+
+                [dir="rtl"] &
+                    margin-right: auto
+
+                [dir="ltr"] &
+                    margin-left: auto
 
                 span
-                    font-family: 'NotoSansArabic_Medium', sans-serif
                     font-size: 12px
+
+                    [dir="rtl"] &
+                        font-family: 'NotoSansArabic_Medium', sans-serif
+
+                    [dir="ltr"] &
+                        font-family: 'NotoSans_Medium', sans-serif
 
             .checkout__remove-item
                 width: 24px
                 height: 24px
-                margin-right: auto
 
 .checkout__cta__container
     display: flex
@@ -117,14 +143,24 @@
 
         span
             &:last-child
-                font-family: 'NotoSansArabic_SemiBold'
                 font-size: rem(22px)
                 line-height: 1.1
 
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_SemiBold', sans-serif
+
             &:first-child,
             &:only-child
-                font-family: 'NotoSansArabic_Medium'
                 font-size: rem(16px)
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
 
             &:only-child
                 margin: 0 auto

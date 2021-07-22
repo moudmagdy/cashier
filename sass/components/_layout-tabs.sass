@@ -10,13 +10,18 @@
         position: relative
         +flex-center
         flex: 1 1 100%
-        font-family: 'NotoSansArabic_Medium', sans-serif
         font-size: 14px
         color: #212529
         cursor: pointer
         text-decoration: none
         transition: all 0.2s ease-in-out
         padding: 14px 5px
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
 
         &::after
             content: ""

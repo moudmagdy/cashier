@@ -52,7 +52,11 @@
                         font-size: 19
 
                         &:last-child
-                            font-family: 'NotoSansArabic_SemiBold', sans-serif
+                            [dir="rtl"] &
+                                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                            [dir="ltr"] &
+                                font-family: 'NotoSans_SemiBold', sans-serif
 
                 &__reload-btn
                     +flex-center
@@ -183,12 +187,17 @@
     .key__btn
         flex: 1 0 25%
         background-color: #F0F2F5
-        font-family: 'NotoSansArabic_Medium'
         font-size: rem(15px)
         border-radius: rem(8px)
         border: none
         padding: 0.613rem 0.85rem
         transition: background-color 0.3s
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
 
         svg
             fill: #C6CFD9
@@ -218,11 +227,20 @@
 
         span
             &:first-child
-                font-family: 'NotoSansArabic_Medium', sans-serif
                 font-size: rem(12px)
 
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
+
             &:last-child
-                font-family: 'NotoSansArabic_SemiBold', sans-serif
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_SemiBold', sans-serif
 
 .success__message
     display: none
@@ -231,5 +249,10 @@
 
     span
         display: block
-        font-family: 'NotoSansArabic_Medium', sans-serif
         margin-bottom: rem(30px)
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif

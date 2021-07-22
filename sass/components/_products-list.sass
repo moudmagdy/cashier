@@ -4,8 +4,13 @@
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
     gap: rem(16px)
     transition: all 0.4s ease-in
-    padding: 0 rem(30px) 0 rem(23px)
     margin-bottom: rem(20px)
+
+    [dir="rtl"] &
+        padding: rem(10px) rem(30px) 0 rem(23px)
+
+    [dir="ltr"] &
+        padding: rem(10px) rem(23px) 0 rem(30px)
 
     &.list-view
         grid-template-columns: repeat(auto-fill, minmax(225px, 1fr))
@@ -32,8 +37,13 @@
 
     &__dropdown
         position: absolute
-        right: rem(2px)
         top: rem(2px)
+
+        [dir="rtl"] &
+            right: rem(2px)
+
+        [dir="ltr"] &
+            left: rem(2px)
 
         &__btn
             +flex-center
@@ -88,7 +98,6 @@
     &__title
         display: -webkit-box
         -webkit-box-orient: vertical
-        font-family: 'NotoSansArabic_Medium', sans-serif
         font-size: 14px
         line-height: 1.5
         overflow: hidden
@@ -97,6 +106,12 @@
         user-select: none
         margin-bottom: rem(5px)
 
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
+
     &__price
         display: block
         font-size: rem(14px)
@@ -104,7 +119,6 @@
 
     &__quantity
         position: absolute
-        left: -7px
         top: -7px
         display: flex
         justify-content: center
@@ -118,6 +132,12 @@
         +var(background-color, color-brand)
         border-radius: 50%
         transition: opacity 0.2s ease
+
+        [dir="rtl"] &
+            left: rem(-7px)
+
+        [dir="ltr"] &
+            right: rem(-7px)
 
     &--selected
         &::before

@@ -26,7 +26,6 @@
     &::before
         content: ""
         position: absolute
-        right: 0
         top: 0
         width: 0
         height: 100%
@@ -34,22 +33,38 @@
         transition: all 0.3s ease-in-out
         z-index: -1
 
+        [dir="rtl"] &
+            right: 0
+
+        [dir="ltr"] &
+            left: 0
+
     &::after
         content: ""
         position: absolute
         bottom: 0
-        right: 0
         width: rem(3px)
         height: 0
         +var(background-color, color-brand)
         z-index: 1
         transition: all 0.2s ease-in-out
 
+        [dir="rtl"] &
+            right: 0
+
+        [dir="ltr"] &
+            left: 0
+
     &--data
         display: flex
         flex-direction: column
-        flex: 0 1 30%
-        margin-left: rem(15px)
+        // flex: 0 1 30%
+
+        // [dir="rtl"] &
+            // margin-left: rem(15px)
+
+        // [dir="ltr"] &
+            // margin-right: rem(15px)
 
         &-name
             margin-bottom: rem(10px)
@@ -57,13 +72,19 @@
             h3
                 display: -webkit-box
                 -webkit-box-orient: vertical
-                font-family: 'NotoSansArabic_Medium', sans-serif
+                width: 125px
                 font-size: 13px
                 line-height: 1.5
                 overflow: hidden
                 text-overflow: ellipsis
                 -webkit-line-clamp: 2
                 margin-bottom: 0
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
 
         .invoice__item__price
             font-size: 11px
@@ -108,7 +129,12 @@
         display: flex
         align-items: center
         gap: rem(5px)
-        margin-left: auto
+
+        [dir="rtl"] &
+            margin-left: auto
+
+        [dir="ltr"] &
+            margin-right: auto
 
         &-screen
             display: flex
@@ -116,13 +142,18 @@
             align-items: center
             min-width: rem(36px)
             height: rem(40px)
-            font-family: 'NotoSansArabic_Medium'
             font-size: rem(15px)
             text-align: center
             +var(color, color-text-primary)
             background-color: #eef1f4
             border-radius: rem(4px)
             padding: 0.5rem
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_Medium', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_Medium', sans-serif
 
             input
                 width: 100%
@@ -206,8 +237,13 @@
                 color: #fff
 
     &--price
-        font-family: 'NotoSansArabic_SemiBold', sans-serif
         font-size: 15px
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif
 
         &.return-amount
             color: #F02849

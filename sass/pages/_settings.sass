@@ -61,9 +61,14 @@ header
 
         p
             max-width: 90%
-            font-family: 'NotoSansArabic_SemiBold'
             text-align: center
             margin-bottom: 60px
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_SemiBold', sans-serif
 
         .form-check
             margin: 0

@@ -17,8 +17,12 @@
 
         &__amount,
         &__currency
-            font-family: 'NotoSansArabic_SemiBold', sans-serif
             font-size: rem(24px)
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_SemiBold', sans-serif
 
         .debtor
             color: #F02849
@@ -49,8 +53,13 @@
             margin-bottom: 0
 
     .client-balance-amount
-        font-family: 'NotoSansArabic_SemiBold', sans-serif
         font-size: rem(14px)
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif
 
         &.debtor
             color: #F02849
@@ -91,8 +100,13 @@
         margin-bottom: 0
 
     .client-data__detail__info
-        font-family: 'NotoSansArabic_Medium', sans-serif
         font-size: rem(14px)
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
 
     .flex-table__row
         &:hover,
@@ -108,7 +122,6 @@
         position: relative
         +flex-center
         width: 100%
-        font-family: 'NotoSansArabic_Medium', sans-serif
         font-size: rem(12px)
         +var(color, color-brand)
         text-decoration: none
@@ -116,6 +129,12 @@
         border-radius: rem(12px)
         padding: 0.825rem 1.5rem
         transition: all 0.3s
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
 
         &::before
             content: ""

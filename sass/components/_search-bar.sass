@@ -65,13 +65,18 @@
         padding: 0.25rem 0.5rem
 
         a
-            font-family: 'NotoSansArabic_Medium', sans-serif
             font-size: rem(12px)
             color: #4D4D4D
             text-decoration: none
             border-radius: 1rem
             padding: 0.45rem 1.002rem
             transition: all 0.3s
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_Medium', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_Medium', sans-serif
 
             &.active
                 color: $color-white
@@ -170,8 +175,13 @@
 
             .dropdown__selected-value
                 color: #4D4D4D
-                font-family: 'NotoSansArabic_Medium'
                 font-size: 12px
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
 
             span
                 &:last-child
@@ -184,9 +194,14 @@
             box-shadow: 1px 0px 12px 0px rgba(0, 0, 0, 0.16)
 
             .dropdown-item
-                font-family: 'NotoSansArabic_Medium'
                 font-size: 14px
                 padding: 10px 14px
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
 
                 &:hover
                     background-color: #EBF6FF

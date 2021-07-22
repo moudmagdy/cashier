@@ -8,7 +8,6 @@
     .filter__btn
         display: flex
         gap: rem(5px)
-        font-family: 'NotoSansArabic_Medium', sans-serif
         font-size: rem(12px)
         color: #4D4D4D
         color: #A3AAB2
@@ -18,6 +17,12 @@
         white-space: nowrap
         padding: 0.325rem 0.6rem
         transition: all 0.3s
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
 
         &:hover,
         &.selected

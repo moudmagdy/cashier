@@ -36,14 +36,17 @@
         background-color: #fff
         border-radius: 50%
         cursor: pointer
-        margin-right: auto
+
+        [dir="rtl"] &
+            margin-right: auto
+
+        [dir="ltr"] &
+            margin-left: auto
 
 .modal-title
     +flex-center
+    gap: rem(12px)
     font-size: 14px
-
-    svg, img
-        margin-left: 12px
 
 .modal-body
     padding: 1.5rem

@@ -17,8 +17,13 @@
                 gap: 10px
                 text-decoration: none
                 color: currentColor
-                font-family: 'NotoSansArabic_SemiBold', sans-serif
                 font-size: rem(12px)
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_SemiBold', sans-serif
 
                 svg
                     fill: currentColor

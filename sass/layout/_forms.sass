@@ -28,7 +28,11 @@ button,
         box-shadow: none !important
 
 [type="number"]
-    direction: rtl
+    [dir="rtl"] &
+        direction: rtl
+
+    [dir="ltr"] &
+        direction: ltr
 
 .form-label
     color: #A3AAB2
@@ -84,14 +88,24 @@ button,
 
     &::before
         position: absolute
-        left: 0.95rem
+
         top: 50%
         transform: translateY(-50%)
         content: attr(data-symbol)
         font-size: 12px
 
+        [dir="rtl"] &
+            left: 0.95rem
+
+        [dir="ltr"] &
+            right: 0.95rem
+
     .form-control
-        padding-left: 2.8rem
+        [dir="rtl"] &
+            padding-left: 2.8rem
+
+        [dir="ltr"] &
+            padding-right: 2.8rem
 
 .percentage-symbol
     position: relative

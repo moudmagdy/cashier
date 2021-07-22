@@ -24,25 +24,40 @@
             margin: auto
 
             .invoice-items-count
-                font-family: 'NotoSansArabic_SemiBold'
                 font-size: 15px
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_SemiBold', sans-serif
 
             .invoice-items-quantity
                 +flex-center
                 min-width: 36px
                 height: 40px
-                font-family: 'NotoSansArabic_Medium'
                 border: 2px solid #fff
                 border-radius: 6px
                 padding: 0.25rem 0.4285rem
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
 
         .control-panel__close-btn
             +flex-center
             width: rem(48px)
             height: rem(48px)
             border-radius: 50%
-            margin-right: auto
             transition: background-color 0.3s
+
+            [dir="rtl"] &
+                margin-right: auto
+
+            [dir="ltr"] &
+                margin-left: auto
 
             &:hover
                 background-color: darken($color-brand, 3%)
@@ -51,16 +66,25 @@
                 fill: $color-white
 
         .dropdown
-            margin-right: auto
+            [dir="rtl"] &
+                margin-right: auto
+
+            [dir="ltr"] &
+                margin-left: auto
 
     &__title
         display: flex
         align-items: center
         gap: rem(5px)
-        font-family: 'NotoSansArabic_Medium', sans-serif
         font-size: rem(15px)
         line-height: 1.5
         margin-bottom: 0
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
 
     &__body
         display: grid
@@ -177,6 +201,7 @@
         .item__selected
             display: none
             align-items: center
+            gap: rem(10px)
             width: 100%
             height: rem(44px)
             background-color: lighten(#4DCDE6, 35%)
@@ -193,7 +218,6 @@
             &__icon
                 width: rem(24px)
                 height: rem(24px)
-                margin-left: rem(10px)
 
                 img, svg
                     width: 100%
@@ -209,7 +233,12 @@
                 background-color: #fff
                 border-radius: 50%
                 cursor: pointer
-                margin-right: auto
+
+                [dir="rtl"] &
+                    margin-right: auto
+
+                [dir="ltr"] &
+                    margin-left: auto
 
                 svg
                     width: rem(10px)
@@ -226,9 +255,14 @@
                 margin-left: rem(10px)
 
             span
-                font-family: 'NotoSansArabic_Medium', sans-serif
                 font-size: rem(12px)
                 color: #4D4D4D
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
 
     .items-search
         display: flex
@@ -284,17 +318,25 @@
                 width: 100%
                 height: 100%
 
+                [dir="ltr"] &
+                    transform: scaleX(-1)
+
     .add-item__btn
         width: 100%
         height: 48px
         +flex-center
         gap: 8px
-        font-family: 'NotoSansArabic_Medium', sans-serif
         font-size: rem(12px)
         +var(color, color-brand)
         text-decoration: none
         border-bottom: 1px solid #F0F2F5
         padding: 15px 20px
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
 
         &:hover
             background-color: $gray9
@@ -304,6 +346,7 @@
             display: flex
             align-items: center
             flex-basis: 100%
+            gap: rem(10px)
             color: inherit
             cursor: pointer
             text-decoration: none
@@ -315,7 +358,6 @@
 
             &__icon
                 +flex-center
-                margin-left: 10px
 
                 img, svg
                     width: 32px
@@ -329,9 +371,14 @@
 
                 span
                     &:first-child
-                        font-family: 'NotoSansArabic_Medium', sans-serif
                         font-size: rem(14px)
                         line-height: 1.6
+
+                        [dir="rtl"] &
+                            font-family: 'NotoSansArabic_Medium', sans-serif
+
+                        [dir="ltr"] &
+                            font-family: 'NotoSans_Medium', sans-serif
 
                     &:last-child
                         font-size: rem(12px)

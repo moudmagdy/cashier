@@ -1,19 +1,30 @@
 .main-menu
     position: fixed
     top: 0
-    right: auto
-    left: 100%
     display: flex
     flex-direction: column
     justify-content: flex-start
     width: rem(168px)
     height: 100vh
     background-color: #fff
-    border-radius: rem(12px) 0 0 rem(12px)
     opacity: 0
     pointer-events: none
     z-index: 999
     transition: transform 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), box-shadow 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), opacity 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17)
+
+    [dir="rtl"] &
+        right: auto
+        left: 100%
+
+        @media (max-width: 1024px)
+            border-radius: rem(12px) 0 0 rem(12px)
+
+    [dir="ltr"] &
+        right: 100%
+        left: auto
+
+        @media (max-width: 1024px)
+            border-radius: 0 rem(12px) rem(12px) 0
 
     &__header
         display: flex
@@ -36,6 +47,10 @@
             height: rem(30px)
             fill: #212121
 
+        [dir="ltr"] &
+            svg
+                transform: scaleX(-1)
+
     &__logo
         width: rem(28px)
         height: rem(28px)
@@ -51,29 +66,34 @@
         overflow-y: hidden
         overflow-y: clip
         overflow-x: visible
-        padding: 0 4px
+        padding: 0 rem(4px)
 
         a
             display: flex
             align-items: center
             gap: rem(5px)
             color: #A3AAB2
-            font-family: 'NotoSansArabic_Medium', sans-serif
-            font-size: 14px
+            font-size: rem(14px)
             overflow: hidden
             text-overflow: ellipsis
             white-space: nowrap
             text-decoration: none
-            border-radius: 8px
+            border-radius: rem(8px)
             padding: 0.569rem 0.59rem
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_Medium', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_Medium', sans-serif
 
             @media (max-width: 1024px)
                 display: flex !important
 
             &::before
                 content: ""
-                width: 28px
-                height: 28px
+                width: rem(28px)
+                height: rem(28px)
                 background-size: cover
                 background-repeat: no-repeat
 
@@ -239,8 +259,6 @@
             display: none
 
     @media (min-width: 1025px)
-        right: 0
-        left: auto
         +var(width, main-menu-width)
         pointer-events: auto
         opacity: 1
@@ -248,8 +266,20 @@
         box-shadow: none
         transition: width 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), border-radius 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), box-shadow 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17)
 
+        [dir="rtl"] &
+            right: 0
+            left: auto
+
+        [dir="ltr"] &
+            right: auto
+            left: 0
+
         &__toggle
-            margin-right: 19px
+            [dir="rtl"] &
+                margin-right: rem(19px)
+
+            [dir="ltr"] &
+                margin-left: rem(19px)
 
         &__logo
             opacity: 0
@@ -260,11 +290,11 @@
             a
                 flex-direction: column
                 justify-content: center
-                font-size: 11.5px
+                font-size: rem(11.5px)
 
                 &::before
-                    width: 36px
-                    height: 36px
+                    width: rem(36px)
+                    height: rem(36px)
 
             .submenu
                 display: flex
@@ -272,14 +302,14 @@
                 position: relative
 
                 & > a
-                    min-height: 68px
+                    min-height: rem(68px)
 
                     &::before
                         display: none
 
                     svg
-                        width: 20px
-                        height: 4px
+                        width: rem(20px)
+                        height: rem(4px)
                         fill: currentColor
 
                     &:hover
@@ -288,19 +318,25 @@
                 .submenu__content
                     position: absolute
                     bottom: 0
-                    right: 100%
+
                     display: flex
                     flex-wrap: wrap
-                    gap: 4px
+                    gap: rem(4px)
                     max-width: 256px
                     width: max-content
                     background-color: $color-white
-                    border-radius: 12px
+                    border-radius: rem(12px)
                     box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.16)
-                    padding: 4px
+                    padding: rem(4px)
                     opacity: 0
                     pointer-events: none
                     transition: opacity 0.3s cubic-bezier(0.48,-1.3, 0.09, 0.77)
+
+                    [dir="rtl"] &
+                        right: 100%
+
+                    [dir="ltr"] &
+                        left: 100%
 
                     a
                         flex: 0 0 100%
@@ -319,16 +355,33 @@
         box-shadow: 5px 0 15px #878787
         pointer-events: auto
         z-index: 9999
-        transform: translateX(-100%)
+
+        [dir="rtl"] &
+            transform: translateX(-100%)
+
+        [dir="ltr"] &
+            transform: translateX(100%)
 
         @media (min-width: 1025px)
             width: 168px
             box-shadow: 5px 0 15px #878787
-            border-radius: 12px 0 0 12px
-            transform: none
+
+            [dir="rtl"] &,
+            [dir="ltr"] &
+                transform: none
+
+            [dir="rtl"] &
+                border-radius: rem(12px) 0 0 rem(12px)
+
+            [dir="ltr"] &
+                border-radius: 0 rem(12px) rem(12px) 0
 
             .main-menu__toggle
-                margin-right: 0
+                [dir="rtl"] &
+                    margin-right: 0
+
+                [dir="ltr"] &
+                    margin-left: 0
 
             .main-menu__logo
                 opacity: 1
@@ -339,11 +392,11 @@
                     display: flex !important
                     flex-direction: row
                     justify-content: flex-start
-                    font-size: 14px
+                    font-size: rem(14px)
 
                     &::before
-                        width: 28px
-                        height: 28px
+                        width: rem(28px)
+                        height: rem(28px)
                         animation: iconScale 0.2s linear forwards
 
                 .submenu

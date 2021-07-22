@@ -37,8 +37,6 @@ html {
 }
 
 body {
-  font-family: "NotoSans_Regular", sans-serif;
-  font-family: "NotoSansArabic_Regular", sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #060505;
@@ -46,20 +44,38 @@ body {
   font-size: 1rem;
   font-size: var(--default-font-size);
 }
+[dir=rtl] body {
+  font-family: "NotoSansArabic_Regular", sans-serif;
+}
+[dir=ltr] body {
+  font-family: "NotoSans_Regular", sans-serif;
+}
 
-h1,
-h2,
-h3 {
+[dir=rtl] h1,
+[dir=rtl] h2,
+[dir=rtl] h3 {
   font-family: "NotoSansArabic_SemiBold", sans-serif;
 }
-
-h4,
-h5 {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+[dir=ltr] h1,
+[dir=ltr] h2,
+[dir=ltr] h3 {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 
-h6 {
+[dir=rtl] h4,
+[dir=rtl] h5 {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] h4,
+[dir=ltr] h5 {
+  font-family: "NotoSans_Medium", sans-serif;
+}
+
+[dir=rtl] h6 {
   font-family: "NotoSansArabic_Regular", sans-serif;
+}
+[dir=ltr] h6 {
+  font-family: "NotoSans_Regular", sans-serif;
 }
 
 header .page__title {
@@ -71,36 +87,59 @@ header .page__title {
 }
 
 fieldset legend {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 14px;
+}
+[dir=rtl] fieldset legend {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] fieldset legend {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 
 label {
+  font-size: 0.875rem;
+}
+[dir=rtl] label {
   font-family: "NotoSansArabic_Medium", sans-serif;
-  font-size: 14px;
+}
+[dir=ltr] label {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 label > span {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .form-control,
 .form-select {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .collapse__toggle {
+  font-size: 0.875rem;
+}
+[dir=rtl] .collapse__toggle {
   font-family: "NotoSansArabic_SemiBold", sans-serif;
-  font-size: 14px;
+}
+[dir=ltr] .collapse__toggle {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 
-.btn-link {
+[dir=rtl] .btn-link {
   font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .btn-link {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 
 body {
-  direction: rtl;
   background-color: #F5F5F5;
   overflow: hidden;
+}
+[dir=rtl] body {
+  direction: rtl;
+}
+[dir=ltr] body {
+  direction: ltr;
 }
 body::after {
   content: "";
@@ -207,7 +246,7 @@ main {
 .dropdown-menu {
   text-align: right;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   -webkit-box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.16);
 }
@@ -219,10 +258,15 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  padding: 0.75rem 1rem;
+}
+[dir=rtl] .dropdown-item {
   font-family: "NotoSansArabic_Medium", sans-serif;
-  font-size: 14px;
-  padding: 12px 16px;
+}
+[dir=ltr] .dropdown-item {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .dropdown-item:hover {
   background-color: #E2F2FE;
@@ -242,7 +286,6 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.75rem;
   text-decoration: none;
   color: #1877F2;
@@ -253,6 +296,12 @@ main {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+[dir=rtl] .select-all {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .select-all {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .select-all:hover {
   color: #fff;
@@ -280,8 +329,8 @@ main {
 .control-panel__header .dropdown-toggle svg,
 .page__layout__col > header .dropdown-toggle svg {
   fill: #fff;
-  width: 18px;
-  height: 4px;
+  width: 1.125rem;
+  height: 0.25rem;
 }
 .control-panel__header .dropdown-toggle:hover,
 .page__layout__col > header .dropdown-toggle:hover {
@@ -363,8 +412,11 @@ button:focus,
           box-shadow: none !important;
 }
 
-[type=number] {
+[dir=rtl] [type=number] {
   direction: rtl;
+}
+[dir=ltr] [type=number] {
+  direction: ltr;
 }
 
 .form-label {
@@ -434,7 +486,6 @@ button:focus,
 }
 .currency-symbol::before {
   position: absolute;
-  left: 0.95rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -442,8 +493,17 @@ button:focus,
   content: attr(data-symbol);
   font-size: 12px;
 }
-.currency-symbol .form-control {
+[dir=rtl] .currency-symbol::before {
+  left: 0.95rem;
+}
+[dir=ltr] .currency-symbol::before {
+  right: 0.95rem;
+}
+[dir=rtl] .currency-symbol .form-control {
   padding-left: 2.8rem;
+}
+[dir=ltr] .currency-symbol .form-control {
+  padding-right: 2.8rem;
 }
 
 .percentage-symbol {
@@ -479,9 +539,13 @@ button:focus,
   height: 100vh;
 }
 @media (min-width: 1025px) {
-  .page__layout {
+  [dir=rtl] .page__layout {
     padding-right: 88px;
     padding-right: var(--main-menu-width);
+  }
+  [dir=ltr] .page__layout {
+    padding-left: 88px;
+    padding-left: var(--main-menu-width);
   }
 }
 .page__layout__row {
@@ -623,7 +687,6 @@ button:focus,
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 14px;
   color: #212529;
   cursor: pointer;
@@ -632,6 +695,12 @@ button:focus,
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   padding: 14px 5px;
+}
+[dir=rtl] .layout__tabs a {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .layout__tabs a {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .layout__tabs a::after {
   content: "";
@@ -678,11 +747,16 @@ button:focus,
 }
 
 .btn {
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 14px;
   border-width: 2px;
   border-radius: 20px;
   padding: 0.475rem 1.25rem;
+}
+[dir=rtl] .btn {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .btn {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .btn svg {
   fill: currentColor;
@@ -1007,7 +1081,12 @@ button:focus,
   background-color: #fff;
   border-radius: 50%;
   cursor: pointer;
+}
+[dir=rtl] .modal-header .btn-close {
   margin-right: auto;
+}
+[dir=ltr] .modal-header .btn-close {
+  margin-left: auto;
 }
 
 .modal-title {
@@ -1020,10 +1099,8 @@ button:focus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.75rem;
   font-size: 14px;
-}
-.modal-title svg, .modal-title img {
-  margin-left: 12px;
 }
 
 .modal-body {
@@ -1060,8 +1137,6 @@ button:focus,
 .main-menu {
   position: fixed;
   top: 0;
-  right: auto;
-  left: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1075,7 +1150,6 @@ button:focus,
   width: 10.5rem;
   height: 100vh;
   background-color: #fff;
-  border-radius: 0.75rem 0 0 0.75rem;
   opacity: 0;
   pointer-events: none;
   z-index: 999;
@@ -1084,6 +1158,24 @@ button:focus,
   -o-transition: transform 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), box-shadow 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), opacity 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17);
   transition: transform 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), box-shadow 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), opacity 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17);
   transition: transform 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), box-shadow 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), opacity 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), -webkit-transform 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), -webkit-box-shadow 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17);
+}
+[dir=rtl] .main-menu {
+  right: auto;
+  left: 100%;
+}
+@media (max-width: 1024px) {
+  [dir=rtl] .main-menu {
+    border-radius: 0.75rem 0 0 0.75rem;
+  }
+}
+[dir=ltr] .main-menu {
+  right: 100%;
+  left: auto;
+}
+@media (max-width: 1024px) {
+  [dir=ltr] .main-menu {
+    border-radius: 0 0.75rem 0.75rem 0;
+  }
 }
 .main-menu__header {
   display: -webkit-box;
@@ -1111,6 +1203,11 @@ button:focus,
   height: 1.875rem;
   fill: #212121;
 }
+[dir=ltr] .main-menu__toggle svg {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
 .main-menu__logo {
   width: 1.75rem;
   height: 1.75rem;
@@ -1127,7 +1224,7 @@ button:focus,
   overflow-y: hidden;
   overflow-y: clip;
   overflow-x: visible;
-  padding: 0 4px;
+  padding: 0 0.25rem;
 }
 .main-menu nav a {
   display: -webkit-box;
@@ -1138,15 +1235,20 @@ button:focus,
           align-items: center;
   gap: 0.3125rem;
   color: #A3AAB2;
-  font-family: "NotoSansArabic_Medium", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
   white-space: nowrap;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   padding: 0.569rem 0.59rem;
+}
+[dir=rtl] .main-menu nav a {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .main-menu nav a {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 @media (max-width: 1024px) {
   .main-menu nav a {
@@ -1157,8 +1259,8 @@ button:focus,
 }
 .main-menu nav a::before {
   content: "";
-  width: 28px;
-  height: 28px;
+  width: 1.75rem;
+  height: 1.75rem;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1314,8 +1416,6 @@ button:focus,
 }
 @media (min-width: 1025px) {
   .main-menu {
-    right: 0;
-    left: auto;
     width: 88px;
     width: var(--main-menu-width);
     pointer-events: auto;
@@ -1329,8 +1429,19 @@ button:focus,
     transition: width 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), border-radius 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), box-shadow 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17);
     transition: width 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), border-radius 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), box-shadow 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), -webkit-box-shadow 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17);
   }
-  .main-menu__toggle {
-    margin-right: 19px;
+  [dir=rtl] .main-menu {
+    right: 0;
+    left: auto;
+  }
+  [dir=ltr] .main-menu {
+    right: auto;
+    left: 0;
+  }
+  [dir=rtl] .main-menu__toggle {
+    margin-right: 1.1875rem;
+  }
+  [dir=ltr] .main-menu__toggle {
+    margin-left: 1.1875rem;
   }
   .main-menu__logo {
     opacity: 0;
@@ -1347,11 +1458,11 @@ button:focus,
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font-size: 11.5px;
+    font-size: 0.71875rem;
   }
   .main-menu nav a::before {
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
   }
   .main-menu nav .submenu {
     display: -webkit-box;
@@ -1364,14 +1475,14 @@ button:focus,
     position: relative;
   }
   .main-menu nav .submenu > a {
-    min-height: 68px;
+    min-height: 4.25rem;
   }
   .main-menu nav .submenu > a::before {
     display: none;
   }
   .main-menu nav .submenu > a svg {
-    width: 20px;
-    height: 4px;
+    width: 1.25rem;
+    height: 0.25rem;
     fill: currentColor;
   }
   .main-menu nav .submenu > a:hover {
@@ -1380,27 +1491,32 @@ button:focus,
   .main-menu nav .submenu .submenu__content {
     position: absolute;
     bottom: 0;
-    right: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 4px;
+    gap: 0.25rem;
     max-width: 256px;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     background-color: #fff;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     -webkit-box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.16);
             box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.16);
-    padding: 4px;
+    padding: 0.25rem;
     opacity: 0;
     pointer-events: none;
     -webkit-transition: opacity 0.3s cubic-bezier(0.48, -1.3, 0.09, 0.77);
     -o-transition: opacity 0.3s cubic-bezier(0.48, -1.3, 0.09, 0.77);
     transition: opacity 0.3s cubic-bezier(0.48, -1.3, 0.09, 0.77);
+  }
+  [dir=rtl] .main-menu nav .submenu .submenu__content {
+    right: 100%;
+  }
+  [dir=ltr] .main-menu nav .submenu .submenu__content {
+    left: 100%;
   }
   .main-menu nav .submenu .submenu__content a {
     -webkit-box-flex: 0;
@@ -1422,22 +1538,39 @@ button:focus,
           box-shadow: 5px 0 15px #878787;
   pointer-events: auto;
   z-index: 9999;
+}
+[dir=rtl] .main-menu--opened .main-menu {
   -webkit-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
           transform: translateX(-100%);
+}
+[dir=ltr] .main-menu--opened .main-menu {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
 }
 @media (min-width: 1025px) {
   .main-menu--opened .main-menu {
     width: 168px;
     -webkit-box-shadow: 5px 0 15px #878787;
             box-shadow: 5px 0 15px #878787;
-    border-radius: 12px 0 0 12px;
+  }
+  [dir=rtl] .main-menu--opened .main-menu, [dir=ltr] .main-menu--opened .main-menu {
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
   }
-  .main-menu--opened .main-menu .main-menu__toggle {
+  [dir=rtl] .main-menu--opened .main-menu {
+    border-radius: 0.75rem 0 0 0.75rem;
+  }
+  [dir=ltr] .main-menu--opened .main-menu {
+    border-radius: 0 0.75rem 0.75rem 0;
+  }
+  [dir=rtl] .main-menu--opened .main-menu .main-menu__toggle {
     margin-right: 0;
+  }
+  [dir=ltr] .main-menu--opened .main-menu .main-menu__toggle {
+    margin-left: 0;
   }
   .main-menu--opened .main-menu .main-menu__logo {
     opacity: 1;
@@ -1454,11 +1587,11 @@ button:focus,
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .main-menu--opened .main-menu nav a::before {
-    width: 28px;
-    height: 28px;
+    width: 1.75rem;
+    height: 1.75rem;
     -webkit-animation: iconScale 0.2s linear forwards;
             animation: iconScale 0.2s linear forwards;
   }
@@ -1593,7 +1726,6 @@ button:focus,
   padding: 0.25rem 0.5rem;
 }
 .search__bar__tabs a {
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.75rem;
   color: #4D4D4D;
   text-decoration: none;
@@ -1602,6 +1734,12 @@ button:focus,
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+[dir=rtl] .search__bar__tabs a {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .search__bar__tabs a {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .search__bar__tabs a.active {
   color: #fff;
@@ -1719,8 +1857,13 @@ button:focus,
 }
 .search__bar .search__bar__dropdown .dropdown-toggle .dropdown__selected-value {
   color: #4D4D4D;
-  font-family: "NotoSansArabic_Medium";
   font-size: 12px;
+}
+[dir=rtl] .search__bar .search__bar__dropdown .dropdown-toggle .dropdown__selected-value {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .search__bar .search__bar__dropdown .dropdown-toggle .dropdown__selected-value {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .search__bar .search__bar__dropdown .dropdown-toggle span:last-child {
   margin-left: 28px;
@@ -1733,9 +1876,14 @@ button:focus,
           box-shadow: 1px 0px 12px 0px rgba(0, 0, 0, 0.16);
 }
 .search__bar .search__bar__dropdown .dropdown-menu .dropdown-item {
-  font-family: "NotoSansArabic_Medium";
   font-size: 14px;
   padding: 10px 14px;
+}
+[dir=rtl] .search__bar .search__bar__dropdown .dropdown-menu .dropdown-item {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .search__bar .search__bar__dropdown .dropdown-menu .dropdown-item {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .search__bar .search__bar__dropdown .dropdown-menu .dropdown-item:hover {
   background-color: #EBF6FF;
@@ -1787,8 +1935,13 @@ button:focus,
   margin: auto;
 }
 .control-panel__header .invoice__counters .invoice-items-count {
-  font-family: "NotoSansArabic_SemiBold";
   font-size: 15px;
+}
+[dir=rtl] .control-panel__header .invoice__counters .invoice-items-count {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .control-panel__header .invoice__counters .invoice-items-count {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .control-panel__header .invoice__counters .invoice-items-quantity {
   display: -webkit-box;
@@ -1802,10 +1955,15 @@ button:focus,
           align-items: center;
   min-width: 36px;
   height: 40px;
-  font-family: "NotoSansArabic_Medium";
   border: 2px solid #fff;
   border-radius: 6px;
   padding: 0.25rem 0.4285rem;
+}
+[dir=rtl] .control-panel__header .invoice__counters .invoice-items-quantity {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .control-panel__header .invoice__counters .invoice-items-quantity {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .control-panel__header .control-panel__close-btn {
   display: -webkit-box;
@@ -1820,10 +1978,15 @@ button:focus,
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  margin-right: auto;
   -webkit-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
+}
+[dir=rtl] .control-panel__header .control-panel__close-btn {
+  margin-right: auto;
+}
+[dir=ltr] .control-panel__header .control-panel__close-btn {
+  margin-left: auto;
 }
 .control-panel__header .control-panel__close-btn:hover {
   background-color: #0d6fed;
@@ -1831,8 +1994,11 @@ button:focus,
 .control-panel__header .control-panel__close-btn svg {
   fill: #fff;
 }
-.control-panel__header .dropdown {
+[dir=rtl] .control-panel__header .dropdown {
   margin-right: auto;
+}
+[dir=ltr] .control-panel__header .dropdown {
+  margin-left: auto;
 }
 .control-panel__title {
   display: -webkit-box;
@@ -1842,10 +2008,15 @@ button:focus,
       -ms-flex-align: center;
           align-items: center;
   gap: 0.3125rem;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.5;
   margin-bottom: 0;
+}
+[dir=rtl] .control-panel__title {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .control-panel__title {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .control-panel__body {
   display: grid;
@@ -2010,6 +2181,7 @@ button:focus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.625rem;
   width: 100%;
   height: 2.75rem;
   background-color: #eaf9fc;
@@ -2026,7 +2198,6 @@ button:focus,
 .control-panel .select-item .item__selected__icon {
   width: 1.5rem;
   height: 1.5rem;
-  margin-left: 0.625rem;
 }
 .control-panel .select-item .item__selected__icon img, .control-panel .select-item .item__selected__icon svg {
   width: 100%;
@@ -2050,7 +2221,12 @@ button:focus,
   background-color: #fff;
   border-radius: 50%;
   cursor: pointer;
+}
+[dir=rtl] .control-panel .select-item .item__selected .remove__selected-item {
   margin-right: auto;
+}
+[dir=ltr] .control-panel .select-item .item__selected .remove__selected-item {
+  margin-left: auto;
 }
 .control-panel .select-item .item__selected .remove__selected-item svg {
   width: 0.625rem;
@@ -2071,9 +2247,14 @@ button:focus,
   margin-left: 0.625rem;
 }
 .control-panel .select-item .invoice__client span {
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.75rem;
   color: #4D4D4D;
+}
+[dir=rtl] .control-panel .select-item .invoice__client span {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .control-panel .select-item .invoice__client span {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .control-panel .items-search {
   display: -webkit-box;
@@ -2161,6 +2342,11 @@ button:focus,
   width: 100%;
   height: 100%;
 }
+[dir=ltr] .control-panel .items-search__back-btn svg {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
 .control-panel .add-item__btn {
   width: 100%;
   height: 48px;
@@ -2174,13 +2360,18 @@ button:focus,
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.75rem;
   color: #1877F2;
   color: var(--color-brand);
   text-decoration: none;
   border-bottom: 1px solid #F0F2F5;
   padding: 15px 20px;
+}
+[dir=rtl] .control-panel .add-item__btn {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .control-panel .add-item__btn {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .control-panel .add-item__btn:hover {
   background-color: #F0F2F5;
@@ -2194,6 +2385,7 @@ button:focus,
           align-items: center;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  gap: 0.625rem;
   color: inherit;
   cursor: pointer;
   text-decoration: none;
@@ -2213,7 +2405,6 @@ button:focus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 10px;
 }
 .control-panel .control-panel__list-item__icon img, .control-panel .control-panel__list-item__icon svg {
   width: 32px;
@@ -2233,9 +2424,14 @@ button:focus,
   min-height: 2.6875rem;
 }
 .control-panel .control-panel__list-item__data span:first-child {
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.875rem;
   line-height: 1.6;
+}
+[dir=rtl] .control-panel .control-panel__list-item__data span:first-child {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .control-panel .control-panel__list-item__data span:first-child {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .control-panel .control-panel__list-item__data span:last-child {
   font-size: 0.75rem;
@@ -2299,8 +2495,13 @@ button:focus,
   -webkit-transition: all 0.4s ease-in;
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
-  padding: 0 1.875rem 0 1.4375rem;
   margin-bottom: 1.25rem;
+}
+[dir=rtl] .products__list {
+  padding: 0.625rem 1.875rem 0 1.4375rem;
+}
+[dir=ltr] .products__list {
+  padding: 0.625rem 1.4375rem 0 1.875rem;
 }
 .products__list.list-view {
   grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
@@ -2335,8 +2536,13 @@ button:focus,
 }
 .product__dropdown {
   position: absolute;
-  right: 0.125rem;
   top: 0.125rem;
+}
+[dir=rtl] .product__dropdown {
+  right: 0.125rem;
+}
+[dir=ltr] .product__dropdown {
+  left: 0.125rem;
 }
 .product__dropdown__btn {
   display: -webkit-box;
@@ -2406,7 +2612,6 @@ button:focus,
 .product__title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 14px;
   line-height: 1.5;
   overflow: hidden;
@@ -2419,6 +2624,12 @@ button:focus,
           user-select: none;
   margin-bottom: 0.3125rem;
 }
+[dir=rtl] .product__title {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .product__title {
+  font-family: "NotoSans_Medium", sans-serif;
+}
 .product__price {
   display: block;
   font-size: 0.875rem;
@@ -2426,7 +2637,6 @@ button:focus,
 }
 .product__quantity {
   position: absolute;
-  left: -7px;
   top: -7px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2449,6 +2659,12 @@ button:focus,
   -webkit-transition: opacity 0.2s ease;
   -o-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
+}
+[dir=rtl] .product__quantity {
+  left: -0.4375rem;
+}
+[dir=ltr] .product__quantity {
+  right: -0.4375rem;
 }
 .product--selected::before {
   border-color: #1877F2;
@@ -2523,7 +2739,6 @@ button:focus,
 .invoice__item::before {
   content: "";
   position: absolute;
-  right: 0;
   top: 0;
   width: 0;
   height: 100%;
@@ -2533,11 +2748,16 @@ button:focus,
   transition: all 0.3s ease-in-out;
   z-index: -1;
 }
+[dir=rtl] .invoice__item::before {
+  right: 0;
+}
+[dir=ltr] .invoice__item::before {
+  left: 0;
+}
 .invoice__item::after {
   content: "";
   position: absolute;
   bottom: 0;
-  right: 0;
   width: 0.1875rem;
   height: 0;
   background-color: #1877F2;
@@ -2547,6 +2767,12 @@ button:focus,
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+[dir=rtl] .invoice__item::after {
+  right: 0;
+}
+[dir=ltr] .invoice__item::after {
+  left: 0;
+}
 .invoice__item--data {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2555,10 +2781,6 @@ button:focus,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 30%;
-          flex: 0 1 30%;
-  margin-left: 0.9375rem;
 }
 .invoice__item--data-name {
   margin-bottom: 0.625rem;
@@ -2566,7 +2788,7 @@ button:focus,
 .invoice__item--data-name h3 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  width: 125px;
   font-size: 13px;
   line-height: 1.5;
   overflow: hidden;
@@ -2574,6 +2796,12 @@ button:focus,
      text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   margin-bottom: 0;
+}
+[dir=rtl] .invoice__item--data-name h3 {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .invoice__item--data-name h3 {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .invoice__item--data .invoice__item__price {
   font-size: 11px;
@@ -2640,7 +2868,12 @@ button:focus,
       -ms-flex-align: center;
           align-items: center;
   gap: 0.3125rem;
+}
+[dir=rtl] .invoice__item--counter {
   margin-left: auto;
+}
+[dir=ltr] .invoice__item--counter {
+  margin-right: auto;
 }
 .invoice__item--counter-screen {
   display: -webkit-box;
@@ -2654,7 +2887,6 @@ button:focus,
           align-items: center;
   min-width: 2.25rem;
   height: 2.5rem;
-  font-family: "NotoSansArabic_Medium";
   font-size: 0.9375rem;
   text-align: center;
   color: #060505;
@@ -2662,6 +2894,12 @@ button:focus,
   background-color: #eef1f4;
   border-radius: 0.25rem;
   padding: 0.5rem;
+}
+[dir=rtl] .invoice__item--counter-screen {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .invoice__item--counter-screen {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .invoice__item--counter-screen input {
   width: 100%;
@@ -2763,8 +3001,13 @@ button:focus,
   color: #fff;
 }
 .invoice__item--price {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 15px;
+}
+[dir=rtl] .invoice__item--price {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .invoice__item--price {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .invoice__item--price.return-amount {
   color: #F02849;
@@ -2828,8 +3071,13 @@ button:focus,
 }
 .checkout {
   width: 100%;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   color: #4D4D4D;
+}
+[dir=rtl] .checkout {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .checkout {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .checkout .checkout__slide__toggle {
   display: -webkit-box;
@@ -2866,15 +3114,16 @@ button:focus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 40px;
+  gap: 0.625rem;
+  height: 2.5rem;
   border-bottom: 1px solid #efefef;
-  padding: 8px 10px;
+  padding: 0.5rem 0.625rem;
 }
 .checkout .checkout__list__item h5 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 65%;
           flex: 0 1 65%;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: inherit;
   color: inherit;
   margin-bottom: 0;
@@ -2892,6 +3141,18 @@ button:focus,
   -ms-flex-line-pack: center;
       align-content: center;
 }
+[dir=rtl] .checkout .checkout__list__item .checkout__item__detail {
+  margin-right: auto;
+}
+[dir=ltr] .checkout .checkout__list__item .checkout__item__detail {
+  margin-left: auto;
+}
+[dir=rtl] .checkout .checkout__list__item .checkout__item__detail.invoice-total-amount {
+  margin-left: 2.125rem;
+}
+[dir=ltr] .checkout .checkout__list__item .checkout__item__detail.invoice-total-amount {
+  margin-right: 2.125rem;
+}
 .checkout .checkout__list__item.invoice-discount {
   color: #FF6B73;
 }
@@ -2902,6 +3163,7 @@ button:focus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.625rem;
 }
 .checkout .checkout__list__item.invoice-discount .discount-details .discount-percentage {
   width: -webkit-max-content;
@@ -2914,9 +3176,6 @@ button:focus,
   border-radius: 12px;
   padding: 0.225rem 0.392rem;
 }
-.checkout .checkout__list__item.invoice-discount .discount-details .discount-amount {
-  margin-right: 10px;
-}
 .checkout .checkout__list__item .invoice__comment {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2928,16 +3187,25 @@ button:focus,
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+}
+[dir=rtl] .checkout .checkout__list__item .invoice__comment {
   margin-right: auto;
 }
+[dir=ltr] .checkout .checkout__list__item .invoice__comment {
+  margin-left: auto;
+}
 .checkout .checkout__list__item .invoice__comment span {
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 12px;
+}
+[dir=rtl] .checkout .checkout__list__item .invoice__comment span {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .checkout .checkout__list__item .invoice__comment span {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .checkout .checkout__list__item .checkout__remove-item {
   width: 24px;
   height: 24px;
-  margin-right: auto;
 }
 
 .checkout__cta__container {
@@ -2997,13 +3265,23 @@ button:focus,
   padding: 0.875rem 1.75rem;
 }
 .checkout__cta__container .receive__cash__btn span:last-child {
-  font-family: "NotoSansArabic_SemiBold";
   font-size: 1.375rem;
   line-height: 1.1;
 }
+[dir=rtl] .checkout__cta__container .receive__cash__btn span:last-child {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .checkout__cta__container .receive__cash__btn span:last-child {
+  font-family: "NotoSans_SemiBold", sans-serif;
+}
 .checkout__cta__container .receive__cash__btn span:first-child, .checkout__cta__container .receive__cash__btn span:only-child {
-  font-family: "NotoSansArabic_Medium";
   font-size: 1rem;
+}
+[dir=rtl] .checkout__cta__container .receive__cash__btn span:first-child, [dir=rtl] .checkout__cta__container .receive__cash__btn span:only-child {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .checkout__cta__container .receive__cash__btn span:first-child, [dir=ltr] .checkout__cta__container .receive__cash__btn span:only-child {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .checkout__cta__container .receive__cash__btn span:only-child {
   margin: 0 auto;
@@ -3051,6 +3329,24 @@ button:focus,
   border-bottom: 0.0625rem solid #E4E6EB;
   padding: 0.625rem 0.9375rem;
 }
+.payment-methods__header .back-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+[dir=ltr] .payment-methods__header .back-btn svg {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
 .payment-methods__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3093,6 +3389,7 @@ button:focus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 1.5rem;
   height: 4.5rem;
   max-width: 24.375rem;
   border: 0.125rem solid #1877F2;
@@ -3101,11 +3398,16 @@ button:focus,
 }
 .payment-methods__content .received-amount input[type=number] {
   width: 100%;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 1.5rem;
-  border: none;
   background-color: transparent;
-  margin-left: 1.5rem;
+  border: none;
+  padding: 0;
+}
+[dir=rtl] .payment-methods__content .received-amount input[type=number] {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .payment-methods__content .received-amount input[type=number] {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .payment-methods__content .received-amount input[type=number]::-webkit-input-placeholder {
   color: #C6CFD9;
@@ -3128,20 +3430,27 @@ button:focus,
   font-size: 1.5rem;
 }
 .payment-methods__content .received-amount .currency {
-  font-family: "NotoSansArabic_Medium", sans-serif;
   color: #1877F2;
   color: var(--color-brand);
-  margin-left: 1.875rem;
-  margin-right: auto;
+}
+[dir=rtl] .payment-methods__content .received-amount .currency {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .payment-methods__content .received-amount .currency {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .payment-methods__content .received-amount .amount {
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.875rem;
   color: #465479;
   background-color: #F5F5F5;
   border-radius: 0.4375rem;
   padding: 0.6rem 0.755rem;
-  margin-right: auto;
+}
+[dir=rtl] .payment-methods__content .received-amount .amount {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .payment-methods__content .received-amount .amount {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .payment-methods__content .key__buttons {
   gap: 1.125rem;
@@ -3280,7 +3589,6 @@ button:focus,
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
   min-height: 2.25rem;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.75rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -3288,6 +3596,12 @@ button:focus,
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
   -webkit-line-clamp: 2;
+}
+[dir=rtl] .operations__group__item .operations__item__comment {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .operations__group__item .operations__item__comment {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .operations__group__item .operations__item__subject span {
   display: inline-block;
@@ -3321,7 +3635,12 @@ button:focus,
 }
 .operations__group__item .operations__item__amount span {
   display: inline-block;
-  font-family: "NotoSansArabic_SemiBold";
+}
+[dir=rtl] .operations__group__item .operations__item__amount span {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .operations__group__item .operations__item__amount span {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .operations__group__item .operations__item__amount span.icon {
   display: -webkit-box;
@@ -3349,8 +3668,13 @@ button:focus,
   -webkit-box-flex: 0;
       -ms-flex: 0 1 15%;
           flex: 0 1 15%;
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 0.875rem;
+}
+[dir=rtl] .operations__group__item .operations__item__invoice-number {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .operations__group__item .operations__item__invoice-number {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .operations__group__item .operations__item__client-data {
   -webkit-box-flex: 1;
@@ -3372,8 +3696,13 @@ button:focus,
   font-size: 0.875rem;
 }
 .operations__group__item .operations__item__type {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 0.875rem;
+}
+[dir=rtl] .operations__group__item .operations__item__type {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .operations__group__item .operations__item__type {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 
 .total-operations {
@@ -3419,11 +3748,16 @@ button:focus,
 }
 .total-operations .total-amount__number, .total-operations .total-amount__currency {
   display: inline-block;
-  font-family: "NotoSansArabic_SemiBold";
   font-size: 1.25rem;
   line-height: 1;
   color: #060505;
   color: var(--color-text-primary);
+}
+[dir=rtl] .total-operations .total-amount__number, [dir=rtl] .total-operations .total-amount__currency {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .total-operations .total-amount__number, [dir=ltr] .total-operations .total-amount__currency {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 @media (max-width: 1024px) {
   .total-operations .total-amount__number, .total-operations .total-amount__currency {
@@ -3475,13 +3809,18 @@ button:focus,
       -ms-flex-align: center;
           align-items: center;
   height: 3rem;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.75rem;
   color: #A3AAB2;
   background-color: #F2F2F2;
   border-radius: 0 0 0.5rem 0.5rem;
   white-space: nowrap;
   padding: 0.45rem 0;
+}
+[dir=rtl] .flex-table__head {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .flex-table__head {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .flex-table__head.sticky--head {
   position: sticky;
@@ -3548,7 +3887,6 @@ button:focus,
   display: -ms-flexbox;
   display: flex;
   gap: 0.3125rem;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.75rem;
   color: #4D4D4D;
   color: #A3AAB2;
@@ -3560,6 +3898,12 @@ button:focus,
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+[dir=rtl] .filters__buttons .filter__btn {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .filters__buttons .filter__btn {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .filters__buttons .filter__btn:hover, .filters__buttons .filter__btn.selected {
   color: #1877F2;
@@ -3599,9 +3943,15 @@ button:focus,
           flex-direction: column;
 }
 .clients-list-users-item-price {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 1rem;
+}
+[dir=rtl] .clients-list-users-item-price {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
   margin-right: auto;
+}
+[dir=ltr] .clients-list-users-item-price {
+  font-family: "NotoSans_SemiBold", sans-serif;
+  margin-left: auto;
 }
 
 .login-page {
@@ -3721,10 +4071,15 @@ button:focus,
 }
 .login-page p {
   display: inline-block;
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 1.0625rem;
   color: #A3AAB2;
   margin-bottom: 0;
+}
+[dir=rtl] .login-page p {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .login-page p {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .login-page a {
   color: #1877F2;
@@ -3733,8 +4088,13 @@ button:focus,
 }
 .login-page .sign-up-cta {
   display: inline-block;
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 1.0625rem;
+}
+[dir=rtl] .login-page .sign-up-cta {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .login-page .sign-up-cta {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .login-page form {
   margin-top: 40px;
@@ -3745,9 +4105,13 @@ button:focus,
   display: inline-flex;
   direction: ltr;
 }
-.login-page [type=number],
-.login-page [type=tel] {
+[dir=rtl] .login-page [type=number],
+[dir=rtl] .login-page [type=tel] {
   direction: rtl;
+}
+[dir=ltr] .login-page [type=number],
+[dir=ltr] .login-page [type=tel] {
+  direction: ltr;
 }
 .login-page .password__field {
   position: relative;
@@ -3808,9 +4172,14 @@ button:focus,
   resize: none;
 }
 .login-page .forgot-credentials {
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.75rem;
   margin-bottom: 0.5rem;
+}
+[dir=rtl] .login-page .forgot-credentials {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .login-page .forgot-credentials {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 
 .resend__code__countdown {
@@ -3846,8 +4215,13 @@ button:focus,
 .code__inputs .form-control[readonly] {
   color: #1877F2;
   color: var(--color-brand);
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 3rem;
+}
+[dir=rtl] .code__inputs .form-control[readonly] {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .code__inputs .form-control[readonly] {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 
 .store-url__field {
@@ -3865,9 +4239,14 @@ button:focus,
   position: absolute;
   right: 0.95rem;
   color: #4D4D4D;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.875rem;
   pointer-events: none;
+}
+[dir=rtl] .store-url__field::before {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .store-url__field::before {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .store-url__field [type=text] {
   padding-right: 6.5rem;
@@ -3963,8 +4342,11 @@ button:focus,
   font-size: 10px;
   text-decoration: line-through;
 }
-.modal-body .after-discount {
+[dir=rtl] .modal-body .after-discount {
   font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .modal-body .after-discount {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .modal-body .table {
   font-size: 14px;
@@ -3995,6 +4377,7 @@ button:focus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.625rem;
   width: 100%;
   height: 44px;
   background-color: #EBF6FF;
@@ -4004,9 +4387,8 @@ button:focus,
   margin-bottom: 15px;
 }
 .modal-body .item__selected__icon {
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .modal-body .item__selected__icon img, .modal-body .item__selected__icon svg {
   width: 100%;
@@ -4048,7 +4430,12 @@ button:focus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0.625rem;
   background-color: #F5F5F5;
+  cursor: pointer;
   border-radius: 8px;
   padding: 0.825rem 0.95rem;
 }
@@ -4070,11 +4457,9 @@ button:focus,
 .addresses__item .address__container .address__details {
   font-size: 12px;
   color: #65676B;
-  margin-left: 10px;
 }
 .addresses__item .address__container .edit__address {
   font-size: 12px;
-  margin-right: auto;
 }
 
 .invoices-page {
@@ -4154,8 +4539,13 @@ button:focus,
   font-size: 16px;
 }
 .invoices-page .checkout .checkout__list__item.main-item .checkout__item__detail {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 22px;
+}
+[dir=rtl] .invoices-page .checkout .checkout__list__item.main-item .checkout__item__detail {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .invoices-page .checkout .checkout__list__item.main-item .checkout__item__detail {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .invoices-page .checkout .checkout__list__item:not(.main-item) {
   display: none;
@@ -4202,8 +4592,13 @@ button:focus,
   gap: 10px;
   text-decoration: none;
   color: currentColor;
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 0.75rem;
+}
+[dir=rtl] .return-page .control-panel .control-panel__header .cancel-return {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .return-page .control-panel .control-panel__header .cancel-return {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .return-page .control-panel .control-panel__header .cancel-return svg {
   fill: currentColor;
@@ -4337,14 +4732,24 @@ button:focus,
   height: 100%;
 }
 .added__client .client__data {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 0.75rem;
   margin-bottom: 0.9375rem;
 }
-.added__client .amount {
+[dir=rtl] .added__client .client__data {
   font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .added__client .client__data {
+  font-family: "NotoSans_SemiBold", sans-serif;
+}
+.added__client .amount {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
+}
+[dir=rtl] .added__client .amount {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .added__client .amount {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .added__client .last__operation {
   display: -webkit-box;
@@ -4371,9 +4776,14 @@ button:focus,
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.75rem;
   color: #A3AAB2;
+}
+[dir=rtl] .added__client .last__operation .operation__date-time {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .added__client .last__operation .operation__date-time {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .added__client .last__operation .operation__amount {
   display: -webkit-box;
@@ -4387,8 +4797,11 @@ button:focus,
           align-items: center;
   gap: 0.3125rem;
 }
-.added__client .last__operation .operation__amount span {
+[dir=rtl] .added__client .last__operation .operation__amount span {
   font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .added__client .last__operation .operation__amount span {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .added__client .last__operation .operation__amount .icon {
   display: -webkit-box;
@@ -4582,9 +4995,14 @@ button:focus,
   margin-bottom: 24px;
 }
 .shift-summary h4 {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 1rem;
   margin-bottom: 1.125rem;
+}
+[dir=rtl] .shift-summary h4 {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .shift-summary h4 {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .shift-summary p {
   line-height: 2;
@@ -4637,12 +5055,24 @@ button:focus,
 .shift-summary__list li .opening-balance-amount,
 .shift-summary__list li .daily-total-amount {
   color: #060505;
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 22px;
 }
-.shift-summary__list li .operations-amount {
+[dir=rtl] .shift-summary__list li .opening-balance-amount,
+[dir=rtl] .shift-summary__list li .daily-total-amount {
   font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .shift-summary__list li .opening-balance-amount,
+[dir=ltr] .shift-summary__list li .daily-total-amount {
+  font-family: "NotoSans_SemiBold", sans-serif;
+}
+.shift-summary__list li .operations-amount {
   font-size: 17px;
+}
+[dir=rtl] .shift-summary__list li .operations-amount {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .shift-summary__list li .operations-amount {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .shift-summary__list li .operations-amount.revenue {
   color: #3ABD76;
@@ -4651,9 +5081,14 @@ button:focus,
   color: #FF6B73;
 }
 .shift-summary__list li .receipt__count {
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 12px;
   color: #4D4D4D;
+}
+[dir=rtl] .shift-summary__list li .receipt__count {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .shift-summary__list li .receipt__count {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 
 .closed-shift {
@@ -4682,10 +5117,15 @@ button:focus,
   margin-bottom: 10px;
 }
 .closed-shift .daily-total-amount {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 40px;
   color: #060505;
   margin-bottom: 24px;
+}
+[dir=rtl] .closed-shift .daily-total-amount {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .closed-shift .daily-total-amount {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .closed-shift .form-label {
   color: #242424;
@@ -4733,8 +5173,13 @@ button:focus,
   margin-bottom: 0;
 }
 .clients-page .total-credits__amount, .clients-page .total-credits__currency {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 1.5rem;
+}
+[dir=rtl] .clients-page .total-credits__amount, [dir=rtl] .clients-page .total-credits__currency {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .clients-page .total-credits__amount, [dir=ltr] .clients-page .total-credits__currency {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .clients-page .total-credits .debtor {
   color: #F02849;
@@ -4769,8 +5214,13 @@ button:focus,
   margin-bottom: 0;
 }
 .clients-page .client-balance-amount {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
   font-size: 0.875rem;
+}
+[dir=rtl] .clients-page .client-balance-amount {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .clients-page .client-balance-amount {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .clients-page .client-balance-amount.debtor {
   color: #F02849;
@@ -4839,8 +5289,13 @@ button:focus,
   margin-bottom: 0;
 }
 .clients-page .client-data__detail__info {
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.875rem;
+}
+[dir=rtl] .clients-page .client-data__detail__info {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .clients-page .client-data__detail__info {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .clients-page .flex-table__row:hover .flex-table__col, .clients-page .flex-table__row.selected .flex-table__col {
   -webkit-transition: color 0.3s;
@@ -4862,7 +5317,6 @@ button:focus,
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.75rem;
   color: #1877F2;
   color: var(--color-brand);
@@ -4873,6 +5327,12 @@ button:focus,
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+[dir=rtl] .clients-page .operations-and-invoices__toggle {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .clients-page .operations-and-invoices__toggle {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .clients-page .operations-and-invoices__toggle::before {
   content: "";
@@ -5189,9 +5649,14 @@ header .header__btns {
 }
 .delete-all-data__modal .modal-body p {
   max-width: 90%;
-  font-family: "NotoSansArabic_SemiBold";
   text-align: center;
   margin-bottom: 60px;
+}
+[dir=rtl] .delete-all-data__modal .modal-body p {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .delete-all-data__modal .modal-body p {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .delete-all-data__modal .modal-body .form-check {
   margin: 0;
@@ -5258,8 +5723,11 @@ header .header__btns {
 .aman-page .page__layout .search__bar .credit__balance__data span {
   font-size: 19;
 }
-.aman-page .page__layout .search__bar .credit__balance__data span:last-child {
+[dir=rtl] .aman-page .page__layout .search__bar .credit__balance__data span:last-child {
   font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .aman-page .page__layout .search__bar .credit__balance__data span:last-child {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 .aman-page .page__layout .search__bar .credit__balance__reload-btn {
   display: -webkit-box;
@@ -5470,7 +5938,6 @@ header .header__btns {
       -ms-flex: 1 0 25%;
           flex: 1 0 25%;
   background-color: #F0F2F5;
-  font-family: "NotoSansArabic_Medium";
   font-size: 0.9375rem;
   border-radius: 0.5rem;
   border: none;
@@ -5478,6 +5945,12 @@ header .header__btns {
   -webkit-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
+}
+[dir=rtl] .key__buttons .key__btn {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .key__buttons .key__btn {
+  font-family: "NotoSans_Medium", sans-serif;
 }
 .key__buttons .key__btn svg {
   fill: #C6CFD9;
@@ -5515,11 +5988,19 @@ header .header__btns {
   border-bottom: 1px solid #F0F2F5;
 }
 .receipt li span:first-child {
-  font-family: "NotoSansArabic_Medium", sans-serif;
   font-size: 0.75rem;
 }
-.receipt li span:last-child {
+[dir=rtl] .receipt li span:first-child {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .receipt li span:first-child {
+  font-family: "NotoSans_Medium", sans-serif;
+}
+[dir=rtl] .receipt li span:last-child {
   font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .receipt li span:last-child {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }
 
 .success__message {
@@ -5529,6 +6010,11 @@ header .header__btns {
 }
 .success__message span {
   display: block;
-  font-family: "NotoSansArabic_Medium", sans-serif;
   margin-bottom: 1.875rem;
+}
+[dir=rtl] .success__message span {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .success__message span {
+  font-family: "NotoSans_Medium", sans-serif;
 }

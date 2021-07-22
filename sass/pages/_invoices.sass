@@ -64,8 +64,13 @@
                     font-size: 16px
 
                 .checkout__item__detail
-                    font-family: 'NotoSansArabic_SemiBold', sans-serif
                     font-size: 22px
+
+                    [dir="rtl"] &
+                        font-family: 'NotoSansArabic_Medium', sans-serif
+
+                    [dir="ltr"] &
+                        font-family: 'NotoSans_Medium', sans-serif
 
             &:not(.main-item)
                 display: none
