@@ -1,6 +1,8 @@
 .main-menu
     position: fixed
     top: 0
+    inset-inline-start: auto
+    inset-inline-end: 100%
     display: flex
     flex-direction: column
     justify-content: flex-start
@@ -12,19 +14,9 @@
     z-index: 999
     transition: transform 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), box-shadow 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), opacity 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17)
 
-    [dir="rtl"] &
-        right: auto
-        left: 100%
-
-        @media (max-width: 1024px)
-            border-radius: rem(12px) 0 0 rem(12px)
-
-    [dir="ltr"] &
-        right: 100%
-        left: auto
-
-        @media (max-width: 1024px)
-            border-radius: 0 rem(12px) rem(12px) 0
+    @media (max-width: 1024px)
+        border-start-end-radius: rem(12px)
+        border-end-end-radius: rem(12px)
 
     &__header
         display: flex
@@ -80,6 +72,7 @@
             text-decoration: none
             border-radius: rem(8px)
             padding: 0.569rem 0.59rem
+            transition: background-color 0.3s
 
             [dir="rtl"] &
                 font-family: 'NotoSansArabic_Medium', sans-serif
@@ -275,11 +268,7 @@
             left: 0
 
         &__toggle
-            [dir="rtl"] &
-                margin-right: rem(19px)
-
-            [dir="ltr"] &
-                margin-left: rem(19px)
+            margin-inline-start: rem(19px)
 
         &__logo
             opacity: 0
@@ -365,23 +354,15 @@
         @media (min-width: 1025px)
             width: 168px
             box-shadow: 5px 0 15px #878787
+            border-start-end-radius: rem(12px)
+            border-end-end-radius: rem(12px)
 
             [dir="rtl"] &,
             [dir="ltr"] &
                 transform: none
 
-            [dir="rtl"] &
-                border-radius: rem(12px) 0 0 rem(12px)
-
-            [dir="ltr"] &
-                border-radius: 0 rem(12px) rem(12px) 0
-
             .main-menu__toggle
-                [dir="rtl"] &
-                    margin-right: 0
-
-                [dir="ltr"] &
-                    margin-left: 0
+                margin-inline-start: 0
 
             .main-menu__logo
                 opacity: 1

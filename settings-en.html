@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>الاعدادات - كاشير</title>
-    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <title>Settings - Cashier</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -28,18 +28,18 @@
                 </a>
             </div>
             <nav>
-                <a href="sales.html" class="sales__page">المبيعات</a>
-                <a href="invoices.html" class="invoices__page">الفواتير</a>
-                <a href="cash-flow.html" class="cash-flow__page">حركة النقدية</a>
-                <a href="expenses.html" class="expenses__page">المصروفات</a>
-                <a href="aman.html" class="aman__page">امان</a>
-                <a href="maintenance.html" class="maintenance__page">الصيانة</a>
-                <a href="shift.html" class="shift__page">الوردية</a>
-                <a href="clients.html" class="clients__page">العملاء</a>
-                <a href="suppliers.html" class="suppliers__page">الموردون</a>
-                <a href="settings.html" class="settings__page active">اعدادات</a>
-                <a href="" class="update-data__page">تحديث البيانات</a>
-                <a href="" class="management__page">الادارة</a>
+                <a href="sales-en.html" class="sales__page">Sales</a>
+                <a href="invoices-en.html" class="invoices__page">Invoices</a>
+                <a href="cash-flow-en.html" class="cash-flow__page">Cash Flow</a>
+                <a href="expenses-en.html" class="expenses__page">Expenses</a>
+                <a href="aman-en.html" class="aman__page">Aman</a>
+                <a href="maintenance-en.html" class="maintenance__page">Maintenance</a>
+                <a href="shift-en.html" class="shift__page">Shift</a>
+                <a href="clients-en.html" class="clients__page">Clients</a>
+                <a href="suppliers-en.html" class="suppliers__page">Suppliers</a>
+                <a href="settings-en.html" class="settings__page active">Settings</a>
+                <a href="" class="update-data__page">Updating Data</a>
+                <a href="" class="management__page">Management</a>
             </nav>
         </div>
         <div class="page__layout">
@@ -50,11 +50,11 @@
                     </svg>
                 </a>
                 <h1 class="page__title">
-                    <a href="settings.html">الاعدادات</a>
+                    <a href="settings-en.html">Settings</a>
                 </h1>
                 <div class="header__btns">
-                    <a href="#" role="button" class="btn btn-secondary">اعادة ضبط المصنع</a>
-                    <a href="#" role="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete-all-data">مسح كل البيانات</a>
+                    <a href="#" role="button" class="btn btn-secondary">Factory Reset</a>
+                    <a href="#" role="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete-all-data">Erase All Data</a>
                 </div>
             </header>
             <div class="page__content">
@@ -62,43 +62,43 @@
                     <form>
                         <section class="form__card collapsible">
                             <div class="form__card__header">
-                                <a href="#" class="collapse__toggle" role="button" aria-expanded="true">اعدادت عامة</a>
+                                <a href="#" class="collapse__toggle" role="button" aria-expanded="true">General settings</a>
                             </div>
                             <div class="collapse__container">
                                 <div class="form__card__body">
                                     <div class="row">
                                         <div class="col-12">
-                                            <label class="form-label" for="lang_setting">اللغة</label>
+                                            <label class="form-label" for="lang_setting">Language</label>
                                             <select class="form-select" name="lang_setting" id="lang_setting">
                                                 <option value="ar">العربية</option>
-                                                <option value="en">English</option>
+                                                <option value="en" selected>English</option>
                                                 <option value="fr">Français</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form__card__footer">
-                                    <button type="submit" class="btn btn-primary" disabled>حفظ التغييرات</button>
+                                    <button type="submit" class="btn btn-primary" disabled>Save the Changes</button>
                                 </div>
                             </div>
                         </section>
                         <section class="form__card collapsible collapsed">
                             <div class="form__card__header">
-                                <a href="#" class="collapse__toggle" role="button" aria-expanded="true">الطباعة</a>
+                                <a href="#" class="collapse__toggle" role="button" aria-expanded="true">Printer</a>
                             </div>
                             <div class="collapse__container">
                                 <div class="form__card__body">
                                     <div class="row">
                                         <div class="col-12 col-sm-6 mb-3">
-                                            <label class="form-label" for="printer-name">اسم الطابعة</label>
-                                            <input type="text" class="form-control" name="" id="printer-name" placeholder="اكتب اسم الطابعة">
+                                            <label class="form-label" for="printer-name">Printer name</label>
+                                            <input type="text" class="form-control" name="" id="printer-name" placeholder="Type the name of the printer">
                                         </div>
                                         <div class="col-12 col-sm-6 mb-3">
-                                            <label class="form-label" for="print-paper-size">مقاس ورقة الطباعة</label>
+                                            <label class="form-label" for="print-paper-size">Printing paper size</label>
                                             <select class="form-select" name="print-paper-size" id="print-paper-size">
-                                                <option value="">صغير</option>
-                                                <option value="">متوسط</option>
-                                                <option value="">كبير</option>
+                                                <option value="">Small</option>
+                                                <option value="">Medium</option>
+                                                <option value="">Large</option>
                                             </select>
                                         </div>
                                     </div>
@@ -106,81 +106,81 @@
                                         <div class="col-12 col-sm-6">
                                             <div class="form-check mb-3">
                                                 <input class="form-check-input" type="checkbox" value="" id="after-payment">
-                                                <label class="form-check-label" for="after-payment">طباعة بعد الدفع</label>
+                                                <label class="form-check-label" for="after-payment">Printing after payment</label>
                                             </div>
                                             <div class="form-check mb-3">
                                                 <input class="form-check-input" type="checkbox" value="" id="client-name-and-number">
-                                                <label class="form-check-label" for="client-name-and-number">طباعة اسم ورقم العميل</label>
+                                                <label class="form-check-label" for="client-name-and-number">Print client name and number</label>
                                             </div>
                                             <div class="form-check mb-3">
                                                 <input class="form-check-input" type="checkbox" value="" id="client-address">
-                                                <label class="form-check-label" for="client-address">طباعة عنوان العميل</label>
+                                                <label class="form-check-label" for="client-address">Print client address</label>
                                             </div>
                                             <div class="form-check mb-3">
                                                 <input class="form-check-input" type="checkbox" value="" id="internal-receipt">
-                                                <label class="form-check-label" for="internal-receipt">طباعة فاتورة داخلية (مطبخ / صيانة)</label>
+                                                <label class="form-check-label" for="internal-receipt">Internal invoice printing (kitchen / maintenance)</label>
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-check mb-3">
                                                 <input class="form-check-input" type="checkbox" value="" id="work-shift-and-employee">
-                                                <label class="form-check-label" for="work-shift-and-employee">طباعة الشيفت والموظف</label>
+                                                <label class="form-check-label" for="work-shift-and-employee">Print shift data and employee name</label>
                                             </div>
                                             <div class="form-check mb-3">
                                                 <input class="form-check-input" type="checkbox" value="" id="client-credit">
-                                                <label class="form-check-label" for="client-credit">طباعة رصيد العميل</label>
+                                                <label class="form-check-label" for="client-credit">Print client balance</label>
                                             </div>
                                             <div class="form-check mb-3">
                                                 <input class="form-check-input" type="checkbox" value="" id="number-counter">
-                                                <label class="form-check-label" for="number-counter">طباعة عداد الاراقام</label>
+                                                <label class="form-check-label" for="number-counter">Digit counter printing</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-12 mb-3">
-                                            <label class="form-label" for="1st-comment">التعليق 1 <span>(يكتب فى اخر الفاتورة)</span></label>
+                                            <label class="form-label" for="1st-comment">Comment 1 <span>(Written at the end of the invoice)</span></label>
                                             <input type="text" class="form-control" name="" id="1st-comment" placeholder="">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-12 mb-3">
-                                            <label class="form-label" for="2nd-comment">التعليق 2 <span>(يكتب فى اخر الفاتورة)</span></label>
+                                            <label class="form-label" for="2nd-comment">Comment 2 <span>(Written at the end of the invoice)</span></label>
                                             <input type="text" class="form-control" name="" id="2nd-comment" placeholder="">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-12">
-                                            <label class="form-label" for="3rd-comment">التعليق 3 <span>(يكتب فى اخر الفاتورة)</span></label>
+                                            <label class="form-label" for="3rd-comment">Comment 3 <span>(Written at the end of the invoice)</span></label>
                                             <input type="text" class="form-control" name="" id="3rd-comment" placeholder="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form__card__footer">
-                                    <button type="submit" class="btn btn-primary" disabled>حفظ التغييرات</button>
+                                    <button type="submit" class="btn btn-primary" disabled>Save the Changes</button>
                                 </div>
                             </div>
                         </section>
                         <section class="form__card collapsible collapsed">
                             <div class="form__card__header">
-                                <a href="#" class="collapse__toggle" role="button" aria-expanded="true">قارئ الباركود والميزان</a>
+                                <a href="#" class="collapse__toggle" role="button" aria-expanded="true">Barcode reader and scale</a>
                             </div>
                             <div class="collapse__container">
                                 <div class="form__card__body">
                                     <fieldset>
-                                        <legend>قارئ الباركود</legend>
+                                        <legend>Barcode reader</legend>
                                         <div class="row">
                                             <div class="col-12 col-sm-6 mb-3">
-                                                <label class="form-label" for="barcode-start">اقارئ الباركود يبدا برقم</label>
+                                                <label class="form-label" for="barcode-start">Barcode reader starts with</label>
                                                 <input type="text" class="form-control" name="" id="barcode-start" placeholder="">
                                             </div>
                                             <div class="col-12 col-sm-6 mb-3">
-                                                <label class="form-label" for="barcode-end">قارئ الباركود ينتهى برقم</label>
+                                                <label class="form-label" for="barcode-end">Barcode reader ends with</label>
                                                 <input type="text" class="form-control" name="" id="barcode-end" placeholder="">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-12 col-sm-6">
-                                                <label class="form-label" for="barcode-numbers-count">عدد ارقام قارئ الباركود</label>
+                                                <label class="form-label" for="barcode-numbers-count">Barcode reader numbers count</label>
                                                 <select class="form-select" name="barcode-numbers-count" id="barcode-numbers-count">
                                                     <option value="">10</option>
                                                     <option value="">12</option>
@@ -190,57 +190,54 @@
                                         </div>
                                     </fieldset>
                                     <fieldset>
-                                        <legend>الميزان</legend>
+                                        <legend>The scale</legend>
                                         <div class="row">
                                             <div class="col-12 col-sm-6">
-                                                <label class="form-label" for="scale-code">كود الميزان</label>
+                                                <label class="form-label" for="scale-code">The scale code</label>
                                                 <input type="text" class="form-control" name="" id="scale-code" placeholder="">
                                             </div>
                                         </div>
                                     </fieldset>
                                 </div>
                                 <div class="form__card__footer">
-                                    <button type="submit" class="btn btn-primary" disabled>حفظ التغييرات</button>
+                                    <button type="submit" class="btn btn-primary" disabled>Save the Changes</button>
                                 </div>
                             </div>
                         </section>
                         <section class="form__card collapsible collapsed">
                             <div class="form__card__header">
-                                <a href="#" class="collapse__toggle" role="button" aria-expanded="true">عناوين العملاء</a>
+                                <a href="#" class="collapse__toggle" role="button" aria-expanded="true">Clients addresses</a>
                             </div>
                             <div class="collapse__container">
                                 <div class="form__card__body">
                                     <div class="row">
                                         <div class="col-12 col-sm-6 mb-3">
-                                            <label class="form-label" for="address-governorate">المحافظة</label>
+                                            <label class="form-label" for="address-governorate">Governorate</label>
                                             <select class="form-select" name="address-governorate" id="address-governorate">
-                                                <option value="ar">القاهرة</option>
-                                                <option value="en">الجيزة</option>
-                                                <option value="fr">القليوبية</option>
+                                                <option value="ar">Cairo</option>
+                                                <option value="en">Giza</option>
                                             </select>
                                         </div>
                                         <div class="col-12 col-sm-6 mb-3">
-                                            <label class="form-label" for="address-city">المدينة</label>
+                                            <label class="form-label" for="address-city">City</label>
                                             <select class="form-select" name="address-city" id="address-city">
-                                                <option value="ar">مدينة نصر</option>
-                                                <option value="en">مصر الجديدة</option>
-                                                <option value="fr">التجمع الاول</option>
+                                                <option value="ar">Nasr City</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-12 col-sm-6 mb-3">
-                                            <label class="form-label" for="address-neighborhood">المنطقة</label>
+                                            <label class="form-label" for="address-neighborhood">Neighborhood</label>
                                             <select class="form-select" name="address-neighborhood" id="address-neighborhood">
-                                                <option value="en">الحي السابع</option>
-                                                <option value="ar">الحي الثامن</option>
-                                                <option value="fr">الماظة</option>
+                                                <option value="en">7th District</option>
+                                                <option value="ar">8th District</option>
+                                                <option value="fr">Almaza</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form__card__footer">
-                                    <button type="submit" class="btn btn-primary" disabled>حفظ التغييرات</button>
+                                    <button type="submit" class="btn btn-primary" disabled>Save the Changes</button>
                                 </div>
                             </div>
                         </section>
@@ -252,21 +249,21 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="delete-all-data-label">مسح كل البيانات</h5>
+                        <h5 class="modal-title" id="delete-all-data-label">Erase All Data</h5>
                     </div>
                     <div class="modal-body">
                         <svg width="142" height="142" viewBox="0 0 142 142">
                             <path opacity="0.5" fill="#FFDBE6" d="M71,0c39.2,0,71,31.8,71,71s-31.8,71-71,71S0,110.2,0,71 S31.8,0,71,0z"></path>
                             <path fill="#FF6B73" d="M115.8,38.4H87.1V24.9c0-1.6-1.3-3-3-3H57.8c-1.6,0-3,1.3-3,3v13.6H26.2v4h8.9c0,0.1,0,0.1,0,0.2 c0,0.2,0,0.3,0,0.5l7.2,63.4c0.9,7.7,7.4,13.6,15.2,13.6l0,0l0,0h26.8c7.8,0,14.3-5.8,15.2-13.6l7.2-63.4c0-0.2,0-0.5,0-0.7h8.9 v-4.1H115.8z M58.9,25.9h24.3v12.5H58.9V25.9z M95.6,106.1c-0.7,5.7-5.5,10-11.2,10H57.6l0,0c-5.7,0-10.6-4.3-11.2-10l-7.2-63.4 c0-0.1,0.1-0.2,0.2-0.2h63.3c0.1,0,0.1,0,0.1,0.1c0,0,0.1,0.1,0,0.2L95.6,106.1z M85.3,81.3H56.7v-4h28.7L85.3,81.3L85.3,81.3z"></path>
                         </svg>
-                        <p>مسح كل البيانات يتضمن عمليات المبيعات والمنتجات والعملاء</p>
+                        <p>Erasing all data includes sales operations, the products and the clients</p>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="delete-check">
-                            <label class="form-check-label" for="delete-check">اعى ذلك وأرغب فى مسح البيانات</label>
+                            <label class="form-check-label" for="delete-check">I understand that and want to erase the data</label>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger btn-lg">مسح كل البيانات</button>
+                        <button type="button" class="btn btn-danger btn-lg">Erase All Data</button>
                         <button type="button" class="btn btn-link btn-lg" data-bs-dismiss="modal">الغاء</button>
                     </div>
                 </div>

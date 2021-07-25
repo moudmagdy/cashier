@@ -38,12 +38,7 @@
     &__dropdown
         position: absolute
         top: rem(2px)
-
-        [dir="rtl"] &
-            right: rem(2px)
-
-        [dir="ltr"] &
-            left: rem(2px)
+        inset-inline-start: rem(2px)
 
         &__btn
             +flex-center
@@ -53,6 +48,7 @@
             border: none
             border-radius: 50%
             padding: 0
+            transition: background-color 0.3s
 
             &:hover
                 background-color: #C6CFD9
@@ -120,6 +116,7 @@
     &__quantity
         position: absolute
         top: -7px
+        inset-inline-end: rem(-7px)
         display: flex
         justify-content: center
         align-items: center
@@ -132,12 +129,6 @@
         +var(background-color, color-brand)
         border-radius: 50%
         transition: opacity 0.2s ease
-
-        [dir="rtl"] &
-            left: rem(-7px)
-
-        [dir="ltr"] &
-            right: rem(-7px)
 
     &--selected
         &::before

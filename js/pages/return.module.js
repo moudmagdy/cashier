@@ -6,6 +6,17 @@ const productsList = document.querySelector('.products__list');
 const products = document.querySelectorAll('.products__list .product');
 const selectAllProducts = document.querySelector('.select-all');
 
+let bodyElement = document.querySelector('body');
+let direction;
+
+if (window.getComputedStyle) {
+    // all browsers
+    direction = window.getComputedStyle(bodyElement, null).getPropertyValue('direction');
+} else {
+    // IE5-8
+    direction = bodyElement.currentStyle.direction;
+}
+
 products.forEach(product => {
     let quantity = 0;
     product.addEventListener('click', (e) => {
@@ -20,7 +31,7 @@ products.forEach(product => {
         }
 
         if (product.parentNode.querySelectorAll('.product--selected').length === product.parentNode.children.length) {
-            selectAllProducts.textContent = 'الغاء تحديد الكل';
+            selectAllProducts.textContent = direction == 'rtl' ? 'الغاء تحديد الكل' : 'Deselect All';
             selectAllProducts.classList.add('active');
         }
     });
@@ -29,7 +40,7 @@ products.forEach(product => {
 selectAllProducts.addEventListener('click', (e) => {
     e.preventDefault();
     if (productsList.querySelectorAll('.product--selected').length === productsList.children.length) {
-        selectAllProducts.textContent = 'تحديد الكل';
+        selectAllProducts.textContent = direction == 'rtl' ? 'تحديد الكل' : 'Select All';
         selectAllProducts.classList.remove('active');
         productsList.querySelectorAll('.product--selected').forEach(selected => {
             selected.classList.remove('product--selected');
@@ -39,7 +50,7 @@ selectAllProducts.addEventListener('click', (e) => {
         products.forEach(product => {
             if (!product.classList.contains('product--selected')) {
                 let quantity = 1;
-                selectAllProducts.textContent = 'الغاء تحديد الكل';
+                selectAllProducts.textContent = direction == 'rtl' ? 'الغاء تحديد الكل' : 'Deselect All';
                 selectAllProducts.classList.add('active');
                 product.classList.add('product--selected');
                 product.querySelector('.product__quantity').textContent = quantity;

@@ -49,19 +49,11 @@
                 flex: 0 1 25%
                 justify-content: flex-end
                 align-content: center
-
-                [dir="rtl"] &
-                    margin-right: auto
-
-                [dir="ltr"] &
-                    margin-left: auto
+                margin-inline-start: auto
 
                 &.invoice-total-amount
-                    [dir="rtl"] &
-                        margin-left: rem(34px)
-
-                    [dir="ltr"] &
-                        margin-right: rem(34px)
+                    .sales-page &
+                        margin-inline-end: rem(34px)
 
             &.invoice-discount
                 color: #FF6B73
@@ -83,12 +75,7 @@
             .invoice__comment
                 +flex-center
                 gap: 10px
-
-                [dir="rtl"] &
-                    margin-right: auto
-
-                [dir="ltr"] &
-                    margin-left: auto
+                margin-inline-start: auto
 
                 span
                     font-size: 12px

@@ -8,6 +8,7 @@
     &__header
         display: flex
         align-items: center
+        gap: rem(10px)
         min-height: 52px
         max-height: 52px
         color: #fff
@@ -52,12 +53,7 @@
             height: rem(48px)
             border-radius: 50%
             transition: background-color 0.3s
-
-            [dir="rtl"] &
-                margin-right: auto
-
-            [dir="ltr"] &
-                margin-left: auto
+            margin-inline-start: auto
 
             &:hover
                 background-color: darken($color-brand, 3%)
@@ -66,11 +62,7 @@
                 fill: $color-white
 
         .dropdown
-            [dir="rtl"] &
-                margin-right: auto
-
-            [dir="ltr"] &
-                margin-left: auto
+            margin-inline-start: auto
 
     &__title
         display: flex
@@ -109,14 +101,19 @@
             transition: none
 
         &:not(:first-of-type)
-            left: -100%
+            inset-inline-end: -100%
             opacity: 0
             pointer-events: none
 
         &.view--shown
-            transform: translateX(100%)
             opacity: 1
             pointer-events: auto
+
+            [dir="rtl"] &
+                transform: translateX(100%)
+
+            [dir="ltr"] &
+                transform: translateX(-100%)
 
     &__content
         display: flex
@@ -233,12 +230,7 @@
                 background-color: #fff
                 border-radius: 50%
                 cursor: pointer
-
-                [dir="rtl"] &
-                    margin-right: auto
-
-                [dir="ltr"] &
-                    margin-left: auto
+                margin-inline-start: auto
 
                 svg
                     width: rem(10px)
@@ -247,12 +239,12 @@
         .invoice__client
             display: flex
             align-items: center
+            gap: rem(10px)
             height: 100%
 
             svg, img
                 width: rem(24px)
                 height: rem(24px)
-                margin-left: rem(10px)
 
             span
                 font-size: rem(12px)
@@ -397,7 +389,7 @@
     & > .control-panel
         position: fixed
         top: 0
-        right: 100%
+        inset-inline-start: 100%
         width: 415px
         z-index: 9999
         transition: transform 0.3s cubic-bezier(0.8,-0.21, 0.35, 0.32)
@@ -414,4 +406,8 @@
         background-color: rgba(6, 5, 5, 0.35)
 
     .page__layout > .control-panel
-        transform: translateX(100%)
+        [dir="rtl"] &
+            transform: translateX(100%)
+
+        [dir="ltr"] &
+            transform: translateX(-100%)

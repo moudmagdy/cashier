@@ -144,3 +144,11 @@ paymentMethodsBackBtn.addEventListener('click', (e) => {
         document.querySelector('main').classList.remove('payment-methods--shown');
     }
 });
+
+const pageLoader = document.querySelector('.page-preloader');
+
+function closePageLoader() {
+    pageLoader.classList.add('page-loaded');
+}
+
+window.addEventListener('load', closePageLoader);

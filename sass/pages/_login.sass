@@ -87,16 +87,6 @@
         +var(color, color-brand)
         text-decoration: none
 
-    .sign-up-cta
-        display: inline-block
-        font-size: rem(17px)
-
-        [dir="rtl"] &
-            font-family: 'NotoSansArabic_SemiBold', sans-serif
-
-        [dir="ltr"] &
-            font-family: 'NotoSans_SemiBold', sans-serif
-
     form
         margin-top: 40px
 
@@ -119,7 +109,7 @@
 
         .show__password
             position: absolute
-            left: 0.95rem
+            inset-inline-end: 0.95rem
             +flex-center
 
             svg
@@ -145,7 +135,7 @@
                         display: block
 
         [type="password"]
-            padding-left: calc(0.95rem + 18px + 0.95rem)
+            padding-inline-end: calc(0.95rem + 18px + 0.95rem)
 
     form
         .btn

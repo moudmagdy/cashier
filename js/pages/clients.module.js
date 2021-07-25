@@ -4,11 +4,23 @@ import '../components/collapsible.module.js';
 
 document.querySelector('.operations-and-invoices__toggle').addEventListener('click', (e) => {
     e.preventDefault();
+
+    let bodyElement = document.querySelector('body');
+    let direction;
+
+    if (window.getComputedStyle) {
+        // all browsers
+        direction = window.getComputedStyle(bodyElement, null).getPropertyValue('direction');
+    } else {
+        // IE5-8
+        direction = bodyElement.currentStyle.direction;
+    }
+
     document.querySelector('main').classList.toggle('operations-and-invoices--shown');
     if (document.querySelector('main').classList.contains('operations-and-invoices--shown')) {
-        document.querySelector('.operations-and-invoices__toggle').textContent = 'اخفاء العمليات والفواتير';
+        document.querySelector('.operations-and-invoices__toggle').textContent = direction == 'rtl' ? 'اخفاء العمليات والفواتير' : 'Hide operations and invoices';
     } else {
-        document.querySelector('.operations-and-invoices__toggle').textContent = 'عرض العمليات والفواتير';
+        document.querySelector('.operations-and-invoices__toggle').textContent = direction == 'rtl' ? 'عرض العمليات والفواتير' : 'Show operations and invoices';
     }
 });
 

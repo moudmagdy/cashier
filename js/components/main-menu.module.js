@@ -19,7 +19,6 @@ function closeMainMenu(e) {
     }
 }
 
-
 function createSubmenu() {
     const navMenuItemHeight = 76;
     const navMaximumOccupancy = Math.floor(menuNav.offsetHeight / navMenuItemHeight);
@@ -54,8 +53,7 @@ function createSubmenu() {
                 element.classList.add('d-none');
             });
 
-        }
-        else {
+        } else {
             menuNavItem.forEach(item => {
                 item.classList.remove('d-none');
             });

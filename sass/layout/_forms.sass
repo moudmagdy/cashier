@@ -88,24 +88,14 @@ button,
 
     &::before
         position: absolute
-
+        inset-inline-end: 0.95rem
         top: 50%
         transform: translateY(-50%)
         content: attr(data-symbol)
         font-size: 12px
 
-        [dir="rtl"] &
-            left: 0.95rem
-
-        [dir="ltr"] &
-            right: 0.95rem
-
     .form-control
-        [dir="rtl"] &
-            padding-left: 2.8rem
-
-        [dir="ltr"] &
-            padding-right: 2.8rem
+        padding-inline-end: 2.8rem
 
 .percentage-symbol
     position: relative

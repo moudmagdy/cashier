@@ -27,44 +27,28 @@
         content: ""
         position: absolute
         top: 0
+        inset-inline-start: 0
         width: 0
         height: 100%
         background-color: #FAFAFA
         transition: all 0.3s ease-in-out
         z-index: -1
 
-        [dir="rtl"] &
-            right: 0
-
-        [dir="ltr"] &
-            left: 0
-
     &::after
         content: ""
         position: absolute
         bottom: 0
+        inset-inline-start: 0
         width: rem(3px)
         height: 0
         +var(background-color, color-brand)
         z-index: 1
         transition: all 0.2s ease-in-out
 
-        [dir="rtl"] &
-            right: 0
-
-        [dir="ltr"] &
-            left: 0
-
     &--data
         display: flex
         flex-direction: column
-        // flex: 0 1 30%
-
-        // [dir="rtl"] &
-            // margin-left: rem(15px)
-
-        // [dir="ltr"] &
-            // margin-right: rem(15px)
+        flex: 0 0 30%
 
         &-name
             margin-bottom: rem(10px)
@@ -72,7 +56,6 @@
             h3
                 display: -webkit-box
                 -webkit-box-orient: vertical
-                width: 125px
                 font-size: 13px
                 line-height: 1.5
                 overflow: hidden
@@ -129,12 +112,8 @@
         display: flex
         align-items: center
         gap: rem(5px)
-
-        [dir="rtl"] &
-            margin-left: auto
-
-        [dir="ltr"] &
-            margin-right: auto
+        margin-inline-start: rem(15px)
+        margin-inline-end: auto
 
         &-screen
             display: flex

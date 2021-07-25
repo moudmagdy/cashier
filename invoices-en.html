@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="utf-8">
@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>فواتير - كاشير</title>
-    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <title>Invoices - Cashier</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -28,24 +28,24 @@
                 </a>
             </div>
             <nav>
-                <a href="sales.html" class="sales__page">المبيعات</a>
-                <a href="invoices.html" class="invoices__page active">الفواتير</a>
-                <a href="cash-flow.html" class="cash-flow__page">حركة النقدية</a>
-                <a href="expenses.html" class="expenses__page">المصروفات</a>
-                <a href="aman.html" class="aman__page">امان</a>
-                <a href="maintenance.html" class="maintenance__page">الصيانة</a>
-                <a href="shift.html" class="shift__page">الوردية</a>
-                <a href="clients.html" class="clients__page">العملاء</a>
-                <a href="suppliers.html" class="suppliers__page">الموردون</a>
-                <a href="settings.html" class="settings__page">اعدادات</a>
-                <a href="" class="update-data__page">تحديث البيانات</a>
-                <a href="" class="management__page">الادارة</a>
+                <a href="sales-en.html" class="sales__page">Sales</a>
+                <a href="invoices-en.html" class="invoices__page active">Invoices</a>
+                <a href="cash-flow-en.html" class="cash-flow__page">Cash Flow</a>
+                <a href="expenses-en.html" class="expenses__page">Expenses</a>
+                <a href="aman-en.html" class="aman__page">Aman</a>
+                <a href="maintenance-en.html" class="maintenance__page">Maintenance</a>
+                <a href="shift-en.html" class="shift__page">Shift</a>
+                <a href="clients-en.html" class="clients__page">Clients</a>
+                <a href="suppliers-en.html" class="suppliers__page">Suppliers</a>
+                <a href="settings-en.html" class="settings__page">Settings</a>
+                <a href="" class="update-data__page">Updating Data</a>
+                <a href="" class="management__page">Management</a>
             </nav>
         </div>
         <div class="page__layout">
             <nav class="layout__tabs">
-                <a href="#" data-tab="invoices_record" class="active-tab">سجل الفواتير</a>
-                <a href="#" data-tab="invoice_details">تفاصيل الفاتورة</a>
+                <a href="#" data-tab="invoices_record" class="active-tab">Invoices Record</a>
+                <a href="#" data-tab="invoice_details">Invoice Details</a>
             </nav>
             <div class="page__layout__row layout__container">
                 <section class="page__layout__col layout__tab__content active-tab" data-tab="invoices_record">
@@ -56,7 +56,7 @@
                             </svg>
                         </a>
                         <h1 class="page__title">
-                            <a href="invoices.html">الفواتير</a>
+                            <a href="invoices-en.html">Invoices</a>
                         </h1>
                     </header>
                     <div class="search__bar">
@@ -64,27 +64,27 @@
                             <svg width="15" height="13.9" viewBox="0 0 15 13.9">
                                 <path d="M14.8,12.7l-2.4-2.4c1.6-2.6,1.3-6-0.9-8.3C8.8-0.7,4.6-0.7,2,2C0.7,3.2,0,4.9,0,6.7s0.7,3.5,2,4.7 c1.3,1.3,2.9,2,4.7,2s3.5-0.7,4.7-2c0,0,0.1-0.1,0.1-0.1l2.3,2.3c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2 C15.1,13.4,15.1,12.9,14.8,12.7z M6.7,12C5.3,12,4,11.4,3,10.4c-1-1-1.6-2.3-1.6-3.7S2,4,3,2.9c1-1,2.3-1.6,3.7-1.6s2.7,0.6,3.7,1.6 c2.1,2.1,2.1,5.4,0,7.5C9.4,11.4,8.1,12,6.7,12z"></path>
                             </svg>
-                            <input type="search" name="search" placeholder="ابحث برقم الفاتورة، المنتج، العميل، السعر">
+                            <input type="search" name="search" placeholder="Search by invoice number, product, customer, price">
                         </div>
                     </div>
                     <div class="filters__buttons">
-                        <a href="#" class="filter__btn selected" data-filter="all">الكل</a>
-                        <a href="#" class="filter__btn" data-filter="returned">المسترجعة</a>
-                        <a href="#" class="filter__btn" data-filter="saved">المحفوظة</a>
-                        <a href="#" class="filter__btn" data-filter="offers">عروض اسعار</a>
-                        <a href="#" class="filter__btn" data-filter="maintenance">صيانة</a>
+                        <a href="#" class="filter__btn selected" data-filter="all">All</a>
+                        <a href="#" class="filter__btn" data-filter="returned">Returned</a>
+                        <a href="#" class="filter__btn" data-filter="saved">Saved</a>
+                        <a href="#" class="filter__btn" data-filter="offers">Offers</a>
+                        <a href="#" class="filter__btn" data-filter="maintenance">Maintenance</a>
                     </div>
                     <div class="page__layout__scrollable-content">
                         <div class="operations">
                             <div class="operations__group collapsible">
                                 <h3 class="operations__group__header">
-                                    <a href="#" class="collapse__toggle" role="button" aria-expanded="true">الثلاثاء، 22 ديسمبر 2020</a>
+                                    <a href="#" class="collapse__toggle" role="button" aria-expanded="true">Tuesday, December 22, 2020</a>
                                 </h3>
                                 <div class="operations__group__list collapse__container">
                                     <div class="operations__group__item" data-subject="rent">
                                         <div class="operations__item__invoice-number">#1005</div>
-                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
-                                        <div class="operations__item__time">05:00 م</div>
+                                        <div class="operations__item__client-data">Assim Elsayed 01013875381</div>
+                                        <div class="operations__item__time">05:00 PM</div>
                                         <div class="operations__item__amount">
                                             <span>150.00</span>
                                             <span class="icon">
@@ -96,8 +96,8 @@
                                     </div>
                                     <div class="operations__group__item" data-subject="rent">
                                         <div class="operations__item__invoice-number">#1005</div>
-                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
-                                        <div class="operations__item__time">05:00 م</div>
+                                        <div class="operations__item__client-data">Assim Elsayed 01013875381</div>
+                                        <div class="operations__item__time">05:00 PM</div>
                                         <div class="operations__item__amount">
                                             <span>150.00</span>
                                             <span class="icon">
@@ -109,8 +109,8 @@
                                     </div>
                                     <div class="operations__group__item" data-subject="rent">
                                         <div class="operations__item__invoice-number">#1005</div>
-                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
-                                        <div class="operations__item__time">05:00 م</div>
+                                        <div class="operations__item__client-data">Assim Elsayed 01013875381</div>
+                                        <div class="operations__item__time">05:00 PM</div>
                                         <div class="operations__item__amount">
                                             <span>150.00</span>
                                             <span class="icon">
@@ -122,8 +122,8 @@
                                     </div>
                                     <div class="operations__group__item" data-subject="rent">
                                         <div class="operations__item__invoice-number">#1005</div>
-                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
-                                        <div class="operations__item__time">05:00 م</div>
+                                        <div class="operations__item__client-data">Assim Elsayed 01013875381</div>
+                                        <div class="operations__item__time">05:00 PM</div>
                                         <div class="operations__item__amount">
                                             <span>150.00</span>
                                             <span class="icon">
@@ -135,8 +135,8 @@
                                     </div>
                                     <div class="operations__group__item" data-subject="rent">
                                         <div class="operations__item__invoice-number">#1005</div>
-                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
-                                        <div class="operations__item__time">05:00 م</div>
+                                        <div class="operations__item__client-data">Assim Elsayed 01013875381</div>
+                                        <div class="operations__item__time">05:00 PM</div>
                                         <div class="operations__item__amount">
                                             <span>150.00</span>
                                             <span class="icon">
@@ -148,8 +148,8 @@
                                     </div>
                                     <div class="operations__group__item" data-subject="rent">
                                         <div class="operations__item__invoice-number">#1005</div>
-                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
-                                        <div class="operations__item__time">05:00 م</div>
+                                        <div class="operations__item__client-data">Assim Elsayed 01013875381</div>
+                                        <div class="operations__item__time">05:00 PM</div>
                                         <div class="operations__item__amount">
                                             <span>150.00</span>
                                             <span class="icon">
@@ -161,8 +161,8 @@
                                     </div>
                                     <div class="operations__group__item" data-subject="rent">
                                         <div class="operations__item__invoice-number">#1005</div>
-                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
-                                        <div class="operations__item__time">05:00 م</div>
+                                        <div class="operations__item__client-data">Assim Elsayed 01013875381</div>
+                                        <div class="operations__item__time">05:00 PM</div>
                                         <div class="operations__item__amount">
                                             <span>150.00</span>
                                             <span class="icon">
@@ -174,8 +174,8 @@
                                     </div>
                                     <div class="operations__group__item" data-subject="rent">
                                         <div class="operations__item__invoice-number">#1005</div>
-                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
-                                        <div class="operations__item__time">05:00 م</div>
+                                        <div class="operations__item__client-data">Assim Elsayed 01013875381</div>
+                                        <div class="operations__item__time">05:00 PM</div>
                                         <div class="operations__item__amount">
                                             <span>150.00</span>
                                             <span class="icon">
@@ -187,8 +187,8 @@
                                     </div>
                                     <div class="operations__group__item" data-subject="rent">
                                         <div class="operations__item__invoice-number">#1005</div>
-                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
-                                        <div class="operations__item__time">05:00 م</div>
+                                        <div class="operations__item__client-data">Assim Elsayed 01013875381</div>
+                                        <div class="operations__item__time">05:00 PM</div>
                                         <div class="operations__item__amount">
                                             <span>150.00</span>
                                             <span class="icon">
@@ -200,8 +200,8 @@
                                     </div>
                                     <div class="operations__group__item" data-subject="rent">
                                         <div class="operations__item__invoice-number">#1005</div>
-                                        <div class="operations__item__client-data">عاصم السيد 01013875381</div>
-                                        <div class="operations__item__time">05:00 م</div>
+                                        <div class="operations__item__client-data">Assim Elsayed 01013875381</div>
+                                        <div class="operations__item__time">05:00 PM</div>
                                         <div class="operations__item__amount">
                                             <span>150.00</span>
                                             <span class="icon">
@@ -223,9 +223,9 @@
                                 </svg>
                             </div>
                             <div class="total-amount">
-                                <h6>اجمالى الفواتير</h6>
+                                <h6>Total Invoices</h6>
                                 <span class="total-amount__number">19250.00</span>
-                                <span class="total-amount__currency">جـ</span>
+                                <span class="total-amount__currency">EGP</span>
                             </div>
                         </div>
                         <div class="total-operations">
@@ -235,9 +235,9 @@
                                 </svg>
                             </div>
                             <div class="total-amount">
-                                <h6>فواتير كاش</h6>
+                                <h6>Cash Invoices</h6>
                                 <span class="total-amount__number">18250.00</span>
-                                <span class="total-amount__currency">جـ</span>
+                                <span class="total-amount__currency">EGP</span>
                             </div>
                         </div>
                         <div class="total-operations">
@@ -247,9 +247,9 @@
                                 </svg>
                             </div>
                             <div class="total-amount">
-                                <h6>فواتير ڤيزا</h6>
+                                <h6>VISA Invoices</h6>
                                 <span class="total-amount__number">1000.00</span>
-                                <span class="total-amount__currency">جـ</span>
+                                <span class="total-amount__currency">EGP</span>
                             </div>
                         </div>
                     </footer>
@@ -258,7 +258,7 @@
                     <div class="control-panel">
                         <div class="control-panel__header">
                             <h4 class="control-panel__title">
-                                <span>الفاتورة</span>
+                                <span>Invoice</span>
                                 <span class="invoice-id">#1005</span>
                             </h4>
                             <div class="invoice__counters">
@@ -273,11 +273,11 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="">
                                     <li>
-                                        <a class="dropdown-item" href="return.html">
+                                        <a class="dropdown-item" href="return-en.html">
                                             <svg width="18" height="18" viewBox="0 0 18 18">
                                                 <path d="M11.1,17.9c-0.6,0-1.3-0.2-1.8-0.7L0.7,8.6C0.2,8.1,0,7.4,0,6.7l0.2-4.1c0.1-1.3,1.1-2.3,2.4-2.4L6.7,0 c0.7,0,1.4,0.2,1.9,0.7l8.6,8.6c0.5,0.5,0.7,1.1,0.7,1.8s-0.3,1.3-0.7,1.8v0l-4.3,4.3C12.4,17.6,11.7,17.9,11.1,17.9z M6.8,1.4 C6.8,1.4,6.8,1.4,6.8,1.4L2.6,1.6c-0.6,0-1,0.5-1,1L1.4,6.7c0,0.3,0.1,0.6,0.3,0.8l8.6,8.6c0.4,0.4,1.1,0.4,1.5,0l4.3-4.3 c0.4-0.4,0.4-1.1,0-1.5L7.6,1.7C7.4,1.5,7.1,1.4,6.8,1.4z M5.6,7.6c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S6.7,7.6,5.6,7.6z M5.6,5 C5.2,5,5,5.2,5,5.6s0.3,0.6,0.6,0.6s0.6-0.3,0.6-0.6S5.9,5,5.6,5z"></path>
                                             </svg>
-                                            <span>استرجاع الفاتورة</span>
+                                            <span>Invoice return</span>
                                         </a>
                                     </li>
                                     <li>
@@ -285,7 +285,7 @@
                                             <svg width="18" height="14.1" viewBox="0 0 18 14.1">
                                                 <path d="M13.4,4.6H4.6C4.3,4.6,4,4.3,4,4s0.3-0.6,0.6-0.6h8.8C13.7,3.4,14,3.7,14,4S13.7,4.6,13.4,4.6z M14,7.1 c0-0.3-0.3-0.6-0.6-0.6H4.6C4.3,6.5,4,6.8,4,7.1c0,0.3,0.3,0.6,0.6,0.6h8.8C13.7,7.7,14,7.4,14,7.1z M5.3,13.9l2.8-2.8 c0,0,0.1-0.1,0.2-0.1h7.5c1.2,0,2.2-1,2.2-2.2V2.2C18,1,17,0,15.8,0H2.2C1,0,0,1,0,2.2v6.6C0,10.1,1,11,2.2,11h1.6 c0.1,0,0.2,0.1,0.2,0.2l0,2.1c0,0.2,0.1,0.4,0.2,0.5c0.1,0.1,0.3,0.2,0.5,0.2c0,0,0,0,0,0C5,14.1,5.2,14.1,5.3,13.9z M2.2,9.9 c-0.6,0-1.1-0.5-1.1-1.1V2.2c0-0.6,0.5-1.1,1.1-1.1h13.6c0.6,0,1.1,0.5,1.1,1.1v6.6c0,0.6-0.5,1.1-1.1,1.1H8.3c-0.4,0-0.7,0.1-1,0.4 l-2.1,2.1v-1.1c0-0.8-0.6-1.4-1.4-1.4H2.2z"></path>
                                             </svg>
-                                            <span>طباعة الفاتورة</span>
+                                            <span>Print the invoice</span>
                                         </a>
                                     </li>
                                     <li>
@@ -293,7 +293,7 @@
                                             <svg width="18" height="14.1" viewBox="0 0 18 14.1">
                                                 <path d="M13.4,4.6H4.6C4.3,4.6,4,4.3,4,4s0.3-0.6,0.6-0.6h8.8C13.7,3.4,14,3.7,14,4S13.7,4.6,13.4,4.6z M14,7.1 c0-0.3-0.3-0.6-0.6-0.6H4.6C4.3,6.5,4,6.8,4,7.1c0,0.3,0.3,0.6,0.6,0.6h8.8C13.7,7.7,14,7.4,14,7.1z M5.3,13.9l2.8-2.8 c0,0,0.1-0.1,0.2-0.1h7.5c1.2,0,2.2-1,2.2-2.2V2.2C18,1,17,0,15.8,0H2.2C1,0,0,1,0,2.2v6.6C0,10.1,1,11,2.2,11h1.6 c0.1,0,0.2,0.1,0.2,0.2l0,2.1c0,0.2,0.1,0.4,0.2,0.5c0.1,0.1,0.3,0.2,0.5,0.2c0,0,0,0,0,0C5,14.1,5.2,14.1,5.3,13.9z M2.2,9.9 c-0.6,0-1.1-0.5-1.1-1.1V2.2c0-0.6,0.5-1.1,1.1-1.1h13.6c0.6,0,1.1,0.5,1.1,1.1v6.6c0,0.6-0.5,1.1-1.1,1.1H8.3c-0.4,0-0.7,0.1-1,0.4 l-2.1,2.1v-1.1c0-0.8-0.6-1.4-1.4-1.4H2.2z"></path>
                                             </svg>
-                                            <span>تكرار الفاتورة</span>
+                                            <span>Duplicate the Invoice</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -307,7 +307,7 @@
                                             <path fill="#A3AAB2" d="M12.5,0C19.4,0,25,5.6,25,12.5S19.4,25,12.5,25S0,19.4,0,12.5S5.6,0,12.5,0z" />
                                             <path fill="#F5F5F5" d="M18.7,16.1c-2.3,3.4-7,4.4-10.5,2c-0.8-0.5-1.5-1.2-2-2c2.3-3.4,7-4.4,10.5-2C17.5,14.6,18.2,15.3,18.7,16.1z M12.5,5.6c1.6,0,2.8,1.3,2.8,2.8s-1.3,2.8-2.8,2.8S9.7,10,9.7,8.4S10.9,5.6,12.5,5.6z" />
                                         </svg>
-                                        <span>لا يوجد عميل</span>
+                                        <span>No client</span>
                                     </div>
                                 </div>
                                 <div class="control-panel__content">
@@ -316,7 +316,7 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم مع عرض خاص لفترة محدودة</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <span class="invoice__item__price">14.00</span>
                                                 </div>
@@ -332,7 +332,7 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم مع عرض خاص لفترة محدودة</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <span class="invoice__item__price">14.00</span>
                                                 </div>
@@ -348,7 +348,7 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم مع عرض خاص لفترة محدودة</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <span class="invoice__item__price">14.00</span>
                                                 </div>
@@ -364,7 +364,7 @@
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
                                                     <div class="invoice__item--data-name">
-                                                        <h3>جونسون صابون استحمام مقاس كبير 55 مللم مع عرض خاص لفترة محدودة</h3>
+                                                        <h3>Johnson Baby Oil, 75 ml</h3>
                                                     </div>
                                                     <span class="invoice__item__price">14.00</span>
                                                 </div>
@@ -389,36 +389,36 @@
                                         </a>
                                         <ul class="checkout__list list-unstyled">
                                             <li class="checkout__list__item">
-                                                <h5>الاجمالي</h5>
+                                                <h5>Total</h5>
                                                 <span class="checkout__item__detail invoice-total-amount">320.00</span>
                                             </li>
                                             <li class="checkout__list__item invoice-discount">
-                                                <h5>الخصم الكلي</h5>
+                                                <h5>Total Discount</h5>
                                                 <div class="checkout__item__detail discount-details">
                                                     <span class="discount-percentage">10%</span>
                                                     <span class="discount-amount">25.00</span>
                                                 </div>
                                             </li>
                                             <li class="checkout__list__item">
-                                                <h5>التوصيل</h5>
+                                                <h5>Delivery</h5>
                                                 <span class="checkout__item__detail delivery-fees-amount">25.00</span>
                                             </li>
                                             <li class="checkout__list__item main-item">
-                                                <h5>الاجمالي الكلي</h5>
+                                                <h5>Total</h5>
                                                 <span class="checkout__item__detail">360.00</span>
                                             </li>
                                             <li class="checkout__list__item">
-                                                <h5>المدفوع</h5>
+                                                <h5>Paid up</h5>
                                                 <span class="checkout__item__detail">25.00</span>
                                             </li>
                                             <li class="checkout__list__item">
-                                                <h5>الباقي</h5>
+                                                <h5>The Change</h5>
                                                 <span class="checkout__item__detail">25.00</span>
                                             </li>
                                         </ul>
                                         <div class="checkout__cta__container">
                                             <button type="button" class="btn btn-primary btn-lg receive__cash__btn">
-                                                <span>استكمال الفاتورة</span>
+                                                <span>Complete the invoice</span>
                                             </button>
                                         </div>
                                     </div>
