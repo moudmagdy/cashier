@@ -11,6 +11,13 @@ header
         gap: 18px
         margin-inline-start: auto
 
+        @media (max-width: 480px)
+            flex-basis: 100%
+            margin: 0
+
+            .btn
+                flex: 100%
+
 .form__card
     &:not(:last-child)
         margin-bottom: 24px

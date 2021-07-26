@@ -53,11 +53,11 @@
         display: flex
         align-items: center
         gap: rem(15px)
-        min-height: 52px
-        padding: 0 22px
+        min-height: rem(52px)
+        padding: 0 rem(22px)
 
         // @media (min-width: 1024px)
-        //     height: 72px
+        //     height: rem(72px)
 
         .main-menu__toggle
             display: none
@@ -71,7 +71,7 @@
             a
                 display: flex
                 align-items: center
-                gap: 5px
+                gap: rem(5px)
                 text-decoration: none
                 color: inherit
 
@@ -81,6 +81,10 @@
         background-color: #fff
         z-index: 998
 
+        @media (max-width: 480px)
+            flex-wrap: wrap
+            padding: rem(12px) rem(22px)
+
     &__scrollable-content
         height: 100%
         overflow-y: auto
@@ -89,5 +93,5 @@
 
     .form-container
         max-width: 670px
-        padding: 20px 15px
+        padding: rem(20px) rem(15px)
         margin: auto

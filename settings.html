@@ -84,76 +84,124 @@
                         </section>
                         <section class="form__card collapsible collapsed">
                             <div class="form__card__header">
-                                <a href="#" class="collapse__toggle" role="button" aria-expanded="true">الطباعة</a>
+                                <a href="#" class="collapse__toggle" role="button" aria-expanded="true">الدفع</a>
                             </div>
                             <div class="collapse__container">
                                 <div class="form__card__body">
                                     <div class="row">
-                                        <div class="col-12 col-sm-6 mb-3">
-                                            <label class="form-label" for="printer-name">اسم الطابعة</label>
-                                            <input type="text" class="form-control" name="" id="printer-name" placeholder="اكتب اسم الطابعة">
-                                        </div>
-                                        <div class="col-12 col-sm-6 mb-3">
-                                            <label class="form-label" for="print-paper-size">مقاس ورقة الطباعة</label>
-                                            <select class="form-select" name="print-paper-size" id="print-paper-size">
-                                                <option value="">صغير</option>
-                                                <option value="">متوسط</option>
-                                                <option value="">كبير</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 col-sm-6">
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" type="checkbox" value="" id="after-payment">
-                                                <label class="form-check-label" for="after-payment">طباعة بعد الدفع</label>
-                                            </div>
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" type="checkbox" value="" id="client-name-and-number">
-                                                <label class="form-check-label" for="client-name-and-number">طباعة اسم ورقم العميل</label>
-                                            </div>
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" type="checkbox" value="" id="client-address">
-                                                <label class="form-check-label" for="client-address">طباعة عنوان العميل</label>
-                                            </div>
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" type="checkbox" value="" id="internal-receipt">
-                                                <label class="form-check-label" for="internal-receipt">طباعة فاتورة داخلية (مطبخ / صيانة)</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6">
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" type="checkbox" value="" id="work-shift-and-employee">
-                                                <label class="form-check-label" for="work-shift-and-employee">طباعة الشيفت والموظف</label>
-                                            </div>
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" type="checkbox" value="" id="client-credit">
-                                                <label class="form-check-label" for="client-credit">طباعة رصيد العميل</label>
-                                            </div>
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" type="checkbox" value="" id="number-counter">
-                                                <label class="form-check-label" for="number-counter">طباعة عداد الاراقام</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 mb-3">
-                                            <label class="form-label" for="1st-comment">التعليق 1 <span>(يكتب فى اخر الفاتورة)</span></label>
-                                            <input type="text" class="form-control" name="" id="1st-comment" placeholder="">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 mb-3">
-                                            <label class="form-label" for="2nd-comment">التعليق 2 <span>(يكتب فى اخر الفاتورة)</span></label>
-                                            <input type="text" class="form-control" name="" id="2nd-comment" placeholder="">
-                                        </div>
-                                    </div>
-                                    <div class="row">
                                         <div class="col-12">
-                                            <label class="form-label" for="3rd-comment">التعليق 3 <span>(يكتب فى اخر الفاتورة)</span></label>
-                                            <input type="text" class="form-control" name="" id="3rd-comment" placeholder="">
+                                            <fieldset>
+                                                <legend>اعدادت زر استلام</legend>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                    <label class="form-check-label" for="inlineRadio1">استلام كاش تلقائى</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                    <label class="form-check-label" for="inlineRadio2">استلام فيزا تلقائى</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" checked>
+                                                    <label class="form-check-label" for="inlineRadio3">اسألنى كل مرة</label>
+                                                </div>
+                                            </fieldset>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="form__card__footer">
+                                    <button type="submit" class="btn btn-primary" disabled>حفظ التغييرات</button>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="form__card collapsible collapsed">
+                            <div class="form__card__header">
+                                <a href="#" class="collapse__toggle" role="button" aria-expanded="true">الطباعة</a>
+                            </div>
+                            <div class="collapse__container">
+                                <div class="form__card__body">
+                                    <fieldset>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 mb-3">
+                                                <label class="form-label" for="printer-name">اسم الطابعة</label>
+                                                <input type="text" class="form-control" name="" id="printer-name" placeholder="اكتب اسم الطابعة">
+                                            </div>
+                                            <div class="col-12 col-sm-6 mb-3">
+                                                <label class="form-label" for="print-paper-size">مقاس ورقة الطباعة</label>
+                                                <select class="form-select" name="print-paper-size" id="print-paper-size">
+                                                    <option value="">صغير</option>
+                                                    <option value="">متوسط</option>
+                                                    <option value="">كبير</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6">
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="after-payment">
+                                                    <label class="form-check-label" for="after-payment">طباعة بعد الدفع</label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="client-name-and-number">
+                                                    <label class="form-check-label" for="client-name-and-number">طباعة اسم ورقم العميل</label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="client-address">
+                                                    <label class="form-check-label" for="client-address">طباعة عنوان العميل</label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="internal-receipt">
+                                                    <label class="form-check-label" for="internal-receipt">طباعة فاتورة داخلية (مطبخ / صيانة)</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="work-shift-and-employee">
+                                                    <label class="form-check-label" for="work-shift-and-employee">طباعة الشيفت والموظف</label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="client-credit">
+                                                    <label class="form-check-label" for="client-credit">طباعة رصيد العميل</label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="number-counter">
+                                                    <label class="form-check-label" for="number-counter">طباعة عداد الاراقام</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <legend class="mb-0">تصفير العداد</legend>
+                                            </div>
+                                            <div class="col-auto">
+                                                <span class="form-text mt-0">تصفير عداد الفواتير ليبدا من رقم 1</span>
+                                            </div>
+                                            <div class="col-auto ms-auto">
+                                                <button type="button" class="btn btn-secondary">تصفير العداد</button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="row">
+                                            <div class="col-12 mb-3">
+                                                <label class="form-label" for="1st-comment">التعليق 1 <span>(يكتب فى اخر الفاتورة)</span></label>
+                                                <input type="text" class="form-control" name="" id="1st-comment" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 mb-3">
+                                                <label class="form-label" for="2nd-comment">التعليق 2 <span>(يكتب فى اخر الفاتورة)</span></label>
+                                                <input type="text" class="form-control" name="" id="2nd-comment" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label class="form-label" for="3rd-comment">التعليق 3 <span>(يكتب فى اخر الفاتورة)</span></label>
+                                                <input type="text" class="form-control" name="" id="3rd-comment" placeholder="">
+                                            </div>
+                                        </div>
+                                    </fieldset>
                                 </div>
                                 <div class="form__card__footer">
                                     <button type="submit" class="btn btn-primary" disabled>حفظ التغييرات</button>
