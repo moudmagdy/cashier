@@ -744,7 +744,7 @@ button:focus,
           align-items: center;
   gap: 0.9375rem;
   min-height: 3.25rem;
-  padding: 0 1.375rem;
+  padding: 0.75rem 1.375rem;
 }
 .page__layout header .main-menu__toggle {
   display: none;
@@ -778,7 +778,9 @@ button:focus,
   .page__layout > header {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 0.75rem 1.375rem;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
   }
 }
 .page__layout__scrollable-content {
