@@ -140,6 +140,25 @@
                 [dir="ltr"] &
                     font-family: 'NotoSans_SemiBold', sans-serif
 
+            .operations__item__status
+                display: flex
+                max-width: max-content
+                font-size: rem(12px)
+                border-radius: rem(16px)
+                padding: 0.45rem 0.85rem
+
+                &.in-progress
+                    color: #f0faff
+                    background-color: #4DCDE6
+
+                &.retrieved
+                    color: #fff2f5
+                    background-color: #FF8591
+
+                &.delivered
+                    color: #D9F6E6
+                    background-color: #30B360
+
 .total-operations
     display: flex
     gap: rem(10px)

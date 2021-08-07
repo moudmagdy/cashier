@@ -1,6 +1,6 @@
-const collapseToggles = document.querySelectorAll('.collapse__toggle:not(.services .collapse__toggle)');
+const collapseToggles = document.querySelectorAll('.collapse__toggle:not(.multi-collapse)');
 const collapseContainers = document.querySelectorAll('.collapse__container');
-const servicesCollapseToggles = document.querySelectorAll('.services .collapse__toggle');
+const multiCollapse = document.querySelectorAll('.collapse__toggle.multi-collapse');
 
 collapseContainers.forEach(container => {
     window.addEventListener('load', () => {
@@ -70,7 +70,7 @@ collapseToggles.forEach(collapseToggle => {
     });
 });
 
-servicesCollapseToggles.forEach(servicesCollapseToggle => {
+multiCollapse.forEach(servicesCollapseToggle => {
     servicesCollapseToggle.addEventListener('click', (e) => {
         e.preventDefault();
         const parentCollapsible = servicesCollapseToggle.closest('.collapsible');

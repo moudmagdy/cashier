@@ -3,6 +3,14 @@ import '../components/layout-tabs.module.js';
 import '../components/collapsible.module.js';
 import '../components/change-view.module.js';
 
+const pageLoader = document.querySelector('.page-preloader');
+
+function closePageLoader() {
+    pageLoader.classList.add('page-loaded');
+}
+
+window.addEventListener('load', closePageLoader);
+
 document.getElementById('save_invoice').addEventListener('click', (e) => {
     e.preventDefault()
     iziToast.show({
@@ -144,11 +152,3 @@ paymentMethodsBackBtn.addEventListener('click', (e) => {
         document.querySelector('main').classList.remove('payment-methods--shown');
     }
 });
-
-const pageLoader = document.querySelector('.page-preloader');
-
-function closePageLoader() {
-    pageLoader.classList.add('page-loaded');
-}
-
-window.addEventListener('load', closePageLoader);

@@ -39,10 +39,10 @@ const closeBtn = controlPanel.querySelector('.control-panel__close-btn');
 
 cashOperationBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    document.querySelector('main').classList.add('control-panel--shown');
+    document.querySelector('body').classList.add('control-panel--shown');
 });
 
 closeBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    document.querySelector('main').classList.remove('control-panel--shown');
+    document.querySelector('body').classList.remove('control-panel--shown');
 });

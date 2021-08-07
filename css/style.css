@@ -821,9 +821,14 @@ button:focus,
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 48px;
+  height: 3rem;
   background-color: #fff;
   border-bottom: 1px solid #F0F2F5;
+}
+@media (min-width: 768px) {
+  .page__layout > .layout__tabs {
+    display: none;
+  }
 }
 .layout__tabs a {
   position: relative;
@@ -839,14 +844,13 @@ button:focus,
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #212529;
-  cursor: pointer;
   text-decoration: none;
+  padding: 0.875rem 0.3125rem;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  padding: 14px 5px;
 }
 [dir=rtl] .layout__tabs a {
   font-family: "NotoSansArabic_Medium", sans-serif;
@@ -871,11 +875,11 @@ button:focus,
   transition: all 0.2s ease-in-out;
 }
 .layout__tabs a:hover {
-  background-color: #f7f8f9;
+  background-color: rgba(24, 119, 242, 0.05);
   border-radius: 0.5rem 0.5rem 0 0;
 }
 .layout__tabs a.active-tab {
-  background-color: #f7f8f9;
+  background-color: rgba(24, 119, 242, 0.05);
   border-radius: 0.5rem 0.5rem 0 0;
   color: #1877F2;
   color: var(--color-brand);
@@ -1457,17 +1461,17 @@ button:focus,
 .main-menu nav a.expenses__page.active::before {
   background-image: url(./../images/menu/expenses-filled.svg);
 }
-.main-menu nav a.aman__page::before {
-  background-image: url(./../images/menu/aman.svg);
+.main-menu nav a.epayments__page::before {
+  background-image: url(./../images/menu/epayments.svg);
 }
-.main-menu nav a.aman__page:hover {
+.main-menu nav a.epayments__page:hover {
   background-color: rgba(61, 190, 200, 0.08);
 }
-.main-menu nav a.aman__page.active {
+.main-menu nav a.epayments__page.active {
   background-color: rgba(61, 190, 200, 0.08);
 }
-.main-menu nav a.aman__page.active::before {
-  background-image: url(./../images/menu/aman.svg);
+.main-menu nav a.epayments__page.active::before {
+  background-image: url(./../images/menu/epayments-filled.svg);
 }
 .main-menu nav a.maintenance__page::before {
   background-image: url(./../images/menu/maintenance.svg);
@@ -1480,6 +1484,18 @@ button:focus,
 }
 .main-menu nav a.maintenance__page.active::before {
   background-image: url(./../images/menu/maintenance-filled.svg);
+}
+.main-menu nav a.delivered-devices__page::before {
+  background-image: url(./../images/menu/delivered-devices.svg);
+}
+.main-menu nav a.delivered-devices__page:hover {
+  background-color: rgba(255, 107, 115, 0.08);
+}
+.main-menu nav a.delivered-devices__page.active {
+  background-color: rgba(255, 107, 115, 0.08);
+}
+.main-menu nav a.delivered-devices__page.active::before {
+  background-image: url(./../images/menu/delivered-devices-filled.svg);
 }
 .main-menu nav a.shift__page::before {
   background-image: url(./../images/menu/shift.svg);
@@ -2159,6 +2175,98 @@ button:focus,
 [dir=ltr] .control-panel__title {
   font-family: "NotoSans_Medium", sans-serif;
 }
+.control-panel__tabs {
+  position: relative;
+}
+.control-panel__tabs nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 2.5rem;
+}
+.control-panel__tabs a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  padding: 0.625rem 0.9375rem;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+[dir=rtl] .control-panel__tabs a {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .control-panel__tabs a {
+  font-family: "NotoSans_Medium", sans-serif;
+}
+.control-panel__tabs a.selected--tab {
+  color: #fff;
+}
+.control-panel__tabs .selected__indicator {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 0.25rem;
+  background-color: #fff;
+  -webkit-transition: left 0.3s ease-in-out;
+  -o-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+}
+.control-panel__accordion {
+  padding: 0.625rem 1.25rem;
+}
+.control-panel__accordion .accordion__header {
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 0.3125rem;
+  margin-bottom: 0;
+}
+.control-panel__accordion .accordion__header .collapse__toggle {
+  padding: 0.65rem 0.975rem;
+  border-radius: 0.25rem;
+}
+.control-panel__accordion .accordion__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2.5rem;
+  background-color: rgba(198, 207, 217, 0.3);
+  padding: 0.6rem 0.8rem;
+  margin-top: 0.3125rem;
+}
+.control-panel__accordion .accordion__item__title {
+  font-size: 0.75rem;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  margin-bottom: 0;
+}
+.control-panel__accordion .accordion__item__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+}
+[dir=rtl] .control-panel__accordion .accordion__item__data {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .control-panel__accordion .accordion__item__data {
+  font-family: "NotoSans_Medium", sans-serif;
+}
 .control-panel__body {
   display: grid;
   grid-template-columns: 1fr;
@@ -2267,7 +2375,7 @@ button:focus,
   width: 100%;
   font-size: 1rem;
   border-radius: 28px;
-  padding: 0.875rem 3rem;
+  padding: 0.875rem 1rem;
 }
 .control-panel__bottom-bar .btn-lg .icon {
   display: -webkit-box;
@@ -2597,7 +2705,6 @@ button:focus,
           justify-content: center;
   width: 100%;
 }
-
 .page__layout > .control-panel {
   position: fixed;
   top: 0;
@@ -3834,6 +3941,29 @@ button:focus,
 [dir=ltr] .operations__group__item .operations__item__type {
   font-family: "NotoSans_SemiBold", sans-serif;
 }
+.operations__group__item .operations__item__status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  font-size: 0.75rem;
+  border-radius: 1rem;
+  padding: 0.45rem 0.85rem;
+}
+.operations__group__item .operations__item__status.in-progress {
+  color: #f0faff;
+  background-color: #4DCDE6;
+}
+.operations__group__item .operations__item__status.retrieved {
+  color: #fff2f5;
+  background-color: #FF8591;
+}
+.operations__group__item .operations__item__status.delivered {
+  color: #D9F6E6;
+  background-color: #30B360;
+}
 
 .total-operations {
   display: -webkit-box;
@@ -4010,7 +4140,8 @@ button:focus,
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 0.5rem;
-  padding: 0.375rem 1.375rem;
+  padding: 0 1.375rem;
+  margin-bottom: 0.9375rem;
 }
 .filters__buttons .filter__btn {
   display: -webkit-box;
@@ -4413,16 +4544,6 @@ button:focus,
 .sales-page {
   overflow: hidden;
 }
-.sales-page > .page__layout > .layout__tabs {
-  display: none;
-}
-@media (max-width: 768px) {
-  .sales-page > .page__layout > .layout__tabs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
 
 #add_discount_modal .currency-symbol::before,
 #add_discount_modal .percentage-symbol::before {
@@ -4588,16 +4709,6 @@ button:focus,
 .invoices-page {
   overflow: hidden;
 }
-.invoices-page > .page__layout > .layout__tabs {
-  display: none;
-}
-@media (max-width: 768px) {
-  .invoices-page > .page__layout > .layout__tabs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
 .invoices-page .control-panel .control-panel__header {
   background-color: #fff;
   color: inherit;
@@ -4692,16 +4803,6 @@ button:focus,
 
 .return-page {
   overflow: hidden;
-}
-.return-page > .page__layout > .layout__tabs {
-  display: none;
-}
-@media (max-width: 768px) {
-  .return-page > .page__layout > .layout__tabs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 .return-page .control-panel .control-panel__header {
   background-color: #FF6B73;
@@ -4812,16 +4913,6 @@ button:focus,
 
 .cash-flow-page {
   overflow: hidden;
-}
-.cash-flow-page > .page__layout > .layout__tabs {
-  display: none;
-}
-@media (max-width: 768px) {
-  .cash-flow-page > .page__layout > .layout__tabs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 .cash-flow-page .operations__group__item .operations__item__client-data {
   -ms-flex-preferred-size: 20%;
@@ -4949,16 +5040,6 @@ button:focus,
 
 .expenses-page {
   overflow: hidden;
-}
-.expenses-page > .page__layout > .layout__tabs {
-  display: none;
-}
-@media (max-width: 768px) {
-  .expenses-page > .page__layout > .layout__tabs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 
 .datepicker__container {
@@ -5275,16 +5356,6 @@ button:focus,
 
 .clients-page {
   overflow: hidden;
-}
-.clients-page > .page__layout > .layout__tabs {
-  display: none;
-}
-@media (max-width: 768px) {
-  .clients-page > .page__layout > .layout__tabs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 .clients-page .total-credits {
   display: -webkit-box;
@@ -5815,53 +5886,53 @@ header .header__btns {
   color: #4D4D4D;
 }
 
-.aman-page .btn-primary:hover {
+.epayments-page .btn-primary:hover {
   background-color: #2e9ba4;
   border-color: #2e9ba4;
 }
-.aman-page .btn-primary:disabled {
+.epayments-page .btn-primary:disabled {
   background-color: #65cbd3;
   border-color: #65cbd3;
 }
-.aman-page .btn-primary:active, .aman-page .btn-primary:focus {
+.epayments-page .btn-primary:active, .epayments-page .btn-primary:focus {
   background-color: #298890;
   border-color: #298890;
 }
-.aman-page .page__layout {
+.epayments-page .page__layout {
   --color-brand: #3DBEC8;
 }
-.aman-page .page__layout .form-control:focus,
-.aman-page .page__layout .form-select:focus {
+.epayments-page .page__layout .form-control:focus,
+.epayments-page .page__layout .form-select:focus {
   border-color: #3DBEC8;
   border-color: var(--color-brand-aman);
   -webkit-box-shadow: 0 0 0 0.25rem #b4e6ea;
           box-shadow: 0 0 0 0.25rem #b4e6ea;
 }
-.aman-page .page__layout > header {
+.epayments-page .page__layout > header {
   background-color: #3DBEC8;
   background-color: var(--color-brand-aman);
   color: #fff;
   height: 52px;
 }
-.aman-page .page__layout > header .page__title {
+.epayments-page .page__layout > header .page__title {
   color: #fff;
 }
-.aman-page .page__layout > header .main-menu__toggle svg {
+.epayments-page .page__layout > header .main-menu__toggle svg {
   fill: #fff;
 }
-.aman-page .page__layout .search__bar {
+.epayments-page .page__layout .search__bar {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.25rem 1.8rem;
 }
-.aman-page .page__layout .search__bar .search__bar__input {
+.epayments-page .page__layout .search__bar .search__bar__input {
   max-width: 500px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
 }
-.aman-page .page__layout .search__bar .credit__balance {
+.epayments-page .page__layout .search__bar .credit__balance {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5870,16 +5941,16 @@ header .header__btns {
           align-items: center;
   gap: 0.5rem;
 }
-.aman-page .page__layout .search__bar .credit__balance__data span {
+.epayments-page .page__layout .search__bar .credit__balance__data span {
   font-size: 19;
 }
-[dir=rtl] .aman-page .page__layout .search__bar .credit__balance__data span:last-child {
+[dir=rtl] .epayments-page .page__layout .search__bar .credit__balance__data span:last-child {
   font-family: "NotoSansArabic_SemiBold", sans-serif;
 }
-[dir=ltr] .aman-page .page__layout .search__bar .credit__balance__data span:last-child {
+[dir=ltr] .epayments-page .page__layout .search__bar .credit__balance__data span:last-child {
   font-family: "NotoSans_SemiBold", sans-serif;
 }
-.aman-page .page__layout .search__bar .credit__balance__reload-btn {
+.epayments-page .page__layout .search__bar .credit__balance__reload-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5893,13 +5964,13 @@ header .header__btns {
   height: 36px;
   border-radius: 8px;
 }
-.aman-page .page__layout .search__bar .credit__balance__reload-btn svg {
+.epayments-page .page__layout .search__bar .credit__balance__reload-btn svg {
   width: 25px;
 }
-.aman-page .page__layout .search__bar .credit__balance__reload-btn:hover {
+.epayments-page .page__layout .search__bar .credit__balance__reload-btn:hover {
   background-color: #C6CFD9;
 }
-.aman-page .page__layout .search__bar .credit__balance__reload-btn.refreshing svg {
+.epayments-page .page__layout .search__bar .credit__balance__reload-btn.refreshing svg {
   -webkit-transform: rotate(360deg);
       -ms-transform: rotate(360deg);
           transform: rotate(360deg);
@@ -5909,7 +5980,7 @@ header .header__btns {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
-.aman-page .page__layout section {
+.epayments-page .page__layout section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5920,13 +5991,13 @@ header .header__btns {
   height: 100%;
   overflow: hidden;
 }
-.aman-page .page__layout .control-panel .control-panel__content:empty {
+.epayments-page .page__layout .control-panel .control-panel__content:empty {
   background-image: none;
 }
-.aman-page .page__layout .control-panel__close-btn:hover {
+.epayments-page .page__layout .control-panel__close-btn:hover {
   background-color: #36b6bf;
 }
-.aman-page .spinner {
+.epayments-page .spinner {
   display: none;
   margin: 125px auto 170px;
 }
@@ -6169,4 +6240,86 @@ header .header__btns {
 }
 [dir=ltr] .success__message span {
   font-family: "NotoSans_Medium", sans-serif;
+}
+
+.maintenance-page .control-panel__header, .maintenance-page .control-panel__tabs {
+  background-color: #4DCDE6;
+}
+.maintenance-page .control-panel__header .dropdown-toggle:hover {
+  background-color: #20c0e0;
+}
+.maintenance-page .control-panel__header .dropdown-toggle.show svg {
+  fill: #4DCDE6;
+}
+.maintenance-page .control-panel__header .dropdown-toggle.show:hover {
+  background-color: #fff;
+}
+.maintenance-page .control-panel__header .dropdown-toggle.show svg {
+  fill: #4DCDE6;
+}
+.maintenance-page .control-panel:not(.page__layout > .control-panel) .select-item {
+  border-bottom: 1px solid #efefef;
+}
+.maintenance-page .page__layout > .control-panel .control-panel__header {
+  color: inherit;
+  background-color: #fff;
+}
+.maintenance-page .page__layout > .control-panel .control-panel__close-btn {
+  background-color: #F5F5F5;
+}
+.maintenance-page .page__layout > .control-panel .control-panel__close-btn svg {
+  fill: inherit;
+}
+.maintenance-page .page__layout > .control-panel .control-panel__close-btn:hover {
+  background-color: #e8e8e8;
+}
+.maintenance-page .page__layout > .control-panel .control-panel__close-btn:hover svg {
+  fill: #3e3333;
+}
+.maintenance-page .device-issues {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 0.6875rem;
+  border: 1px solid #060505;
+  border-radius: 0.875rem;
+  padding: 0.313rem 0.6rem;
+}
+.maintenance-page .device-issues:not(:last-child) {
+  -webkit-margin-end: 0.3125rem;
+          margin-inline-end: 0.3125rem;
+}
+[dir=rtl] .maintenance-page .device-issues {
+  font-family: "NotoSansArabic_Medium", sans-serif;
+}
+[dir=ltr] .maintenance-page .device-issues {
+  font-family: "NotoSans_Medium", sans-serif;
+}
+
+.maintenance-statistics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.3125rem;
+}
+.maintenance-statistics .statistics__title {
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
+.maintenance-statistics .statistics__count {
+  line-height: 1;
+  font-size: 1.375rem;
+}
+[dir=rtl] .maintenance-statistics .statistics__count {
+  font-family: "NotoSansArabic_SemiBold", sans-serif;
+}
+[dir=ltr] .maintenance-statistics .statistics__count {
+  font-family: "NotoSans_SemiBold", sans-serif;
 }

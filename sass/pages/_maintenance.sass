@@ -1,0 +1,79 @@
+.maintenance-page
+
+    .control-panel
+        &__header,
+        &__tabs
+            background-color: #4DCDE6
+
+        &__header
+            .dropdown-toggle
+                &:hover
+                    background-color: darken(#4DCDE6, 10%)
+
+                &.show
+                    svg
+                        fill: #4DCDE6
+
+                    &:hover
+                        background-color: $color-white
+
+                    svg
+                        fill: #4DCDE6
+
+        &:not(.page__layout > .control-panel)
+            .select-item
+                border-bottom: 1px solid #efefef
+
+    .page__layout
+        & > .control-panel
+            .control-panel__header
+                color: inherit
+                background-color: $color-white
+
+            .control-panel__close-btn
+                background-color: #F5F5F5
+
+                svg
+                    fill: inherit
+
+                &:hover
+                    background-color: darken(#F5F5F5, 5%)
+
+                    svg
+                        fill: lighten(#060505, 20%)
+
+    .device-issues
+        display: inline-flex
+        font-size: rem(11px)
+        border: 1px solid #060505
+        border-radius: rem(14px)
+        padding: 0.313rem 0.6rem
+
+        &:not(:last-child)
+            margin-inline-end: rem(5px)
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
+
+.maintenance-statistics
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: rem(5px)
+
+    .statistics__title
+        font-size: rem(12px)
+        margin-bottom: 0
+
+    .statistics__count
+        line-height: 1
+        font-size: rem(22px)
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif

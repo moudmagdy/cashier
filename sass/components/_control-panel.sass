@@ -78,6 +78,75 @@
         [dir="ltr"] &
             font-family: 'NotoSans_Medium', sans-serif
 
+    &__tabs
+        position: relative
+
+        nav
+            display: flex
+            width: 100%
+            height: rem(40px)
+
+        a
+            +flex-center
+            flex: 1 1 100%
+            font-size: 14px
+            color: rgba(255, 255, 255, 0.5)
+            text-decoration: none
+            padding: rem(10px) rem(15px)
+            transition: color 0.3s ease-in-out
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_Medium', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_Medium', sans-serif
+
+            &.selected--tab
+                color: $color-white
+
+        .selected__indicator
+            position: absolute
+            bottom: 0
+            width: 50%
+            height: rem(4px)
+            background-color: $color-white
+            transition: left 0.3s ease-in-out
+
+    &__accordion
+        padding: rem(10px) rem(20px)
+
+        .accordion__header
+            border-bottom: 1px solid #efefef
+            padding-bottom: rem(5px)
+            margin-bottom: 0
+
+            .collapse__toggle
+                padding: 0.65rem 0.975rem
+                border-radius: rem(4px)
+
+        .accordion__item
+            display: flex
+            align-items: center
+            height: rem(40px)
+            background-color: rgba(198, 207, 217, 0.3)
+            padding: 0.6rem 0.8rem
+            margin-top: rem(5px)
+
+            &__title
+                font-size: rem(12px)
+                flex-basis: 30%
+                margin-bottom: 0
+
+            &__data
+                display: flex
+                font-size: rem(14px)
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
+
     &__body
         display: grid
         grid-template-columns: 1fr
@@ -150,7 +219,7 @@
             width: 100%
             font-size: 1rem
             border-radius: 28px
-            padding: 0.875rem 3rem
+            padding: 0.875rem 1rem
 
             .icon
                 +flex-center
@@ -385,8 +454,7 @@
         justify-content: center
         width: 100%
 
-.page__layout
-    & > .control-panel
+    .page__layout > &
         position: fixed
         top: 0
         inset-inline-start: 100%
