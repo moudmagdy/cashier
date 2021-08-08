@@ -26,3 +26,24 @@ closeBtn.addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('body').classList.remove('control-panel--shown');
 });
+
+document.querySelectorAll('.previous-devices--dropdown .form-check-label').forEach(label => {
+    label.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+});
+
+
+// Show and hide the second view in the control panel
+const selectItemBtn = document.querySelector('.select-item__btn');
+selectItemBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let btnDataAttr = selectItemBtn.getAttribute('data-view-target');
+    document.querySelector('[data-view="' + btnDataAttr + '"]').classList.add('view--shown');
+});
+
+const viewBackBtn = document.querySelector('.items-search__back-btn');
+viewBackBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    viewBackBtn.closest('[data-view]').classList.remove('view--shown');
+});

@@ -6288,8 +6288,8 @@ header .header__btns {
   fill: #3e3333;
 }
 .maintenance-page .page__layout > .control-panel .lg-btn__container {
-  padding: 0 1.25rem;
-  margin-bottom: 0.625rem;
+  padding: 0.9375rem 1.25rem 0.625rem;
+  margin-top: auto;
 }
 .maintenance-page .page__layout > .control-panel .btn-lg {
   width: 100%;

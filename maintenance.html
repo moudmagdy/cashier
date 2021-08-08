@@ -339,7 +339,10 @@
             </div>
             <div class="control-panel">
                 <div class="control-panel__header">
-                    <h4 class="control-panel__title">عملية نقدية</h4>
+                    <h4 class="control-panel__title">
+                        <span>استلام جهاز</span>
+                        <span>#1010</span>
+                    </h4>
                     <a href="#" class="control-panel__close-btn">
                         <svg width="18" height="18" viewBox="0 0 18 18">
                             <path d="M9.7,9l8.3,8.3L17.3,18L9,9.7L0.7,18L0,17.3L8.3,9L0,0.7L0.7,0L9,8.3L17.3,0L18,0.7L9.7,9z"></path>
@@ -347,7 +350,7 @@
                     </a>
                 </div>
                 <div class="control-panel__body">
-                    <div class="control-panel__view" data-view="sales-invoice">
+                    <div class="control-panel__view" data-view="receive-device">
                         <div class="select-item">
                             <a href="#" class="select-item__btn" data-view-target="clients-list">
                                 <span class="select-item__btn__icon">
@@ -393,8 +396,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="page__layout__scrollable-content">
-                                <form>
+                            <form class="d-flex overflow-hidden h-100">
+                                <div class="page__layout__scrollable-content">
                                     <div class="control-panel__accordion collapsible">
                                         <h3 class="accordion__header">
                                             <a href="#" class="collapse__toggle multi-collapse" role="button" aria-expanded="true">معلومات الجهاز</a>
@@ -477,17 +480,277 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-12 mb-3">
+                                                <div class="col-12">
                                                     <label class="form-label" for="repair_comment">التعليق</label>
                                                     <textarea class="form-control" name="" id="repair_comment" placeholder="اكتب تعليقك"></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="lg-btn__container">
-                                        <button type="submit" class="btn btn-primary btn-lg">استلام الجهاز</button>
-                                    </div>
-                                </form>
+                                </div>
+                                <div class="lg-btn__container">
+                                    <button type="submit" class="btn btn-primary btn-lg">استلام الجهاز</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="control-panel__view" data-view="clients-list" tabindex="-1">
+                        <div class="items-search">
+                            <div class="items-search__input">
+                                <svg width="15" height="13.9" viewBox="0 0 15 13.9">
+                                    <path d="M14.8,12.7l-2.4-2.4c1.6-2.6,1.3-6-0.9-8.3C8.8-0.7,4.6-0.7,2,2C0.7,3.2,0,4.9,0,6.7s0.7,3.5,2,4.7 c1.3,1.3,2.9,2,4.7,2s3.5-0.7,4.7-2c0,0,0.1-0.1,0.1-0.1l2.3,2.3c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2 C15.1,13.4,15.1,12.9,14.8,12.7z M6.7,12C5.3,12,4,11.4,3,10.4c-1-1-1.6-2.3-1.6-3.7S2,4,3,2.9c1-1,2.3-1.6,3.7-1.6s2.7,0.6,3.7,1.6 c2.1,2.1,2.1,5.4,0,7.5C9.4,11.4,8.1,12,6.7,12z"></path>
+                                </svg>
+                                <input type="search" name="" id="" placeholder="اضف عميل">
+                            </div>
+                            <div class="items-search__back-btn">
+                                <svg width="15" height="15" viewBox="0 0 15 15">
+                                    <path fill="#060505" d="M15,8.1H2.3l4.1,4.1L5.5,13L0,7.5L5.5,2l0.8,0.8L2.3,6.9H15V8.1z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <nav class="layout__tabs">
+                            <a href="#" data-tab="individuals_list" class="active-tab">افراد</a>
+                            <a href="#" data-tab="shops_list">محلات</a>
+                            <a href="#" data-tab="suppliers_list">موردين</a>
+                        </nav>
+                        <a href="#" class="add-item__btn" data-bs-toggle="modal" data-bs-target="#add_client_modal">
+                            <svg width="10.2" height="10.2" viewBox="0 0 10.2 10.2">
+                                <path fill="#1877F2" d="M10.2,4.8c0,0.4-0.4,0.8-0.8,0.8H5.9v3.8c0,0.4-0.4,0.8-0.8,0.8S4.3,9.8,4.3,9.4V5.6H0.8C0.4,5.6,0,5.2,0,4.8 S0.4,4,0.8,4h3.5V0.8C4.3,0.4,4.7,0,5.1,0s0.8,0.4,0.8,0.8V4h3.5C9.8,4,10.2,4.4,10.2,4.8z"></path>
+                            </svg>
+                            <span>اضافة عميل</span>
+                        </a>
+                        <div class="clients-list--container layout__container">
+                            <div class="clients-list--individuals layout__tab__content active-tab" data-tab="individuals_list">
+                                <ul class="control-panel__list list-unstyled clients-list-users">
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="control-panel__list-item clients-list-users-item">
+                                            <div class="control-panel__list-item__icon">
+                                                <img src="images/client-icon-neutral.svg">
+                                            </div>
+                                            <div class="control-panel__list-item__data">
+                                                <span>عاصم الجزيري</span>
+                                                <span>01126622221</span>
+                                            </div>
+                                            <div class="clients-list-users-item-price">
+                                                <span>00.00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clients-list--shops layout__tab__content" data-tab="shops_list">
+                            </div>
+                            <div class="clients-list--suppliers layout__tab__content" data-tab="suppliers_list">
                             </div>
                         </div>
                     </div>
