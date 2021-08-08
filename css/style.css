@@ -625,10 +625,12 @@ button:focus,
   color: #242424;
 }
 
-.currency-symbol {
+.currency-symbol,
+.time-label {
   position: relative;
 }
-.currency-symbol::before {
+.currency-symbol::before,
+.time-label::before {
   position: absolute;
   inset-inline-end: 0.95rem;
   top: 50%;
@@ -638,9 +640,14 @@ button:focus,
   content: attr(data-symbol);
   font-size: 12px;
 }
-.currency-symbol .form-control {
+.currency-symbol .form-control,
+.time-label .form-control {
   -webkit-padding-end: 2.8rem;
           padding-inline-end: 2.8rem;
+}
+
+.time-label::before {
+  content: attr(data-time);
 }
 
 .percentage-symbol {
@@ -2226,16 +2233,20 @@ button:focus,
   transition: left 0.3s ease-in-out;
 }
 .control-panel__accordion {
-  padding: 0.625rem 1.25rem;
+  padding: 0 1.25rem;
 }
 .control-panel__accordion .accordion__header {
   border-bottom: 1px solid #efefef;
-  padding-bottom: 0.3125rem;
+  padding: 0.3125rem 0;
   margin-bottom: 0;
 }
 .control-panel__accordion .accordion__header .collapse__toggle {
   padding: 0.65rem 0.975rem;
   border-radius: 0.25rem;
+}
+.control-panel__accordion .form-label {
+  font-size: 0.75rem;
+  color: inherit;
 }
 .control-panel__accordion .accordion__item {
   display: -webkit-box;
@@ -6276,6 +6287,15 @@ header .header__btns {
 .maintenance-page .page__layout > .control-panel .control-panel__close-btn:hover svg {
   fill: #3e3333;
 }
+.maintenance-page .page__layout > .control-panel .lg-btn__container {
+  padding: 0 1.25rem;
+  margin-bottom: 0.625rem;
+}
+.maintenance-page .page__layout > .control-panel .btn-lg {
+  width: 100%;
+  border-radius: 1.75rem;
+  padding: 0.875rem 1.75rem;
+}
 .maintenance-page .device-issues {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -6294,6 +6314,46 @@ header .header__btns {
 }
 [dir=ltr] .maintenance-page .device-issues {
   font-family: "NotoSans_Medium", sans-serif;
+}
+.maintenance-page .previous-devices--dropdown {
+  padding: 0.375rem 1.5rem 0.625rem;
+}
+.maintenance-page .previous-devices--dropdown .dropdown-toggle {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.3125rem;
+  font-size: 0.875rem;
+  color: #4D4D4D;
+}
+.maintenance-page .previous-devices--dropdown .dropdown-toggle .count {
+  font-size: 0.75rem;
+  background-color: #fff;
+  border-radius: 1.5625rem;
+  padding: 0 0.3125rem;
+}
+.maintenance-page .previous-devices--dropdown .dropdown-menu {
+  padding: 0.9375rem;
+}
+.maintenance-page .previous-devices--dropdown .dropdown-menu .form-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+  padding: 0;
+  margin-bottom: 0.625rem;
+}
+.maintenance-page .previous-devices--dropdown .dropdown-menu .form-check .form-check-input {
+  margin: 0;
+}
+.maintenance-page .previous-devices--dropdown .dropdown-menu .form-check .form-check-label {
+  white-space: nowrap;
 }
 
 .maintenance-statistics {

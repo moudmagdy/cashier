@@ -82,7 +82,8 @@ button,
 .form-check-label
     color: #242424
 
-.currency-symbol
+.currency-symbol,
+.time-label
     position: relative
 
     &::before
@@ -95,6 +96,10 @@ button,
 
     .form-control
         padding-inline-end: 2.8rem
+
+.time-label
+    &::before
+        content: attr(data-time)
 
 .percentage-symbol
     position: relative

@@ -369,6 +369,126 @@
                             </div>
                         </div>
                         <div class="control-panel__content">
+                            <div class="dropdown previous-devices--dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="previousDevicesDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>الاجهزة السابقة</span>
+                                    <span class="count">6</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="previousDevicesDropdownMenuLink">
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="previousDevices" id="device1">
+                                        <label class="form-check-label" for="device1">Samsung s09 - أسود</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="previousDevices" id="device2">
+                                        <label class="form-check-label" for="device2">Samsung s09 - أسود</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="previousDevices" id="device3">
+                                        <label class="form-check-label" for="device3">Samsung s09 - أسود</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="previousDevices" id="device4">
+                                        <label class="form-check-label" for="device4">Samsung s09 - أسود</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page__layout__scrollable-content">
+                                <form>
+                                    <div class="control-panel__accordion collapsible">
+                                        <h3 class="accordion__header">
+                                            <a href="#" class="collapse__toggle multi-collapse" role="button" aria-expanded="true">معلومات الجهاز</a>
+                                        </h3>
+                                        <div class="collapse__container">
+                                            <div class="row">
+                                                <div class="col-12 mb-3 pt-3">
+                                                    <label for="device_brand" class="form-label">ماركة الجهاز</label>
+                                                    <select name="" id="device_brand" class="form-select">
+                                                        <option value="">سامسونج</option>
+                                                        <option value="">هواوي</option>
+                                                        <option value="">وان بلس</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <label for="device_type" class="form-label">نوع الجهاز</label>
+                                                    <select name="" id="device_type" class="form-select">
+                                                        <option value="">11 برو</option>
+                                                        <option value="">12</option>
+                                                        <option value="">اكس بلس</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <label for="device_color" class="form-label">لون الجهاز</label>
+                                                    <select name="" id="device_color" class="form-select">
+                                                        <option value="">اسود</option>
+                                                        <option value="">فضي</option>
+                                                        <option value="">رمادي</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <label for="device_serial_number" class="form-label">الرقم المتسلسل</label>
+                                                    <input type="text" class="form-control" id="device_serial_number">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-panel__accordion collapsible">
+                                        <h3 class="accordion__header">
+                                            <a href="#" class="collapse__toggle multi-collapse" role="button" aria-expanded="true">معلومات الصيانة</a>
+                                        </h3>
+                                        <div class="collapse__container">
+                                            <div class="row">
+                                                <div class="col-12 mb-3 pt-3">
+                                                    <label for="device_issues" class="form-label">مشكلات الجهاز</label>
+                                                    <select name="" id="device_issues" class="form-select">
+                                                        <option value="">كسر شاشة</option>
+                                                        <option value="">تسريب شحن</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <label for="repair_time" class="form-label">مدة التصليح بالساعة</label>
+                                                    <div class="time-label" data-time="ساعة">
+                                                        <input type="text" class="form-control" id="repair_time">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <label class="form-label" for="expected_cost">التكلفة المتوقعة</label>
+                                                    <div class="currency-symbol" data-symbol="جـ.م">
+                                                        <input type="number" class="form-control" name="" id="expected_cost" placeholder="00.00">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <label class="form-label" for="down_payment">المدفوع تحت الحساب</label>
+                                                    <div class="currency-symbol" data-symbol="جـ.م">
+                                                        <input type="number" class="form-control" name="" id="down_payment" placeholder="00.00">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <label class="form-label" for="repair_comment">التعليق</label>
+                                                    <textarea class="form-control" name="" id="repair_comment" placeholder="اكتب تعليقك"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lg-btn__container">
+                                        <button type="submit" class="btn btn-primary btn-lg">استلام الجهاز</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
