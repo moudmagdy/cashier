@@ -1,5 +1,4 @@
 .maintenance-page
-
     .control-panel
         &__header,
         &__tabs
@@ -118,3 +117,67 @@
 
         [dir="ltr"] &
             font-family: 'NotoSans_SemiBold', sans-serif
+
+.spare-parts
+    position: absolute
+    inset: 0
+    display: flex
+    flex-direction: column
+    background-color: $color-white
+    border-left: 1px solid #E4E6EB
+    border-right: 1px solid #E4E6EB
+    opacity: 0
+    pointer-events: none
+    transition: opacity 200ms ease-in-out, transform 350ms ease-in-out
+
+    [dir="rtl"] &
+        transform: translateX(-100%)
+
+    [dir="ltr"] &
+        transform: translateX(100%)
+
+    &__header
+        display: flex
+        align-items: center
+        gap: rem(10px)
+        position: sticky
+        top: 0
+        height: rem(52px)
+        padding: 0 rem(22px)
+
+        h4
+            font-size: rem(14px)
+            margin-bottom: 0
+
+        .spare-parts__close-btn
+            +flex-center
+            width: rem(48px)
+            height: rem(48px)
+            border-radius: 50%
+            transition: background-color 0.3s
+
+            &:hover
+                background-color: #F5F5F5
+
+            svg
+                fill: inherit
+
+    .outside-piece--btn
+        display: flex
+        align-items: center
+        gap: rem(5px)
+
+        span
+            &:last-child
+                +flex-center
+                min-width: rem(18px)
+                min-height: rem(18px)
+                font-size: rem(12px)
+                +var(color, color-text-primary)
+                background-color: $color-white
+                border-radius: rem(9px)
+
+    .spare-parts--shown &
+        opacity: 1
+        pointer-events: auto
+        transform: translateX(0)

@@ -2,17 +2,15 @@ import '../components/main-menu.module.js';
 import '../components/layout-tabs.module.js';
 import '../components/collapsible.module.js';
 import '../components/control-panel-tabs.module.js';
-// import '../components/change-view.module.js';
+import '../components/change-view.module.js';
 
 
 // Hide the preloader when the page fully loaded
 const pageLoader = document.querySelector('.page-preloader');
-
 function closePageLoader() {
     pageLoader.classList.add('page-loaded');
 }
 window.addEventListener('load', closePageLoader);
-
 
 const receiveDeviceBtn = document.querySelector('.receive-device--btn');
 const controlPanel = document.querySelector('.page__layout > .control-panel');
@@ -85,4 +83,23 @@ removeSelectedItem.addEventListener('click', (e) => {
 
     document.querySelector('.item__selected').style.display = 'none';
     document.querySelector('.select-item__btn').style.display = 'flex';
+});
+
+
+const products = document.querySelectorAll('.product');
+products.forEach(product => {
+    let quantity = 1;
+    product.addEventListener('click', (e) => {
+        e.stopPropagation();
+        product.classList.add('product--selected');
+        product.querySelector('.product__quantity').textContent = quantity;
+        quantity++
+    });
+});
+
+
+document.querySelectorAll('.product__dropdown').forEach(dropdown => {
+    dropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
 });
