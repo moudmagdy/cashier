@@ -4,7 +4,11 @@
     width: 100%
     height: rem(48px)
     background-color: #fff
-    border-bottom: 1px solid #F0F2F5
+
+    &:not(.page__layout > .layout__tabs)
+        border-bottom: 1px solid #F0F2F5
+
+    // .page__layout > &
 
     @media (min-width: 768px)
         .page__layout > &
@@ -32,7 +36,7 @@
             left: 50%
             bottom: 0
             width: 0
-            height: 2px
+            height: rem(3px)
             +var(background-color, color-brand)
             transform: translateX(-50%)
             transition: all 0.2s ease-in-out

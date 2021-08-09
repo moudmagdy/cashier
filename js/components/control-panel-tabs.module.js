@@ -4,8 +4,13 @@ const selectedTab = document.querySelector('.selected--tab');
 const selectedTabLeftPosition = selectedTab.offsetLeft;
 const selectedTabWidth = selectedTab.offsetWidth;
 
-selectedIndicator.style.left = selectedTabLeftPosition + 'px';
-selectedIndicator.style.width = selectedTabWidth + 'px';
+function restyleIndicator() {
+    selectedIndicator.style.left = selectedTabLeftPosition + 'px';
+    selectedIndicator.style.width = selectedTabWidth + 'px';
+}
+
+window.addEventListener('load', restyleIndicator);
+window.addEventListener('resize', restyleIndicator);
 
 cpTabs.forEach(tab => {
     tab.addEventListener('click', (e) => {
