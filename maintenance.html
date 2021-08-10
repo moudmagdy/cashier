@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <main class="maintenance-page">
+    <main class="maintenance-page spare-parts--shown">
         <div class="main-menu">
             <div class="main-menu__header">
                 <a href="#" class="main-menu__toggle">
@@ -1219,7 +1219,7 @@
                             <span class="selected__indicator"></span>
                         </div>
                         <div class="control-panel__body">
-                            <div class="control-panel__view" data-view="device-info">
+                            <div class="control-panel__view">
                                 <div class="select-item">
                                     <div class="invoice__client">
                                         <svg width="25" height="25" viewBox="0 0 25 25">
@@ -1229,7 +1229,7 @@
                                         <span>لا يوجد عميل</span>
                                     </div>
                                 </div>
-                                <div class="control-panel__content">
+                                <div class="control-panel__content content--shown" data-content="device-info">
                                     <div class="control-panel__accordion collapsible">
                                         <h3 class="accordion__header">
                                             <a href="#" class="collapse__toggle multi-collapse" role="button" aria-expanded="true">معلومات الجهاز</a>
@@ -1280,6 +1280,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="control-panel__content" data-content="spare-parts" tabindex="-1">
+                                </div>
                                 <div class="control-panel__bottom-bar">
                                     <div class="d-flex gap-3 w-100">
                                         <button type="submit" class="btn btn-outline-success btn-lg">
@@ -1300,8 +1302,6 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="control-panel__view" data-view="spare-parts" tabindex="-1">
                             </div>
                         </div>
                     </div>

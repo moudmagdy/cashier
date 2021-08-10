@@ -26,11 +26,12 @@ cpTabs.forEach(tab => {
         e.stopPropagation();
 
         const tabViewTarget = tab.getAttribute('data-tab');
+        document.querySelector('[data-content].content--shown').classList.remove('content--shown');
+        document.querySelector('[data-content="' + tabViewTarget + '"]').classList.add('content--shown');
+
         if (tabViewTarget == 'spare-parts') {
-            document.querySelector('[data-view="spare-parts"]').classList.add('view--shown');
             document.querySelector('main').classList.add('spare-parts--shown');
         } else {
-            document.querySelector('[data-view="spare-parts"]').classList.remove('view--shown');
             document.querySelector('main').classList.remove('spare-parts--shown');
         }
 
@@ -49,8 +50,9 @@ const sparePartsCloseBtn = document.querySelector('.spare-parts__close-btn');
 sparePartsCloseBtn.addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('main').classList.remove('spare-parts--shown');
-    document.querySelector('[data-view="spare-parts"]').classList.remove('view--shown');
-    document.querySelector('[data-tab="spare-parts"]').classList.remove('selected--tab');
-    document.querySelector('[data-tab="device-info"]').classList.add('selected--tab');
+    document.querySelector('.control-panel__tabs .selected--tab').classList.remove('selected--tab');
+    document.querySelector('.control-panel__content.content--shown').classList.remove('content--shown');
+    document.querySelector('.control-panel__content').classList.add('content--shown');
+    document.querySelector('.control-panel__tabs a').classList.add('selected--tab');
     loadIndicator();
 });

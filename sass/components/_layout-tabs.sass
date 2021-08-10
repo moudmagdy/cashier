@@ -54,11 +54,23 @@
 .layout__container
     .layout__tab__content
         &:not(.page__layout__col)
-            display: none
+            // display: none
+            // height: 0
+            flex-basis: 0
+            opacity: 0
+            pointer-events: none
 
         @media (max-width: 768px)
             &.page__layout__col
-                display: none
+                // display: none
+                // height: 0
+                flex-basis: 0
+                opacity: 0
+                pointer-events: none
 
         &.active-tab
-            display: flex
+            // display: flex
+            // height: 100%
+            flex-basis: 100%
+            opacity: 1
+            pointer-events: auto

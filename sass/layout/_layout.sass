@@ -29,8 +29,14 @@
             grid-template-columns: 1fr 1fr
 
         @media (max-width: 768px)
-            grid-template-columns: 1fr
+            display: flex
+            flex-direction: column
+            height: 100%
+            // grid-template-columns: 1fr
             // height: calc(100vh - 48px)
+
+            & > *
+                flex-basis: 100%
 
     &__col
         position: relative

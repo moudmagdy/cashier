@@ -712,7 +712,18 @@ button:focus,
 }
 @media (max-width: 768px) {
   .page__layout__row {
-    grid-template-columns: 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+  .page__layout__row > * {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 .page__layout__col {
@@ -898,17 +909,24 @@ button:focus,
 }
 
 .layout__container .layout__tab__content:not(.page__layout__col) {
-  display: none;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 @media (max-width: 768px) {
   .layout__container .layout__tab__content.page__layout__col {
-    display: none;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    opacity: 0;
+    pointer-events: none;
   }
 }
 .layout__container .layout__tab__content.active-tab {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .btn {
@@ -6275,6 +6293,11 @@ header .header__btns {
 }
 .maintenance-page .control-panel:not(.page__layout > .control-panel) .select-item {
   border-bottom: 1px solid #efefef;
+}
+.maintenance-page .control-panel .control-panel__content:not(.content--shown) {
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 .maintenance-page .page__layout > .control-panel .control-panel__header {
   color: inherit;
