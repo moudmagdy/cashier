@@ -2300,6 +2300,7 @@ button:focus,
   font-family: "NotoSans_Medium", sans-serif;
 }
 .control-panel__body {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -2367,7 +2368,7 @@ button:focus,
   background-repeat: no-repeat;
   background-position: center 60px;
 }
-.control-panel__bottom-bar {
+.control-panel__bottom-bar, .control-panel__modal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2386,14 +2387,14 @@ button:focus,
   padding: 0.75rem 1.5rem 0.625rem;
   margin-top: auto;
 }
-.control-panel__bottom-bar label {
+.control-panel__bottom-bar label, .control-panel__modal label {
   font-size: 0.75rem;
   color: #242424;
 }
-.control-panel__bottom-bar textarea {
+.control-panel__bottom-bar textarea, .control-panel__modal textarea {
   resize: none;
 }
-.control-panel__bottom-bar .btn-lg {
+.control-panel__bottom-bar .btn-lg, .control-panel__modal .btn-lg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2409,7 +2410,7 @@ button:focus,
   border-radius: 28px;
   padding: 0.875rem 1rem;
 }
-.control-panel__bottom-bar .btn-lg .icon {
+.control-panel__bottom-bar .btn-lg .icon, .control-panel__modal .btn-lg .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2424,9 +2425,17 @@ button:focus,
   border: 2px solid currentColor;
   border-radius: 50%;
 }
-.control-panel__bottom-bar .btn-lg .icon svg {
+.control-panel__bottom-bar .btn-lg .icon svg, .control-panel__modal .btn-lg .icon svg {
   width: 0.75rem;
   height: 0.75rem;
+}
+.control-panel__modal {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
 }
 .control-panel .select-item {
   height: 3.25rem;

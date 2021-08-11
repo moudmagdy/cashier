@@ -153,6 +153,7 @@
                     font-family: 'NotoSans_Medium', sans-serif
 
     &__body
+        position: relative
         display: grid
         grid-template-columns: 1fr
         grid-template-rows: 1fr
@@ -200,7 +201,8 @@
             background-repeat: no-repeat
             background-position: center 60px
 
-    &__bottom-bar
+    &__bottom-bar,
+    &__modal
         display: flex
         flex-direction: column
         align-items: center
@@ -236,6 +238,14 @@
                 svg
                     width: rem(12px)
                     height: rem(12px)
+
+    &__modal
+        position: absolute
+        bottom: 0
+        width: 100%
+        opacity: 0
+        pointer-events: none
+        z-index: 999
 
     .select-item
         height: rem(52px)
