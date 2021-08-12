@@ -1483,8 +1483,8 @@
                             <form>
                                 <div class="row">
                                     <div class="col-12 mb-3">
-                                        <label class="form-label" for="maintenance_technician">فنى الصيانة</label>
-                                        <select class="form-select" id="maintenance_technician">
+                                        <label class="form-label" for="deliver_maintenance_technician">فنى الصيانة</label>
+                                        <select class="form-select" id="deliver_maintenance_technician">
                                             <option selected disabled>اختر فنى</option>
                                             <option value="1">محمد</option>
                                             <option value="2">احمد</option>
@@ -1494,12 +1494,12 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12 mb-3">
-                                        <label class="form-label" for="comment">التعليق</label>
-                                        <textarea class="form-control" name="comment" id="comment" placeholder="اكتب تعليقك"></textarea>
+                                        <label class="form-label" for="deliver_comment">التعليق</label>
+                                        <textarea class="form-control" name="" id="deliver_comment" placeholder="اكتب تعليقك"></textarea>
                                     </div>
                                 </div>
                                 <div class="d-flex gap-3">
-                                    <a href="#">
+                                    <a href="#" class="btn close--btn">
                                         <svg width="12" height="12" viewBox="0 0 12 12">
                                             <path d="M7.4,6l4.6,4.6L10.6,12L6,7.4L1.4,12L0,10.6L4.6,6L0,1.4L1.4,0L6,4.6L10.6,0L12,1.4L7.4,6z"></path>
                                         </svg>
@@ -1513,9 +1513,40 @@
                                 </div>
                             </form>
                         </div>
-                        <!-- <div class="control-panel__modal" data-modal="reject">
-
-                        </div> -->
+                        <div class="control-panel__modal" data-modal="reject">
+                            <form>
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <label class="form-label" for="reject_maintenance_technician">فنى الصيانة</label>
+                                        <select class="form-select" id="reject_maintenance_technician">
+                                            <option selected disabled>اختر فنى</option>
+                                            <option value="1">محمد</option>
+                                            <option value="2">احمد</option>
+                                            <option value="3">محمود</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <label class="form-label" for="reject_comment">التعليق</label>
+                                        <textarea class="form-control" name="" id="reject_comment" placeholder="اكتب تعليقك"></textarea>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <a href="#" class="btn close--btn">
+                                        <svg width="12" height="12" viewBox="0 0 12 12">
+                                            <path d="M7.4,6l4.6,4.6L10.6,12L6,7.4L1.4,12L0,10.6L4.6,6L0,1.4L1.4,0L6,4.6L10.6,0L12,1.4L7.4,6z"></path>
+                                        </svg>
+                                    </a>
+                                    <button type="submit" class="btn btn-danger btn-lg">
+                                        <svg width="12" height="12" viewBox="0 0 12 12">
+                                            <path d="M7.4,6l4.6,4.6L10.6,12L6,7.4L1.4,12L0,10.6L4.6,6L0,1.4L1.4,0L6,4.6L10.6,0L12,1.4L7.4,6z"></path>
+                                        </svg>
+                                        <span>رفض الجهاز</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </section>
             </div>

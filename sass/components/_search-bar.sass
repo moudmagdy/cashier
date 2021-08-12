@@ -9,6 +9,13 @@
     @media (max-width: 992px)
         flex-wrap: wrap
 
+    &.has-tabs
+        flex-wrap: wrap
+
+        @media (min-width: 576px)
+            flex-wrap: nowrap
+            gap: 0
+
     &__input
         display: flex
         align-items: center
@@ -41,15 +48,10 @@
             &::-webkit-search-cancel-button
                 display: none !important
 
-    &.has-tabs
-        gap: 0
-
-        @media (max-width: 992px)
-            flex-wrap: nowrap
-
-        .search__bar__input
-            border-end-end-radius: 0
-            border-start-end-radius: 0
+        .has-tabs &
+            @media (min-width: 576px)
+                border-end-end-radius: 0
+                border-start-end-radius: 0
 
     .btn
         white-space: nowrap
@@ -61,10 +63,13 @@
         align-items: center
         gap: rem(5px)
         border: rem(2px) solid #C6CFD9
-        border-inline-start: none
-        border-end-end-radius: rem(22px)
-        border-start-end-radius: rem(22px)
+        border-radius: rem(22px)
         padding: 0.25rem 0.5rem
+
+        @media (min-width: 576px)
+            border-inline-start: none
+            border-start-start-radius: 0
+            border-end-start-radius: 0
 
         a
             font-size: rem(12px)

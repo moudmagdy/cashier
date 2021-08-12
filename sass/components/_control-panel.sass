@@ -5,6 +5,15 @@
     background-color: #fff
     overflow: hidden
 
+    &::after
+        content: ""
+        position: absolute
+        inset: 0
+        z-index: 999
+        background-color: transparent
+        pointer-events: none
+        transition: background-color 0.3s
+
     &__header
         display: flex
         align-items: center
@@ -245,7 +254,33 @@
         width: 100%
         opacity: 0
         pointer-events: none
-        z-index: 999
+        z-index: 1000
+        transform: translateY(100%)
+        transition: all 0.3s ease-in-out
+
+        .btn
+            gap: rem(8px)
+
+            svg
+                width: rem(15px)
+                height: rem(15px)
+
+        .close--btn
+            +flex-center
+            width: rem(56px)
+            height: rem(56px)
+            background-color: #f3f3f3
+            border-radius: rem(20px)
+            transition: background-color 0.3s
+
+            &:hover
+                background-color: darken(#f3f3f3, 12%)
+
+        .modal--open &
+            &.modal--shown
+                opacity: 1
+                pointer-events: auto
+                transform: translateY(0)
 
     .select-item
         height: rem(52px)
@@ -485,11 +520,13 @@
         @media (max-width: 576px)
             width: 100%
 
-.control-panel--shown
+.control-panel--shown,
+.modal--open
     &::after
         pointer-events: auto
         background-color: rgba(6, 5, 5, 0.35)
 
+.control-panel--shown
     .page__layout > .control-panel
         [dir="rtl"] &
             transform: translateX(100%)

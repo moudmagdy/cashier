@@ -98,11 +98,15 @@ products.forEach(product => {
 });
 
 
+// Prevent the dropdown from sending event to it's parent
 document.querySelectorAll('.product__dropdown').forEach(dropdown => {
     dropdown.addEventListener('click', (e) => {
         e.stopPropagation();
     });
 });
+
+
+// Control panel filters
 
 const contentFilter = document.querySelectorAll('.content__filter__item');
 const invoiceList = document.querySelector('.invoice__list');
@@ -134,3 +138,27 @@ function filterContent(e) {
 
 window.addEventListener('load', loadFilteredContent);
 contentFilter.forEach(filter => filter.addEventListener('click', filterContent));
+
+
+const controlPanelBtns = document.querySelectorAll('[data-target-modal]');
+const controlPanelModalCloseBtns = document.querySelectorAll('.control-panel__modal .close--btn');
+
+controlPanelBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        let btnDataAttr = btn.getAttribute('data-target-modal');
+
+        btn.closest('.control-panel').classList.add('modal--open');
+        btn.closest('.control-panel').querySelector('[data-modal="' + btnDataAttr + '"]').classList.add('modal--shown');
+    });
+});
+
+controlPanelModalCloseBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        btn.closest('.control-panel').classList.remove('modal--open');
+        btn.closest('.control-panel__modal').classList.remove('modal--shown');
+    });
+});
