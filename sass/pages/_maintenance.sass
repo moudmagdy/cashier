@@ -177,44 +177,46 @@
         position: sticky
         top: 0
         height: rem(52px)
+        min-height: rem(52px)
+        flex: 0 0 rem(52px)
         padding: 0 rem(22px)
 
         h4
             font-size: rem(14px)
             margin-bottom: 0
 
-        .spare-parts__close-btn
-            +flex-center
-            width: rem(48px)
-            height: rem(48px)
-            border-radius: 50%
-            transition: background-color 0.3s
-
-            &:hover
-                background-color: #F5F5F5
-
-            svg
-                fill: inherit
-
-    .outside-piece--btn
-        display: flex
-        align-items: center
-        gap: rem(5px)
-
-        span
-            &:last-child
-                +flex-center
-                min-width: rem(18px)
-                min-height: rem(18px)
-                font-size: rem(12px)
-                +var(color, color-text-primary)
-                background-color: $color-white
-                border-radius: rem(9px)
-
     .spare-parts--shown &
         opacity: 1
         pointer-events: auto
         transform: translateX(0)
+
+.outside-piece--btn
+    display: flex
+    align-items: center
+    gap: rem(5px)
+
+    span
+        &:last-child
+            +flex-center
+            min-width: rem(18px)
+            min-height: rem(18px)
+            font-size: rem(12px)
+            +var(color, color-text-primary)
+            background-color: $color-white
+            border-radius: rem(9px)
+
+.close--btn
+    +flex-center
+    width: rem(48px)
+    height: rem(48px)
+    border-radius: 50%
+    transition: background-color 0.3s
+
+    &:hover
+        background-color: #F5F5F5
+
+    svg
+        fill: inherit
 
 .content__filters
     +flex-center

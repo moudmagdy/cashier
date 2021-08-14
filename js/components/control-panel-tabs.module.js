@@ -46,7 +46,7 @@ cpTabs.forEach(tab => {
     });
 });
 
-const sparePartsCloseBtn = document.querySelector('.spare-parts__close-btn');
+const sparePartsCloseBtn = document.querySelector('.close--btn');
 sparePartsCloseBtn.addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('main').classList.remove('spare-parts--shown');
