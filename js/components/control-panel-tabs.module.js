@@ -1,26 +1,31 @@
-const cpTabs = document.querySelectorAll('.control-panel__tabs a');
+const controlPanelContainer = document.querySelector('.control-panel__tabs');
+const controlPanelTabs = document.querySelectorAll('.control-panel__tabs a');
 const selectedIndicator = document.querySelector('.selected__indicator');
 
 
 function loadIndicator() {
-    let selectedTab = document.querySelector('.selected--tab');
-    let selectedTabLeftPosition = selectedTab.offsetLeft;
-    let selectedTabWidth = selectedTab.offsetWidth;
-    selectedIndicator.style.left = selectedTabLeftPosition + 'px';
-    selectedIndicator.style.width = selectedTabWidth + 'px';
+    if (typeof (controlPanelContainer) != 'undefined' && controlPanelContainer != null) {
+        let selectedTab = document.querySelector('.selected--tab');
+        let selectedTabLeftPosition = selectedTab.offsetLeft;
+        let selectedTabWidth = selectedTab.offsetWidth;
+        selectedIndicator.style.left = selectedTabLeftPosition + 'px';
+        selectedIndicator.style.width = selectedTabWidth + 'px';
+    }
 }
 window.addEventListener('load', loadIndicator);
 
 window.addEventListener('resize', () => {
-    let selectedTab = document.querySelector('.selected--tab');
-    let selectedTabLeftPosition = selectedTab.offsetLeft;
-    let selectedTabWidth = selectedTab.offsetWidth;
-    selectedIndicator.style.left = selectedTabLeftPosition + 'px';
-    selectedIndicator.style.width = selectedTabWidth + 'px';
-    selectedIndicator.style.transition = 'none';
+    if (typeof (controlPanelContainer) != 'undefined' && controlPanelContainer != null) {
+        let selectedTab = document.querySelector('.selected--tab');
+        let selectedTabLeftPosition = selectedTab.offsetLeft;
+        let selectedTabWidth = selectedTab.offsetWidth;
+        selectedIndicator.style.left = selectedTabLeftPosition + 'px';
+        selectedIndicator.style.width = selectedTabWidth + 'px';
+        selectedIndicator.style.transition = 'none';
+    }
 });
 
-cpTabs.forEach(tab => {
+controlPanelTabs.forEach(tab => {
     tab.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();

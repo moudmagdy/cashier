@@ -276,3 +276,36 @@
         flex: 1 1 100%
         border-radius: rem(8px)
         padding: 0.725rem 1.25rem
+
+.product__quantity__control
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    gap: rem(10px)
+
+    .product__quantity__input
+        display: flex
+        flex-direction: column
+        align-items: center
+        max-width: rem(90px)
+
+        .form-control
+            text-align: center
+            background-color: #eef1f4
+            border: none
+
+            &:focus
+                box-shadow: none
+
+    .product__quantity__increment,
+    .product__quantity__decrement
+        +flex-center
+        width: rem(32px)
+        height: rem(32px)
+        background-color: #F5F5F5
+        border-radius: 50%
+        margin-bottom: rem(6px)
+
+        svg
+            width: rem(16px)
+            height: rem(16px)
