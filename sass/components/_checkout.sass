@@ -2,6 +2,9 @@
     width: 100%
     color: #4D4D4D
 
+    .control-panel__content &
+        padding: 0 rem(22px)
+
     [dir="rtl"] &
         font-family: 'NotoSansArabic_Medium', sans-serif
 
@@ -26,7 +29,7 @@
                 &:hover
                     transform: translateY(5px) rotate(180deg)
 
-    .checkout__list
+    &__list
         margin-bottom: 10px
 
         &__item
@@ -53,6 +56,9 @@
 
                 &.invoice-total-amount
                     .sales-page &
+                        margin-inline-end: rem(34px)
+
+                    .control-panel__content &
                         margin-inline-end: rem(34px)
 
             &.invoice-discount
@@ -89,6 +95,10 @@
             .checkout__remove-item
                 width: 24px
                 height: 24px
+
+    .control-panel__content &
+        .checkout__list
+            margin-bottom: 0
 
 .checkout__cta__container
     display: flex

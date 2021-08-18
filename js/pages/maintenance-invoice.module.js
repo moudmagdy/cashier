@@ -38,6 +38,8 @@ receivePaymentBtn.addEventListener('click', (e) => {
     e.preventDefault();
     if (!document.querySelector('main').classList.contains('payment-methods--shown')) {
         document.querySelector('main').classList.add('payment-methods--shown');
+        document.querySelector('.control-panel__bottom-bar').classList.add('d-none');
+        document.querySelector('.invoice__list__container').classList.add('d-none');
     }
 });
 

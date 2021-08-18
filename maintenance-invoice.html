@@ -1143,7 +1143,7 @@
                                     </div>
                                 </div>
                                 <div class="control-panel__content">
-                                    <div class="invoice__list__container page__layout__scrollable-content">
+                                    <div class="invoice__list__container page__layout__scrollable-content d-flex">
                                         <ul class="invoice__list">
                                             <li class="invoice__item">
                                                 <div class="invoice__item--data">
@@ -1303,6 +1303,51 @@
                                                         <path fill="#878A90" d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
                                                     </svg>
                                                 </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="checkout">
+                                        <ul class="checkout__list list-unstyled">
+                                            <li class="checkout__list__item">
+                                                <h5>الاجمالي</h5>
+                                                <span class="checkout__item__detail invoice-total-amount">302.25</span>
+                                            </li>
+                                            <li class="checkout__list__item invoice-discount">
+                                                <h5>الخصم الكلي</h5>
+                                                <div class="checkout__item__detail discount-details">
+                                                    <span class="discount-percentage">10%</span>
+                                                    <span class="discount-amount">25.00</span>
+                                                </div>
+                                                <a href="#" class="checkout__remove-item">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                                        <path fill="#C6CFD9" d="M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12s12-5.4,12-12S18.6,0,12,0z M12,23C5.9,23,1,18.1,1,12S5.9,1,12,1 s11,4.9,11,11S18.1,23,12,23z M17.7,16.9L12.7,12l4.9-4.9l-0.7-0.7L12,11.3L7.1,6.3L6.3,7.1l4.9,4.9l-4.9,4.9l0.7,0.7l4.9-4.9 l4.9,4.9L17.7,16.9z"></path>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="checkout__list__item">
+                                                <h5>التوصيل</h5>
+                                                <span class="checkout__item__detail delivery-fees-amount">25.00</span>
+                                                <a href="#" class="checkout__remove-item">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                                        <path fill="#C6CFD9" d="M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12s12-5.4,12-12S18.6,0,12,0z M12,23C5.9,23,1,18.1,1,12S5.9,1,12,1 s11,4.9,11,11S18.1,23,12,23z M17.7,16.9L12.7,12l4.9-4.9l-0.7-0.7L12,11.3L7.1,6.3L6.3,7.1l4.9,4.9l-4.9,4.9l0.7,0.7l4.9-4.9 l4.9,4.9L17.7,16.9z"></path>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="checkout__list__item">
+                                                <div class="invoice__comment">
+                                                    <span>المنتج اخير ولا يمكن استرجاعه</span>
+                                                    <svg width="22.1" height="17.4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22.1 17.4" xml:space="preserve">
+                                                        <path d="M16.5,5.6H5.6c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7h10.8c0.4,0,0.7,0.3,0.7,0.7S16.8,5.6,16.5,5.6z M17.2,8.7 c0-0.4-0.3-0.7-0.7-0.7H5.6C5.2,8,4.9,8.3,4.9,8.7s0.3,0.7,0.7,0.7h10.8C16.8,9.4,17.2,9.1,17.2,8.7z M6.5,17.1l3.5-3.5 c0.1-0.1,0.1-0.1,0.2-0.1h9.2c1.5,0,2.7-1.2,2.7-2.7V2.7c0-1.5-1.2-2.7-2.7-2.7H2.7C1.2,0,0,1.2,0,2.7v8.2c0,1.5,1.2,2.7,2.7,2.7h2 c0.2,0,0.3,0.1,0.3,0.3l0,2.6c0,0.2,0.1,0.4,0.3,0.6c0.2,0.2,0.4,0.3,0.6,0.3c0,0,0,0,0,0C6.1,17.4,6.3,17.3,6.5,17.1z M2.7,12.1 c-0.7,0-1.3-0.6-1.3-1.3V2.7C1.4,2,2,1.4,2.7,1.4h16.7c0.7,0,1.3,0.6,1.3,1.3v8.1c0,0.7-0.6,1.3-1.3,1.3h-9.2 c-0.5,0-0.9,0.2-1.2,0.5l-2.6,2.6v-1.4c0-0.9-0.8-1.7-1.7-1.7H2.7z" />
+                                                    </svg>
+                                                </div>
+                                            </li>
+                                            <li class="checkout__list__item total">
+                                                <h5>الاجمالى الكلى</h5>
+                                                <span class="checkout__item__detail delivery-fees-amount">385.00</span>
+                                            </li>
+                                            <li class="checkout__list__item change">
+                                                <h5>الباقى</h5>
+                                                <span class="checkout__item__detail delivery-fees-amount">360.00</span>
                                             </li>
                                         </ul>
                                     </div>

@@ -1194,6 +1194,7 @@ button:focus,
 }
 .btn-link:hover {
   color: #4c4e51;
+  background-color: #f1f1f1;
 }
 
 .modal {
@@ -3427,6 +3428,9 @@ button:focus,
   width: 100%;
   color: #4D4D4D;
 }
+.control-panel__content .checkout {
+  padding: 0 1.375rem;
+}
 [dir=rtl] .checkout {
   font-family: "NotoSansArabic_Medium", sans-serif;
 }
@@ -3458,10 +3462,10 @@ button:focus,
       -ms-transform: translateY(5px) rotate(180deg);
           transform: translateY(5px) rotate(180deg);
 }
-.checkout .checkout__list {
+.checkout__list {
   margin-bottom: 10px;
 }
-.checkout .checkout__list__item {
+.checkout__list__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3473,7 +3477,7 @@ button:focus,
   border-bottom: 1px solid #efefef;
   padding: 0.5rem 0.625rem;
 }
-.checkout .checkout__list__item h5 {
+.checkout__list__item h5 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 65%;
           flex: 0 1 65%;
@@ -3482,7 +3486,7 @@ button:focus,
   color: inherit;
   margin-bottom: 0;
 }
-.checkout .checkout__list__item .checkout__item__detail {
+.checkout__list__item .checkout__item__detail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3497,14 +3501,18 @@ button:focus,
   -webkit-margin-start: auto;
           margin-inline-start: auto;
 }
-.sales-page .checkout .checkout__list__item .checkout__item__detail.invoice-total-amount {
+.sales-page .checkout__list__item .checkout__item__detail.invoice-total-amount {
   -webkit-margin-end: 2.125rem;
           margin-inline-end: 2.125rem;
 }
-.checkout .checkout__list__item.invoice-discount {
+.control-panel__content .checkout__list__item .checkout__item__detail.invoice-total-amount {
+  -webkit-margin-end: 2.125rem;
+          margin-inline-end: 2.125rem;
+}
+.checkout__list__item.invoice-discount {
   color: #FF6B73;
 }
-.checkout .checkout__list__item.invoice-discount .discount-details {
+.checkout__list__item.invoice-discount .discount-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3513,7 +3521,7 @@ button:focus,
           align-items: center;
   gap: 0.625rem;
 }
-.checkout .checkout__list__item.invoice-discount .discount-details .discount-percentage {
+.checkout__list__item.invoice-discount .discount-details .discount-percentage {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -3524,7 +3532,7 @@ button:focus,
   border-radius: 12px;
   padding: 0.225rem 0.392rem;
 }
-.checkout .checkout__list__item .invoice__comment {
+.checkout__list__item .invoice__comment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3538,18 +3546,21 @@ button:focus,
   -webkit-margin-start: auto;
           margin-inline-start: auto;
 }
-.checkout .checkout__list__item .invoice__comment span {
+.checkout__list__item .invoice__comment span {
   font-size: 12px;
 }
-[dir=rtl] .checkout .checkout__list__item .invoice__comment span {
+[dir=rtl] .checkout__list__item .invoice__comment span {
   font-family: "NotoSansArabic_Medium", sans-serif;
 }
-[dir=ltr] .checkout .checkout__list__item .invoice__comment span {
+[dir=ltr] .checkout__list__item .invoice__comment span {
   font-family: "NotoSans_Medium", sans-serif;
 }
-.checkout .checkout__list__item .checkout__remove-item {
+.checkout__list__item .checkout__remove-item {
   width: 24px;
   height: 24px;
+}
+.control-panel__content .checkout .checkout__list {
+  margin-bottom: 0;
 }
 
 .checkout__cta__container {
