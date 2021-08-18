@@ -40,6 +40,7 @@ receivePaymentBtn.addEventListener('click', (e) => {
         document.querySelector('main').classList.add('payment-methods--shown');
         document.querySelector('.control-panel__bottom-bar').classList.add('d-none');
         document.querySelector('.invoice__list__container').classList.add('d-none');
+        document.querySelector('.control-panel__content .checkout').classList.remove('d-none');
     }
 });
 
@@ -47,5 +48,8 @@ paymentMethodsBackBtn.addEventListener('click', (e) => {
     e.preventDefault();
     if (document.querySelector('main').classList.contains('payment-methods--shown')) {
         document.querySelector('main').classList.remove('payment-methods--shown');
+        document.querySelector('.control-panel__bottom-bar').classList.remove('d-none');
+        document.querySelector('.invoice__list__container').classList.remove('d-none');
+        document.querySelector('.control-panel__content .checkout').classList.add('d-none');
     }
 });

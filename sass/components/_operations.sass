@@ -43,122 +43,122 @@
             &:hover
                 background-color: #fff
 
-            .operations__item__comment
-                flex-basis: 30%
-                min-height: rem(36px)
-                font-size: rem(12px)
-                display: -webkit-box
-                -webkit-box-orient: vertical
-                overflow: hidden
-                text-overflow: ellipsis
-                -webkit-line-clamp: 2
+.operations__item__comment
+    flex-basis: 30%
+    min-height: rem(36px)
+    font-size: rem(12px)
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    overflow: hidden
+    text-overflow: ellipsis
+    -webkit-line-clamp: 2
 
-                [dir="rtl"] &
-                    font-family: 'NotoSansArabic_Medium', sans-serif
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
 
-                [dir="ltr"] &
-                    font-family: 'NotoSans_Medium', sans-serif
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif
 
-            .operations__item__subject
-                span
-                    display: inline-block
-                    +var(color, color-text-primary)
-                    font-size: rem(12px)
-                    white-space: nowrap
-                    border: 1px solid $color-text-primary
-                    border-radius: rem(24px)
-                    padding: 0.388rem 0.8rem
+.operations__item__subject
+    span
+        display: inline-block
+        +var(color, color-text-primary)
+        font-size: rem(12px)
+        white-space: nowrap
+        border: 1px solid $color-text-primary
+        border-radius: rem(24px)
+        padding: 0.388rem 0.8rem
 
-            .operations__item__date-time
-                display: flex
-                gap: rem(10px)
+.operations__item__date-time
+    display: flex
+    gap: rem(10px)
 
-            .operations__item__time
-                font-size: rem(12px)
+.operations__item__time
+    font-size: rem(12px)
 
-            .operations__item__amount
-                display: flex
-                justify-content: flex-end
-                align-items: center
-                gap: rem(3px)
+.operations__item__amount
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    gap: rem(3px)
 
-                span
-                    display: inline-block
+    span
+        display: inline-block
 
-                    [dir="rtl"] &
-                        font-family: 'NotoSansArabic_SemiBold', sans-serif
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
 
-                    [dir="ltr"] &
-                        font-family: 'NotoSans_SemiBold', sans-serif
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif
 
-                    &.icon
-                        +flex-center
-                        width: rem(32px)
-                        height: rem(32px)
-                        background-color: #fff
-                        border-radius: 50%
+        &.icon
+            +flex-center
+            width: rem(32px)
+            height: rem(32px)
+            background-color: #fff
+            border-radius: 50%
 
-                        svg
-                            width: rem(11px)
-                            height: rem(11px)
+            svg
+                width: rem(11px)
+                height: rem(11px)
 
-                &.return-amount
-                    span
-                        color: #F02849
+    &.return-amount
+        span
+            color: #F02849
 
-            .operations__item__invoice-number
-                flex: 0 1 15%
-                font-size: rem(14px)
+.operations__item__invoice-number
+    flex: 0 1 15%
+    font-size: rem(14px)
 
-                [dir="rtl"] &
-                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_SemiBold', sans-serif
 
-                [dir="ltr"] &
-                    font-family: 'NotoSans_SemiBold', sans-serif
+    [dir="ltr"] &
+        font-family: 'NotoSans_SemiBold', sans-serif
 
-            .operations__item__client-data
-                flex: 1 1 30%
-                font-size: rem(12px)
+.operations__item__client-data
+    flex: 1 1 30%
+    font-size: rem(12px)
 
-            .operations__item__invoice-info
-                display: block
-                flex: 1 1 20%
-                font-size: rem(14px)
+.operations__item__invoice-info
+    display: block
+    flex: 1 1 20%
+    font-size: rem(14px)
 
-            .operations__item__date-time
-                font-size: rem(12px)
+.operations__item__date-time
+    font-size: rem(12px)
 
-            .operations__item__location
-                font-size: rem(14px)
+.operations__item__location
+    font-size: rem(14px)
 
-            .operations__item__type
-                font-size: rem(14px)
+.operations__item__type
+    font-size: rem(14px)
 
-                [dir="rtl"] &
-                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_SemiBold', sans-serif
 
-                [dir="ltr"] &
-                    font-family: 'NotoSans_SemiBold', sans-serif
+    [dir="ltr"] &
+        font-family: 'NotoSans_SemiBold', sans-serif
 
-            .operations__item__status
-                display: flex
-                max-width: max-content
-                font-size: rem(12px)
-                white-space: nowrap
-                border-radius: rem(16px)
-                padding: 0.45rem 0.85rem
+.operations__item__status
+    display: flex
+    max-width: max-content
+    font-size: rem(12px)
+    white-space: nowrap
+    border-radius: rem(16px)
+    padding: 0.45rem 0.85rem
 
-                &.in-progress
-                    color: #f0faff
-                    background-color: #4DCDE6
+    &.in-progress
+        color: #f0faff
+        background-color: #4DCDE6
 
-                &.retrieved
-                    color: #fff2f5
-                    background-color: #FF8591
+    &.retrieved
+        color: #fff2f5
+        background-color: #FF8591
 
-                &.delivered
-                    color: #D9F6E6
-                    background-color: #30B360
+    &.delivered
+        color: #D9F6E6
+        background-color: #30B360
 
 .total-operations
     display: flex

@@ -2,9 +2,6 @@
     width: 100%
     color: #4D4D4D
 
-    .control-panel__content &
-        padding: 0 rem(22px)
-
     [dir="rtl"] &
         font-family: 'NotoSansArabic_Medium', sans-serif
 
@@ -39,6 +36,9 @@
             height: rem(40px)
             border-bottom: 1px solid #efefef
             padding: rem(8px) rem(10px)
+
+            .control-panel__content &
+                padding: rem(8px) rem(22px)
 
             h5
                 flex: 0 1 65%
@@ -77,6 +77,33 @@
                         background-color: #FF8591
                         border-radius: 12px
                         padding: 0.225rem 0.392rem
+
+            &.total
+                height: rem(48px)
+                background-color: #F5F5F5
+
+                .checkout__item__detail
+                    font-size: rem(24px)
+                    color: #060505
+                    margin-inline-end: rem(34px)
+
+                    [dir="rtl"] &
+                        font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                    [dir="ltr"] &
+                        font-family: 'NotoSans_SemiBold', sans-serif
+
+            &.change
+                .checkout__item__detail
+                    font-size: rem(18px)
+                    +var(color, color-brand)
+                    margin-inline-end: rem(34px)
+
+                    [dir="rtl"] &
+                        font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                    [dir="ltr"] &
+                        font-family: 'NotoSans_SemiBold', sans-serif
 
             .invoice__comment
                 +flex-center
