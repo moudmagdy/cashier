@@ -2234,13 +2234,17 @@ button:focus,
 }
 .control-panel__tabs {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 2.5rem;
+  overflow: hidden;
 }
 .control-panel__tabs nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 2.5rem;
 }
 .control-panel__tabs a {
   display: -webkit-box;
@@ -2258,7 +2262,7 @@ button:focus,
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
-  padding: 0.625rem 0.9375rem;
+  padding: 0.75rem 1rem;
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
@@ -2275,8 +2279,6 @@ button:focus,
 .control-panel__tabs .selected__indicator {
   position: absolute;
   bottom: 0;
-  width: 50%;
-  min-width: 50%;
   height: 0.25rem;
   background-color: #fff;
   -webkit-transition: inset-inline-start 0.3s ease-in-out;
@@ -2285,6 +2287,9 @@ button:focus,
 }
 .control-panel__accordion {
   padding: 0 1.25rem;
+}
+.control-panel__accordion:last-child {
+  margin-bottom: 0.9375rem;
 }
 .control-panel__accordion .accordion__header {
   border-bottom: 1px solid #efefef;
@@ -2321,6 +2326,7 @@ button:focus,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 0.3125rem;
   font-size: 0.875rem;
 }
 [dir=rtl] .control-panel__accordion .accordion__item__data {

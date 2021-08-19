@@ -1,13 +1,12 @@
 const controlPanelContainer = document.querySelector('.control-panel__tabs');
 const controlPanelTabs = document.querySelectorAll('.control-panel__tabs a');
 const selectedIndicator = document.querySelector('.selected__indicator');
-
+const selectedTab = document.querySelector('.selected--tab');
+const selectedTabLeftPosition = selectedTab.offsetLeft;
+const selectedTabWidth = selectedTab.offsetWidth;
 
 function loadIndicator() {
     if (typeof (controlPanelContainer) != 'undefined' && controlPanelContainer != null) {
-        let selectedTab = document.querySelector('.selected--tab');
-        let selectedTabLeftPosition = selectedTab.offsetLeft;
-        let selectedTabWidth = selectedTab.offsetWidth;
         selectedIndicator.style.left = selectedTabLeftPosition + 'px';
         selectedIndicator.style.width = selectedTabWidth + 'px';
     }
@@ -16,10 +15,6 @@ window.addEventListener('load', loadIndicator);
 
 window.addEventListener('resize', () => {
     if (typeof (controlPanelContainer) != 'undefined' && controlPanelContainer != null) {
-        let selectedTab = document.querySelector('.selected--tab');
-        let selectedTabLeftPosition = selectedTab.offsetLeft;
-        let selectedTabWidth = selectedTab.offsetWidth;
-        selectedIndicator.style.left = selectedTabLeftPosition + 'px';
         selectedIndicator.style.width = selectedTabWidth + 'px';
         selectedIndicator.style.transition = 'none';
     }

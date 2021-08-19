@@ -89,11 +89,13 @@
 
     &__tabs
         position: relative
+        display: flex
+        min-height: rem(40px)
+        overflow: hidden
 
         nav
             display: flex
             width: 100%
-            height: rem(40px)
 
         a
             +flex-center
@@ -101,7 +103,7 @@
             font-size: 14px
             color: rgba(255, 255, 255, 0.5)
             text-decoration: none
-            padding: rem(10px) rem(15px)
+            padding: 0.75rem 1rem
             transition: color 0.3s ease-in-out
 
             [dir="rtl"] &
@@ -116,14 +118,15 @@
         .selected__indicator
             position: absolute
             bottom: 0
-            width: 50%
-            min-width: 50%
             height: rem(4px)
             background-color: $color-white
             transition: inset-inline-start 0.3s ease-in-out
 
     &__accordion
         padding: 0 rem(20px)
+
+        &:last-child
+            margin-bottom: rem(15px)
 
         .accordion__header
             border-bottom: 1px solid #efefef
@@ -153,6 +156,7 @@
 
             &__data
                 display: flex
+                gap: rem(5px)
                 font-size: rem(14px)
 
                 [dir="rtl"] &
