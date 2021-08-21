@@ -156,6 +156,7 @@
 
             &__data
                 display: flex
+                flex: 1
                 gap: rem(5px)
                 font-size: rem(14px)
 
@@ -285,6 +286,17 @@
                 opacity: 1
                 pointer-events: auto
                 transform: translateY(0)
+
+    .lg-btn__container
+        box-shadow: 0 10px 15px rgba(24, 24, 24, 0.8)
+        z-index: 2
+        padding: rem(15px) rem(20px) rem(10px)
+        margin-top: auto
+
+        .btn-lg
+            width: 100%
+            border-radius: 1.75rem
+            padding: 0.875rem 1.75rem
 
     .select-item
         height: rem(52px)

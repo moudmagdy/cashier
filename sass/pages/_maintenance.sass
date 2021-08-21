@@ -19,6 +19,26 @@
                     svg
                         fill: #4DCDE6
 
+        &.returned-request
+            .control-panel__header,
+            .control-panel__tabs
+                background-color: #FF6B73
+
+            .control-panel__header
+                .dropdown-toggle
+                    &:hover
+                        background-color: lighten(#FF6B73, 5%)
+
+                    &.show
+                        svg
+                            fill: #FF6B73
+
+                        &:hover
+                            background-color: $color-white
+
+                        svg
+                            fill: #FF6B73
+
         &:not(.page__layout > .control-panel)
             .select-item
                 border-bottom: 1px solid #efefef
@@ -29,49 +49,6 @@
                     height: 0
                     opacity: 0
                     pointer-events: none
-
-    .page__layout
-        & > .control-panel
-            .control-panel__header
-                color: inherit
-                background-color: $color-white
-
-            .control-panel__close-btn
-                background-color: #F5F5F5
-
-                svg
-                    fill: inherit
-
-                &:hover
-                    background-color: darken(#F5F5F5, 5%)
-
-                    svg
-                        fill: lighten(#060505, 20%)
-
-            .lg-btn__container
-                padding: rem(15px) rem(20px) rem(10px)
-                margin-top: auto
-
-            .btn-lg
-                width: 100%
-                border-radius: 1.75rem
-                padding: 0.875rem 1.75rem
-
-    .device-issues
-        display: inline-flex
-        font-size: rem(11px)
-        border: 1px solid #060505
-        border-radius: rem(14px)
-        padding: 0.313rem 0.6rem
-
-        &:not(:last-child)
-            margin-inline-end: rem(5px)
-
-        [dir="rtl"] &
-            font-family: 'NotoSansArabic_Medium', sans-serif
-
-        [dir="ltr"] &
-            font-family: 'NotoSans_Medium', sans-serif
 
     .previous-devices--dropdown
         padding: rem(6px) rem(24px) rem(10px)
@@ -105,32 +82,68 @@
                 .form-check-label
                     white-space: nowrap
 
-    .total-parts
+.maintenance-page,
+.delivered-devices-page
+    .page__layout
+        & > .control-panel
+            .control-panel__header
+                color: inherit
+                background-color: $color-white
+
+            .control-panel__close-btn
+                background-color: #F5F5F5
+
+                svg
+                    fill: inherit
+
+                &:hover
+                    background-color: darken(#F5F5F5, 5%)
+
+                    svg
+                        fill: lighten(#060505, 20%)
+
+.total-parts
+    display: flex
+    flex-direction: column
+    border-top: 1px solid #efefef
+
+    li
         display: flex
-        flex-direction: column
-        border-top: 1px solid #efefef
+        align-items: center
+        justify-content: space-between
+        height: rem(56px)
+        padding: rem(10px) rem(20px)
 
-        li
-            display: flex
-            align-items: center
-            justify-content: space-between
-            height: rem(56px)
-            padding: rem(10px) rem(20px)
+        &:not(:last-child)
+            border-bottom: 1px solid #efefef
 
-            &:not(:last-child)
-                border-bottom: 1px solid #efefef
+        h5
+            font-size: rem(14px)
 
-            h5
-                font-size: rem(14px)
+        .total-parts__amount
+            font-size: rem(22px)
 
-            .total-parts__amount
-                font-size: rem(22px)
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
 
-                [dir="rtl"] &
-                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+            [dir="ltr"] &
+                font-family: 'NotoSans_SemiBold', sans-serif
 
-                [dir="ltr"] &
-                    font-family: 'NotoSans_SemiBold', sans-serif
+.device-issues
+    display: inline-flex
+    font-size: rem(11px)
+    border: 1px solid #060505
+    border-radius: rem(14px)
+    padding: 0.313rem 0.6rem
+
+    &:not(:last-child)
+        margin-inline-end: rem(5px)
+
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif
 
 .maintenance-statistics
     display: flex
@@ -309,3 +322,17 @@
         svg
             width: rem(16px)
             height: rem(16px)
+
+.maintenance-invoice-page
+    .select-item
+        border-bottom: 1px solid #efefef
+
+.returned-detail
+    display: flex
+    align-items: center
+    gap: rem(5px)
+
+    .invoice-id
+        color: #FF6B73
+        font-size: rem(12px)
+        text-decoration: underline

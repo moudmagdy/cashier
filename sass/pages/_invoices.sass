@@ -1,12 +1,6 @@
 .invoices-page
     overflow: hidden
 
-    // & > .page__layout > .layout__tabs
-    //     display: none
-
-    //     @media (max-width: 768px)
-    //         display: flex
-
     .control-panel
         .control-panel__header
             background-color: $color-white
@@ -38,49 +32,6 @@
     .checkout
         .checkout__cta__container
             display: none
-
-        .checkout__list
-            margin-bottom: 0
-
-        .checkout__list__item
-            &:last-child
-                border-bottom: none
-
-            h5
-                flex: 0 1 50%
-
-            .checkout__item__detail
-                flex: 0 1 50%
-
-            &.main-item
-                height: 56px
-                border-color: transparent
-
-                h5,
-                .checkout__item__detail
-                    color: #060505
-
-                h5
-                    font-size: 16px
-
-                .checkout__item__detail
-                    font-size: 22px
-
-                    [dir="rtl"] &
-                        font-family: 'NotoSansArabic_Medium', sans-serif
-
-                    [dir="ltr"] &
-                        font-family: 'NotoSans_Medium', sans-serif
-
-            &:not(.main-item)
-                display: none
-
-        &.slide
-            .checkout__list__item
-                display: flex
-
-                &.main-item
-                    border-color: #efefef
 
     .invoice__item--counter-screen
         margin-inline-start: 30px

@@ -12,15 +12,15 @@ function closePageLoader() {
 }
 window.addEventListener('load', closePageLoader);
 
+
+// Receive device side panel
 const receiveDeviceBtn = document.querySelector('.receive-device--btn');
 const controlPanel = document.querySelector('.page__layout > .control-panel');
 const closeBtn = controlPanel.querySelector('.control-panel__close-btn');
-
 receiveDeviceBtn.addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('body').classList.add('control-panel--shown');
 });
-
 closeBtn.addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('body').classList.remove('control-panel--shown');
@@ -41,7 +41,6 @@ document.querySelectorAll('.previous-devices--dropdown .form-check-label').forEa
 // Show and hide the second view in the control panel
 const selectItemBtns = document.querySelectorAll('.select-item__btn');
 const viewBackBtns = document.querySelectorAll('.items-search__back-btn');
-
 selectItemBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -110,7 +109,6 @@ document.querySelectorAll('.product__dropdown').forEach(dropdown => {
 
 const contentFilter = document.querySelectorAll('.content__filter__item');
 const invoiceList = document.querySelector('.invoice__list');
-
 function loadFilteredContent() {
     let selectedFilterDataAttr = document.querySelector('.selected--filter').getAttribute('data-filter');
 
@@ -118,7 +116,6 @@ function loadFilteredContent() {
         item.style.display = 'flex';
     });
 }
-
 function filterContent(e) {
     e.preventDefault();
 
@@ -135,14 +132,14 @@ function filterContent(e) {
         item.style.display = 'flex';
     });
 }
-
 window.addEventListener('load', loadFilteredContent);
 contentFilter.forEach(filter => filter.addEventListener('click', filterContent));
 
 
+// Control panel modals
+
 const controlPanelBtns = document.querySelectorAll('[data-target-modal]');
 const controlPanelModalCloseBtns = document.querySelectorAll('.control-panel__modal .close--btn');
-
 controlPanelBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -153,7 +150,6 @@ controlPanelBtns.forEach(btn => {
         btn.closest('.control-panel').querySelector('[data-modal="' + btnDataAttr + '"]').classList.add('modal--shown');
     });
 });
-
 controlPanelModalCloseBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();

@@ -8,23 +8,18 @@
     [dir="ltr"] &
         font-family: 'NotoSans_Medium', sans-serif
 
-    .checkout__slide__toggle
+    &__slide__toggle
         display: flex
         width: max-content
         padding: 0.375rem 0
         margin: 0 auto
-        // transition: transform 0.3s
+        transition: transform 0.3s
+
+        svg
+            transition: transform 0.3s
 
         &:hover
-            transform: translateY(-5px)
-
-    &.slidable
-        &.slide
-            .checkout__slide__toggle
-                transform: rotate(180deg)
-
-                &:hover
-                    transform: translateY(5px) rotate(180deg)
+            transform: translateY(-3px)
 
     &__list
         margin-bottom: 10px
@@ -53,6 +48,9 @@
                 justify-content: flex-end
                 align-content: center
                 margin-inline-start: auto
+
+                &.returned-amount
+                    color: #FF6B73 !important
 
                 &.invoice-total-amount
                     .sales-page &
@@ -122,6 +120,57 @@
             .checkout__remove-item
                 width: 24px
                 height: 24px
+
+    &.slidable
+        .checkout__list
+            margin-bottom: 0
+
+        .checkout__list__item
+            &:last-child
+                border-bottom: none
+
+            h5
+                flex: 0 1 50%
+
+            .checkout__item__detail
+                flex: 0 1 50%
+
+            &.main-item
+                height: 56px
+                border-color: transparent
+
+                h5,
+                .checkout__item__detail
+                    color: #060505
+
+                h5
+                    font-size: 16px
+
+                .checkout__item__detail
+                    font-size: 22px
+
+                    [dir="rtl"] &
+                        font-family: 'NotoSansArabic_Medium', sans-serif
+
+                    [dir="ltr"] &
+                        font-family: 'NotoSans_Medium', sans-serif
+
+            &:not(.main-item)
+                display: none
+
+        &.slide
+            .checkout__list__item
+                display: flex
+
+                &.main-item
+                    border-color: #efefef
+
+            .checkout__slide__toggle
+                svg
+                    transform: rotate(180deg)
+
+                &:hover
+                    transform: translateY(3px)
 
     .control-panel__content &
         .checkout__list

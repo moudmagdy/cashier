@@ -80,11 +80,11 @@
                                     <a href="#" class="collapse__toggle" role="button" aria-expanded="true">الثلاثاء، 22 ديسمبر 2020</a>
                                 </h3>
                                 <div class="operations__group__list collapse__container">
-                                    <div class="operations__group__item">
+                                    <div class="operations__group__item selected">
                                         <div class="operations__item__invoice-number">#1005</div>
                                         <div class="operations__item__client-data">عاصم السيد 01013875381</div>
                                         <div class="operations__item__time">05:00 م</div>
-                                        <div class="operations__item__status delivered">تم التسليم</div>
+                                        <div class="operations__item__status returned">مسترجعة</div>
                                     </div>
                                     <div class="operations__group__item">
                                         <div class="operations__item__invoice-number">#1005</div>
@@ -293,12 +293,17 @@
                                                 <div class="accordion__item">
                                                     <h6 class="accordion__item__title">الحالة</h6>
                                                     <div class="accordion__item__data">
-                                                        <span class="operations__item__status in-progress">تمت الصيانة</span>
-                                                        <span class="operations__item__status delivered">تم التسليم</span>
+                                                        <span class="operations__item__status returned">مسترجعة</span>
+                                                        <span class="returned-detail ms-auto">
+                                                            <span class="invoice-id">#1004</span>
+                                                            <svg width="18.2" height="9.7" viewBox="0 0 18.2 9.7">
+                                                                <path fill="#FF6B73" d="M14.3,9.5V1H5.1V0h10.2v7.1l2.3-2.3l0.7,0.7L14.3,9.5z M13.2,8.7H4V0.2l-4,4l0.7,0.7L3,2.6v7.1h10.2V8.7z"></path>
+                                                            </svg>
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <div class="accordion__item">
-                                                    <h6 class="accordion__item__title">تعليق التسليم</h6>
+                                                    <h6 class="accordion__item__title">سبب الاسترجاع</h6>
                                                     <span class="accordion__item__data">لا يوجد</span>
                                                 </div>
                                             </div>
@@ -675,8 +680,8 @@
                                                 </div>
                                             </li>
                                             <li class="checkout__list__item main-item">
-                                                <h5>الاجمالي الكلي</h5>
-                                                <span class="checkout__item__detail">360.00</span>
+                                                <h5>المبلغ المسترجع</h5>
+                                                <span class="checkout__item__detail returned-amount">360.00</span>
                                             </li>
                                             <li class="checkout__list__item">
                                                 <h5>المدفوع</h5>

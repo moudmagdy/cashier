@@ -47,12 +47,14 @@ controlPanelTabs.forEach(tab => {
 });
 
 const sparePartsCloseBtn = document.querySelector('.close--btn');
-sparePartsCloseBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    document.querySelector('main').classList.remove('spare-parts--shown');
-    document.querySelector('.control-panel__tabs .selected--tab').classList.remove('selected--tab');
-    document.querySelector('.control-panel__content.content--shown').classList.remove('content--shown');
-    document.querySelector('.control-panel__content').classList.add('content--shown');
-    document.querySelector('.control-panel__tabs a').classList.add('selected--tab');
-    loadIndicator();
-});
+if (sparePartsCloseBtn) {
+    sparePartsCloseBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('main').classList.remove('spare-parts--shown');
+        document.querySelector('.control-panel__tabs .selected--tab').classList.remove('selected--tab');
+        document.querySelector('.control-panel__content.content--shown').classList.remove('content--shown');
+        document.querySelector('.control-panel__content').classList.add('content--shown');
+        document.querySelector('.control-panel__tabs a').classList.add('selected--tab');
+        loadIndicator();
+    });
+}
