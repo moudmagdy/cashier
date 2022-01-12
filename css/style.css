@@ -1979,6 +1979,8 @@ button:focus,
   display: none;
 }
 .search__bar__feature svg {
+  max-width: 1.125rem;
+  max-height: 1.125rem;
   fill: #A3AAB2;
   -webkit-transition: fill 0.3s;
   -o-transition: fill 0.3s;
@@ -3981,7 +3983,7 @@ button:focus,
 }
 
 .collapse__container {
-  overflow: hidden;
+  overflow-y: clip;
   -webkit-transition: max-height 350ms ease;
   -o-transition: max-height 350ms ease;
   transition: max-height 350ms ease;
