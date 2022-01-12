@@ -6956,6 +6956,11 @@ header .header__btns {
   opacity: 0;
   pointer-events: none;
 }
+.delivered-devices-page .control-panel .select-item .item__selected {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .delivered-devices-page .filters__buttons .filter__btn:hover, .delivered-devices-page .filters__buttons .filter__btn.selected {
   color: #2BAB5A;
   border-color: #2BAB5A;
